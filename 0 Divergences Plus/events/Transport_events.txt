@@ -1,0 +1,497 @@
+#Commercial Aviation
+country_event = {
+
+	id = 90820401
+
+	trigger = {
+		year = 1910
+		aeronautics = 1
+		or = {
+			is_secondary_power = yes
+			is_greater_power = yes
+		}
+		produces = aeroplanes
+		industrial_score = 200
+		not = { has_country_flag = commercial_aviation }
+		has_global_flag = delag_founded
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			big_producer = aeroplanes
+		}
+	}
+
+	title = "EVTNAME90820401"
+	desc = "EVTDESC90820401"
+	picture = "commercial_aviation"
+	
+
+	option = {
+		name = "EVTOPTA90820401"
+		prestige = 10
+		set_country_flag = commercial_aviation
+		add_country_modifier = {
+			name = commercial_aviation
+			duration = -1
+		}
+	}
+}
+
+# First airline
+country_event = {
+
+	id = 90820402
+
+	trigger = {
+		year = 1910
+		is_greater_power = yes
+		capitalists = 0.01
+		industrial_score = 300
+		produces = aeroplanes
+		not = { has_global_flag = delag_founded }
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			big_producer = aeroplanes
+		}
+	}
+
+	title = "EVTNAME90820402"
+	desc = "EVTDESC90820402"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA90820402"
+		prestige = 20
+		set_global_flag = delag_founded
+	}
+}
+
+# Transatlantic Line
+country_event = {
+
+	id = 90820403
+
+	trigger = {
+		is_greater_power = yes
+		big_producer = steamer_convoy
+		num_of_ports = 5
+		not = { has_country_flag = transatlantic_line }
+		or = {
+			capital_scope = { continent = europe }
+			and = { 
+				capital_scope = { continent = north_america }
+				or = {
+					primary_culture = plantagenian
+					primary_culture = amazonian
+					primary_culture = septiman
+					primary_culture = lotharian
+					primary_culture = athesian
+					primary_culture = guianan
+					primary_culture = vinlander
+					primary_culture = ayitian
+					primary_culture = livlandian
+					primary_culture = beornian
+					primary_culture = yankee
+					primary_culture = dixie
+					primary_culture = texan
+					primary_culture = australian
+					primary_culture = anglo_canadian
+					primary_culture = french_canadian
+					primary_culture = alaskan
+					primary_culture = mexican
+					primary_culture = central_american
+					primary_culture = caribeno
+					primary_culture = north_andean
+					primary_culture = south_andean
+					primary_culture = platinean
+					primary_culture = brazilian
+					primary_culture = lusitanian
+					primary_culture = granadan
+				}
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "EVTNAME90820403"
+	desc = "EVTDESC90820403"
+	picture = "ocean_liner"
+
+	option = {
+		name = "EVTOPTA90820403"
+		prestige = 10
+		set_country_flag = transatlantic_line
+	}
+}
+
+# The blue riband
+country_event = {
+
+	id = 90820404
+
+	trigger = {
+		is_greater_power = yes
+		big_producer = steamer_convoy
+		num_of_ports = 5
+		has_country_flag = transatlantic_line
+		not = { has_country_modifier = blue_riband_cooloff }
+	}
+ 
+	mean_time_to_happen =  {
+		months = 24
+	}
+
+	title = "EVTNAME90820404"
+	desc = "EVTDESC90820404"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA90820404"
+		prestige = 50
+		any_country = {
+			limit = {
+				not = {
+					tag = THIS
+				}
+			}
+			remove_country_modifier = blue_riband_cooloff
+			remove_country_modifier = blue_riband
+		}
+		add_country_modifier = {
+			name = blue_riband
+			duration = -1
+		}
+		any_country = {
+			add_country_modifier = {
+				name = blue_riband_cooloff 
+				duration = 3650
+			}
+		}
+	}
+}
+
+# Titanic launched
+country_event = {
+
+	id = 90820405
+
+	trigger = {
+		has_country_flag = transatlantic_line
+		is_greater_power = yes
+		not = { has_global_flag = titanic_launched}
+		year = 1911
+	}
+ 
+	mean_time_to_happen =  {
+		months = 6
+
+		modifier = {
+			factor = 0.5
+			safety_regulations = trinket_safety
+		}
+		modifier = {
+			factor = 0.5
+			safety_regulations = low_safety
+		}
+		modifier = {
+			factor = 0.5
+			rank = 4
+		}
+		modifier = {
+			factor = 0.5
+			rank = 2
+		}
+	}
+
+	title = "EVTNAME90820405"
+	desc = "EVTDESC90820405"
+	picture = "titanic_launch"
+
+	option = {
+		name = "EVTOPTA90820405"
+		prestige = 20
+		set_country_flag = titanic_nation
+		set_global_flag = titanic_launched
+	}
+}
+
+# Titanic disaster
+country_event = {
+
+	id = 90820406
+
+	trigger = {
+		has_country_flag = titanic_nation
+		not = { has_global_flag = titanic_disaster}
+		not = { safety_regulations = good_safety }
+		year = 1912
+	}
+ 
+	mean_time_to_happen =  {
+		months = 4
+
+		modifier = {
+			factor = 0.9
+			month = 4
+		}
+	}
+
+	title = "EVTNAME90820406"
+	desc = "EVTDESC90820406"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA90820406"
+		prestige = -40
+		social_reform = good_safety
+		set_global_flag = titanic_disaster
+		random_list = {
+			50 = {
+				any_pop = {
+					limit = {
+						strata = rich
+					}
+					ideology = {
+						factor = 0.2
+						value = reactionary
+					}
+					dominant_issue = {
+						factor = 0.2
+						value = low_safety
+					}
+				}
+			}
+			50 = {
+				any_pop = {
+					limit = {
+						strata = rich
+					}
+					ideology = {
+						factor = 0.2
+						value = anarcho_liberal
+					}
+					dominant_issue = {
+						factor = 0.2
+						value = low_safety
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				not = { 
+					or = {
+						ruling_party_ideology = anarcho_liberal
+						ruling_party_ideology = reactionary
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820406"
+		prestige = -70
+		badboy = 0.1
+		set_global_flag = titanic_disaster
+		add_country_modifier = {
+			name = ghosts_of_titanic 
+			duration = -1
+		}
+		any_pop = {
+			limit = {
+				not = {
+					strata = rich
+				}
+			}
+			dominant_issue = {
+				factor = 0.2
+				value = good_safety
+			}
+			ideology = {
+				factor = 0.1
+				value = socialist
+			}
+			scaled_militancy = {
+				factor = 2
+				issue = good_safety
+			}
+			scaled_militancy = {
+				factor = 2
+				ideology = socialist
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				or = {
+					ruling_party_ideology = anarcho_liberal
+					ruling_party_ideology = reactionary
+				}
+			}
+		}
+	}
+}
+
+# Titanic disaster aftermath
+country_event = {
+
+	id = 90820407
+
+	trigger = {
+		has_global_flag = titanic_disaster
+		not = { safety_regulations = good_safety }
+		not = { has_country_flag = titanic_reforms}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 3
+	}
+
+	title = "EVTNAME90820407"
+	desc = "EVTDESC90820407"
+	picture = "titanic_reforms"
+
+	option = {
+		name = "EVTOPTA90820407"
+		prestige = 10
+		social_reform = good_safety
+		set_country_flag = titanic_reforms
+		random_list = {
+			50 = {
+				any_pop = {
+					limit = {
+						strata = rich
+					}
+					ideology = {
+						factor = 0.2
+						value = reactionary
+					}
+					dominant_issue = {
+						factor = 0.2
+						value = low_safety
+					}
+				}
+			}
+			50 = {
+				any_pop = {
+					limit = {
+						strata = rich
+					}
+					ideology = {
+						factor = 0.2
+						value = anarcho_liberal
+					}
+					dominant_issue = {
+						factor = 0.2
+						value = low_safety
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				not = { 
+					or = {
+						ruling_party_ideology = anarcho_liberal
+						ruling_party_ideology = reactionary
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820407"
+		prestige = -10
+		badboy = 0.1
+		set_country_flag = titanic_reforms
+		add_country_modifier = {
+			name = ghosts_of_titanic 
+			duration = -1
+		}
+		any_pop = {
+			limit = {
+				not = {
+					strata = rich
+				}
+			}
+			dominant_issue = {
+				factor = 0.2
+				value = good_safety
+			}
+			ideology = {
+				factor = 0.1
+				value = socialist
+			}
+			scaled_militancy = {
+				factor = 2
+				issue = good_safety
+			}
+			scaled_militancy = {
+				factor = 2
+				ideology = socialist
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				or = {
+					ruling_party_ideology = anarcho_liberal
+					ruling_party_ideology = reactionary
+				}
+			}
+		}
+	}
+}
+
+# Ghosts of Titanic removed
+country_event = {
+
+	id = 90820408
+
+	trigger = {
+		has_global_flag = titanic_disaster
+		safety_regulations = good_safety
+		has_country_modifier = ghosts_of_titanic
+	}
+ 
+	mean_time_to_happen =  {
+		months = 3
+	}
+
+	title = "EVTNAME90820408"
+	desc = "EVTDESC90820408"
+	picture = "titanic_reforms"
+
+	option = {
+		name = "EVTOPTA90820408"
+		prestige = 10
+		remove_country_modifier = ghosts_of_titanic
+		any_pop = {
+			scaled_militancy = {
+				factor = -0.5
+				issue = good_safety
+			}
+		}
+	}
+}

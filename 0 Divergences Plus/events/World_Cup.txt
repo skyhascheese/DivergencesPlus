@@ -1,0 +1,1186 @@
+#############################
+#       The World Cup       #
+#############################
+
+#Form a national football team
+country_event = {
+
+	id = 90820301
+
+	trigger = {
+		year = 1870
+		money = 15000
+		nationalism_n_imperialism = 1
+		war = no # Nation can not be at war at the time of invite
+		not = { 
+			or = {
+				has_country_flag = national_football_team 
+				has_country_flag = no_national_football_team 
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.8
+			year = 1880
+		}
+		modifier = {
+			factor = 0.8
+			year = 1890
+		}
+	}
+
+	title = "EVTNAME90820301"
+	desc = "EVTDESC90820301"
+	picture = "national_football_team"
+	
+
+	option = {
+		name = "EVTOPTA90820301"
+		ai_chance = { factor = 99 }
+		money = -15000
+		prestige = 20
+		set_country_flag = national_football_team
+		add_country_modifier = {
+			name = football_mania
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB90820301"
+		ai_chance = { factor = 1 }
+		prestige = -5
+		set_country_flag = no_national_football_team
+	}
+}
+
+#The first national football team in the world
+country_event = {
+
+	id = 90820302
+
+	trigger = {
+		has_country_flag = national_football_team
+		not = { has_global_flag = first_national_football_team }
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	title = "EVTNAME90820302"
+	desc = "EVTDESC90820302"
+	picture = "national_football_team"
+	
+	option = {
+		name = "EVTOPTA90820302"
+		prestige = 5
+		set_country_flag = first_national_football_team
+		set_global_flag = first_national_football_team
+	}
+}
+
+#The second national football team in the world
+country_event = {
+
+	id = 90820303
+
+	trigger = {
+		has_country_flag = national_football_team
+		has_global_flag = first_national_football_team
+		not = { 
+			or = {
+				has_global_flag = first_national_football_team 
+				has_country_flag = first_national_football_team
+				has_country_flag = second_national_football_team_renounced
+			}
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	title = "EVTNAME90820303"
+	desc = "EVTDESC90820303"
+	picture = "national_football_team"
+	
+	option = {
+		name = "EVTOPTA90820303"
+		prestige = 5
+		set_country_flag = second_national_football_team
+		set_global_flag = second_national_football_team
+	}
+}
+
+#Challenge the second national team to the first international match
+country_event = {
+
+	id = 90820304
+
+	trigger = {
+		has_country_flag = first_national_football_team
+		has_global_flag = first_national_football_team
+		has_global_flag = second_national_football_team
+		not = { 
+			has_global_flag = second_national_football_team_challenged
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "EVTNAME90820304"
+	desc = "EVTDESC90820304"
+	picture = "first_international_football_match"
+	
+	option = {
+		name = "EVTOPTA90820304"
+		set_global_flag = second_national_football_team_challenged
+		any_country = {
+			limit = {
+				has_country_flag = second_national_football_team
+			}
+			country_event = 90820305
+		}
+	}
+}
+
+#We are being challenged to the first international football match
+country_event = {
+
+	id = 90820305
+
+	is_triggered_only = yes
+
+	title = "EVTNAME90820305"
+	desc = "EVTDESC90820305"
+	picture = "first_international_football_match"
+	
+	option = {
+		name = "EVTOPTA90820105"
+		any_country = {
+			limit = {
+				has_country_flag = first_national_football_team
+			}
+			random_list = {
+				50 = { country_event = 90820306 }
+				50 = { country_event = 90820307 }
+			}
+		}
+		ai_chance = { factor = 80 }
+	}
+	
+	option = {
+		name = "EVTOPTB90820305"
+		any_country = {
+			limit = {
+				has_country_flag = first_national_football_team
+			}
+			country_event = 90820308
+		}
+		prestige = -15
+		clr_country_flag = second_national_football_team
+		clr_global_flag = second_national_football_team
+		clr_global_flag = second_national_football_team_challenged
+		set_country_flag = second_national_football_team_renounced
+		ai_chance = { factor = 20 }
+	}
+}
+
+#The first international football match - first team wins
+country_event = {
+
+	id = 90820306
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME90820306"
+	desc = "EVTDESC90820306"
+	picture = "first_international_football_match"
+	
+	option = {
+		name = "EVTOPTA90820306"
+		set_global_flag = first_international_match_held
+		prestige = 15
+		any_country = {
+			limit = { has_country_flag = second_national_football_team }
+			prestige = -5
+		}
+	}
+}
+
+#The first international football match - second team wins
+country_event = {
+
+	id = 90820307
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME90820307"
+	desc = "EVTDESC90820307"
+	picture = "first_international_football_match"
+	
+	option = {
+		name = "EVTOPTA90820307"
+		set_global_flag = first_international_match_held
+		prestige = -5
+		any_country = {
+			limit = { has_country_flag = second_national_football_team }
+			prestige = 15
+		}
+	}
+}
+
+#Second national team refused
+country_event = {
+
+	id = 90820308
+
+	is_triggered_only = yes
+
+	title = "EVTNAME90820308"
+	desc = "EVTDESC90820308"
+	picture = "first_international_football_match"
+	
+	option = {
+		name = "EVTOPTA90820308"
+	}
+}
+
+#Establish the International Federation of Association Football (FIFA)
+country_event = {
+
+	id = 90820309
+
+	trigger = {
+		has_global_flag = FIFA_founded
+		not = { 
+			or = {
+				has_global_flag = FIFA_founded
+				has_country_flag = NoFIFAMember
+				badboy = 0.8
+				has_country_modifier = bad_host
+			}
+		}
+		year = 1904
+		money = 10000
+		war = no # Nation can not be at war at the time of invite
+		or = { 
+			is_greater_power = yes # Nation is a great power
+			and = {
+				rank = 16 # Nation is a secondary power
+				prestige = 600 # Non-Euro/non GP need to be high prestige to get invite in this era
+			}
+			and = {
+				capital_scope = { continent = europe } # European nation with > 25 prestige
+				prestige = 25
+			}
+			and = {
+				OR = { 
+					primary_culture = greek
+					primary_culture = north_german
+					primary_culture = south_german
+					primary_culture = rheinish
+					primary_culture = dutch
+					primary_culture = flemish
+					primary_culture = wallonian
+					primary_culture = burgundian
+					primary_culture = swiss
+					primary_culture = swedish
+					primary_culture = danish
+					primary_culture = norwegian
+					primary_culture = icelandic
+					primary_culture = finnish
+					primary_culture = scandinavian
+					primary_culture = british
+					primary_culture = irish
+					primary_culture = scottish
+					primary_culture = welsh
+					primary_culture = north_italian
+					primary_culture = south_italian
+					primary_culture = maltese
+					primary_culture = venetian
+					primary_culture = catalan
+					primary_culture = basque
+					primary_culture = spanish
+					primary_culture = portuguese
+					primary_culture = castilian
+					primary_culture = french
+					primary_culture = breton
+					primary_culture = occitan
+					primary_culture = picard
+					primary_culture = anglois
+					primary_culture = provencal
+					primary_culture = croat
+					primary_culture = serb
+					primary_culture = bulgarian
+					primary_culture = slovene
+					primary_culture = bosniak
+					primary_culture = slavonian
+					primary_culture = albanian
+					primary_culture = romanian
+					primary_culture = hungarian
+					primary_culture = polish
+					primary_culture = western_slavic
+					primary_culture = ruthenian
+					primary_culture = czech
+					primary_culture = slovak
+					primary_culture = russian
+					primary_culture = byelorussian
+					primary_culture = ukrainian
+					primary_culture = lithuanian
+					primary_culture = latvian
+					primary_culture = estonian
+					primary_culture = turkish
+					primary_culture = persian
+					primary_culture = boer
+					primary_culture = plantagenian
+					primary_culture = amazonian
+					primary_culture = septiman
+					primary_culture = lotharian
+					primary_culture = athesian
+					primary_culture = guianan
+					primary_culture = vinlander
+					primary_culture = ayitian
+					primary_culture = livlandian
+					primary_culture = beornian
+					primary_culture = yankee
+					primary_culture = dixie
+					primary_culture = texan
+					primary_culture = australian
+					primary_culture = anglo_canadian
+					primary_culture = french_canadian
+					primary_culture = alaskan
+					primary_culture = mexican
+					primary_culture = central_american
+					primary_culture = caribeno
+					primary_culture = north_andean
+					primary_culture = south_andean
+					primary_culture = platinean
+					primary_culture = brazilian
+					primary_culture = lusitanian
+					primary_culture = granadan
+				}
+				prestige = 25
+				rank = 16
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.8
+			year = 1905
+		}
+		modifier = {
+			factor = 0.8
+			year = 1906
+		}
+		modifier = {
+			factor = 0.9
+			rank = 4
+		}
+		modifier = {
+			factor = 0.9
+			rank = 8
+		}
+	}
+
+	title = "EVTNAME90820309"
+	desc = "EVTDESC90820309"
+	picture = "fifa"
+	
+
+	option = {
+		name = "EVTOPTA90820309" # Join FIFA
+		ai_chance = { factor = 99 }
+		money = -10000
+		prestige = 20
+		set_country_flag = FIFAMember
+		set_global_flag = FIFA_founded
+	}
+	option = {
+		name = "EVTOPTB90820309" # Reject invite
+		ai_chance = { factor = 1 }
+		prestige = -10
+		set_country_flag = NoFIFAMember
+	}
+}
+
+#Join the International Federation of Association Football (FIFA)
+country_event = {
+
+	id = 90820310
+
+	trigger = {
+		has_global_flag = FIFA_founded
+		not = { 
+			or = {
+				has_country_flag = FIFAMember 
+				has_country_flag = NoFIFAMember
+				badboy = 0.8
+			}
+		}
+		year = 1904
+		money = 5000
+		war = no # Nation can not be at war at the time of invite
+		or = { 
+			is_greater_power = yes # Nation is a great power
+			and = {
+				rank = 16 # Nation is a secondary power
+				prestige = 600 # Non-Euro/non GP need to be high prestige to get invite in this era
+			}
+			and = {
+				capital_scope = { continent = europe } # European nation with > 25 prestige
+				prestige = 25
+			}
+			and = {
+				OR = { 
+					primary_culture = greek
+					primary_culture = north_german
+					primary_culture = south_german
+					primary_culture = rheinish
+					primary_culture = dutch
+					primary_culture = flemish
+					primary_culture = wallonian
+					primary_culture = burgundian
+					primary_culture = swiss
+					primary_culture = swedish
+					primary_culture = danish
+					primary_culture = norwegian
+					primary_culture = icelandic
+					primary_culture = finnish
+					primary_culture = scandinavian
+					primary_culture = british
+					primary_culture = irish
+					primary_culture = scottish
+					primary_culture = welsh
+					primary_culture = north_italian
+					primary_culture = south_italian
+					primary_culture = maltese
+					primary_culture = venetian
+					primary_culture = catalan
+					primary_culture = basque
+					primary_culture = spanish
+					primary_culture = portuguese
+					primary_culture = castilian
+					primary_culture = french
+					primary_culture = breton
+					primary_culture = occitan
+					primary_culture = picard
+					primary_culture = anglois
+					primary_culture = provencal
+					primary_culture = croat
+					primary_culture = serb
+					primary_culture = bulgarian
+					primary_culture = slovene
+					primary_culture = bosniak
+					primary_culture = slavonian
+					primary_culture = albanian
+					primary_culture = romanian
+					primary_culture = hungarian
+					primary_culture = polish
+					primary_culture = western_slavic
+					primary_culture = ruthenian
+					primary_culture = czech
+					primary_culture = slovak
+					primary_culture = russian
+					primary_culture = byelorussian
+					primary_culture = ukrainian
+					primary_culture = lithuanian
+					primary_culture = latvian
+					primary_culture = estonian
+					primary_culture = turkish
+					primary_culture = persian
+					primary_culture = boer
+					primary_culture = plantagenian
+					primary_culture = amazonian
+					primary_culture = septiman
+					primary_culture = lotharian
+					primary_culture = athesian
+					primary_culture = guianan
+					primary_culture = vinlander
+					primary_culture = ayitian
+					primary_culture = livlandian
+					primary_culture = beornian
+					primary_culture = yankee
+					primary_culture = dixie
+					primary_culture = texan
+					primary_culture = australian
+					primary_culture = anglo_canadian
+					primary_culture = french_canadian
+					primary_culture = alaskan
+					primary_culture = mexican
+					primary_culture = central_american
+					primary_culture = caribeno
+					primary_culture = north_andean
+					primary_culture = south_andean
+					primary_culture = platinean
+					primary_culture = brazilian
+					primary_culture = lusitanian
+					primary_culture = granadan
+				}
+				prestige = 25
+				rank = 16
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.8
+			year = 1905
+		}
+		modifier = {
+			factor = 0.8
+			year = 1906
+		}
+		modifier = {
+			factor = 0.9
+			rank = 4
+		}
+		modifier = {
+			factor = 0.9
+			rank = 8
+		}
+	}
+
+	title = "EVTNAME90820101"
+	desc = "EVTDESC90820101"
+	picture = "fifa"
+	
+
+	option = {
+		name = "EVTOPTA90820101" # Join FIFA
+		ai_chance = { factor = 99 }
+		money = -5000
+		prestige = 10
+		set_country_flag = FIFAMember
+	}
+	option = {
+		name = "EVTOPTB90820101" # Reject invite
+		ai_chance = { factor = 1 }
+		prestige = -10
+		set_country_flag = NoFIFAMember
+	}
+}
+
+# 1930 World Cup - Choose host
+country_event = {
+
+	id = 90820311
+
+	trigger = {
+		has_country_flag = FIFAMember
+		year = 1927 # -3
+		not = { year = 1930 } # +0
+		not = { has_global_flag = I_World_Cup_host_chosen }
+		not = { has_country_flag = I_World_Cup_host_declined }
+		not = { has_country_modifier = bad_host }
+		war = no # Nation can not be at war at the time of invite
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1928 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1929 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+	}
+
+	title = "EVTNAME90820140"
+	desc = "EVTDESC90820140"
+	picture = "world_cup"
+
+	option = {
+		name = "EVTOPTA90820140" # Send invites to other FIFA members
+		money = -30000
+		set_global_flag = I_World_Cup_host_chosen
+		set_country_flag = I_World_Cup_host
+		set_country_flag = Attend_I_World_Cup
+		set_country_flag = Current_World_Cup_host
+		any_country = { 
+			limit = {
+				has_country_flag = FIFAMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820140" # Not interested
+		prestige = -5
+		set_country_flag = I_World_Cup_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = FIFAMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1930 World Cup - Participate Yer or No
+country_event = {
+
+	id = 90820312 # Attend 1930 World Cup 
+
+	trigger = {
+		has_global_flag = I_World_Cup_host_chosen
+		has_country_flag = FIFAMember
+		not = {
+			has_country_flag = Attend_I_World_Cup
+			has_country_flag = No_Attend_I_World_Cup
+			has_global_flag = I_World_Cup_Opened
+		}
+		year = 1928 # -2
+		not = { year = 1931 } # +1
+		war = no # Nation can not be at war at the time of invite
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1929 # -1
+		}
+	}
+
+	title = "EVTNAME90820141"
+	desc = "EVTDESC90820141"
+	picture = "world_cup"
+
+	option = {
+		name = "EVTOPTA90820141" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_I_World_Cup
+		any_country = { 
+			limit = {
+				has_country_flag = FIFAMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820141" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_I_World_Cup
+		any_country = { 
+			limit = {
+				has_country_flag = FIFAMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1930 World Cup - Host nation holds games
+country_event = {
+
+	id = 90820313 # 1930 cup is held 
+
+	trigger = {
+		has_country_flag = I_World_Cup_host
+		has_country_flag = Attend_I_World_Cup
+		not = { has_global_flag = I_World_Cup_Opened }
+		year = 1930 # +0
+		not = { year = 1932 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820142"
+	desc = "EVTDESC90820142"
+
+	option = {
+		name = "EVTOPTA90820142" # The games are held
+		prestige = 40
+		consciousness = 1
+		set_global_flag = I_World_Cup_Opened
+		set_country_flag = Recent_World_Cup_host
+		clr_country_flag = Current_World_Cup_host
+		random_country = {
+			limit = { has_country_flag = Attend_I_World_Cup }
+			country_event = 90820314
+		}
+	}
+}
+
+# 1930 World Cup - Semi-fanalist 1
+country_event = {
+
+	id = 90820314
+
+	is_triggered_only = yes
+
+	title = "EVTNAME90820142"
+	desc = "EVTDESC90820142"
+	picture = "world_cup"
+
+	option = {
+		name = "EVTOPTA90820142" # The games are held
+		set_country_flag = world_cup_finalist_one
+		random_country = {
+			limit = { 
+				has_country_flag = Attend_I_World_Cup 
+				not = { tag = this }
+			}
+			random_list = {
+				50 = { country_event = 90820315 }
+				50 = { country_event = 90820316 }
+			}
+		}
+	}
+}
+
+# 1930 World Cup - Semi-fanalist 1 wins
+country_event = {
+
+	id = 90820315
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME90820142"
+	desc = "EVTDESC90820142"
+
+	option = {
+		name = "EVTOPTA90820142"
+		prestige = 40
+		any_country = {
+			limit = { has_country_flag = world_cup_finalist_one }
+			prestige = 15
+			clr_country_flag = world_cup_finalist_one
+		}
+	}
+}
+
+# 1930 World Cup - Semi-fanalist 2 wins
+country_event = {
+
+	id = 90820316
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME90820142"
+	desc = "EVTDESC90820142"
+
+	option = {
+		name = "EVTOPTA90820142"
+		prestige = 15
+		any_country = {
+			limit = { has_country_flag = world_cup_finalist_one }
+			prestige = 40
+			clr_country_flag = world_cup_finalist_one
+		}
+	}
+}
+
+# 1934 World Cup - Choose host
+country_event = {
+
+	id = 90820317
+
+	trigger = {
+		has_country_flag = FIFAMember
+		year = 1931 # -3
+		not = { year = 1934 } # +0
+		not = { has_global_flag = II_World_Cup_host_chosen }
+		not = { has_country_flag = II_World_Cup_host_declined }
+		not = { has_country_flag = I_World_Cup_host }
+		not = { has_country_modifier = bad_host }
+		war = no # Nation can not be at war at the time of invite
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1932 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1933 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+	}
+
+	title = "EVTNAME90820140"
+	desc = "EVTDESC90820140"
+	picture = "world_cup"
+
+	option = {
+		name = "EVTOPTA90820140" # Send invites to other FIFA members
+		money = -30000
+		set_global_flag = II_World_Cup_host_chosen
+		set_country_flag = II_World_Cup_host
+		set_country_flag = Attend_II_World_Cup
+		set_country_flag = Current_World_Cup_host
+		any_country = { 
+			limit = {
+				has_country_flag = FIFAMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820140" # Not interested
+		prestige = -5
+		set_country_flag = II_World_Cup_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = FIFAMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1934 World Cup - Participate Yer or No
+country_event = {
+
+	id = 90820318 # Attend 1930 World Cup 
+
+	trigger = {
+		has_global_flag = II_World_Cup_host_chosen
+		has_country_flag = FIFAMember
+		not = {
+			has_country_flag = Attend_II_World_Cup
+			has_country_flag = No_Attend_II_World_Cup
+			has_global_flag = II_World_Cup_Opened
+		}
+		year = 1928 # -2
+		not = { year = 1931 } # +1
+		war = no # Nation can not be at war at the time of invite
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1929 # -1
+		}
+	}
+
+	title = "EVTNAME90820141"
+	desc = "EVTDESC90820141"
+	picture = "world_cup"
+
+	option = {
+		name = "EVTOPTA90820141" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_II_World_Cup
+		any_country = { 
+			limit = {
+				has_country_flag = FIFAMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820141" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_II_World_Cup
+		any_country = { 
+			limit = {
+				has_country_flag = FIFAMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1934 World Cup - Host nation holds games
+country_event = {
+
+	id = 90820319 # 1934 cup is held 
+
+	trigger = {
+		has_country_flag = II_World_Cup_host
+		has_country_flag = Attend_II_World_Cup
+		not = { has_global_flag = II_World_Cup_Opened }
+		year = 1934 # +0
+		not = { year = 1936 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820142"
+	desc = "EVTDESC90820142"
+
+	option = {
+		name = "EVTOPTA90820142" # The games are held
+		prestige = 40
+		consciousness = 1
+		set_global_flag = II_World_Cup_Opened
+		set_country_flag = Recent_World_Cup_host
+		clr_country_flag = Current_World_Cup_host
+		random_country = {
+			limit = { has_country_flag = Attend_II_World_Cup }
+			country_event = 90820320
+		}
+	}
+}
+
+# 1934 World Cup - Semi-fanalist 1
+country_event = {
+
+	id = 90820320
+
+	is_triggered_only = yes
+
+	title = "EVTNAME90820142"
+	desc = "EVTDESC90820142"
+	picture = "world_cup"
+
+	option = {
+		name = "EVTOPTA90820142" # The games are held
+		set_country_flag = world_cup_finalist_one
+		random_country = {
+			limit = { 
+				has_country_flag = Attend_II_World_Cup 
+				not = { tag = this }
+			}
+			random_list = {
+				50 = { country_event = 90820321 }
+				50 = { country_event = 90820322 }
+			}
+		}
+	}
+}
+
+# 1934 World Cup - Semi-fanalist 1 wins
+country_event = {
+
+	id = 90820321
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME90820142"
+	desc = "EVTDESC90820142"
+
+	option = {
+		name = "EVTOPTA90820142"
+		prestige = 40
+		any_country = {
+			limit = { has_country_flag = world_cup_finalist_one }
+			prestige = 15
+			clr_country_flag = world_cup_finalist_one
+		}
+	}
+}
+
+# 1934 World Cup - Semi-fanalist 2 wins
+country_event = {
+
+	id = 90820322
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "EVTNAME90820142"
+	desc = "EVTDESC90820142"
+
+	option = {
+		name = "EVTOPTA90820142"
+		prestige = 15
+		any_country = {
+			limit = { has_country_flag = world_cup_finalist_one }
+			prestige = 40
+			clr_country_flag = world_cup_finalist_one
+		}
+	}
+}
+
+# World Cup Stadium - lavish
+country_event = {
+
+	id = 90820323
+
+	trigger = {
+		has_country_flag = FIFAMember
+		has_country_flag = Current_World_Cup_host_host
+		has_country_flag = lavish_world_cup
+		any_owned = {
+			limit = {
+				is_capital = yes
+			}
+			not = {
+				has_province_flag = world_cup_stadium
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		days = 5
+	}
+
+	title = "EVTNAME90820323"
+	desc = "EVTDESC90820323"
+	picture = "world_cup_stadium"
+
+	option = {
+		name = "EVTOPTA90820323"
+		capital_scope = { 
+			set_province_flag = world_cup_stadium
+			life_rating = 1
+		}
+	}
+}

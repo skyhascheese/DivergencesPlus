@@ -1,0 +1,708 @@
+#############################
+#       The Worlds Fair     #
+#############################
+
+#Organise a World's Fair
+country_event = {
+
+	id = 90820501
+
+	trigger = {
+		money = 20000
+		year = 1850
+		industrial_score = 100
+		high_pressure_steam_engine = 1
+		or = {
+			is_greater_power = yes	
+			is_secondary_power = yes
+		}
+		war = no # Nation can not be at war at the time of invite
+		not = { 
+			has_country_modifier = worlds_fair_cooloff
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+		
+		modifier = {
+			factor = 0.5
+			has_country_flag = previous_worlds_fair_winner
+		}
+	}
+
+	title = "EVTNAME90820501"
+	desc = "EVTDESC90820501"
+	picture = "worlds_fair"
+	
+
+	option = {
+		name = "EVTOPTA90820501"
+		money = -20000
+		prestige = 20
+		set_country_flag = worlds_fair_host
+		set_country_flag = worlds_fair_attendee
+		set_global_flag = worlds_fair_host_chosen
+		any_country = {
+			add_country_modifier = {
+				name = worlds_fair_cooloff
+				duration = 1827
+			}
+		}
+		any_country = {
+			clr_country_flag = previous_worlds_fair_winner 
+		}
+		any_country = {
+			limit = {
+				industrial_score = 25
+				not = { has_country_flag = worlds_fair_no_attend }
+				not = { tag = this }
+			}
+			country_event = 90820502
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 20000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820501"
+		prestige = -5
+		add_country_modifier = {
+			name = worlds_fair_cooloff
+			duration = 1827
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+#Attend the World's Fair
+country_event = {
+
+	id = 90820502
+
+	is_triggered_only = yes
+
+	title = "EVTNAME90820502"
+	desc = "EVTDESC90820502"
+	picture = "worlds_fair"
+	
+	option = {
+		name = "EVTOPTA90820502"
+		prestige = 5
+		set_country_flag = worlds_fair_attendee
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				relation = { 
+					value = 50
+					who = FROM
+				}
+			}
+			modifier = {
+				factor = 0.1
+				industrial_score = 50
+			}
+			modifier = {
+				factor = 0.1
+				industrial_score = 100
+			}
+			modifier = {
+				factor = 0.1
+				industrial_score = 150
+			}
+			
+			modifier = {
+				factor = 0.1
+				industrial_score = 200
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTA90820502"
+		prestige = -5
+		set_country_flag = worlds_fair_no_attend
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+#Our Pavilion 
+country_event = {
+
+	id = 90820503
+
+	trigger = {
+		has_country_flag = worlds_fair_attendee
+	}
+ 
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	title = "EVTNAME90820503"
+	desc = "EVTDESC90820503"
+	picture = "worlds_fair_construction"
+	
+	option = {
+		name = "EVTOPTA90820503" # Lavish spending
+		money = -40000
+		set_country_flag = lavish_pavilion
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 0.5
+				NOT = { money = 40000 }
+			}
+			modifier = {
+				factor = 0.5
+				industrial_score = 200
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820503" # Sensible spending
+		money = -20000
+		set_country_flag = sensible_pavilion
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 0.2
+				NOT = { money = 20000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC90820503" # Minimal spending
+		money = -10000
+		set_country_flag = minimal_pavilion
+		ai_chance = {
+			factor = 33
+		}
+	}
+}
+
+# Planning the Worlds Fair
+country_event = {
+
+	id = 90820504
+
+	trigger = {
+		has_country_flag = worlds_fair_host
+		not = {
+			or = {
+				has_country_flag = lavish_worlds_fair
+				has_country_flag = sensible_worlds_fair
+				has_country_flag = minimal_worlds_fair
+			}
+		}
+		not = { has_global_flag = worlds_fair_opened }
+	}
+ 
+	mean_time_to_happen =  {
+		months = 2
+	}
+
+	title = "EVTNAME90820504"
+	desc = "EVTDESC90820504"
+	picture = "worlds_fair_construction"
+
+	option = {
+		name = "EVTOPTA90820504" # Lavish spending
+		money = -100000
+		set_country_flag = lavish_worlds_fair
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 0.5
+				NOT = { money = 100000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820504" # Sensible spending
+		money = -50000
+		set_country_flag = sensible_worlds_fair
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 0.2
+				NOT = { money = 50000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC90820504" # Minimal spending
+		money = -10000
+		set_country_flag = minimal_worlds_fair
+		ai_chance = {
+			factor = 33
+		}
+	}
+}
+
+# Worlds Fair troubles
+country_event = {
+
+	id = 90820505
+	
+	trigger = {
+		has_country_flag = worlds_fair_host
+		or = {
+			has_country_flag = lavish_worlds_fair
+			has_country_flag = sensible_worlds_fair
+			has_country_flag = minimal_worlds_fair
+		}
+		not = { has_global_flag = worlds_fair_opened }
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = sensible_worlds_fair
+		}
+		modifier = {
+			factor = 0.3
+			has_country_flag = minimal_worlds_fair
+		}
+		modifier = {
+			factor = 0.1
+			not = { administration_spending = 0.7 }
+		}
+		modifier = {
+			factor = 0.1
+			not = { administration_spending = 0.5 }
+		}
+		modifier = {
+			factor = 0.1
+			not = { administration_spending = 0.3 }
+		}
+		modifier = {
+			factor = 0.1
+			unemployment = 0.15
+		}
+		modifier = {
+			factor = 0.1
+			has_country_modifier = bad_host
+		}
+	}
+
+	title = "EVTNAME90820505"
+	desc = "EVTDESC90820505"
+	picture = "worlds_fair_construction"
+
+	option = {
+		name = "EVTOPTA90820505"
+		money = -20000
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_attendee
+			}
+			relation = {
+				who = THIS
+				value = -10
+			}
+		}
+	}
+}
+
+# Worlds Fair opens
+country_event = {
+
+	id = 90820506
+	
+	trigger = {
+		has_country_flag = worlds_fair_host
+		or = {
+			has_country_flag = lavish_worlds_fair
+			has_country_flag = sensible_worlds_fair
+			has_country_flag = minimal_worlds_fair
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "EVTNAME90820506"
+	desc = "EVTDESC90820506"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA90820506"
+		prestige = 20
+		set_global_flag = worlds_fair_opened
+		set_country_flag = recent_worlds_fair_host
+	}
+}
+
+# Outstanding performance at the Worlds Fair
+country_event = {
+
+	id = 90820507
+	
+	trigger = {
+		has_country_flag = worlds_fair_host
+		has_global_flag = worlds_fair_opened
+	}
+ 
+	mean_time_to_happen =  {
+		months = 3
+
+		modifier = {
+			factor = 0.1
+			industrial_score = 50
+		}
+		modifier = {
+			factor = 0.1
+			industrial_score = 100
+		}
+		modifier = {
+			factor = 0.1
+			industrial_score = 200
+		}
+		modifier = {
+			factor = 0.2
+			industrial_score = 400
+		}
+		modifier = {
+			factor = 0.3
+			industrial_score = 800
+		}
+		modifier = {
+			factor = 0.4
+			industrial_score = 1200
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = lavish_pavilion
+		}
+		modifier = {
+			factor = 0.1
+			has_country_flag = sensible_pavilion
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = lavish_worlds_fair
+		}
+		modifier = {
+			factor = 0.1
+			has_country_flag = sensible_worlds_fair
+		}
+	}
+
+	title = "EVTNAME90820507"
+	desc = "EVTDESC90820507"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA90820507"
+		prestige = 30
+		set_global_flag = recent_worlds_fair_winner_chosen
+		set_country_flag = recent_worlds_fair_winner
+		add_country_modifier = {
+			name = worlds_fair_winner
+			duration = 1825
+		}
+		any_country = {
+			limit = {
+				has_country_flag = worlds_fair_attendee
+				not = { has_country_flag = recent_worlds_fair_winner }
+			}
+			country_event = 90820511
+		}
+	}
+}
+
+# Worlds Fair verdict - Good
+country_event = {
+
+	id = 90820508 
+
+	trigger = {
+		has_country_flag = recent_worlds_fair_host
+		has_global_flag = worlds_fair_opened
+		has_global_flag = worlds_fair_winner_chosen
+	}
+	
+	major = yes
+ 
+	mean_time_to_happen =  {
+		months = 3
+		
+		modifier = {
+			factor = 2
+			has_country_flag = lavish_worlds_fair
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = sensible_worlds_fair
+		}
+	}
+
+	title = "EVTNAME90820508"
+	desc = "EVTDESC90820508"
+
+	option = {
+		name = "EVTOPTA90820508"
+		prestige = 40
+		clr_country_flag = worlds_fair_host
+		clr_country_flag = worlds_fair_attendee
+		clr_country_flag = recent_worlds_fair_host
+		clr_country_flag = lavish_worlds_fair
+		clr_country_flag = sensible_worlds_fair
+		clr_country_flag = minimal_worlds_fair
+		clr_global_flag = worlds_fair_host_chosen
+		clr_global_flag = worlds_fair_opened
+		clr_global_flag = worlds_fair_winner_chosen
+		add_country_modifier = {
+			name = good_host
+			duration = 1825
+		}
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_attendee
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_attendee
+			}
+			clr_country_flag = worlds_fair_attendee
+			clr_country_flag = lavish_pavilion
+			clr_country_flag = sensible_pavilion
+			clr_country_flag = minimal_pavilion
+			clr_country_flag = worlds_fair_winner
+			clr_country_flag = worlds_fair_no_attend
+		}
+	}
+}
+
+# Worlds Fair verdict - Mediocre
+country_event = {
+
+	id = 90820509 
+
+	trigger = {
+		has_country_flag = recent_worlds_fair_host
+		has_global_flag = worlds_fair_opened
+		has_global_flag = worlds_fair_winner
+	}
+	
+	major = yes
+ 
+	mean_time_to_happen =  {
+		months = 3
+		
+		modifier = {
+			factor = 2
+			has_country_flag = sensible_worlds_fair
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = minimal_worlds_fair
+		}
+	}
+
+	title = "EVTNAME90820509"
+	desc = "EVTDESC90820509"
+
+	option = {
+		name = "EVTOPTA90820509"
+		prestige = 10
+		clr_country_flag = worlds_fair_host
+		clr_country_flag = worlds_fair_attendee
+		clr_country_flag = recent_worlds_fair_host
+		clr_country_flag = lavish_worlds_fair
+		clr_country_flag = sensible_worlds_fair
+		clr_country_flag = minimal_worlds_fair
+		clr_global_flag = worlds_fair_host_chosen
+		clr_global_flag = worlds_fair_opened
+		clr_global_flag = worlds_fair_winner_chosen
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_attendee
+			}
+			relation = {
+				who = THIS
+				value = 10
+			}
+		}
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_attendee
+			}
+			clr_country_flag = worlds_fair_attendee
+			clr_country_flag = lavish_pavilion
+			clr_country_flag = sensible_pavilion
+			clr_country_flag = minimal_pavilion
+			clr_country_flag = worlds_fair_winner
+			clr_country_flag = worlds_fair_no_attend
+		}
+	}
+}
+
+# Olympic verdict - Terrible
+country_event = {
+
+	id = 90820510 
+
+	trigger = {
+		has_country_flag = recent_worlds_fair_host
+		has_global_flag = worlds_fair_opened
+		has_global_flag = worlds_fair_winner_chosen
+	}
+	
+	major = yes
+ 
+	mean_time_to_happen =  {
+		months = 3
+		
+		modifier = {
+			factor = 2
+			has_country_flag = minimal_worlds_fair
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = sensible_worlds_fair
+		}
+	}
+
+	title = "EVTNAME90820510"
+	desc = "EVTDESC90820510"
+
+	option = {
+		name = "EVTOPTA90820510"
+		prestige = -20
+		clr_country_flag = worlds_fair_host
+		clr_country_flag = worlds_fair_attendee
+		clr_country_flag = recent_worlds_fair_host
+		clr_country_flag = lavish_worlds_fair
+		clr_country_flag = sensible_worlds_fair
+		clr_country_flag = minimal_worlds_fair
+		clr_global_flag = worlds_fair_host_chosen
+		clr_global_flag = worlds_fair_opened
+		clr_global_flag = worlds_fair_winner
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_attendee
+			}
+			relation = {
+				who = THIS
+				value = -20
+			}
+		}
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_attendee
+			}
+			clr_country_flag = worlds_fair_attendee
+			clr_country_flag = lavish_pavilion
+			clr_country_flag = sensible_pavilion
+			clr_country_flag = minimal_pavilion
+			clr_country_flag = worlds_fair_winner
+			clr_country_flag = worlds_fair_no_attend
+		}
+	}
+}
+
+# Outshone at the World's Fair
+country_event = {
+
+	id = 90820511
+	
+	is_triggered_only = yes
+
+	title = "EVTNAME90820511"
+	desc = "EVTDESC90820511"
+
+	option = {
+		name = "EVTOPTA90820511"
+		prestige = -10
+	}
+}
+
+# Expo grounds - lavish
+country_event = {
+
+	id = 90820512
+
+	trigger = {
+		has_country_flag = worlds_fair_host
+		has_country_flag = lavish_worlds_fair
+		any_owned = {
+			limit = {
+				is_capital = yes
+			}
+			not = {
+				has_province_flag = expo_grounds 
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		days = 5
+	}
+
+	title = "EVTNAME90820512"
+	desc = "EVTDESC90820512"
+	picture = "expo_grounds"
+
+	option = {
+		name = "EVTOPTA90820512"
+		capital_scope = { 
+			set_province_flag = expo_grounds
+			life_rating = 2
+		}
+	}
+}
+
+# Expo grounds - sensible
+country_event = {
+
+	id = 90820513
+
+	trigger = {
+		has_country_flag = worlds_fair_host
+		has_country_flag = sensible_worlds_fair
+		any_owned = {
+			limit = {
+				is_capital = yes
+			}
+			not = {
+				has_province_flag = expo_grounds 
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		days = 5
+	}
+
+	title = "EVTNAME90820513"
+	desc = "EVTDESC90820513"
+	picture = "expo_grounds"
+
+	option = {
+		name = "EVTOPTA90820513"
+		capital_scope = { 
+			set_province_flag = expo_grounds
+			life_rating = 1
+		}
+	}
+}

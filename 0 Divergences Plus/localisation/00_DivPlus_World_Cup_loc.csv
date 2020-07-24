@@ -1,0 +1,51 @@
+EVTNAME90820301;Form a National Football Team;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820301;The sport known as 'football' has gained a lot of popularity in $COUNTRY$, and there have been calls for us to create the $COUNTRY_ADJ$ National Football Team.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820301;A great idea!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820301;Should we be spending national resources on people kicking around a ball?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820302;The First National Team in the World;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820302;The $COUNTRY_ADJ$ National Football Team has become the first national team of its kind in the world, and the model for all others.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820302;Great news!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820303;The Second National Team in the World;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820303;The $COUNTRY_ADJ$ National Football Team has become only the second national team of its kind in the world, and the model for many others.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820303;Great news!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820304;Challenge to International Match;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820304;The $COUNTRY_ADJ$ National Football Team is no longer the only national team in the world. We should organise the first international football match!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820304;An excellent idea!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820305;Challenge to International Match;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820305;$FROMCOUNTRY$ is challenging the $COUNTRY_ADJ$ National Football Team to the first international football match. Should we accept the challenge?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820305;We will triumph!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820305;We respectfully decline.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820306;The First International Football Match;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820306;Huge crowds have gathered in $CAPITAL$, capital of $COUNTRY$, to watch the world's first international match of Association Football. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $COUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $COUNTRY$ 3 - $FROMCOUNTRY$ 1.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820306;Hooray!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820307;The First International Football Match;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820307;Huge crowds have gathered in $CAPITAL$, capital of $COUNTRY$, to watch the world's first international match of Association Football. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $FROMCOUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $COUNTRY$ 1 - $FROMCOUNTRY$ 3.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820307;Hooray!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820308;Challenge Refused;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820308;$FROMCOUNTRY$ has refused our challenge for an international football match.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820308;Cluck cluck cluck!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820309;Establish FIFA;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820309;Association Football has become an extremely popular sport not only in $COUNTRY$, but also the world. The first international football match was a huge success with fans, and there is a big demand for an international body to organise a world cup. The proposed name of that organisation is the International Associated Football Federation, likely to be better-known by its French acronym, FIFA.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820309;Let us establish FIFA!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820309;Football is just a trend, it will fade into obscurity within the year.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820310;Join FIFA;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820310;Association Football has become an extremely popular sport not only in $COUNTRY$, but also the world. The first international football match was a huge success with fans, and it created a big demand for an international body to organise a world cup. Thus was born the International Associated Football Federation, be better-known by its French acronym, FIFA. Should we join, for a chance at glory?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820310;We will join!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820310;Football is just a trend, it will fade into obscurity within the year.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820311;Shall we host the first World Cup?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820311;The International Associated Football Federation has approached us, proposing we organise the first World Cup. Should we accept?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820311;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820311;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820312;Attend the first World Cup?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820312;With the announcement of a host nation for the first ever World Cup, the International Associated Football Federation has extended participation invitations to its members. Shall we enter the playoffs?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820312;May our team be blessed and highly favoured.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820312;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820313;The first World Cup;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820313;National football teams from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the first ever football World Cup, in order to compete for the highest honour in Association Football.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820313;The World Cup is officially open!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820114;World Cup Semifinalst;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820114;The $COUNTRY_ADJ$ National Football Team has done exceptionally well at the World Cup, securing a place at the final match.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820114;May the odds be ever in our favour!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820115;World Cup Final;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820115;The $COUNTRY_ADJ$ National Football Team has done exceptionally well at the World Cup, securing a place at the final match.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820115;May the odds be ever in our favour!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

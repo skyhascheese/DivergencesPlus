@@ -1,0 +1,3638 @@
+#############################
+#       Olympic Games       #
+#############################
+
+#Formation of the Internatonal Olympic Committee
+country_event = {
+
+	id = 90820101
+	news = yes
+	news_title = "EVTNAME23400_NEWS_TITLE"
+	news_desc_long = "EVTDESC90820101_NEWS_LONG"
+	news_desc_medium = "EVTDESC90820101_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC90820101_NEWS_SHORT"
+
+	trigger = {
+		not = { 
+			or = {
+				has_country_flag = IOCMember 
+				has_country_flag = NoIOCMember
+				badboy = 0.8
+				has_country_modifier = bad_host
+			}
+		}
+		year = 1893
+		money = 5000
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+		or = { 
+			is_greater_power = yes # Nation is a great power
+			and = {
+				rank = 16 # Nation is a secondary power
+				prestige = 600 # Non-Euro/non GP need to be high prestige to get invite in this era
+			}
+			and = {
+				capital_scope = { continent = europe } # European nation with > 25 prestige
+				prestige = 25
+			}
+			primary_culture = greek # All Greek nations invited
+			and = {
+				OR = { 
+					primary_culture = north_german
+					primary_culture = south_german
+					primary_culture = rheinish
+					primary_culture = dutch
+					primary_culture = flemish
+					primary_culture = wallonian
+					primary_culture = burgundian
+					primary_culture = swiss
+					primary_culture = swedish
+					primary_culture = danish
+					primary_culture = norwegian
+					primary_culture = icelandic
+					primary_culture = finnish
+					primary_culture = scandinavian
+					primary_culture = british
+					primary_culture = irish
+					primary_culture = scottish
+					primary_culture = welsh
+					primary_culture = north_italian
+					primary_culture = south_italian
+					primary_culture = maltese
+					primary_culture = venetian
+					primary_culture = catalan
+					primary_culture = basque
+					primary_culture = spanish
+					primary_culture = portuguese
+					primary_culture = castilian
+					primary_culture = french
+					primary_culture = breton
+					primary_culture = occitan
+					primary_culture = picard
+					primary_culture = anglois
+					primary_culture = provencal
+					primary_culture = croat
+					primary_culture = serb
+					primary_culture = bulgarian
+					primary_culture = slovene
+					primary_culture = bosniak
+					primary_culture = slavonian
+					primary_culture = albanian
+					primary_culture = romanian
+					primary_culture = hungarian
+					primary_culture = polish
+					primary_culture = western_slavic
+					primary_culture = ruthenian
+					primary_culture = czech
+					primary_culture = slovak
+					primary_culture = russian
+					primary_culture = byelorussian
+					primary_culture = ukrainian
+					primary_culture = lithuanian
+					primary_culture = latvian
+					primary_culture = estonian
+					primary_culture = turkish
+					primary_culture = persian
+					primary_culture = boer
+					primary_culture = plantagenian
+					primary_culture = amazonian
+					primary_culture = septiman
+					primary_culture = lotharian
+					primary_culture = athesian
+					primary_culture = guianan
+					primary_culture = vinlander
+					primary_culture = ayitian
+					primary_culture = livlandian
+					primary_culture = beornian
+					primary_culture = yankee
+					primary_culture = dixie
+					primary_culture = texan
+					primary_culture = australian
+					primary_culture = anglo_canadian
+					primary_culture = french_canadian
+					primary_culture = alaskan
+					primary_culture = mexican
+					primary_culture = central_american
+					primary_culture = caribeno
+					primary_culture = north_andean
+					primary_culture = south_andean
+					primary_culture = platinean
+					primary_culture = brazilian
+					primary_culture = lusitanian
+					primary_culture = granadan
+				}
+				prestige = 25
+				rank = 16
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.8
+			year = 1894
+		}
+		modifier = {
+			factor = 0.8
+			year = 1895
+		}
+		modifier = {
+			factor = 0.9
+			rank = 4
+		}
+		modifier = {
+			factor = 0.9
+			rank = 8
+		}
+	}
+
+	title = "EVTNAME90820101"
+	desc = "EVTDESC90820101"
+	picture = "Olympics"
+	
+
+	option = {
+		name = "EVTOPTA90820101" # Join the IOC
+		ai_chance = { factor = 99 }
+		money = -5000
+		prestige = 20
+		set_country_flag = IOCMember
+	}
+	option = {
+		name = "EVTOPTB90820101" # Reject invite
+		ai_chance = { factor = 1 }
+		prestige = -5
+		set_country_flag = NoIOCMember
+	}
+}
+
+# 1st Olympiad - Greece gets first crack to host if it wants
+country_event = {
+
+	id = 90820102
+
+	trigger = {
+		tag = GRE # Greece hosted 1896 Olympics
+		has_country_flag = IOCMember
+		not = {
+			or = {
+				has_country_flag = I_Olympiad_host
+				has_country_flag = I_Olympiad_host_declined
+			}
+		}
+		year = 1895
+		not = { year = 1898 }
+		not = { has_global_flag = I_Olympiad_host_chosen }
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1896
+		}
+		modifier = {
+			factor = 0.95
+			year = 1897
+		}
+	}
+
+	title = "EVTNAME90820102"
+	desc = "EVTDESC90820102"
+	picture = "Olympics"
+
+	option = {
+		name = "EVTOPTA90820102" # Send invites to other IOC members
+		money = -10000
+		set_global_flag = I_Olympiad_host_chosen
+		set_country_flag = I_Olympiad_host
+		set_country_flag = Attend_I_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820102" # Not interested
+		prestige = -5
+		set_global_flag = GRE_declined_I_Olympiad
+		set_country_flag = I_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# 1st Olympiad - Other Greek state gets asked to host
+country_event = {
+
+	id = 90820103
+	
+	trigger = {
+		has_country_flag = IOCMember
+		primary_culture = greek
+		not = {
+			or = {
+				has_country_flag = I_Olympiad_host
+				has_country_flag = Attend_I_Olympiad
+				has_country_flag = I_Olympiad_host_declined
+				has_country_flag = macedon_serb
+				has_country_modifier = bad_host
+			}
+		}
+		or = {
+			has_global_flag = GRE_declined_I_Olympiad
+			not = { exists = GRE }
+		}
+		year = 1895
+		not = { year = 1898 }
+		not = { tag = GRE }
+		not = { has_global_flag = I_Olympiad_host_chosen }
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1896
+		}
+		modifier = {
+			factor = 0.95
+			year = 1897
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+	}
+
+	title = "EVTNAME90820103"
+	desc = "EVTDESC90820103"
+	picture = "Olympics"
+
+	option = {
+		name = "EVTOPTA90820103" # Send invites to other IOC members
+		money = -10000
+		set_global_flag = I_Olympiad_host_chosen
+		set_country_flag = I_Olympiad_host
+		set_country_flag = Attend_I_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820103" # Not interested
+		prestige = -5
+		set_global_flag = GRE_declined_I_Olympiad_2
+		set_country_flag = I_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# 1st Olympiad - Other nation hosts because all Greek states refuse or none exist
+country_event = {
+
+	id = 90820104 
+
+	trigger = {
+		has_global_flag = GRE_declined_I_Olympiad
+		has_global_flag = GRE_declined_I_Olympiad_2
+		not = {
+			has_country_flag = I_Olympiad_host
+			has_country_flag = Attend_I_Olympiad
+			has_country_flag = I_Olympiad_host_declined
+			has_country_modifier = bad_host
+		}
+		has_country_flag = IOCMember
+		year = 1895
+		not = { year = 1898 }
+		not = { has_global_flag = I_Olympiad_host_chosen }
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1896
+		}
+		modifier = {
+			factor = 0.95
+			year = 1897
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+	}
+
+	title = "EVTNAME90820104"
+	desc = "EVTDESC90820104"
+	picture = "Olympics"
+
+	option = {
+		name = "EVTOPTA90820104" # Send invites to other IOC members
+		money = -10000
+		set_global_flag = I_Olympiad_host_chosen
+		set_country_flag = I_Olympiad_host
+		set_country_flag = Attend_I_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820104" # Not interested
+		prestige = -5
+		set_country_flag = I_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1st Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820105 # Attend 1896 Olympics 
+
+	trigger = {
+		has_global_flag = I_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_I_Olympiad
+			has_global_flag = I_Olympiad_Opened
+			has_country_flag = No_Attend_I_Olympiad
+		}
+		year = 1895
+		not = { year = 1898 }
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 3
+		}
+		modifier = {
+			factor = 0.95
+			month = 4
+		}
+	}
+
+	title = "EVTNAME90820105"
+	desc = "EVTDESC90820105"
+	picture = "Olympics"
+
+	option = {
+		name = "EVTOPTA90820105" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_I_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820105" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_I_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1st Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820106 # 1st games are held 
+
+	trigger = {
+		has_country_flag = I_Olympiad_host
+		has_country_flag = Attend_I_Olympiad
+		not = { has_global_flag = I_Olympiad_Opened }
+		year = 1896
+		not = { year = 1899 }
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820106"
+	desc = "EVTDESC90820106"
+
+	option = {
+		name = "EVTOPTA90820106" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = I_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1st Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820107 # Win medal at 1896 Olympics 
+
+	trigger = {
+		has_global_flag = I_Olympiad_Opened
+		has_country_flag = Attend_I_Olympiad
+		not = { has_global_flag = I_Olympiad_Winner }
+		year = 1896
+		not = { year = 1899 }
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = II_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820107"
+	desc = "EVTDESC90820107"
+
+	option = {
+		name = "EVTOPTA90820107" # Our team won medals!
+		prestige = 30
+		set_global_flag = I_Olympiad_Winner
+		set_country_flag = I_Olympiad_Winner_country
+	}
+}
+
+# 1900 Olympiad - Choose host
+country_event = {
+
+	id = 90820108
+
+	trigger = {
+		has_country_flag = IOCMember
+		year = 1897 # -3
+		not = { year = 1900 } # +0
+		not = { has_global_flag = II_Olympiad_host_chosen }
+		not = { has_country_flag = I_Olympiad_host }
+		not = { has_country_flag = II_Olympiad_host_declined }
+		not = { has_country_modifier = bad_host }
+		has_global_flag = I_Olympiad_Winner
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1898 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1899 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+		modifier = {
+			factor = 0.2
+			has_global_flag = I_Olympiad_Winner_country
+		}
+	}
+
+	title = "EVTNAME90820108"
+	desc = "EVTDESC90820108"
+	picture = "olympics_opening"
+
+	option = {
+		name = "EVTOPTA90820108" # Send invites to other IOC members
+		money = -30000
+		set_global_flag = II_Olympiad_host_chosen
+		set_country_flag = II_Olympiad_host
+		set_country_flag = Attend_II_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820108" # Not interested
+		prestige = -5
+		set_country_flag = II_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1900 Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820109 # Attend 1900 Olympics 
+
+	trigger = {
+		has_global_flag = II_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_II_Olympiad
+			has_global_flag = II_Olympiad_Opened
+			has_country_flag = No_Attend_II_Olympiad
+		}
+		year = 1898 # -2
+		not = { year = 1901 } # +1
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1899 # -1
+		}
+	}
+
+	title = "EVTNAME90820109"
+	desc = "EVTDESC90820109"
+	picture = "olympics_running"
+
+	option = {
+		name = "EVTOPTA90820109" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_II_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820109" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_II_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1900 Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820110 # 1900 games are held 
+
+	trigger = {
+		has_country_flag = II_Olympiad_host
+		has_country_flag = Attend_II_Olympiad
+		not = { has_global_flag = II_Olympiad_Opened }
+		year = 1900 # +0
+		not = { year = 1902 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820110"
+	desc = "EVTDESC90820110"
+
+	option = {
+		name = "EVTOPTA90820110" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = II_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1900 Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820111 # Win medal at 1900 Olympics 
+
+	trigger = {
+		has_global_flag = II_Olympiad_Opened
+		has_country_flag = Attend_II_Olympiad
+		not = { has_global_flag = II_Olympiad_Winner }
+		year = 1900 # +0
+		not = { year = 1903 } # +3
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = II_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820111"
+	desc = "EVTDESC90820111"
+
+	option = {
+		name = "EVTOPTA90820111" # Our team won medals!
+		prestige = 30
+		set_global_flag = II_Olympiad_Winner
+		set_country_flag = II_Olympiad_Winner_country
+		any_country = {
+			limit = { 
+				has_country_flag = II_Olympiad_host
+			}
+			set_country_flag = Recent_Olympic_host
+		}
+	}
+}
+
+# 1904 Olympiad - Choose host
+country_event = {
+
+	id = 90820112
+
+	trigger = {
+		has_country_flag = IOCMember
+		year = 1901 # -3
+		not = { year = 1904 } # +0
+		not = { has_global_flag = III_Olympiad_host_chosen }
+		not = { has_country_flag = I_Olympiad_host }
+		not = { has_country_flag = II_Olympiad_host }
+		not = { has_country_flag = III_Olympiad_host_declined }
+		not = { has_country_modifier = bad_host }
+		has_global_flag = II_Olympiad_Winner
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1902 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1903 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = I_Olympiad_Winner_country
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = II_Olympiad_Winner_country
+		}
+	}
+
+	title = "EVTNAME90820112"
+	desc = "EVTDESC90820112"
+	picture = "olympics_opening"
+
+	option = {
+		name = "EVTOPTA90820112" # Send invites to other IOC members
+		money = -30000
+		set_global_flag = III_Olympiad_host_chosen
+		set_country_flag = III_Olympiad_host
+		set_country_flag = Attend_III_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820112" # Not interested
+		prestige = -5
+		set_country_flag = III_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1904 Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820113 # Attend 1904 Olympics 
+
+	trigger = {
+		has_global_flag = III_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_III_Olympiad
+			has_country_flag = No_Attend_III_Olympiad
+			has_global_flag = III_Olympiad_Opened
+		}
+		year = 1902 # -2
+		not = { year = 1905 } # +1
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1903 # -1
+		}
+	}
+
+	title = "EVTNAME90820113"
+	desc = "EVTDESC90820113"
+	picture = "olympics_running"
+
+	option = {
+		name = "EVTOPTA90820113" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_III_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820113" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_III_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1904 Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820114 # 1904 games are held 
+
+	trigger = {
+		has_country_flag = III_Olympiad_host
+		has_country_flag = Attend_III_Olympiad
+		not = { has_global_flag = III_Olympiad_Opened }
+		year = 1904 # +0
+		not = { year = 1906 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820114"
+	desc = "EVTDESC90820114"
+
+	option = {
+		name = "EVTOPTA90820114" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = III_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1904 Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820115 # Win medal at 1900 Olympics 
+
+	trigger = {
+		has_global_flag = III_Olympiad_Opened
+		has_country_flag = Attend_III_Olympiad
+		not = { has_global_flag = III_Olympiad_Winner }
+		year = 1904 # +0
+		not = { year = 1907 } # +3
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = III_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820115"
+	desc = "EVTDESC90820115"
+
+	option = {
+		name = "EVTOPTA90820115" # Our team won medals!
+		prestige = 30
+		set_global_flag = III_Olympiad_Winner
+		set_country_flag = III_Olympiad_Winner_country
+		any_country = {
+			limit = { 
+				has_country_flag = III_Olympiad_host
+			}
+			set_country_flag = Recent_Olympic_host
+		}
+	}
+}
+
+# 1908 Olympiad - Choose host
+country_event = {
+
+	id = 90820116
+
+	trigger = {
+		has_country_flag = IOCMember
+		year = 1905 # -3
+		not = { year = 1908 } # +0
+		not = { has_global_flag = IV_Olympiad_host_chosen }
+		not = { has_country_flag = II_Olympiad_host }
+		not = { has_country_flag = III_Olympiad_host }
+		not = { has_country_flag = IV_Olympiad_host_declined }
+		not = { has_country_modifier = bad_host }
+		has_global_flag = III_Olympiad_Winner
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1906 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1907 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = II_Olympiad_Winner_country
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = III_Olympiad_Winner_country
+		}
+	}
+
+	title = "EVTNAME90820116"
+	desc = "EVTDESC90820116"
+	picture = "olympics_opening"
+
+	option = {
+		name = "EVTOPTA90820116" # Send invites to other IOC members
+		money = -30000
+		set_global_flag = IV_Olympiad_host_chosen
+		set_country_flag = IV_Olympiad_host
+		set_country_flag = Attend_IV_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820112" # Not interested
+		prestige = -5
+		set_country_flag = IV_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1908 Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820117 # Attend 1908 Olympics 
+
+	trigger = {
+		has_global_flag = IV_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_IV_Olympiad
+			has_country_flag = No_Attend_IV_Olympiad
+			has_global_flag = IV_Olympiad_Opened
+		}
+		year = 1906 # -2
+		not = { year = 1909 } # +1
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1907 # -1
+		}
+	}
+
+	title = "EVTNAME90820117"
+	desc = "EVTDESC90820117"
+	picture = "olympics_running"
+
+	option = {
+		name = "EVTOPTA90820117" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_IV_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820117" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_IV_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1908 Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820118 # 1908 games are held 
+
+	trigger = {
+		has_country_flag = IV_Olympiad_host
+		has_country_flag = Attend_IV_Olympiad
+		not = { has_global_flag = IV_Olympiad_Opened }
+		year = 1908 # +0
+		not = { year = 1910 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820118"
+	desc = "EVTDESC90820118"
+
+	option = {
+		name = "EVTOPTA90820118" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = IV_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1908 Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820119 # Win medal at 1900 Olympics 
+
+	trigger = {
+		has_global_flag = IV_Olympiad_Opened
+		has_country_flag = Attend_IV_Olympiad
+		not = { has_global_flag = IV_Olympiad_Winner }
+		year = 1908 # +0
+		not = { year = 1911 } # +3
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = IV_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820119"
+	desc = "EVTDESC90820119"
+
+	option = {
+		name = "EVTOPTA90820119" # Our team won medals!
+		prestige = 30
+		set_global_flag = IV_Olympiad_Winner
+		set_country_flag = IV_Olympiad_Winner_country
+		any_country = {
+			limit = { 
+				has_country_flag = IV_Olympiad_host
+			}
+			set_country_flag = Recent_Olympic_host
+		}
+	}
+}
+
+# 1912 Olympiad - Choose host
+country_event = {
+
+	id = 90820120
+
+	trigger = {
+		has_country_flag = IOCMember
+		year = 1909 # -3
+		not = { year = 1912 } # +0
+		not = { has_global_flag = V_Olympiad_host_chosen }
+		not = { has_country_flag = III_Olympiad_host }
+		not = { has_country_flag = IV_Olympiad_host }
+		not = { has_country_flag = V_Olympiad_host_declined }
+		not = { has_country_modifier = bad_host }
+		has_global_flag = IV_Olympiad_Winner
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1910 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1911 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = III_Olympiad_Winner_country
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = IV_Olympiad_Winner_country
+		}
+	}
+
+	title = "EVTNAME90820120"
+	desc = "EVTDESC90820120"
+	picture = "olympics_opening"
+
+	option = {
+		name = "EVTOPTA90820120" # Send invites to other IOC members
+		money = -30000
+		set_global_flag = V_Olympiad_host_chosen
+		set_country_flag = V_Olympiad_host
+		set_country_flag = Attend_V_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820120" # Not interested
+		prestige = -5
+		set_country_flag = V_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1912 Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820121 # Attend 1912 Olympics 
+
+	trigger = {
+		has_global_flag = V_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_V_Olympiad
+			has_country_flag = No_Attend_V_Olympiad
+			has_global_flag = V_Olympiad_Opened
+		}
+		year = 1910 # -2
+		not = { year = 1913 } # +1
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1911 # -1
+		}
+	}
+
+	title = "EVTNAME90820121"
+	desc = "EVTDESC90820121"
+	picture = "olympics_running"
+
+	option = {
+		name = "EVTOPTA90820121" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_V_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820121" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_V_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1912 Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820122 # 1912 games are held 
+
+	trigger = {
+		has_country_flag = V_Olympiad_host
+		has_country_flag = Attend_V_Olympiad
+		not = { has_global_flag = V_Olympiad_Opened }
+		year = 1912 # +0
+		not = { year = 1914 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820122"
+	desc = "EVTDESC90820122"
+
+	option = {
+		name = "EVTOPTA90820122" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = V_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1912 Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820123 # Win medal at 1912 Olympics 
+
+	trigger = {
+		has_global_flag = V_Olympiad_Opened
+		has_country_flag = Attend_V_Olympiad
+		not = { has_global_flag = V_Olympiad_Winner }
+		year = 1912 # +0
+		not = { year = 1915 } # +3
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = V_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820123"
+	desc = "EVTDESC90820123"
+
+	option = {
+		name = "EVTOPTA90820123" # Our team won medals!
+		prestige = 30
+		set_global_flag = V_Olympiad_Winner
+		set_country_flag = V_Olympiad_Winner_country
+		any_country = {
+			limit = { 
+				has_country_flag = V_Olympiad_host
+			}
+			set_country_flag = Recent_Olympic_host
+		}
+	}
+}
+
+# 1916 Olympiad - Choose host
+country_event = {
+
+	id = 90820124
+
+	trigger = {
+		has_country_flag = IOCMember
+		year = 1913 # -3
+		not = { year = 1916 } # +0
+		not = { has_global_flag = VI_Olympiad_host_chosen }
+		not = { has_country_flag = IV_Olympiad_host }
+		not = { has_country_flag = V_Olympiad_host }
+		not = { has_country_flag = VI_Olympiad_host_declined }
+		not = { has_country_modifier = bad_host }
+		has_global_flag = V_Olympiad_Winner
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1914 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1915 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = IV_Olympiad_Winner_country
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = V_Olympiad_Winner_country
+		}
+	}
+
+	title = "EVTNAME90820124"
+	desc = "EVTDESC90820124"
+	picture = "olympics_opening"
+
+	option = {
+		name = "EVTOPTA90820124" # Send invites to other IOC members
+		money = -30000
+		set_global_flag = VI_Olympiad_host_chosen
+		set_country_flag = VI_Olympiad_host
+		set_country_flag = Attend_VI_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820120" # Not interested
+		prestige = -5
+		set_country_flag = VI_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1916 Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820125 # Attend 1916 Olympics 
+
+	trigger = {
+		has_global_flag = VI_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_VI_Olympiad
+			has_country_flag = No_Attend_VI_Olympiad
+			has_global_flag = VI_Olympiad_Opened
+		}
+		year = 1914 # -2
+		not = { year = 1917 } # +1
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1915 # -1
+		}
+	}
+
+	title = "EVTNAME90820125"
+	desc = "EVTDESC90820125"
+	picture = "olympics_running"
+
+	option = {
+		name = "EVTOPTA90820125" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_VI_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820125" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_VI_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1916 Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820126 # 1916 games are held 
+
+	trigger = {
+		has_country_flag = VI_Olympiad_host
+		has_country_flag = Attend_VI_Olympiad
+		not = { has_global_flag = VI_Olympiad_Opened }
+		year = 1916 # +0
+		not = { year = 1918 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820126"
+	desc = "EVTDESC90820126"
+
+	option = {
+		name = "EVTOPTA90820126" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = VI_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1916 Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820127 # Win medal at 1916 Olympics 
+
+	trigger = {
+		has_global_flag = VI_Olympiad_Opened
+		has_country_flag = Attend_VI_Olympiad
+		not = { has_global_flag = VI_Olympiad_Winner }
+		year = 1916 # +0
+		not = { year = 1919 } # +3
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = VI_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820127"
+	desc = "EVTDESC90820127"
+
+	option = {
+		name = "EVTOPTA90820127" # Our team won medals!
+		prestige = 30
+		set_global_flag = VI_Olympiad_Winner
+		set_country_flag = VI_Olympiad_Winner_country
+		any_country = {
+			limit = { 
+				has_country_flag = VI_Olympiad_host
+			}
+			set_country_flag = Recent_Olympic_host
+		}
+	}
+}
+
+# 1920 Olympiad - Choose host
+country_event = {
+
+	id = 90820128
+
+	trigger = {
+		has_country_flag = IOCMember
+		year = 1917 # -3
+		not = { year = 1920 } # +0
+		not = { has_global_flag = VII_Olympiad_host_chosen }
+		not = { has_country_flag = V_Olympiad_host }
+		not = { has_country_flag = VI_Olympiad_host }
+		not = { has_country_flag = VII_Olympiad_host_declined }
+		not = { has_country_modifier = bad_host }
+		has_global_flag = VI_Olympiad_Winner
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1918 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1919 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = V_Olympiad_Winner_country
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = VI_Olympiad_Winner_country
+		}
+	}
+
+	title = "EVTNAME90820128"
+	desc = "EVTDESC90820128"
+	picture = "olympics_opening"
+
+	option = {
+		name = "EVTOPTA90820128" # Send invites to other IOC members
+		money = -30000
+		set_global_flag = VII_Olympiad_host_chosen
+		set_country_flag = VII_Olympiad_host
+		set_country_flag = Attend_VII_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820124" # Not interested
+		prestige = -5
+		set_country_flag = VII_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1920 Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820129 # Attend 1916 Olympics 
+
+	trigger = {
+		has_global_flag = VII_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_VII_Olympiad
+			has_country_flag = No_Attend_VII_Olympiad
+			has_global_flag = VII_Olympiad_Opened
+		}
+		year = 1918 # -2
+		not = { year = 1921 } # +1
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1919 # -1
+		}
+	}
+
+	title = "EVTNAME90820125"
+	desc = "EVTDESC90820125"
+	picture = "olympics_running"
+
+	option = {
+		name = "EVTOPTA90820129" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_VII_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820125" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_VII_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1920 Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820130 # 1920 games are held 
+
+	trigger = {
+		has_country_flag = VII_Olympiad_host
+		has_country_flag = Attend_VII_Olympiad
+		not = { has_global_flag = VII_Olympiad_Opened }
+		year = 1920 # +0
+		not = { year = 1922 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820130"
+	desc = "EVTDESC90820130"
+
+	option = {
+		name = "EVTOPTA90820130" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = VII_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1920 Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820131 # Win medal at 1916 Olympics 
+
+	trigger = {
+		has_global_flag = VII_Olympiad_Opened
+		has_country_flag = Attend_VII_Olympiad
+		not = { has_global_flag = VII_Olympiad_Winner }
+		year = 1920 # +0
+		not = { year = 1923 } # +3
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = VII_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820131"
+	desc = "EVTDESC90820131"
+
+	option = {
+		name = "EVTOPTA90820131" # Our team won medals!
+		prestige = 30
+		set_global_flag = VII_Olympiad_Winner
+		set_country_flag = VII_Olympiad_Winner_country
+		any_country = {
+			limit = { 
+				has_country_flag = VII_Olympiad_host
+			}
+			set_country_flag = Recent_Olympic_host
+		}
+	}
+}
+
+# 1924 Olympiad - Choose host
+country_event = {
+
+	id = 90820132
+
+	trigger = {
+		has_country_flag = IOCMember
+		year = 1921 # -3
+		not = { year = 1924 } # +0
+		not = { has_global_flag = VIII_Olympiad_host_chosen }
+		not = { has_country_flag = VI_Olympiad_host }
+		not = { has_country_flag = VII_Olympiad_host }
+		not = { has_country_flag = VIII_Olympiad_host_declined }
+		not = { has_country_modifier = bad_host }
+		has_global_flag = VII_Olympiad_Winner
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1922 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1923 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = VI_Olympiad_Winner_country
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = VII_Olympiad_Winner_country
+		}
+	}
+
+	title = "EVTNAME90820132"
+	desc = "EVTDESC90820132"
+	picture = "olympics_opening"
+
+	option = {
+		name = "EVTOPTA90820132" # Send invites to other IOC members
+		money = -30000
+		set_global_flag = VIII_Olympiad_host_chosen
+		set_country_flag = VIII_Olympiad_host
+		set_country_flag = Attend_VIII_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820132" # Not interested
+		prestige = -5
+		set_country_flag = VIII_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1924 Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820133 # Attend 1924 Olympics 
+
+	trigger = {
+		has_global_flag = VIII_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_VIII_Olympiad
+			has_country_flag = No_Attend_VIII_Olympiad
+			has_global_flag = VIII_Olympiad_Opened
+		}
+		year = 1922 # -2
+		not = { year = 1923 } # +1
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1923 # -1
+		}
+	}
+
+	title = "EVTNAME90820133"
+	desc = "EVTDESC90820133"
+	picture = "olympics_running"
+
+	option = {
+		name = "EVTOPTA90820133" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_VIII_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820133" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_VIII_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1924 Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820134 # 1924 games are held 
+
+	trigger = {
+		has_country_flag = VIII_Olympiad_host
+		has_country_flag = Attend_VIII_Olympiad
+		not = { has_global_flag = VIII_Olympiad_Opened }
+		year = 1924 # +0
+		not = { year = 1926 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820134"
+	desc = "EVTDESC90820134"
+
+	option = {
+		name = "EVTOPTA90820134" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = VIII_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1924 Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820135 # Win medal at 1924 Olympics 
+
+	trigger = {
+		has_global_flag = VIII_Olympiad_Opened
+		has_country_flag = Attend_VIII_Olympiad
+		not = { has_global_flag = VIII_Olympiad_Winner }
+		year = 1924 # +0
+		not = { year = 1927 } # +3
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = VIII_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820135"
+	desc = "EVTDESC90820135"
+
+	option = {
+		name = "EVTOPTA90820135" # Our team won medals!
+		prestige = 30
+		set_global_flag = VIII_Olympiad_Winner
+		set_country_flag = VIII_Olympiad_Winner_country
+		any_country = {
+			limit = { 
+				has_country_flag = VIII_Olympiad_host
+			}
+			set_country_flag = Recent_Olympic_host
+		}
+	}
+}
+
+# 1928 Olympiad - Choose host
+country_event = {
+
+	id = 90820136
+
+	trigger = {
+		has_country_flag = IOCMember
+		year = 1925 # -3
+		not = { year = 1928 } # +0
+		not = { has_global_flag = IX_Olympiad_host_chosen }
+		not = { has_country_flag = VII_Olympiad_host }
+		not = { has_country_flag = VIII_Olympiad_host }
+		not = { has_country_flag = IX_Olympiad_host_declined }
+		not = { has_country_modifier = bad_host }
+		has_global_flag = VIII_Olympiad_Winner
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1926 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1927 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = VII_Olympiad_Winner_country
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = VIII_Olympiad_Winner_country
+		}
+	}
+
+	title = "EVTNAME90820136"
+	desc = "EVTDESC90820136"
+	picture = "olympics_opening"
+
+	option = {
+		name = "EVTOPTA90820136" # Send invites to other IOC members
+		money = -30000
+		set_global_flag = IX_Olympiad_host_chosen
+		set_country_flag = IX_Olympiad_host
+		set_country_flag = Attend_IX_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820136" # Not interested
+		prestige = -5
+		set_country_flag = IX_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1928 Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820137 # Attend 1928 Olympics 
+
+	trigger = {
+		has_global_flag = IX_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_IX_Olympiad
+			has_country_flag = No_Attend_IX_Olympiad
+			has_global_flag = IX_Olympiad_Opened
+		}
+		year = 1928 # -2
+		not = { year = 1929 } # +1
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1927 # -1
+		}
+	}
+
+	title = "EVTNAME90820137"
+	desc = "EVTDESC90820137"
+	picture = "olympics_running"
+
+	option = {
+		name = "EVTOPTA90820137" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_IX_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820137" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_IX_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1928 Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820138 # 1928 games are held 
+
+	trigger = {
+		has_country_flag = IX_Olympiad_host
+		has_country_flag = Attend_IX_Olympiad
+		not = { has_global_flag = IX_Olympiad_Opened }
+		year = 1928 # +0
+		not = { year = 1930 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820138"
+	desc = "EVTDESC90820138"
+
+	option = {
+		name = "EVTOPTA90820138" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = IX_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1928 Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820139 # Win medal at 1928 Olympics 
+
+	trigger = {
+		has_global_flag = IX_Olympiad_Opened
+		has_country_flag = Attend_IX_Olympiad
+		not = { has_global_flag = IX_Olympiad_Winner }
+		year = 1928 # +0
+		not = { year = 1931 } # +3
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = IX_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820139"
+	desc = "EVTDESC90820139"
+
+	option = {
+		name = "EVTOPTA90820139" # Our team won medals!
+		prestige = 30
+		set_global_flag = IX_Olympiad_Winner
+		set_country_flag = IX_Olympiad_Winner_country
+		any_country = {
+			limit = { 
+				has_country_flag = IX_Olympiad_host
+			}
+			set_country_flag = Recent_Olympic_host
+		}
+	}
+}
+
+# 1932 Olympiad - Choose host
+country_event = {
+
+	id = 90820140
+
+	trigger = {
+		has_country_flag = IOCMember
+		year = 1929 # -3
+		not = { year = 1932 } # +0
+		not = { has_global_flag = X_Olympiad_host_chosen }
+		not = { has_country_flag = VIII_Olympiad_host }
+		not = { has_country_flag = IX_Olympiad_host }
+		not = { has_country_flag = X_Olympiad_host_declined }
+		not = { has_country_modifier = bad_host }
+		has_global_flag = IX_Olympiad_Winner
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			year = 1930 # -2
+		}
+		modifier = {
+			factor = 0.95
+			year = 1931 # -1
+		}
+		modifier = {
+			factor = 0.4
+			rank = 8
+		}
+		modifier = {
+			factor = 0.2
+			rank = 16
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = VIII_Olympiad_Winner_country
+		}
+		modifier = {
+			factor = 0.2
+			has_country_flag = IX_Olympiad_Winner_country
+		}
+	}
+
+	title = "EVTNAME90820140"
+	desc = "EVTDESC90820140"
+	picture = "olympics_opening"
+
+	option = {
+		name = "EVTOPTA90820140" # Send invites to other IOC members
+		money = -30000
+		set_global_flag = X_Olympiad_host_chosen
+		set_country_flag = X_Olympiad_host
+		set_country_flag = Attend_X_Olympiad
+		set_country_flag = Current_Olympic_host
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 30000 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB90820140" # Not interested
+		prestige = -5
+		set_country_flag = X_Olympiad_host_declined
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1932 Olympiad - Send Delegation or No
+country_event = {
+
+	id = 90820141 # Attend 1932 Olympics 
+
+	trigger = {
+		has_global_flag = X_Olympiad_host_chosen
+		has_country_flag = IOCMember
+		not = {
+			has_country_flag = Attend_X_Olympiad
+			has_country_flag = No_Attend_X_Olympiad
+			has_global_flag = X_Olympiad_Opened
+		}
+		year = 1930 # -2
+		not = { year = 1933 } # +1
+		war = no # Nation can not be at war at the time of invite
+		is_disarmed = no
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			month = 3
+		}
+		modifier = {
+			factor = 0.5
+			month = 4
+		}
+		modifier = {
+			factor = 0.9
+			year = 1931 # -1
+		}
+	}
+
+	title = "EVTNAME90820141"
+	desc = "EVTDESC90820141"
+	picture = "olympics_running"
+
+	option = {
+		name = "EVTOPTA90820141" # Send a delegation to the games
+		money = -10000
+		prestige = 10
+		set_country_flag = Attend_X_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				NOT = { money = 10000 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820141" # We're not going this year
+		prestige = -10
+		set_country_flag = No_Attend_X_Olympiad
+		any_country = { 
+			limit = {
+				has_country_flag = IOCMember
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# 1932 Olympiad - Host nation holds games
+country_event = {
+
+	id = 90820142 # 1932 games are held 
+
+	trigger = {
+		has_country_flag = X_Olympiad_host
+		has_country_flag = Attend_X_Olympiad
+		not = { has_global_flag = X_Olympiad_Opened }
+		year = 1932 # +0
+		not = { year = 1934 } # +2
+		war = no # Nation can not be at war at the time of invite
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.9
+			month = 7
+		}
+		modifier = {
+			factor = 0.95
+			month = 8
+		}
+	}
+
+	title = "EVTNAME90820142"
+	desc = "EVTDESC90820142"
+
+	option = {
+		name = "EVTOPTA90820142" # The games are held
+		prestige = 50
+		plurality = 1
+		set_global_flag = X_Olympiad_Opened
+		clr_country_flag = Current_Olympic_host
+	}
+}
+
+# 1932 Olympiad - Our nation won medals at the games
+country_event = {
+
+	id = 90820143 # Win medal at 1932 Olympics 
+
+	trigger = {
+		has_global_flag = X_Olympiad_Opened
+		has_country_flag = Attend_X_Olympiad
+		not = { has_global_flag = X_Olympiad_Winner }
+		year = 1932 # +0
+		not = { year = 1936 } # +3
+	}
+	
+	major = yes	
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.1
+			has_country_flag = X_Olympiad_host
+		}
+		modifier = {
+			factor = 0.03
+			literacy = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			administration_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			administration_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			administration_spending = 0.7
+		}
+		modifier = {
+			factor = 0.03
+			education_spending = 0.3
+		}
+		modifier = {
+			factor = 0.04
+			education_spending = 0.5
+		}
+		modifier = {
+			factor = 0.05
+			education_spending = 0.7
+		}
+		modifier = {
+			factor = 0.1
+			rank = 8
+		}
+		modifier = {
+			factor = 0.05
+			rank = 16
+		}
+		modifier = {
+			factor = 0.05
+			total_pops = 10000000
+		}
+		modifier = {
+			factor = 0.07
+			total_pops = 20000000
+		}
+		modifier = {
+			factor = 0.09
+			total_pops = 40000000
+		}
+		modifier = {
+			factor = 0.03
+			health_care = acceptable_health_care
+		}
+		modifier = {
+			factor = 0.05
+			health_care = good_health_care
+		}
+		modifier = {
+			factor = 0.03
+			school_reforms = acceptable_schools
+		}
+		modifier = {
+			factor = 0.05
+			school_reforms = good_schools
+		}
+	}
+
+	title = "EVTNAME90820143"
+	desc = "EVTDESC90820143"
+
+	option = {
+		name = "EVTOPTA90820143" # Our team won medals!
+		prestige = 30
+		set_global_flag = X_Olympiad_Winner
+		set_country_flag = X_Olympiad_Winner_country
+		any_country = {
+			limit = { 
+				has_country_flag = X_Olympiad_host
+			}
+			set_country_flag = Recent_Olympic_host
+		}
+	}
+}

@@ -1,0 +1,7 @@
+# 90820000 - New World Nation
+# 90820100 - Olympics
+# 90820200 - Olympics Flavour
+# 90820300 - World Cup 
+# 90820400 - Transport events
+# 90820500 - World's Fair
+# 90820700 - Macedonia Flavour

@@ -1,0 +1,63 @@
+football_mania = {
+	pop_militancy_modifier = -0.01
+	icon = 17
+}
+
+commercial_aviation = {
+	tax_efficiency = 0.05
+	import_cost = -0.05
+	rich_income_modifier = 0.05
+	icon = 11
+}
+
+blue_riband_cooloff = {
+	icon = 8
+}
+
+blue_riband = {
+	tax_efficiency = 0.05
+	import_cost = -0.05
+	rich_income_modifier = 0.05
+	navy_tech_research_bonus = 0.05
+	naval_organisation = 0.05
+	prestige = 0.1
+	icon = 7
+}
+
+ghosts_of_titanic = {
+	social_reform_desire = 0.1
+	pop_militancy_modifier = 0.01
+	prestige = -0.1
+	icon = 18
+}
+
+good_host = {
+	pop_militancy_modifier = -0.01
+	prestige = 0.1
+	icon = 17
+}
+
+bad_host = {
+	pop_militancy_modifier = 0.01
+	prestige = -0.1
+	icon = 18
+}
+
+the_statue_of_liberty = {
+	prestige = 0.4
+	global_immigrant_attract = 2	#200%
+	global_assimilation_rate = 5.0
+	icon = 15
+}
+
+worlds_fair_winner = {
+	prestige = 0.4
+	global_immigrant_attract = 2	#200%
+	global_assimilation_rate = 5.0
+	icon = 15
+}
+
+worlds_fair_cooloff = {
+	icon = 8
+}
+

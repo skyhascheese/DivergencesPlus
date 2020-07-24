@@ -1,0 +1,742 @@
+country_event = { 
+	id = 90820701 # Rebellion Brewing in Macedonia
+	title = "EVTNAME90820701"
+	desc = "EVTDESC90820701"
+	picture = "macedonian_war_of_independence"
+	
+	trigger = {
+		TAG = MAC
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+		days = 1
+		
+		modifier = {
+			factor = 3
+			year = 1836
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820701"
+		any_country = {
+			limit = {
+				or = {
+					tag = VEN
+					tag = ARA
+				}
+			}
+			country_event = 90820702
+		}
+		set_variable = {
+			which = macedonian_rebellion
+			value = 4
+		}
+	}
+}
+
+country_event = {
+	id = 90820702 # Macedonia Calls for Help
+	title = "EVTNAME90820702"
+	desc = "EVTDESC90820702"
+	picture = "macedonian_war_of_independence"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820702"
+		diplomatic_influence = {
+			who = MAC
+			value = 100
+		}
+		create_alliance = MAC
+		relation = {
+			who = MAC
+			value = 200
+		}
+		relation = {
+			who = TUR
+			value = -200
+		}
+		any_country = {
+			limit = {
+				or = {
+					relation = {
+						who = TUR
+						value = 75
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		set_country_flag = helping_macedonia
+		MAC = {
+			country_event = 90820703
+			change_variable = {
+				name = macedonian_rebellion
+			}
+		}
+		ai_will_do = { factor = 66 }
+	}
+	
+	option = {
+		name = "EVTOPTB90820702"
+		diplomatic_influence = {
+			who = MAC
+			value = -100
+		}
+		any_country = {
+			limit = {
+				or = {
+					relation = {
+						who = TUR
+						value = 75
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		MAC = {
+			country_event = 90820704
+		}
+		ai_will_do = { factor = 33 }
+	}
+}
+
+country_event = { 
+	id = 90820703 # FROMCOUNTRY Offers Help
+	title = "EVTNAME90820703"
+	desc = "EVTDESC90820703"
+	picture = "macedonian_war_of_independence"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820703"
+		relation = {
+			who = FROM
+			value = 200
+		}
+	}
+}
+
+country_event = { 
+	id = 90820704 # FROMCOUNTRY Refuses Help
+	title = "EVTNAME90820704"
+	desc = "EVTDESC90820704"
+	picture = "macedonian_war_of_independence"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820704"
+		relation = {
+			who = FROM
+			value = -200
+		}
+	}
+}
+
+country_event = { 
+	id = 90820705 # Macedonia's Call to Arms
+	title = "EVTNAME90820705"
+	desc = "EVTDESC90820705"
+	picture = "macedonian_war_of_independence"
+	
+	trigger = {
+		tag = MAC
+		check_variable = {
+			which = "macedonian_rebellion"
+			value = 1
+		}
+		or = {
+			alliance_with = VEN
+			alliance_with = ARA
+		}
+		not = {
+			has_global_flag = macedonian_war_of_independence_ended
+		}
+	}
+	
+	mean_time_to_happen = { days = 14 }
+	
+	option = {
+		name = "EVTOPTA90820705"
+		war = {
+			attacker_goal = { casus_belli = call_allies_cb }
+			call_ally = yes
+		}
+	}
+}
+
+country_event = { 
+	id = 90820706 # Macedonia is Free!
+	title = "EVTNAME90820706"
+	desc = "EVTDESC90820706"
+	
+	major = yes
+	
+	trigger = {
+		tag = MAC
+		year = 1836
+		not = { 
+			or = {
+				year = 1840
+				has_global_flag = macedonian_war_of_independence_ended
+			}
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "EVTOPTA90820706"
+		prestige = 20
+		any_country = {
+			limit = {
+				has_country_flag = helping_macedonia
+			}
+			country_event = 90820707
+		}
+		TUR = {
+			country_event = 90820708
+		}
+		set_global_flat = Macedonian_war_of_independence_ended
+	}
+}
+
+country_event = { 
+	id = 90820707 # Macedonia is Free!
+	title = "EVTNAME90820707"
+	desc = "EVTDESC90820707"
+	picture = "macedonian_war_of_independence"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820707"
+		prestige = 20
+	}
+}
+
+country_event = { 
+	id = 90820708 # Macedonia Gains Independence!
+	title = "EVTNAME90820708"
+	desc = "EVTDESC90820708"
+	picture = "macedonian_war_of_independence"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820708"
+		prestige = -20
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			conscioussness = 3
+		}
+		any_pop = {
+			limit = {
+				not = {
+					is_primary_culture = yes
+				}
+			}
+			militancy = 3
+		}
+	}
+}
+
+country_event = {
+	id = 90820709 # The fate of the Republic - Aragon has helped
+	title = "EVTNAME90820709"
+	desc = "EVTDESC90820709"
+	picture = "fate_of_the_republic"
+	
+	trigger = {
+		tag = MAC
+		has_global_flag = macedonian_war_of_independence_ended
+		war = no
+		ARA = {
+			has_country_flag = helping_macedonia
+		}
+		not = {
+			or = {
+				has_country_flag = macedonia_prince_martin
+				has_country_flag = macedonia_reform_the_republic
+				has_country_flag = macedonia_maintain_the_dictatorship
+				has_country_flag = macedonia_find_a_prince
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "EVTOPTA90820709" # Martin Fernando Alfonso, Prince of Aragon
+		scaled_militancy = {
+			factor = -4
+			ideology = reactionary
+		}
+		scaled_militancy = {
+			factor = -1
+			ideology = conservative
+		}
+		scaled_militancy = {
+			factor = 3
+			ideology = liberal
+		}
+		scaled_militancy = {
+			factor = 5
+			ideology = anarcholiberal
+		}
+		set_country_flag = macedonia_prince_martin
+		ARA = {
+			country_event = 90820711
+		}
+		ai_will_do = { factor = 60 }
+	}
+	
+	option = {
+		name = "EVTOPB90820709" #Reform the Republic
+		scaled_militancy = {
+			factor = 4
+			ideology = reactionary
+		}
+		scaled_militancy = {
+			factor = 2
+			ideology = conservative
+		}
+		scaled_militancy = {
+			factor = -1
+			ideology = anarcholiberal
+		}
+		scaled_militancy = {
+			factor = -3
+			ideology = liberal
+		}
+		any_pop = {
+			limit = {
+				not = {
+					is_primary_culture = yes
+				}
+			}
+			militancy = 2
+		}
+		set_country_flag = macedonia_reform_the_republic
+		ai_will_do = { factor = 20 }
+	}
+	
+	option = {
+		name = "EVTOPTC90820709" #Maintain the dictatorship
+		scaled_militancy = {
+			factor = 2
+			ideology = reactionary
+		}
+		scaled_militancy = {
+			factor = 1
+			ideology = conservative
+		}
+		scaled_militancy = {
+			factor = 3
+			ideology = anarcholiberal
+		}
+		scaled_militancy = {
+			factor = 5
+			ideology = liberal
+		}
+		any_pop = {
+			limit = {
+				not = {
+					is_primary_culture = yes
+				}
+			}
+			militancy = 2
+		}
+		set_country_flag = macedonia_maintain_the_dictatorship
+		ai_will_do = { factor = 20 }
+	}
+}
+
+country_event = { 
+	id = 90820710 # The fate of the Republic - Aragon has not helped
+	title = "EVTNAME90820710"
+	desc = "EVTDESC90820710"
+	picture = "fate_of_the_republic"
+	
+	trigger = {
+		tag = MAC
+		has_global_flag = macedonian_war_of_independence_ended
+		war = no
+		not = {
+			or = {
+				ARA = {
+					has_country_flag = helping_macedonia
+				}
+				has_country_flag = macedonia_find_a_prince
+				has_country_flag = macedonia_reform_the_republic
+				has_country_flag = macedonia_maintain_the_dictatorship
+				has_country_flag = macedonia_prince_martin
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "EVTOPTA90820710" # Find a prince
+		scaled_militancy = {
+			factor = -4
+			ideology = reactionary
+		}
+		scaled_militancy = {
+			factor = -1
+			ideology = conservative
+		}
+		scaled_militancy = {
+			factor = 3
+			ideology = liberal
+		}
+		scaled_militancy = {
+			factor = 5
+			ideology = anarcholiberal
+		}
+		set_country_flag = macedonia_find_a_prince
+		ai_will_do = { factor = 45 }
+	}
+	
+	option = {
+		name = "EVTOPTB90820710" #Reform the Republic
+		scaled_militancy = {
+			factor = 4
+			ideology = reactionary
+		}
+		scaled_militancy = {
+			factor = 2
+			ideology = conservative
+		}
+		scaled_militancy = {
+			factor = -1
+			ideology = anarcholiberal
+		}
+		scaled_militancy = {
+			factor = -3
+			ideology = liberal
+		}
+		set_country_flag = macedonia_reform_the_republic
+		ai_will_do = { factor = 35 }
+	}
+	
+	option = {
+		name = "EVTOPTC90820710" #Maintain the dictatorship
+		scaled_militancy = {
+			factor = 4
+			ideology = reactionary
+		}
+		scaled_militancy = {
+			factor = 2
+			ideology = conservative
+		}
+		scaled_militancy = {
+			factor = -1
+			ideology = anarcholiberal
+		}
+		scaled_militancy = {
+			factor = -3
+			ideology = liberal
+		}
+		any_pop = {
+			limit = {
+				not = {
+					is_primary_culture = yes
+				}
+			}
+			militancy = 2
+		}
+		set_country_flag = macedonia_maintain_the_dictatorship
+		set_country_flag = macedonian_revolution_has_ended
+		ai_will_do = { factor = 20 }
+	}
+}
+
+country_event = { 
+	id = 90820711 # The Crown of Macedonia
+	title = "EVTNAME90820711"
+	desc = "EVTDESC90820711"
+	picture = "fate_of_the_republic"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820711"
+		prestige = 20
+		relation = {
+			who = MAC
+			value = 200
+		}
+		diplomatic_influence = {
+			who = MAC
+			value = 100
+		}
+		set_country_flag = aragon_has_decided_to_accept
+		ai_will_do { factor = 75 }
+	}
+	
+	option = {
+		name = "EVTOPTB90820711"
+		prestige = -20
+		relation = {
+			who = MAC
+			value = -100
+		}
+		diplomatic_influence = {
+			who = MAC
+			value = -100
+		}
+		set_country_flag = aragon_has_decided_to_decline
+		MAC = {
+			country_event = 90820713
+		}
+		ai_will_do = { factor = 25 }
+	}
+}
+
+country_event = { 
+	id = 90820712 # The Kingdom of Macedonia (Aragon)
+	title = "EVTNAME90820712"
+	desc = "EVTDESC90820712"
+	picture = "fate_of_the_republic"
+	
+	trigger = {
+		tag = MAC
+		or = {
+			and = {
+				has_country_flag = macedonia_prince_martin
+				has_global_flag = aragon_has_decided_to_accept
+			}
+			has_country_flag = macedonia_find_a_prince
+		}
+		war = no
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "EVTOPTA90820712"
+		government = prussian_constitutionalism
+		political_reform = state_equal_weight
+		political_reform = wealth_voting
+		political_reform = yes_meeting
+		political_reform = censored_press
+		political_reform = no_trade_unions
+		political_reform = first_past_the_post
+		political_reform = non_secret_ballots
+		political_reform = four_year_draft
+		political_reform = all_voting_pops
+		political_reform = bankruptcy
+		political_reform = quota_immigration
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				or = {
+					government = hms_government
+					government = prussian_constitutionalism
+					government = absolute_monarchy
+				}
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+		}
+		set_country_flag = macedonian_revolution_has_ended
+	}
+}
+
+country_event = { 
+	id = 90820713 # Aragon has declined the offer
+	title = "EVTNAME90820713"
+	desc = "EVTDESC90820713"
+	picture = "fate_of_the_republic"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820710" # Find a prince
+		scaled_militancy = {
+			factor = -4
+			ideology = reactionary
+		}
+		scaled_militancy = {
+			factor = -1
+			ideology = conservative
+		}
+		scaled_militancy = {
+			factor = 3
+			ideology = liberal
+		}
+		scaled_militancy = {
+			factor = 5
+			ideology = anarcholiberal
+		}
+		clr_country_flag = macedonia_prince_martin
+		set_country_flag = macedonia_find_a_prince
+		ai_will_do = { factor = 45 }
+	}
+	
+	option = {
+		name = "EVTOPTB90820710" #Reform the Republic
+		scaled_militancy = {
+			factor = 4
+			ideology = reactionary
+		}
+		scaled_militancy = {
+			factor = 2
+			ideology = conservative
+		}
+		scaled_militancy = {
+			factor = -1
+			ideology = anarcholiberal
+		}
+		scaled_militancy = {
+			factor = -3
+			ideology = liberal
+		}
+		clr_country_flag = macedonia_prince_martin
+		set_country_flag = macedonia_reform_the_republic
+		ai_will_do = { factor = 35 }
+	}
+	
+	option = {
+		name = "EVTOPTC90820710" #Maintain the dictatorship
+		scaled_militancy = {
+			factor = -4
+			ideology = reactionary
+		}
+		scaled_militancy = {
+			factor = 1
+			ideology = conservative
+		}
+		scaled_militancy = {
+			factor = 5
+			ideology = anarcholiberal
+		}
+		scaled_militancy = {
+			factor = 5
+			ideology = liberal
+		}
+		any_pop = {
+			limit = {
+				not = {
+					is_primary_culture
+				}
+			}
+			militancy = 2
+		}
+		clr_country_flag = macedonia_prince_martin
+		set_country_flag = macedonia_maintain_the_dictatorship
+		set_country_flag = macedonian_revolution_has_ended
+		ai_will_do = { factor = 20 }
+	}
+}
+
+country_event = { 
+	id = 90820714 # The Macedonian Republic
+	title = "EVTNAME90820714"
+	desc = "EVTDESC90820714"
+	picture = "fate_of_the_republic"
+	
+	trigger = {
+		tag = MAC
+		has_country_flag = macedonia_reform_the_republic
+		war = no
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "EVTOPTA90820714"
+		government = democracy
+		political_reform = state_equal_weight
+		political_reform = universal_weighted_voting
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = state_controlled
+		political_reform = jefferson_method
+		political_reform = secret_ballots
+		political_reform = two_year_draft
+		political_reform = all_voting_pops
+		political_reform = bankruptcy
+		political_reform = quota_immigration
+		
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				or = {
+					government = hms_government
+					government = prussian_constitutionalism
+					government = absolute_monarchy
+				}
+				capital_scope = { continent = europe }
+			}
+			not = {
+				or = {
+					relation = {
+						who = THIS
+						value = 50
+					}
+					diplomatic_influence = {
+						who = THIS
+						value = 50
+					}
+				}
+			}
+			country_event = 90820715
+		}
+		set_country_flag = macedonian_revolution_has_ended
+	}
+}
+
+country_event = { 
+	id = 90820716 # New Republic on the Block
+	title = "EVTNAME90820716"
+	desc = "EVTDESC90820716"
+	picture = "new_republic_on_the_block"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820716"
+		add_casus_belli = {
+			target = FROM
+			type = install_monarchy
+			months = 48
+		}
+		ai_will_do = { factor = 70 }
+	}
+	option = {
+		name = "EVTOPTB90820716"
+		add_casus_belli = {
+			target = FROM
+			type = install_monarchy
+			months = 48
+		}
+		ai_will_do = { factor = 30 }
+	}
+}

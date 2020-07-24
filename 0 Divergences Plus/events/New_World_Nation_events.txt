@@ -1,0 +1,205 @@
+country_event = { 
+	id = 90820001 # Nations that start without the New World flag can get it by becoming a Great Power
+	title = "EVTNAME90820001"
+	desc = "EVTDESC90820001"
+	picture = "new_world_nation"
+	
+	trigger = {
+		capital_scope = { 
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		war = no
+		is_greater_power = yes
+		NOT = { has_country_flag = new_world_nation }
+	}
+	
+	mean_time_to_happen = { months = 10 }
+	
+	option = {
+		name = "EVTOPTA90820001"
+		set_country_flag = new_world_nation
+	}
+}
+
+country_event = { 
+	id = 90820002 #Statue of Liberty chain
+	title = "EVTNAME90820002"
+	desc = "EVTDESC90820002"
+	picture = "statue_of_liberty_new_world"
+	
+	trigger = {
+		year = 1886
+		has_global_flag = statue_of_liberty_start
+		money = 30000
+		war = no
+		is_greater_power = yes
+		capital_scope = { continent = europe }
+		or = {
+			government = hms_government
+			government = democracy
+		}
+		NOT = { 
+			OR = {
+				has_global_flag = statue_of_liberty_built
+				has_country_flag = statue_of_liberty_refused
+			}
+		}
+		advanced_metallurgy = 1
+		invention = realist_art
+	}
+	
+	mean_time_to_happen = { months = 10 }
+	
+	option = {
+		name = "EVTOPTA90820002"
+		set_global_flag = statue_of_liberty_built
+		random_country = {
+			limit = {
+				has_country_flag = new_world_nation
+				is_greater_power = yes
+				or = {
+					government = hms_government
+					government = democracy
+				}
+				or = {		
+					border_policy = quota_immigration
+					border_policy = open_borders
+				}
+				not = { has_country_flag = statue_of_liberty_refused }
+			}
+			country_event = 90820003
+			relation = {
+				who = THIS
+				value = 150
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = "EVTOPTB90820002"
+		prestige = -20
+		set_country_flag = statue_of_liberty_refused
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { 
+	id = 90820003 #New World Nation asked if it wants Statue of Liberty
+	title = "EVTNAME90820003"
+	desc = "EVTDESC90820003"
+	picture = "statue_of_liberty_new_world"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820003" # Accept
+		FROM = {
+			country_event = 90820004
+		}
+		ai_chance = {
+			factor = 99
+		}
+	}
+	option = {
+		name = "EVTOPTB90820003" # Refuse
+		set_country_flag = statue_of_liberty_refused
+		FROM = {
+			country_event = 90820005
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { 
+	id = 90820004 #New World Nation has accepted
+	title = "EVTNAME90820004"
+	desc = "EVTDESC90820004"
+	picture = "statue_of_liberty_new_world"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820004"
+		money = -30000
+		prestige = 40
+		FROM = {
+			country_event = 90820006
+		}
+	}
+}
+
+country_event = { 
+	id = 90820005 #New World Nation has refused
+	title = "EVTNAME90820005"
+	desc = "EVTDESC90820005"
+	picture = "statue_of_liberty_new_world"
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820005"
+		clr_global_flag = statue_of_liberty_built
+	}
+}
+
+country_event = { 
+	id = 90820006 #Liberty Enlighting the World
+	title = "EVTNAME90820006"
+	desc = "EVTDESC90820006"
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820006"
+		prestige = 20
+		add_country_modifier = {
+			name = the_statue_of_liberty
+			duration = -1
+		}
+	}
+}
+
+country_event = { 
+	id = 90820007 #A Beacon of Liberty
+	title = "EVTNAME90820007"
+	desc = "EVTDESC90820007"
+	picture = "beacon_of_liberty"
+	
+	trigger = {
+		has_country_flag = new_world_nation
+		is_greater_power = yes
+		or = {
+			government = hms_government
+			government = democracy
+		}
+		or = {
+			border_policy = quota_immigration
+			border_policy = open_borders
+		}
+		not = { has_global_flag = statue_of_liberty_start }
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "EVTOPTA90820006"
+		prestige = 20
+		set_country_flag = beacon_of_liberty
+		set_global_flag = statue_of_liberty_start
+	}
+}
