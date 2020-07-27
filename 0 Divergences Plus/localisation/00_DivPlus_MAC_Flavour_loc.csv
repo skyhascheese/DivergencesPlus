@@ -1,0 +1,72 @@
+EVTNAME90820701;The Macedonian Revolution;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820701;The Macedonian Revolution;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820701;For centuries, the Greek and Bulgarian population of Macedonia has endured the harsh and capricious rule of the Sultan. Sensing an opportunity to increase their international standing and bring about the downfall of their rival, Venice and Aragon helped us organise our revolution. Now we have risen against the Turk, but the fight will be hard. The assurances of the foreign powers are an inadequate protection against Ottoman advances. We must press Venice and Aragon join our war.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820701;Send delegations to them at once.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820702;Macedonia Calls for Help;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820702;Sensing an opportunity to increase our international standing, we fuelled the flames of rebellion in the Ottoman Empire. $COUNTRY_ADJ$ diplomats were instrumental in convincing Greek and Bulgarian revolutionaries in Macedonia to rise up and overthrow the Ottoman yoke. Now, the revolutionaries are calling out for us to aid them in their war.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820702;We will honour our commitments!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820702;We must have given them the wrong impression.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820703;$FROMCOUNTRY$ Agrees to Help;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820703;$FROMCOUNTRY_ADJ$ diplomats have given the Macedonian provisional government the strongest assurances that they intend to aid us in our War of Independence.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820703;That is excellent news.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820704;$FROMCOUNTRY$ Refuses to Help;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820704;Our envoys in $FROMCOUNTRY$ have failed in their quest to secure an anti-Ottoman alliance with $FROMCOUNTRY$. The $FROMCOUNTRY_ADJ$ government has apologised profusely, but they claim we must have misunderstood the extent to which they were willing to provide support.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820704;An outrage!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820705;Calling our Allies;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820705;Having secured international support for our cause, it is time to test the seriousness of our allies. The war effort necessitates their direct military involvement.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820705;To arms, citizens!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820706;Macedonia is Free!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820706;Our War of Independence has ended, and Macedonia has gained her hard-earned freedom. Greeks and Bulgars can rejoice, for it is a glorious day when the Macedonian tricolour flies proudly over the land of Alexander.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820706;Long Live!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820707;Macedonia is Free!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820707;The Macedonian War of Independence has ended, and our newest ally has gained their hard-earned freedom. Greeks and Bulgars can rejoice, for it is a glorious day when the Macedonian tricolour flies proudly over the land of Alexander.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820707;Long Live!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820708;We Failed Macedonia;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820708;When the great military powers of the world make commitments, they are expected to keep them. We promised Macedonia aid in their war of independence, but we have failed to come to their aid. This reflects badly on us and we likely have lost much leverage over Macedonia.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820708;A shameful display.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820709;We Failed Macedonia;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820709;When the great military powers of the world make commitments, they are expected to keep them. We promised Macedonia aid in their war of independence, but we have failed to come to their aid. This reflects badly on us and we likely have lost much leverage over Macedonia. What hope there was of prince Martin Fernando Alfonso of the royal house of Aragon acceding to a new Macedonian throne has been swept away by our diplomatic ineptitude. The throne will now most likely go to another European monarchy.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820709;It's still early in the game, maybe restart?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820710;Macedonia Lost!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820710;The Macedonian War of Independence has ended, and we have lost one of our most important provinces. This is a monumental loss for $COUNTRY$, and Mehmed is surely turning in his grave.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820710;Dark days lie ahead.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820711;The Fate of the Republic;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820711;In helping us gain our independence, Aragon made it abundantly clear that they were only interested in aiding us if we agreed to place prince Martin Fernando Alfonso of Aragon on the Macedonian throne under a system of constitutional monarchy. The war now at an end, the Constitutional Convention assembled at $CAPITAL$ must decide the fate of the country. Defy Aragon and the other monarchies of Europe and risk war to subdue republicanism, or accept their demands and abolish the republic?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820711;Well, they did promise a *constitutional* monarchy...;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820711;We will press ahead with a more democratic republic.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTC90820711;The government needs no reform.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820712;The Fate of the Republic;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820712;We have gained our independence at a time when monarchy is the prevailing form of government on the continent. Our republic is a republic in name only, power residing in a small circle of intellectuals leading the Revolution. The war now at an end, the Constitutional Convention assembled at $CAPITAL$ must decide the fate of the country. Anger the other monarchies of Europe and risk war to subdue republicanism, or accept their demands and abolish the republic?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820712;We must not anger the Great Powers. Constitutional monarchy!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820712;We will press ahead with a more democratic republic.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTC90820712;The government needs no reform.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820713;The Crown of Macedonia;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820713;In helping Macedonia gain her independence, we made it abundantly clear that we were only interested in aiding them if they agreed to place prince Martin Fernando Alfonso of Aragon on the Macedonian throne under a system of constitutional monarchy. The war now at an end, the Constitutional Convention assembled in $FROMCOUNTRY_CAPITAL$ has decided to offer Martin Fernando Alfonso the crown.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820713;He obviously accepts.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820713;We have no interest in the crown from the gutter!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820714;The Kingdom of Macedonia;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820714;Martin Fernando Alfonso of Aragon has accepted our proposal that he ascend the Macedonian throne. All preparations are in place for him to be coronated in $CAPITAL$. What should his regal name be? Alexander seems fitting.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820714;Long Live the King!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820715;Martin Fernando Alfonso Refuses;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820715;In a truly surreal turn of events, upon hearing that our Constitutional Convention has agreed to abolish the republic and apoint him King of Macedonia within a constitutional framework, prince Martin Fernando Alfonso of Aragon flat-out refused the offer. The words 'crown from the gutter' were uttered.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820715;To avoid war, we must find another prince.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820715;A democratic republic is the only logical course of action.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTC90820715;Why not maintain the current junta?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820716;The Macedonian Republic;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820716;The Constitutional Convention concluded its workings today, and a new Constitution was signed. Macedonia is to be a democratic republic, built on principles of equality and brotherhood, a true role model for the peoples of the world still living under barbarously illiberal monarchies. Said monarchies will probably not take too kindly to our little experiment, however.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820716;Three hurrahs for the republic!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820717;The Crown of Macedonia;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820717;The newly-independent state of Macedonia has decided to reform its revolutionary government into a constitutional monarchy so as not to anger the monarchial powers of Europe. The Constitutional Convention has decided to offer one of our princes the new crown of Macedonia.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820717;Any excuse to further our influence.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820717;We have no interest in the crown from the gutter!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820718;The Kingdom of Macedonia;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820718;$FROMCOUNTRY$ has accepted our proposal that a $FROMCOUNTRY_ADJ$ prince acceed the Macedonian throne. All preparations are in place for a grand coronation in $CAPITAL$. What should his regal name be? Alexander seems fitting.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820718;Long Live the King!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820719;New Republic on the Block;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820719;Macedonia has embarked on a risky little experiment, instituting a democratic republic - in direct opposition to our insistance on a constitutional monarchy instead. This is an extremely dangerous precedent, and as a Great Power build on a tradition of monarchial legitimacy, we must respond with an iron fist.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820719;Macedonia shall be a monarchy.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820719;Let them be, we have more pressing issues.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90820720;New Republic on the Block;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90820720;Macedonia, having thrown off the chains of Ottoman domination, has decided to reform its government into that of a democratic republic. Being a republic ourselves, we know that the other Great Powers don't look favourably on republicanism. It is certain that they will seek to turn Macedonia into a monarchy. Should we take the moral decision and ally ourselves with the nascent Macedonian republic, or let them fend for themselves?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90820720;We shall stand with them.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90820720;Let them be, we have more pressing issues.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

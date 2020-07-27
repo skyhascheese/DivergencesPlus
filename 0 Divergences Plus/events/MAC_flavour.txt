@@ -1,5 +1,5 @@
 country_event = { 
-	id = 90820701 # Rebellion Brewing in Macedonia
+	id = 90820701 # Rebellion in Macedonia
 	title = "EVTNAME90820701"
 	desc = "EVTDESC90820701"
 	picture = "macedonian_war_of_independence"
@@ -21,18 +21,15 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA90820701"
-		any_country = {
-			limit = {
-				or = {
-					tag = VEN
-					tag = ARA
-				}
-			}
+		VEN = {
+			country_event = 90820702
+		}
+		ARA = {
 			country_event = 90820702
 		}
 		set_variable = {
 			which = macedonian_rebellion
-			value = 4
+			value = 0.01
 		}
 	}
 }
@@ -62,11 +59,9 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				or = {
-					relation = {
-						who = TUR
-						value = 75
-					}
+				relation = {
+					who = TUR
+					value = 75
 				}
 			}
 			relation = {
@@ -78,10 +73,25 @@ country_event = {
 		MAC = {
 			country_event = 90820703
 			change_variable = {
-				name = macedonian_rebellion
+				which = macedonian_rebellion
+				value = 1
 			}
 		}
-		ai_will_do = { factor = 66 }
+		ai_chance = { factor = 66
+			modifier = { 
+				factor = 1.5
+				tag = ARA
+				or = {
+					government = absolute_monarchy
+					government = prussian_constitutionalism
+					government = hms_government
+				}
+			}
+			modifier = { 
+				factor = 1.2
+				war = no
+			}
+		}	
 	}
 	
 	option = {
@@ -92,11 +102,9 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				or = {
-					relation = {
-						who = TUR
-						value = 75
-					}
+				relation = {
+					who = TUR
+					value = 75
 				}
 			}
 			relation = {
@@ -106,8 +114,25 @@ country_event = {
 		}
 		MAC = {
 			country_event = 90820704
+			change_variable = {
+				which = macedonian_rebellion
+				value = 1
+			}
 		}
-		ai_will_do = { factor = 33 }
+		ai_chance = { 
+			factor = 33 
+			modifier = { 
+				factor = 3
+				tag = ARA
+				not = {
+					or = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -118,6 +143,8 @@ country_event = {
 	picture = "macedonian_war_of_independence"
 	
 	is_triggered_only = yes
+
+	allow_multiple_instances = yes
 	
 	option = {
 		name = "EVTOPTA90820703"
@@ -135,6 +162,8 @@ country_event = {
 	picture = "macedonian_war_of_independence"
 	
 	is_triggered_only = yes
+
+	allow_multiple_instances = yes
 	
 	option = {
 		name = "EVTOPTA90820704"
@@ -151,11 +180,13 @@ country_event = {
 	desc = "EVTDESC90820705"
 	picture = "macedonian_war_of_independence"
 	
+	fire_only_once = yes
+	
 	trigger = {
 		tag = MAC
 		check_variable = {
 			which = "macedonian_rebellion"
-			value = 1
+			value = 2
 		}
 		or = {
 			alliance_with = VEN
@@ -196,21 +227,51 @@ country_event = {
 		war = no
 	}
 	
+	fire_only_once = yes
+	
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
 		name = "EVTOPTA90820706"
-		prestige = 20
+		prestige = 10
 		any_country = {
 			limit = {
 				has_country_flag = helping_macedonia
+				truce_with = TUR
+				alliance_with = MAC
 			}
 			country_event = 90820707
 		}
-		TUR = {
+		any_country = {
+			limit = {
+				has_country_flag = helping_macedonia
+				tag = VEN
+				not = {
+					and = {
+						truce_with = TUR
+						alliance_with = MAC
+					}
+				}
+			}
 			country_event = 90820708
 		}
-		set_global_flat = Macedonian_war_of_independence_ended
+		any_country = {
+			limit = {
+				and = {
+					has_country_flag = helping_macedonia
+					tag = ARA
+					not = {
+						truce_with = TUR
+						alliance_with = MAC
+					}
+				}
+			}
+			country_event = 90820709
+		}
+		TUR = {
+			country_event = 90820710
+		}
+		set_global_flag = Macedonian_war_of_independence_ended
 	}
 }
 
@@ -224,12 +285,12 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA90820707"
-		prestige = 20
+		prestige = 10
 	}
 }
 
 country_event = { 
-	id = 90820708 # Macedonia Gains Independence!
+	id = 90820708 # We Failed Macedonia
 	title = "EVTNAME90820708"
 	desc = "EVTDESC90820708"
 	picture = "macedonian_war_of_independence"
@@ -238,6 +299,54 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA90820708"
+		prestige = -10
+		clr_country_flag = helping_macedonia
+		set_country_flag = inelligible_for_macedonian_crown
+		relation = {
+			who = MAC
+			value = -100
+		}
+		diplomatic_influence = {
+			who = MAC
+			value = -100
+		}
+	}
+}
+
+country_event = { 
+	id = 90820709 # We Failed Macedonia (Aragon)
+	title = "EVTNAME90820709"
+	desc = "EVTDESC90820709"
+	picture = "macedonian_war_of_independence"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820709"
+		prestige = -10
+		clr_country_flag = helping_macedonia
+		set_country_flag = inelligible_for_macedonian_crown
+		relation = {
+			who = MAC
+			value = -100
+		}
+		diplomatic_influence = {
+			who = MAC
+			value = -100
+		}
+	}
+}
+
+country_event = { 
+	id = 90820710 # Macedonia Gains Independence!
+	title = "EVTNAME90820710"
+	desc = "EVTDESC90820710"
+	picture = "macedonian_war_of_independence"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820710"
 		prestige = -20
 		any_pop = {
 			limit = {
@@ -246,12 +355,15 @@ country_event = {
 					is_accepted_culture = yes
 				}
 			}
-			conscioussness = 3
+			consciousness = 3
 		}
 		any_pop = {
 			limit = {
 				not = {
-					is_primary_culture = yes
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
 				}
 			}
 			militancy = 3
@@ -260,9 +372,9 @@ country_event = {
 }
 
 country_event = {
-	id = 90820709 # The fate of the Republic - Aragon has helped
-	title = "EVTNAME90820709"
-	desc = "EVTDESC90820709"
+	id = 90820711 # The fate of the Republic - Aragon has helped
+	title = "EVTNAME90820711"
+	desc = "EVTDESC90820711"
 	picture = "fate_of_the_republic"
 	
 	trigger = {
@@ -285,7 +397,7 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 	
 	option = {
-		name = "EVTOPTA90820709" # Martin Fernando Alfonso, Prince of Aragon
+		name = "EVTOPTA90820711" # Martin Fernando Alfonso, Prince of Aragon
 		scaled_militancy = {
 			factor = -4
 			ideology = reactionary
@@ -300,17 +412,17 @@ country_event = {
 		}
 		scaled_militancy = {
 			factor = 5
-			ideology = anarcholiberal
+			ideology = anarcho_liberal
 		}
 		set_country_flag = macedonia_prince_martin
 		ARA = {
-			country_event = 90820711
+			country_event = 90820713
 		}
-		ai_will_do = { factor = 60 }
+		ai_chance = { factor = 60 }
 	}
 	
 	option = {
-		name = "EVTOPB90820709" #Reform the Republic
+		name = "EVTOPTB90820711" #Reform the Republic
 		scaled_militancy = {
 			factor = 4
 			ideology = reactionary
@@ -321,7 +433,7 @@ country_event = {
 		}
 		scaled_militancy = {
 			factor = -1
-			ideology = anarcholiberal
+			ideology = anarcho_liberal
 		}
 		scaled_militancy = {
 			factor = -3
@@ -330,17 +442,20 @@ country_event = {
 		any_pop = {
 			limit = {
 				not = {
-					is_primary_culture = yes
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
 				}
 			}
 			militancy = 2
 		}
 		set_country_flag = macedonia_reform_the_republic
-		ai_will_do = { factor = 20 }
+		ai_chance = { factor = 20 }
 	}
 	
 	option = {
-		name = "EVTOPTC90820709" #Maintain the dictatorship
+		name = "EVTOPTC90820711" #Maintain the dictatorship
 		scaled_militancy = {
 			factor = 2
 			ideology = reactionary
@@ -351,7 +466,7 @@ country_event = {
 		}
 		scaled_militancy = {
 			factor = 3
-			ideology = anarcholiberal
+			ideology = anarcho_liberal
 		}
 		scaled_militancy = {
 			factor = 5
@@ -360,20 +475,23 @@ country_event = {
 		any_pop = {
 			limit = {
 				not = {
-					is_primary_culture = yes
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
 				}
 			}
 			militancy = 2
 		}
 		set_country_flag = macedonia_maintain_the_dictatorship
-		ai_will_do = { factor = 20 }
+		ai_chance = { factor = 20 }
 	}
 }
 
 country_event = { 
-	id = 90820710 # The fate of the Republic - Aragon has not helped
-	title = "EVTNAME90820710"
-	desc = "EVTDESC90820710"
+	id = 90820712 # The fate of the Republic - Aragon has not helped
+	title = "EVTNAME90820712"
+	desc = "EVTDESC90820712"
 	picture = "fate_of_the_republic"
 	
 	trigger = {
@@ -396,7 +514,7 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 	
 	option = {
-		name = "EVTOPTA90820710" # Find a prince
+		name = "EVTOPTA90820712" # Find a prince
 		scaled_militancy = {
 			factor = -4
 			ideology = reactionary
@@ -411,14 +529,14 @@ country_event = {
 		}
 		scaled_militancy = {
 			factor = 5
-			ideology = anarcholiberal
+			ideology = anarcho_liberal
 		}
 		set_country_flag = macedonia_find_a_prince
-		ai_will_do = { factor = 45 }
+		ai_chance = { factor = 45 }
 	}
 	
 	option = {
-		name = "EVTOPTB90820710" #Reform the Republic
+		name = "EVTOPTB90820712" #Reform the Republic
 		scaled_militancy = {
 			factor = 4
 			ideology = reactionary
@@ -429,18 +547,18 @@ country_event = {
 		}
 		scaled_militancy = {
 			factor = -1
-			ideology = anarcholiberal
+			ideology = anarcho_liberal
 		}
 		scaled_militancy = {
 			factor = -3
 			ideology = liberal
 		}
 		set_country_flag = macedonia_reform_the_republic
-		ai_will_do = { factor = 35 }
+		ai_chance = { factor = 35 }
 	}
 	
 	option = {
-		name = "EVTOPTC90820710" #Maintain the dictatorship
+		name = "EVTOPTC90820712" #Maintain the dictatorship
 		scaled_militancy = {
 			factor = 4
 			ideology = reactionary
@@ -451,7 +569,7 @@ country_event = {
 		}
 		scaled_militancy = {
 			factor = -1
-			ideology = anarcholiberal
+			ideology = anarcho_liberal
 		}
 		scaled_militancy = {
 			factor = -3
@@ -460,27 +578,30 @@ country_event = {
 		any_pop = {
 			limit = {
 				not = {
-					is_primary_culture = yes
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
 				}
 			}
 			militancy = 2
 		}
 		set_country_flag = macedonia_maintain_the_dictatorship
 		set_country_flag = macedonian_revolution_has_ended
-		ai_will_do = { factor = 20 }
+		ai_chance = { factor = 20 }
 	}
 }
 
 country_event = { 
-	id = 90820711 # The Crown of Macedonia
-	title = "EVTNAME90820711"
-	desc = "EVTDESC90820711"
+	id = 90820713 # The Crown of Macedonia (Aragon)
+	title = "EVTNAME90820713"
+	desc = "EVTDESC90820713"
 	picture = "fate_of_the_republic"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820711"
+		name = "EVTOPTA90820713"
 		prestige = 20
 		relation = {
 			who = MAC
@@ -490,12 +611,12 @@ country_event = {
 			who = MAC
 			value = 100
 		}
-		set_country_flag = aragon_has_decided_to_accept
-		ai_will_do { factor = 75 }
+		set_global_flag = aragon_has_decided_to_accept
+		ai_chance = { factor = 90 }
 	}
 	
 	option = {
-		name = "EVTOPTB90820711"
+		name = "EVTOPTB90820713"
 		prestige = -20
 		relation = {
 			who = MAC
@@ -505,29 +626,24 @@ country_event = {
 			who = MAC
 			value = -100
 		}
-		set_country_flag = aragon_has_decided_to_decline
+		set_global_flag = aragon_has_decided_to_decline
 		MAC = {
-			country_event = 90820713
+			country_event = 90820715
 		}
-		ai_will_do = { factor = 25 }
+		ai_chance = { factor = 10 }
 	}
 }
 
 country_event = { 
-	id = 90820712 # The Kingdom of Macedonia (Aragon)
-	title = "EVTNAME90820712"
-	desc = "EVTDESC90820712"
+	id = 90820714 # The Kingdom of Macedonia (Aragon)
+	title = "EVTNAME90820714"
+	desc = "EVTDESC90820714"
 	picture = "fate_of_the_republic"
 	
 	trigger = {
 		tag = MAC
-		or = {
-			and = {
-				has_country_flag = macedonia_prince_martin
-				has_global_flag = aragon_has_decided_to_accept
-			}
-			has_country_flag = macedonia_find_a_prince
-		}
+		has_country_flag = macedonia_prince_martin
+		has_global_flag = aragon_has_decided_to_accept
 		war = no
 	}
 	
@@ -536,7 +652,7 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 	
 	option = {
-		name = "EVTOPTA90820712"
+		name = "EVTOPTA90820714"
 		government = prussian_constitutionalism
 		political_reform = state_equal_weight
 		political_reform = wealth_voting
@@ -549,6 +665,7 @@ country_event = {
 		political_reform = all_voting_pops
 		political_reform = bankruptcy
 		political_reform = quota_immigration
+		election = yes
 		any_country = {
 			limit = {
 				is_greater_power = yes
@@ -568,15 +685,15 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820713 # Aragon has declined the offer
-	title = "EVTNAME90820713"
-	desc = "EVTDESC90820713"
+	id = 90820715 # Aragon has declined the offer
+	title = "EVTNAME90820715"
+	desc = "EVTDESC90820715"
 	picture = "fate_of_the_republic"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820710" # Find a prince
+		name = "EVTOPTA90820715" # Find a prince
 		scaled_militancy = {
 			factor = -4
 			ideology = reactionary
@@ -591,15 +708,15 @@ country_event = {
 		}
 		scaled_militancy = {
 			factor = 5
-			ideology = anarcholiberal
+			ideology = anarcho_liberal
 		}
 		clr_country_flag = macedonia_prince_martin
 		set_country_flag = macedonia_find_a_prince
-		ai_will_do = { factor = 45 }
+		ai_chance = { factor = 45 }
 	}
 	
 	option = {
-		name = "EVTOPTB90820710" #Reform the Republic
+		name = "EVTOPTB90820715" #Reform the Republic
 		scaled_militancy = {
 			factor = 4
 			ideology = reactionary
@@ -610,7 +727,7 @@ country_event = {
 		}
 		scaled_militancy = {
 			factor = -1
-			ideology = anarcholiberal
+			ideology = anarcho_liberal
 		}
 		scaled_militancy = {
 			factor = -3
@@ -618,11 +735,11 @@ country_event = {
 		}
 		clr_country_flag = macedonia_prince_martin
 		set_country_flag = macedonia_reform_the_republic
-		ai_will_do = { factor = 35 }
+		ai_chance = { factor = 35 }
 	}
 	
 	option = {
-		name = "EVTOPTC90820710" #Maintain the dictatorship
+		name = "EVTOPTC90820715" #Maintain the dictatorship
 		scaled_militancy = {
 			factor = -4
 			ideology = reactionary
@@ -633,7 +750,7 @@ country_event = {
 		}
 		scaled_militancy = {
 			factor = 5
-			ideology = anarcholiberal
+			ideology = anarcho_liberal
 		}
 		scaled_militancy = {
 			factor = 5
@@ -642,7 +759,10 @@ country_event = {
 		any_pop = {
 			limit = {
 				not = {
-					is_primary_culture
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
 				}
 			}
 			militancy = 2
@@ -650,14 +770,14 @@ country_event = {
 		clr_country_flag = macedonia_prince_martin
 		set_country_flag = macedonia_maintain_the_dictatorship
 		set_country_flag = macedonian_revolution_has_ended
-		ai_will_do = { factor = 20 }
+		ai_chance = { factor = 20 }
 	}
 }
 
 country_event = { 
-	id = 90820714 # The Macedonian Republic
-	title = "EVTNAME90820714"
-	desc = "EVTDESC90820714"
+	id = 90820716 # The Macedonian Republic
+	title = "EVTNAME90820716"
+	desc = "EVTDESC90820716"
 	picture = "fate_of_the_republic"
 	
 	trigger = {
@@ -671,7 +791,7 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 	
 	option = {
-		name = "EVTOPTA90820714"
+		name = "EVTOPTA90820716"
 		government = democracy
 		political_reform = state_equal_weight
 		political_reform = universal_weighted_voting
@@ -684,7 +804,7 @@ country_event = {
 		political_reform = all_voting_pops
 		political_reform = bankruptcy
 		political_reform = quota_immigration
-		
+		election = yes		
 		any_country = {
 			limit = {
 				is_greater_power = yes
@@ -695,48 +815,246 @@ country_event = {
 				}
 				capital_scope = { continent = europe }
 			}
-			not = {
+			country_event = 90820719
+		}
+		
+		any_country = {
+			limit = {
+				is_greater_power = yes
 				or = {
-					relation = {
-						who = THIS
-						value = 50
-					}
-					diplomatic_influence = {
-						who = THIS
-						value = 50
-					}
+					government = democracy
+					government = merchant_republic
 				}
+				capital_scope = { continent = europe }
 			}
-			country_event = 90820715
+			country_event = 90820720
 		}
 		set_country_flag = macedonian_revolution_has_ended
 	}
 }
 
 country_event = { 
-	id = 90820716 # New Republic on the Block
-	title = "EVTNAME90820716"
-	desc = "EVTDESC90820716"
+	id = 90820717 # The Macedonian Crown (Aragon has declined)
+	title = "EVTNAME90820717"
+	desc = "EVTDESC90820717"
+	picture = "fate_of_the_republic"
+	
+	trigger = {
+		or = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		capital_scope = { continent = europe }
+		rank = 16
+		civilized = yes
+		MAC = {
+			has_country_flag = macedonia_find_a_prince
+		}
+		not = {
+			or = {
+				has_global_flag = macedonia_prince_found
+				has_country_flag = inelligible_for_macedonian_crown
+			}
+		}
+	}
+	
+	mean_time_to_happen = { 
+		months = 2 
+		
+		modifier = {
+			factor = 0.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.7
+			government = hms_government
+		}
+		modifier = {
+			factor = 0.8
+			government = prussian_constitutionalism
+		}
+		modifier = {
+			factor = 0.9
+			government = absolute_monarchy
+		}
+		modifier = {
+			factor = 0.9
+			relation = {
+				who = MAC
+				value = 50
+			}
+		}
+		modifier = {
+			factor = 0.9
+			relation = {
+				who = MAC
+				value = 100
+			}
+		}
+		modifier = {
+			factor = 0.9
+			relation = {
+				who = MAC
+				value = 150
+			}
+		}
+		modifier = {
+			factor = 1.1
+			relation = {
+				who = TUR
+				value = 50
+			}
+		}
+		modifier = {
+			factor = 1.1
+			relation = {
+				who = TUR
+				value = 100
+			}
+		}
+		modifier = {
+			factor = 1.1
+			relation = {
+				who = TUR
+				value = 150
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820717"
+		prestige = 10
+		relation = {
+			who = MAC
+			value = 200
+		}
+		diplomatic_influence = {
+			who = MAC
+			value = 100
+		}
+		set_country_flag = accepted_macedonian_crown
+		MAC = {
+			country_event = 90820718
+		}
+		ai_chance = { factor = 70 }
+	}
+	
+	option = {
+		name = "EVTOPTB90820717"
+		prestige = -10
+		relation = {
+			who = MAC
+			value = -100
+		}
+		diplomatic_influence = {
+			who = MAC
+			value = -100
+		}
+		set_country_flag = inelligible_for_macedonian_crown
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = { 
+	id = 90820718 # The Kingdom of Macedonia (Aragon has declined)
+	title = "EVTNAME90820718"
+	desc = "EVTDESC90820718"
+	picture = "fate_of_the_republic"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820718"
+		government = prussian_constitutionalism
+		political_reform = state_equal_weight
+		political_reform = wealth_voting
+		political_reform = yes_meeting
+		political_reform = censored_press
+		political_reform = no_trade_unions
+		political_reform = first_past_the_post
+		political_reform = non_secret_ballots
+		political_reform = four_year_draft
+		political_reform = all_voting_pops
+		political_reform = bankruptcy
+		political_reform = quota_immigration
+		election = yes
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				or = {
+					government = hms_government
+					government = prussian_constitutionalism
+					government = absolute_monarchy
+				}
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+		}
+		set_country_flag = macedonian_revolution_has_ended
+		clr_country_flag = macedonia_find_a_prince
+	}
+}
+
+country_event = { 
+	id = 90820719 # New Republic on the Block (is a monarchy)
+	title = "EVTNAME90820719"
+	desc = "EVTDESC90820719"
 	picture = "new_republic_on_the_block"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820716"
+		name = "EVTOPTA90820719"
 		add_casus_belli = {
 			target = FROM
 			type = install_monarchy
 			months = 48
 		}
-		ai_will_do = { factor = 70 }
+		relation = {
+			who = MAC
+			value = -100
+		}
+		diplomatic_influence = {
+			who = MAC
+			value = -100
+		}
+		ai_chance = { factor = 70 }
+	}
+	
+	option = {
+		name = "EVTOPTB90820719"
+		prestige = -10
+		ai_chance = { factor = 30 }
+	}
+}
+
+country_event = { 
+	id = 90820720 # New Republic on the Block (is a republic)
+	title = "EVTNAME90820720"
+	desc = "EVTDESC90820720"
+	picture = "new_republic_on_the_block"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820720"
+		create_alliance = MAC
+		relation = {
+			who = MAC
+			value = 100
+		}
+		diplomatic_influence = {
+			who = MAC
+			value = 100
+		}
+		ai_chance = { factor = 50 }
 	}
 	option = {
-		name = "EVTOPTB90820716"
-		add_casus_belli = {
-			target = FROM
-			type = install_monarchy
-			months = 48
-		}
-		ai_will_do = { factor = 30 }
+		name = "EVTOPTB90820720"
+		prestige = -10
+		ai_chance = { factor = 50 }
 	}
 }

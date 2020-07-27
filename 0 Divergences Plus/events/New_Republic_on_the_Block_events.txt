@@ -1,0 +1,143 @@
+country_event = { 
+	id = 90820751 # Great powers get assigned a flag and the GP monarchies variable is changed
+	title = "EVTNAME90820751"
+	desc = "EVTDESC990820751"
+	picture = "suppressing_republicanism"
+	
+	trigger = {
+		is_greater_power = yes
+		or = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		not = { has_country_flag = great_power_monarchy }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "EVTOPTA90820751"
+		set_country_flag = great_power_monarchy
+		change_variable = {
+			which = great_power_monarchy
+			value = 1.1
+		}
+	}
+}
+
+country_event = { 
+	id = 90820752 # Great power monarchy loses GP status and GP monarchies variable is changed
+	title = "EVTNAME90820752"
+	desc = "EVTDESC990820752"
+	picture = "suppressing_republicanism"
+	
+	trigger = {
+		is_greater_power = no
+		has_country_flag = great_power_monarchy
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "EVTOPTA90820752"
+		clr_country_flag = great_power_monarchy
+		change_variable = {
+			which = great_power_monarchy
+			value = -1.1
+		}
+	}
+}
+
+country_event = { 
+	id = 90820753 # Great power monarchy no longer a monarchy and GP monarchies variable is changed
+	title = "EVTNAME90820753"
+	desc = "EVTDESC990820753"
+	picture = "suppressing_republicanism"
+	
+	trigger = {
+		is_greater_power = yes
+		has_country_flag = great_power_monarchy
+		not = {
+			or = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "EVTOPTA90820753"
+		clr_country_flag = great_power_monarchy
+		change_variable = {
+			which = great_power_monarchy
+			value = -1.1
+		}
+	}
+}
+
+country_event = { 
+	id = 90820754 # 3 or fewer GPs are monarchies gets install_monarchy cb disabled
+	title = "EVTNAME90820754"
+	desc = "EVTDESC990820754"
+	picture = "suppressing_republicanism"
+	
+	trigger = {
+		not = {
+			check_variable = {
+				which = great_power_monarchy
+				value = 3.4
+			}
+		}
+		not = { has_global_flag = decline_of_monarchism }
+	}
+	
+	major = yes
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "EVTOPTA90820754"
+		set_global_flag = decline_of_monarchism
+	}
+}
+
+country_event = { 
+	id = 90820755 # 3 or fewer GPs are monarchies gets install_monarchy cb disabled
+	title = "EVTNAME90820755"
+	desc = "EVTDESC990820755"
+	picture = "suppressing_republicanism"
+	
+	trigger = {
+		not = { 
+			has_global_flag = decline_of_monarchism
+			has_country_flag = new_republic_on_the_block
+			or = {
+				ruling_party_ideology = reactionary
+				ruling_party_ideology = fascist
+			}
+			or = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+		}
+		has_country_modifier = national_confusion
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "EVTOPTA90820755"
+		set_country_flag = new_republic_on_the_block
+		any_country = {
+			limit = {
+				has_country_flag = great_power_monarchy
+			}
+			country_event = 90820756
+		}
+	}
+}
