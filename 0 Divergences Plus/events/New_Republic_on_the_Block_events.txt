@@ -106,10 +106,10 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820755 # 3 or fewer GPs are monarchies gets install_monarchy cb disabled
+	id = 90820755 # New Republic on the Block
 	title = "EVTNAME90820755"
 	desc = "EVTDESC990820755"
-	picture = "suppressing_republicanism"
+	picture = "proclamation_of_the_republic"
 	
 	trigger = {
 		not = { 
@@ -128,16 +128,246 @@ country_event = {
 		has_country_modifier = national_confusion
 	}
 	
-	mean_time_to_happen = { months = 1 }
+	mean_time_to_happen = { 
+		months = 3
+		
+		modifier = {
+			factor = 0.5
+			government = democracy
+		}
+		modifier = {
+			factor = 0.5
+			not = {
+				or = {
+					ruling_party_ideology = conservative
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+					ruling_party_ideology = anarcho_liberal
+				}
+			}
+		}
+	}
 	
 	option = {
 		name = "EVTOPTA90820755"
+		clr_country_flag = forced_monarchy
+		remove_country_modifier = forced_monarchy
 		set_country_flag = new_republic_on_the_block
 		any_country = {
 			limit = {
+				is_greater_power = yes
 				has_country_flag = great_power_monarchy
 			}
 			country_event = 90820756
 		}
+		any_country = {
+			limit = {
+				neighbor = THIS
+			}
+			any_pop = {
+				limit = {
+					not = {
+						or = {
+							type = rich_strata
+							ideology = conservative
+							ideology = reactionary
+							ideology = fascist
+							ideology = anarcho_liberal
+						}
+					}
+				}
+				consciousness = 3
+				political_reform_desire = 0.3
+				social_reform_desire = 0.2
+			}
+		}	
+	}
+}
+
+country_event = { 
+	id = 90820756 # New Republic on the Block (GP event)
+	title = "EVTNAME90820756"
+	desc = "EVTDESC990820756"
+	picture = "suppressing_republicanism"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA90820756"
+		add_casus_belli = {
+			target = FROM
+			type = install_monarchy
+			months = 24
+		}
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				not = {
+					has_country_flag = great_power_monarchy
+				}
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		any_country = {
+			limit = {
+				not = {
+					is_greater_power = yes
+					or = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		any_pop = {
+				limit = {
+					not = {
+						or = {
+							type = rich_strata
+							ideology = conservative
+							ideology = reactionary
+							ideology = fascist
+							ideology = anarcho_liberal
+						}
+					}
+				}
+			consciousness = 1.5
+			political_reform_desire = 0.15
+			social_reform_desire = 0.1
+		}
+		ai_chance = {
+			factor = 66
+			
+			modifier = {
+				factor = 1.5
+				not = {
+					relation = {
+						who = FROM
+						value = 50
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820756"
+		prestige = -30
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				not = {
+					has_country_flag = great_power_monarchy
+				}
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		any_pop = {
+				limit = {
+					not = {
+						or = {
+							type = rich_strata
+							ideology = conservative
+							ideology = reactionary
+							ideology = fascist
+							ideology = anarcho_liberal
+						}
+					}
+				}
+			consciousness = 0.5
+			political_reform_desire = 0.1
+			social_reform_desire = 0.05
+		}	
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 0.5
+				or = {
+					not = {
+						relation = {
+							who = FROM
+							value = 150
+						}
+					}
+					FROM = {
+						in_sphere = THIS
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820757 # Our Republic Dismantled
+	title = "EVTNAME90820757"
+	desc = "EVTDESC990820757"
+	picture = "suppressing_republicanism"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA90820757"
+		clr_country_flag = new_republic_on_the_block
+		set_country_flag = forced_monarchy
+		add_country_modifier = {
+			name = forced_monarchy
+			duration = 1825
+		}
+		prestige = -20
+		government = prussian_constitutionalism
+		ruling_party_ideology = reactionary
+		political_reform = wealth_weighted_voting
+		political_reform = appointed
+		political_reform = first_past_the_post
+		political_reform = censored_press
+		political_reform = state_controlled
+		political_reform = harassment
+		political_reform = culture_voting_only
+		any_pop = {
+			limit = {
+				not = {
+					or = {
+						type = rich_strata
+						ideology = conservative
+						ideology = reactionary							
+						ideology = fascist
+						ideology = anarcho_liberal
+					}
+				}
+			}
+			consciousness = 2
+			political_reform_desire = 0.2
+			social_reform_desire = 0.1
+		}
+		any_pop = {
+			limit = {
+				or = {
+					type = rich_strata
+					ideology = conservative
+					ideology = reactionary
+					ideology = fascist
+					ideology = anarcho_liberal
+					}
+			}
+			consciousness = -3
+			militancy = -5
+		}	
 	}
 }

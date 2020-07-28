@@ -16,7 +16,7 @@ country_event = {
 			is_greater_power = yes	
 			is_secondary_power = yes
 		}
-		war = no # Nation can not be at war at the time of invite
+		war = no
 		not = { 
 			has_country_modifier = worlds_fair_cooloff
 		}
@@ -28,6 +28,10 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			has_country_flag = previous_worlds_fair_winner
+		}
+		modifier = {
+			factor = 0.5
+			has_country_modifier = good_host
 		}
 	}
 
@@ -55,7 +59,12 @@ country_event = {
 		any_country = {
 			limit = {
 				industrial_score = 25
-				not = { has_country_flag = worlds_fair_no_attend }
+				not = { 
+					or = {
+						has_country_flag = worlds_fair_no_attend 
+						has_country_flag = worlds_fair_attendee
+					}
+				}
 				not = { tag = this }
 			}
 			country_event = 90820502
@@ -100,26 +109,28 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 0.1
-				relation = { 
-					value = 50
-					who = FROM
+				not = {
+					relation = { 
+						value = 50
+						who = FROM
+					}
 				}
 			}
 			modifier = {
-				factor = 0.1
+				factor = 1.1
 				industrial_score = 50
 			}
 			modifier = {
-				factor = 0.1
+				factor = 1.1
 				industrial_score = 100
 			}
 			modifier = {
-				factor = 0.1
+				factor = 1.1
 				industrial_score = 150
 			}
 			
 			modifier = {
-				factor = 0.1
+				factor = 1.1
 				industrial_score = 200
 			}
 		}
@@ -158,8 +169,8 @@ country_event = {
 		ai_chance = {
 			factor = 33
 			modifier = {
-				factor = 0.5
-				NOT = { money = 40000 }
+				factor = 2
+				money = 40000
 			}
 			modifier = {
 				factor = 0.5
@@ -174,8 +185,9 @@ country_event = {
 		ai_chance = {
 			factor = 33
 			modifier = {
-				factor = 0.2
-				NOT = { money = 20000 }
+				factor = 2
+				money = 20000
+				NOT = { money = 40000 }
 			}
 		}
 	}
@@ -185,6 +197,10 @@ country_event = {
 		set_country_flag = minimal_pavilion
 		ai_chance = {
 			factor = 33
+			modifier = {
+				factor = 2
+				NOT = { money = 20000 }
+			}
 		}
 	}
 }
@@ -221,8 +237,8 @@ country_event = {
 		ai_chance = {
 			factor = 33
 			modifier = {
-				factor = 0.5
-				NOT = { money = 100000 }
+				factor = 2
+				money = 100000
 			}
 		}
 	}
@@ -233,8 +249,9 @@ country_event = {
 		ai_chance = {
 			factor = 33
 			modifier = {
-				factor = 0.2
-				NOT = { money = 50000 }
+				factor = 2
+				money = 50000
+				NOT = { money = 100000 }
 			}
 		}
 	}
@@ -244,6 +261,10 @@ country_event = {
 		set_country_flag = minimal_worlds_fair
 		ai_chance = {
 			factor = 33
+			modifier = {
+				factor = 2
+				NOT = { money = 50000 }
+			}
 		}
 	}
 }
@@ -267,7 +288,7 @@ country_event = {
 		months = 12
 
 		modifier = {
-			factor = 0.1
+			factor = 0.7
 			has_country_flag = sensible_worlds_fair
 		}
 		modifier = {
@@ -275,23 +296,23 @@ country_event = {
 			has_country_flag = minimal_worlds_fair
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.7
 			not = { administration_spending = 0.7 }
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			not = { administration_spending = 0.5 }
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.3
 			not = { administration_spending = 0.3 }
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.3
 			unemployment = 0.15
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.3
 			has_country_modifier = bad_host
 		}
 	}
@@ -352,7 +373,7 @@ country_event = {
 	id = 90820507
 	
 	trigger = {
-		has_country_flag = worlds_fair_host
+		has_country_flag = worlds_fair_attendee
 		has_global_flag = worlds_fair_opened
 	}
  
@@ -360,19 +381,19 @@ country_event = {
 		months = 3
 
 		modifier = {
-			factor = 0.1
+			factor = 2
 			industrial_score = 50
 		}
 		modifier = {
-			factor = 0.1
+			factor = 1.5
 			industrial_score = 100
 		}
 		modifier = {
-			factor = 0.1
+			factor = 1
 			industrial_score = 200
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.6
 			industrial_score = 400
 		}
 		modifier = {
@@ -380,23 +401,23 @@ country_event = {
 			industrial_score = 800
 		}
 		modifier = {
-			factor = 0.4
+			factor = 0.1
 			industrial_score = 1200
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_country_flag = lavish_pavilion
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.9
 			has_country_flag = sensible_pavilion
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_country_flag = lavish_worlds_fair
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.9
 			has_country_flag = sensible_worlds_fair
 		}
 	}
@@ -442,11 +463,11 @@ country_event = {
 		months = 3
 		
 		modifier = {
-			factor = 2
+			factor = 0.2
 			has_country_flag = lavish_worlds_fair
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.6
 			has_country_flag = sensible_worlds_fair
 		}
 	}
@@ -457,15 +478,6 @@ country_event = {
 	option = {
 		name = "EVTOPTA90820508"
 		prestige = 40
-		clr_country_flag = worlds_fair_host
-		clr_country_flag = worlds_fair_attendee
-		clr_country_flag = recent_worlds_fair_host
-		clr_country_flag = lavish_worlds_fair
-		clr_country_flag = sensible_worlds_fair
-		clr_country_flag = minimal_worlds_fair
-		clr_global_flag = worlds_fair_host_chosen
-		clr_global_flag = worlds_fair_opened
-		clr_global_flag = worlds_fair_winner_chosen
 		add_country_modifier = {
 			name = good_host
 			duration = 1825
@@ -479,6 +491,21 @@ country_event = {
 				value = 25
 			}
 		}
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_no_attend
+			}
+			clr_country_flag = worlds_fair_no_attend
+		}
+		clr_country_flag = worlds_fair_host
+		clr_country_flag = worlds_fair_attendee
+		clr_country_flag = recent_worlds_fair_host
+		clr_country_flag = lavish_worlds_fair
+		clr_country_flag = sensible_worlds_fair
+		clr_country_flag = minimal_worlds_fair
+		clr_global_flag = worlds_fair_host_chosen
+		clr_global_flag = worlds_fair_opened
+		clr_global_flag = worlds_fair_winner_chosen
 		any_country = { 
 			limit = {
 				has_country_flag = worlds_fair_attendee
@@ -510,11 +537,11 @@ country_event = {
 		months = 3
 		
 		modifier = {
-			factor = 2
+			factor = 0.2
 			has_country_flag = sensible_worlds_fair
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.6
 			has_country_flag = minimal_worlds_fair
 		}
 	}
@@ -525,15 +552,6 @@ country_event = {
 	option = {
 		name = "EVTOPTA90820509"
 		prestige = 10
-		clr_country_flag = worlds_fair_host
-		clr_country_flag = worlds_fair_attendee
-		clr_country_flag = recent_worlds_fair_host
-		clr_country_flag = lavish_worlds_fair
-		clr_country_flag = sensible_worlds_fair
-		clr_country_flag = minimal_worlds_fair
-		clr_global_flag = worlds_fair_host_chosen
-		clr_global_flag = worlds_fair_opened
-		clr_global_flag = worlds_fair_winner_chosen
 		any_country = { 
 			limit = {
 				has_country_flag = worlds_fair_attendee
@@ -542,6 +560,12 @@ country_event = {
 				who = THIS
 				value = 10
 			}
+		}
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_no_attend
+			}
+			clr_country_flag = worlds_fair_no_attend
 		}
 		any_country = { 
 			limit = {
@@ -554,10 +578,19 @@ country_event = {
 			clr_country_flag = worlds_fair_winner
 			clr_country_flag = worlds_fair_no_attend
 		}
+		clr_country_flag = worlds_fair_host
+		clr_country_flag = worlds_fair_attendee
+		clr_country_flag = recent_worlds_fair_host
+		clr_country_flag = lavish_worlds_fair
+		clr_country_flag = sensible_worlds_fair
+		clr_country_flag = minimal_worlds_fair
+		clr_global_flag = worlds_fair_host_chosen
+		clr_global_flag = worlds_fair_opened
+		clr_global_flag = worlds_fair_winner_chosen
 	}
 }
 
-# Olympic verdict - Terrible
+# Worlds Fair verdict - Terrible
 country_event = {
 
 	id = 90820510 
@@ -574,11 +607,11 @@ country_event = {
 		months = 3
 		
 		modifier = {
-			factor = 2
+			factor = 0.3
 			has_country_flag = minimal_worlds_fair
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.6
 			has_country_flag = sensible_worlds_fair
 		}
 	}
@@ -589,15 +622,10 @@ country_event = {
 	option = {
 		name = "EVTOPTA90820510"
 		prestige = -20
-		clr_country_flag = worlds_fair_host
-		clr_country_flag = worlds_fair_attendee
-		clr_country_flag = recent_worlds_fair_host
-		clr_country_flag = lavish_worlds_fair
-		clr_country_flag = sensible_worlds_fair
-		clr_country_flag = minimal_worlds_fair
-		clr_global_flag = worlds_fair_host_chosen
-		clr_global_flag = worlds_fair_opened
-		clr_global_flag = worlds_fair_winner
+		add_country_modifier = {
+			name = bad_host
+			duration = 1825
+		}
 		any_country = { 
 			limit = {
 				has_country_flag = worlds_fair_attendee
@@ -607,6 +635,21 @@ country_event = {
 				value = -20
 			}
 		}
+		any_country = { 
+			limit = {
+				has_country_flag = worlds_fair_no_attend
+			}
+			clr_country_flag = worlds_fair_no_attend
+		}
+		clr_country_flag = worlds_fair_host
+		clr_country_flag = worlds_fair_attendee
+		clr_country_flag = recent_worlds_fair_host
+		clr_country_flag = lavish_worlds_fair
+		clr_country_flag = sensible_worlds_fair
+		clr_country_flag = minimal_worlds_fair
+		clr_global_flag = worlds_fair_host_chosen
+		clr_global_flag = worlds_fair_opened
+		clr_global_flag = worlds_fair_winner
 		any_country = { 
 			limit = {
 				has_country_flag = worlds_fair_attendee
