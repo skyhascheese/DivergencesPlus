@@ -2663,14 +2663,14 @@ blue_riband = {
 	rich_income_modifier = 0.05
 	navy_tech_research_bonus = 0.05
 	naval_organisation = 0.05
-	prestige = 0.1
+	prestige = 0.01
 	icon = 7
 }
 
 ghosts_of_titanic = {
 	social_reform_desire = 0.1
 	pop_militancy_modifier = 0.01
-	prestige = -0.1
+	prestige = -0.01
 	icon = 18
 }
 
@@ -2682,7 +2682,7 @@ good_host = {
 
 bad_host = {
 	pop_militancy_modifier = 0.01
-	prestige = -0.1
+	prestige = -0.01
 	icon = 18
 }
 
@@ -2705,9 +2705,29 @@ worlds_fair_cooloff = {
 }
 
 forced_monarchy = {
-	suppression_points_modifier = 0.2
-	prestige = -0.10
+	suppression_points_modifier = 0.1
+	prestige = -0.01
 	political_reform_desire = 0.1
 	icon = 4
+}
+
+aigai_excavations = {
+	prestige = 0.01
+	icon = 3
+}
+
+pella_excavations = {
+	prestige = 0.01
+	icon = 3
+}
+
+dodona_excavations = {
+	prestige = 0.01
+	icon = 3
+}
+
+stagira_excavations = {
+	prestige = 0.01
+	icon = 3
 }
 

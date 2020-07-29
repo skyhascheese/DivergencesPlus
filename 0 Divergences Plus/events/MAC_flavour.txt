@@ -11,12 +11,7 @@ country_event = {
 	fire_only_once = yes
 	
 	mean_time_to_happen = { 
-		days = 1
-		
-		modifier = {
-			factor = 3
-			year = 1836
-		}
+		days =14
 	}
 	
 	option = {
@@ -805,30 +800,7 @@ country_event = {
 		political_reform = bankruptcy
 		political_reform = quota_immigration
 		election = yes		
-		any_country = {
-			limit = {
-				is_greater_power = yes
-				or = {
-					government = hms_government
-					government = prussian_constitutionalism
-					government = absolute_monarchy
-				}
-				capital_scope = { continent = europe }
-			}
-			country_event = 90820719
-		}
-		
-		any_country = {
-			limit = {
-				is_greater_power = yes
-				or = {
-					government = democracy
-					government = merchant_republic
-				}
-				capital_scope = { continent = europe }
-			}
-			country_event = 90820720
-		}
+		set_country_flag = new_republic_on_the_block
 		set_country_flag = macedonian_revolution_has_ended
 	}
 }
@@ -860,8 +832,12 @@ country_event = {
 	}
 	
 	mean_time_to_happen = { 
-		months = 2 
+		months = 4 
 		
+		modifier = {
+			factor = 0.5
+			ai = no
+		}		
 		modifier = {
 			factor = 0.5
 			is_greater_power = yes
@@ -902,21 +878,21 @@ country_event = {
 		modifier = {
 			factor = 1.1
 			relation = {
-				who = TUR
+				who = MAC
 				value = 50
 			}
 		}
 		modifier = {
 			factor = 1.1
 			relation = {
-				who = TUR
+				who = MAC
 				value = 100
 			}
 		}
 		modifier = {
 			factor = 1.1
 			relation = {
-				who = TUR
+				who = MAC
 				value = 150
 			}
 		}

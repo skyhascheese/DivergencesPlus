@@ -156,9 +156,18 @@ country_event = {
 		any_country = {
 			limit = {
 				is_greater_power = yes
+				is_overseas = no
 				has_country_flag = great_power_monarchy
 			}
 			country_event = 90820756
+		}
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				is_overseas = yes
+				has_country_flag = great_power_monarchy
+			}
+			country_event = 90820757
 		}
 		any_country = {
 			limit = {
@@ -313,9 +322,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820757 # Our Republic Dismantled
-	title = "EVTNAME90820757"
-	desc = "EVTDESC990820757"
+	id = 90820758 # Our Republic Dismantled
+	title = "EVTNAME90820758"
+	desc = "EVTDESC990820758"
 	picture = "suppressing_republicanism"
 	
 	is_triggered_only = yes
@@ -323,7 +332,7 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA90820757"
+		name = "EVTOPTA90820758"
 		clr_country_flag = new_republic_on_the_block
 		set_country_flag = forced_monarchy
 		add_country_modifier = {
