@@ -1,0 +1,161 @@
+political_decisions = {
+	
+	aigai_excavations = {
+		picture = aigai_excavations_decision
+		
+		potential = {
+			has_global_flag = in_the_footsteps_of_the_argaeds
+			not = {
+				owns = 821
+			}
+		}
+		
+		allow = {
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			invention = modern_archaeology
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					owns = 821
+				}
+				country_event = 90820731
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	aigai_excavations_owner = {
+		picture = aigai_excavations_decision
+		
+		potential = {
+			has_global_flag = in_the_footsteps_of_the_argaeds
+			owns = 821
+		}
+		
+		allow = {
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			invention = modern_archaeology
+		}
+		
+		effect = {
+			set_country_flag = aigai_excavations
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	pella_excavations = {
+		picture = pella_excavations_decision
+		
+		potential = {
+			has_global_flag = in_the_footsteps_of_the_argaeds
+			not = {
+				owns = 821
+			}
+		}
+		
+		allow = {
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			invention = modern_archaeology
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					owns = 821
+				}
+				country_event = 90820741
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	pella_excavations_owner = {
+		picture = pella_excavations_decision
+		
+		potential = {
+			has_global_flag = in_the_footsteps_of_the_argaeds
+			owns = 821
+		}
+		
+		allow = {
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			invention = modern_archaeology
+		}
+		
+		effect = {
+			set_country_flag = pella_excavations
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	dodona_excavations = {
+		picture = dodona_excavations_decision
+		
+		potential = {
+			has_global_flag = in_the_footsteps_of_the_argaeds
+			not = {
+				owns = 824
+			}
+		}
+		
+		allow = {
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			invention = modern_archaeology
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					owns = 824
+				}
+				country_event = 90820748
+			}
+		}
+	
+		ai_will_do = { factor = 1 }
+	}
+	
+	dodona_excavations_owner = {
+		picture = dodona_excavations_decision
+		
+		potential = {
+			has_global_flag = in_the_footsteps_of_the_argaeds
+			owns = 824
+		}
+		
+		allow = {
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			invention = modern_archaeology
+		}
+		
+		effect = {
+			set_country_flag = dodona_excavations
+		}
+	
+		ai_will_do = { factor = 1 }
+	}
+}

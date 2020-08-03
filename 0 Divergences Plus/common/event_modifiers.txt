@@ -2676,7 +2676,7 @@ ghosts_of_titanic = {
 
 good_host = {
 	pop_militancy_modifier = -0.01
-	prestige = 0.1
+	prestige = 0.01
 	icon = 17
 }
 
@@ -2687,17 +2687,16 @@ bad_host = {
 }
 
 the_statue_of_liberty = {
-	prestige = 0.4
+	prestige = 0.04
 	global_immigrant_attract = 2	#200%
 	global_assimilation_rate = 5.0
 	icon = 15
 }
 
 worlds_fair_winner = {
-	prestige = 0.4
-	global_immigrant_attract = 2	#200%
-	global_assimilation_rate = 5.0
-	icon = 15
+	prestige = 0.01
+	tax_efficiency = 0.05
+	icon = 17
 }
 
 worlds_fair_cooloff = {
@@ -2726,8 +2725,16 @@ dodona_excavations = {
 	icon = 3
 }
 
-stagira_excavations = {
+LON_member = {
+	badboy = -0.01
 	prestige = 0.01
-	icon = 3
+	cb_generation_speed_modifier = -1
+	diplomatic_points_modifier = 0.2
+	influence_modifier = 0.2
+	max_military_spending = -0.1
+	research_points_on_conquer = -0.5
+	global_immigrant_attract = 0.05
+	core_pop_militancy_modifier = -0.01
+	icon = 7
 }
 

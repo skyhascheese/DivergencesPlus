@@ -13,8 +13,16 @@ good_host_desc;We recently hosted a very successful international event.;;;;;;;;
 bad_host;Bad Host;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 bad_host_desc;We recently hosted a very unsuccessful international event.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 the_statue_of_liberty;Liberty Enlighting the World;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-bad_host_desc;We are an internationally-recognised beacon of hope to all the tired, the poor, the huddled masses yearning to breathe free.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+bad_host_desc;We are an internationally-recognised beacon of hope to all the tired, poor, huddled masses yearning to breathe free.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 worlds_fair_cooloff;World's Fair cool-off period;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 worlds_fair_cooloff_desc;A World's Fair was hosted recently.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 worlds_fair_winner;World's Fair Winner;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 worlds_fair_cooloff_desc;We made quite the impression at the recent World's Fair.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+aigai_excavations;Aigai Excavations;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+aigai_excavations_desc;We are currently conducting archaeological excavations at Aigai.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+pella_excavations;Pella Excavations;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+pella_excavations_desc;We are currently conducting archaeological excavations at Pella.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+dodona_excavations;Dodona Excavations;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+dodona_excavations_desc;We are currently conducting archaeological excavations at Dodona.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+forced_monarchy;Forced Monarchy;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+forced_monarchy_desc;We tried our best to maintain the Republic, but the Great Powers forced a monarch on us.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

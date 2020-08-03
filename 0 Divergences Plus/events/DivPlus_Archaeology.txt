@@ -1,0 +1,1003 @@
+country_event = { #In the Footsteps of the Argaeds
+	id = 90820730
+	title = "EVTNAME90820730"
+	desc = "EVTDESC90820730"
+	picture = "aigai"
+	
+	trigger = {
+		or = {
+			tag = GRE
+			tag = MAC
+			primary_culture = greek
+		}
+		or = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
+		owns = 821
+	}
+	
+	mean_time_to_happen = {
+		months = 350
+		
+		modifier = {
+			factor = 0.7
+			is_greater_power = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820730"
+		set_global_flag = in_the_footsteps_of_the_argaeds
+	}
+}
+
+country_event = { #FROMCOUNTRY requests excavation rights at Aigai
+	id = 90820731
+	title = "EVTNAME90820731"
+	desc = "EVTDESC90820731"
+	picture = "aigai"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820731"
+		set_global_flag = aigai_excavation_rights
+		FROM = { country_event = 90820732 }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.1
+				has_global_flag = aigai_excavation_rights
+			}
+			modifier = {
+				factor = 3
+				FROM = { prestige = 65 }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { is_greater_power = yes }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820731"
+		FROM = { country_event = 90820733 }
+		ai_chance = {
+			modifier = {
+				factor = 50
+				not = {
+					relation = {
+						who = FROM
+						value = 25
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Aigai excavation rights granted
+	id = 90820732
+	title = "EVTNAME90820732"
+	desc = "EVTDESC90820732"
+	picture = "aigai"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820732"
+		add_country_modifier = {
+			name = aigai_excavations
+			duration = -1
+		}
+		relation = {
+			who = FROM
+			value = 20
+		}
+		prestige = 5
+	}
+}
+
+country_event = { #Aigai excavation rights refused
+	id = 90820733
+	title = "EVTNAME90820733"
+	desc = "EVTDESC90820733"
+	picture = "aigai"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820733"
+		relation = {
+			who = FROM
+			value = -20
+		}
+		prestige = -5
+		set_country_flag = aigai_excavation_rights_refused
+	}
+}
+
+country_event = { #Excavation team gets into trouble
+	id = 90820734
+	title = "EVTNAME90820734"
+	desc = "EVTDESC90820734"
+	picture = "archaeological_excavations"
+	
+	trigger = {
+		has_country_modifier = aigai_excavations
+		has_country_modifier = pella_excavations
+		NOT = {
+			owns = 821
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	option = {
+		name = "EVTOPTA90820734"
+		treasury = -5000
+		any_country = {
+			limit = {
+				owns = 821
+			}
+			relation = {
+				who = THIS
+				value = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820734"
+		ai_chance = {
+			modifier = {
+				factor = 10
+				not = {
+					money = 5000
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				owns = 821
+			}
+			relation = {
+				who = THIS
+				value = -20
+			}
+		}
+		prestige = -15
+		remove_country_modifier = aigai_excavation_rights
+		remove_country_modifier = pella_excavation_rights
+	}
+}
+
+country_event = { #Ruin found
+	id = 90820735
+	title = "EVTNAME90820735"
+	desc = "EVTDESC90820735"
+	picture = "archaeological_ruins"
+	
+	trigger = {
+		or = {
+			has_country_modifier = aigai_excavations
+			has_country_modifier = pella_excavations
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 350
+		
+		modifier = {
+			factor = 0.9
+			invention = modern_archaeology
+		}
+           modifier = {
+			factor = 0.9
+			has_country_flag = museum_build
+		}
+        modifier = {
+			factor = 0.9
+			has_country_flag = archaeological_society
+		}	
+		modifier = {
+			factor = 0.9
+			has_country_flag = famous_archaeologist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820735"
+		prestige = 10
+		years_of_research = 0.1
+	}
+}
+
+country_event = { #Fraud
+	id = 90820736
+	title = "EVTNAME90820736"
+	desc = "EVTDESC90820736"
+	picture = "archaeological_fraud"
+		
+	trigger = {
+		or = {
+			has_country_modifier = aigai_excavations
+			has_country_modifier = pella_excavations
+		}
+		NOT = {
+			owns = 821
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+		
+		modifier = {
+			factor = 3
+			invention = modern_archaeology
+		}
+        modifier = {
+			factor = 1.2
+            has_country_flag = archaeological_society
+		}
+        modifier = {
+			factor = 1.3
+            has_country_flag = famous_archaeologist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820736"
+		any_pop = {
+			militancy = 1
+		}
+	}
+}
+
+country_event = { #The Royal Tombs
+	id = 90820737
+	title = "EVTNAME90820737"
+	desc = "EVTDESC90820737"
+	picture = "royal_tombs_aigai"	
+	
+	trigger = {
+		has_country_modifier = aigai_excavations
+		NOT = {
+			has_global_flag = aigai_found
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 700
+		
+		modifier = {
+			factor = 0.9
+			invention = modern_archaeology
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = mesopotamian_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = inca_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = dodona_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = pella_excavations
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = had_arch_exhibition
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = museum_build
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = archaeological_society
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = famous_archaeologist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820737"
+		prestige = 30
+		years_of_research = 0.5
+		set_global_flag = aigai_found
+		any_country = {
+			limit = {
+				not = {
+					tag = THIS
+				}
+			}
+			country_event = 90820738
+		}
+	}
+}
+
+country_event = { #Aigai archaeological explanation event
+	id = 90820738
+	title = "EVTNAME90820738"
+	desc = "EVTDESC90820738"
+	picture = "royal_tombs_aigai"	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820738"
+	}
+}
+
+country_event = { #The Royal Palace
+	id = 90820739
+	title = "EVTNAME90820739"
+	desc = "EVTDESC90820739"
+	picture = "royal_palace_aigai"	
+	
+	trigger = {
+		has_country_modifier = aigai_excavations
+		has_global_flag = aigai_found
+		NOT = {
+			has_global_flag = aigai_palace_found
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		
+		modifier = {
+			factor = 0.9
+			invention = modern_archaeology
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = mesopotamian_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = inca_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = dodona_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = pella_excavations
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = had_arch_exhibition
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = museum_build
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = archaeological_society
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = famous_archaeologist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820739"
+		prestige = 30
+		years_of_research = 0.5
+		set_global_flag = aigai_found
+		any_country = {
+			limit = {
+				not = {
+					tag = THIS
+				}
+			}
+			country_event = 90820740
+		}
+		any_country = {
+			remove_country_modifier = aigai_excavations
+		}
+		remove_country_modifier = aigai_excavations
+		clr_global_flag = aigai_excavation_rights
+	}
+}
+
+country_event = { #Aigai palace archaeological explanation event
+	id = 90820740
+	title = "EVTNAME90820740"
+	desc = "EVTDESC90820740"
+	picture = "royal_palace_aigai"	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820740"
+	}
+}
+
+country_event = { #FROMCOUNTRY requests excavation rights at Pella
+	id = 90820741
+	title = "EVTNAME90820741"
+	desc = "EVTDESC90820741"
+	picture = "pella"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820741"
+		set_global_flag = pella_excavation_rights
+		FROM = { country_event = 90820742 }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.1
+				has_global_flag = pella_excavation_rights
+			}
+			modifier = {
+				factor = 3
+				FROM = { prestige = 65 }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { is_greater_power = yes }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820741"
+		FROM = { country_event = 90820743 }
+		ai_chance = {
+			modifier = {
+				factor = 50
+				not = {
+					relation = {
+						who = FROM
+						value = 50
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Pella excavation rights granted
+	id = 90820742
+	title = "EVTNAME90820742"
+	desc = "EVTDESC90820742"
+	picture = "pella"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820742"
+		add_country_modifier = {
+			name = pella_excavations
+			duration = -1
+		}
+		relation = {
+			who = FROM
+			value = 20
+		}
+		set_global_flag = pella_excavation_rights
+		prestige = 5
+	}
+}
+
+country_event = { #Pella excavation rights refused
+	id = 90820743
+	title = "EVTNAME90820743"
+	desc = "EVTDESC90820743"
+	picture = "pella"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820743"
+		relation = {
+			who = FROM
+			value = -20
+		}
+		prestige = -5
+		set_country_flag = pella_excavation_rights_refused
+	}
+}
+
+country_event = { #Ancient Pella
+	id = 90820744
+	title = "EVTNAME90820744"
+	desc = "EVTDESC90820744"
+	picture = "ancient_pella"	
+	
+	trigger = {
+		has_country_modifier = pella_excavations
+		NOT = {
+			has_global_flag = pella_found
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 700
+		
+		modifier = {
+			factor = 0.9
+			invention = modern_archaeology
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = mesopotamian_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = inca_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = dodona_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = aigai_excavations
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = had_arch_exhibition
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = museum_build
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = archaeological_society
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = famous_archaeologist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820744"
+		prestige = 30
+		years_of_research = 0.5
+		set_global_flag = pella_found
+		any_country = {
+			limit = {
+				not = {
+					tag = THIS
+				}
+			}
+			country_event = 90820745
+		}
+	}
+}
+
+country_event = { #Pella archaeological explanation event
+	id = 90820745
+	title = "EVTNAME90820745"
+	desc = "EVTDESC90820745"
+	picture = "ancient_pella"	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820745"
+	}
+}
+
+country_event = { #Pella Curse Tablet
+	id = 90820746
+	title = "EVTNAME90820746"
+	desc = "EVTDESC90820746"
+	picture = "pella_curse_tablet"	
+	
+	trigger = {
+		has_country_modifier = pella_excavations
+		has_country_flag = pella_found
+		NOT = {
+			has_global_flag = pella_curse_tablet
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		
+		modifier = {
+			factor = 0.9
+			invention = modern_archaeology
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = mesopotamian_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = inca_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = dodona_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = aigai_excavations
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = had_arch_exhibition
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = museum_build
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = archaeological_society
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = famous_archaeologist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820744"
+		prestige = 20
+		years_of_research = 0.5
+		set_global_flag = pella_curse_tablet
+		any_country = {
+			limit = {
+				not = {
+					tag = THIS
+				}
+			}
+			country_event = 90820747
+		}
+		any_country = {
+			remove_country_modifier = pella_excavations
+			clr_global_flag = pella_excavation_rights
+		}
+		remove_country_modifier = pella_excavations
+		clr_global_flag = pella_excavation_rights
+	}
+}
+
+country_event = { #Pella curse tablet explanation event
+	id = 90820747
+	title = "EVTNAME90820747"
+	desc = "EVTDESC90820747"
+	picture = "pella_curse_tablet"	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820747"
+	}
+}
+
+country_event = { #FROMCOUNTRY requests excavation rights at Dodona
+	id = 90820748
+	title = "EVTNAME90820748"
+	desc = "EVTDESC90820748"
+	picture = "dodona"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820746"
+		set_global_flag = dodona_excavation_rights
+		FROM = { country_event = 90820749 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				has_global_flag = pella_excavation_rights
+			}
+			modifier = {
+				factor = 3
+				FROM = { prestige = 65 }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { is_greater_power = yes }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820748"
+		FROM = { country_event = 90820750 }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 5
+				not = {
+					relation = {
+						who = FROM
+						value = 50
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Dodona excavation rights granted
+	id = 90820749
+	title = "EVTNAME90820749"
+	desc = "EVTDESC90820749"
+	picture = "dodona"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820749"
+		add_country_modifier = {
+			name = dodona_excavations
+			duration = -1
+		}
+		relation = {
+			who = FROM
+			value = 20
+		}
+		set_global_flag = dodona_excavation_rights
+		prestige = 5
+	}
+}
+
+country_event = { #Dodona excavation rights refused
+	id = 90820750
+	title = "EVTNAME90820750"
+	desc = "EVTDESC90820750"
+	picture = "dodona"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820750"
+		relation = {
+			who = FROM
+			value = -20
+		}
+		prestige = -5
+		set_country_flag = dodona_excavation_rights_refused
+	}
+}
+
+country_event = { #The Oracle at Dodona
+	id = 90820751
+	title = "EVTNAME90820751"
+	desc = "EVTDESC90820751"
+	picture = "oracle_at_dodona"	
+	
+	trigger = {
+		has_country_modifier = dodona_excavations
+		NOT = {
+			has_global_flag = dodona_found
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 700
+		
+		modifier = {
+			factor = 0.9
+			invention = modern_archaeology
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = mesopotamian_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = inca_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = pella_excavations
+		}
+        modifier = {
+			factor = 0.9
+			has_country_modifier = aigai_excavations
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = had_arch_exhibition
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = museum_build
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = archaeological_society
+		}
+        modifier = {
+			factor = 0.9
+            has_country_flag = famous_archaeologist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820751"
+		prestige = 30
+		years_of_research = 0.5
+		set_global_flag = dodona_found
+		any_country = {
+			limit = {
+				not = {
+					tag = THIS
+				}
+			}
+			country_event = 90820752
+		}
+		any_country = {
+			remove_country_modifier = dodona_excavations
+			clr_global_flag = dodona_excavation_rights
+		}
+		remove_country_modifier = dodona_excavations
+		clr_global_flag = dodona_excavation_rights
+	}
+}
+
+country_event = { #Dodona archaeological explanation event
+	id = 90820752
+	title = "EVTNAME90820752"
+	desc = "EVTDESC90820752"
+	picture = "oracle_at_dodona"	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820752"
+	}
+}
+
+country_event = { #Excavation team gets into trouble (Dodona)
+	id = 90820753
+	title = "EVTNAME90820753"
+	desc = "EVTDESC90820753"
+	picture = "archaeological_excavations"
+	
+	trigger = {
+		has_country_modifier = dodona_excavations
+		NOT = {
+			owns = 824
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	option = {
+		name = "EVTOPTA90820753"
+		treasury = -5000
+		any_country = {
+			limit = {
+				owns = 824
+			}
+			relation = {
+				who = THIS
+				value = 5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820753"
+		ai_chance = {
+			modifier = {
+				factor = 10
+				not = {
+					money = 5000
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				owns = 824
+			}
+			relation = {
+				who = THIS
+				value = -20
+			}
+		}
+		prestige = -15
+		remove_country_modifier = dodona_excavation_rights
+	}
+}
+
+country_event = { #Ruin found (Dodona)
+	id = 90820754
+	title = "EVTNAME90820754"
+	desc = "EVTDESC90820754"
+	picture = "archaeological_ruins"
+	
+	trigger = {
+		has_country_modifier = dodona_excavations
+	}
+	
+	mean_time_to_happen = {
+		months = 350
+		
+		modifier = {
+			factor = 0.9
+			invention = modern_archaeology
+		}
+           modifier = {
+			factor = 0.9
+			has_country_flag = museum_build
+		}
+        modifier = {
+			factor = 0.9
+			has_country_flag = archaeological_society
+		}	
+		modifier = {
+			factor = 0.9
+			has_country_flag = famous_archaeologist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820754"
+		prestige = 10
+		years_of_research = 0.1
+	}
+}
+
+country_event = { #Fraud (Dodona)
+	id = 90820755
+	title = "EVTNAME90820755"
+	desc = "EVTDESC90820755"
+	picture = "archaeological_fraud"
+		
+	trigger = {
+		or = {
+			has_country_modifier = dodona_excavations
+		}
+		NOT = {
+			owns = 824
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+		
+		modifier = {
+			factor = 3
+			invention = modern_archaeology
+		}
+        modifier = {
+			factor = 1.2
+            has_country_flag = archaeological_society
+		}
+        modifier = {
+			factor = 1.3
+            has_country_flag = famous_archaeologist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820736"
+		any_pop = {
+			militancy = 1
+		}
+	}
+}

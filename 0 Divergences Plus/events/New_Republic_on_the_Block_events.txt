@@ -1,7 +1,7 @@
 country_event = { 
-	id = 90820751 # Great powers get assigned a flag and the GP monarchies variable is changed
-	title = "EVTNAME90820751"
-	desc = "EVTDESC990820751"
+	id = 90820761 # Great powers get assigned a flag and the GP monarchies variable is changed
+	title = "EVTNAME90820761"
+	desc = "EVTDESC990820761"
 	picture = "suppressing_republicanism"
 	
 	trigger = {
@@ -17,19 +17,41 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
-		name = "EVTOPTA90820751"
+		name = "EVTOPTA90820761"
 		set_country_flag = great_power_monarchy
 		change_variable = {
 			which = great_power_monarchy
 			value = 1.1
 		}
+		any_country = {
+			limit = {
+				or = {
+					government = absolute_monarchy
+					government = prussian_constitutionalism
+					government = hms_government
+				}
+			}
+			set_country_flag = supports_monarchy
+		}
+		any_country = {
+			limit = {
+				not = {
+					or = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+			}
+			set_country_flag = supports_antimonarchism
+		}
 	}
 }
 
 country_event = { 
-	id = 90820752 # Great power monarchy loses GP status and GP monarchies variable is changed
-	title = "EVTNAME90820752"
-	desc = "EVTDESC990820752"
+	id = 90820762 # Great power monarchy loses GP status and GP monarchies variable is changed
+	title = "EVTNAME90820762"
+	desc = "EVTDESC990820762"
 	picture = "suppressing_republicanism"
 	
 	trigger = {
@@ -40,7 +62,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
-		name = "EVTOPTA90820752"
+		name = "EVTOPTA90820762"
 		clr_country_flag = great_power_monarchy
 		change_variable = {
 			which = great_power_monarchy
@@ -50,9 +72,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820753 # Great power monarchy no longer a monarchy and GP monarchies variable is changed
-	title = "EVTNAME90820753"
-	desc = "EVTDESC990820753"
+	id = 90820763 # Great power monarchy no longer a monarchy and GP monarchies variable is changed
+	title = "EVTNAME90820763"
+	desc = "EVTDESC990820763"
 	picture = "suppressing_republicanism"
 	
 	trigger = {
@@ -70,7 +92,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
-		name = "EVTOPTA90820753"
+		name = "EVTOPTA90820763"
 		clr_country_flag = great_power_monarchy
 		change_variable = {
 			which = great_power_monarchy
@@ -80,9 +102,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820754 # 3 or fewer GPs are monarchies gets install_monarchy cb disabled
-	title = "EVTNAME90820754"
-	desc = "EVTDESC990820754"
+	id = 90820764 # 3 or fewer GPs are monarchies gets install_monarchy cb disabled
+	title = "EVTNAME90820764"
+	desc = "EVTDESC990820764"
 	picture = "suppressing_republicanism"
 	
 	trigger = {
@@ -100,15 +122,15 @@ country_event = {
 	mean_time_to_happen = { months = 3 }
 	
 	option = {
-		name = "EVTOPTA90820754"
+		name = "EVTOPTA90820764"
 		set_global_flag = decline_of_monarchism
 	}
 }
 
 country_event = { 
-	id = 90820755 # New Republic on the Block
-	title = "EVTNAME90820755"
-	desc = "EVTDESC990820755"
+	id = 90820765 # New Republic on the Block
+	title = "EVTNAME90820765"
+	desc = "EVTDESC990820765"
 	picture = "proclamation_of_the_republic"
 	
 	trigger = {
@@ -126,6 +148,7 @@ country_event = {
 			}
 		}
 		has_country_modifier = national_confusion
+		has_country_flag = supports_monarchy
 	}
 	
 	mean_time_to_happen = { 
@@ -149,17 +172,19 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820755"
+		name = "EVTOPTA90820765"
 		clr_country_flag = forced_monarchy
+		clr_country_flag = supports_monarchy
 		remove_country_modifier = forced_monarchy
 		set_country_flag = new_republic_on_the_block
+		set_country_flag = supports_antimonarchism
 		any_country = {
 			limit = {
 				is_greater_power = yes
 				is_overseas = no
 				has_country_flag = great_power_monarchy
 			}
-			country_event = 90820756
+			country_event = 90820766
 		}
 		any_country = {
 			limit = {
@@ -167,7 +192,7 @@ country_event = {
 				is_overseas = yes
 				has_country_flag = great_power_monarchy
 			}
-			country_event = 90820757
+			country_event = 90820767
 		}
 		any_country = {
 			limit = {
@@ -194,9 +219,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820756 # New Republic on the Block (GP event)
-	title = "EVTNAME90820756"
-	desc = "EVTDESC990820756"
+	id = 90820766 # New Republic on the Block (GP event)
+	title = "EVTNAME90820766"
+	desc = "EVTDESC990820766"
 	picture = "suppressing_republicanism"
 	
 	is_triggered_only = yes
@@ -204,7 +229,7 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA90820756"
+		name = "EVTOPTA90820766"
 		add_casus_belli = {
 			target = FROM
 			type = install_monarchy
@@ -270,7 +295,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820756"
+		name = "EVTOPTB90820766"
 		prestige = -30
 		any_country = {
 			limit = {
@@ -322,9 +347,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820758 # Our Republic Dismantled
-	title = "EVTNAME90820758"
-	desc = "EVTDESC990820758"
+	id = 90820767 # Our Republic Dismantled
+	title = "EVTNAME90820767"
+	desc = "EVTDESC990820767"
 	picture = "suppressing_republicanism"
 	
 	is_triggered_only = yes
@@ -332,8 +357,10 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA90820758"
+		name = "EVTOPTA90820767"
 		clr_country_flag = new_republic_on_the_block
+		clr_country_flag = supports_antimonarchism
+		set_country_flag = supports_monarchy
 		set_country_flag = forced_monarchy
 		add_country_modifier = {
 			name = forced_monarchy

@@ -1,0 +1,115 @@
+political_decisions = {
+	
+	decriminalise_homosexuality = {
+		picture = decriminalise_homosexuality
+		
+		potential = {
+			or = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = socialist
+			}
+			not = {
+				has_country_flag = homosexuality_decriminalised
+			}
+			civilized = yes
+		}
+		
+		allow = {
+			or = {
+				or = {
+					religious_policy = pro_atheism
+					religious_policy = secularized
+				}
+				and = {
+					religious_policy = pluralism
+					ruling_party_ideology = liberal
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 10
+			any_pop = {
+				limit = {
+					not = {
+						or = {
+							issue = pro_atheism
+							issue = secularized
+							issue = pluralism
+						}
+					}
+				}
+				militancy = 2
+				consciousness = 2
+			}
+			any_pop = {
+				limit = {
+					or = {
+						issue = pro_atheism
+						issue = secularized
+						issue = pluralism
+					}
+				}
+				militancy = -1
+				consciousness = -1
+			}
+			remove_country_modifier = order_of_chaeronea
+			set_country_flag = homosexuality_decriminalised
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	recriminalise_homosexuality = {
+		picture = recriminalise_homosexuality
+		
+		potential = {
+			has_country_flag = homosexuality_decriminalised
+			civilized = yes
+		}
+		
+		allow = {
+			or = {
+				ruling_party_ideology = reactionary
+				ruling_party_ideology = fascist
+			}
+		}
+		
+		effect = {
+			prestige = -10
+			any_pop = {
+				limit = {
+					not = {
+						or = {
+							issue = pro_atheism
+							issue = secularized
+							issue = pluralism
+						}
+					}
+				}
+				militancy = -2
+				consciousness = -2
+			}
+			any_pop = {
+				limit = {
+					or = {
+						issue = pro_atheism
+						issue = secularized
+						issue = pluralism
+					}
+				}
+				militancy = 1
+				consciousness = 1
+				plurality = 1
+				social_reform_desire = 0.1
+			}
+			add_country_modifier = {
+				name = order_of_chaeronea
+				duration = -1
+			}
+			clr_country_flag = homosexuality_decriminalised
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+}

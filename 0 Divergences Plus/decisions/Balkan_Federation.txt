@@ -1,0 +1,94 @@
+political_decisions = {
+	
+	form_balkan_federation = {
+		potential = {
+			OR = {
+				primary_culture = greek
+				primary_culture = bulgarian
+				primary_culture = serbian
+				primary_culture = albanian
+			}
+			NOT = {
+				exists = YUG
+				exists = BYZ
+			}
+		}
+		
+		allow = {
+			is_greater_power = yes
+			war = no
+			GRE = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			MAC = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			BUL = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			SER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			ALB = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			MON = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 50
+			change_tag = BLK
+			add_accepted_culture = greek
+			add_accepted_culture = bulgarian
+			add_accepted_culture = serbian
+			add_accepted_culture = albanian
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

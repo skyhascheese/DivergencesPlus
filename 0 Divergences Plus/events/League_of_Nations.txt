@@ -1,0 +1,717 @@
+#Setup event
+country_event = {
+
+	id = 90820800
+
+	trigger = {
+		great_wars_enabled = yes
+		has_country_modifier = no_more_war
+		war = no
+		not = {
+			has_global_flag = LON_enabled
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	title = "EVTNAME90820800"
+	desc = "EVTDESC90820800"
+	picture = "a_just_and_secure_peace"
+
+	option = {
+		name = "EVTOPTA90820800"
+		set_global_flag = LON_enabled
+	}
+}
+
+#A Just and Secure Peace
+country_event = {
+
+	id = 90820801
+
+	trigger = {
+		has_global_flag = LON_enabled
+		civilized = yes
+		war = no
+		not = {
+			or = {
+				ruling_party_ideology = fascist
+				ruling_party_ideology = reactionary
+				ruling_party_ideology = communist
+				ruling_party_ideology = anarcho_liberal
+				has_country_flag = not_LON_member
+				has_global_flag = LON_question
+			}
+		}
+		or = {
+			government = hms_government
+			government = democracy
+		}
+		or = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 12
+		
+		modifier = {
+			factor = 0.9
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.9
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = 0.9
+			ruling_party_ideology = socialist
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 25
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 75
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 100
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = conservative
+		}
+	}
+
+	title = "EVTNAME90820801"
+	desc = "EVTDESC90820801"
+	picture = "a_just_and_secure_peace"
+	
+	option = {
+		name = "EVTOPTA90820801"
+		prestige = 30
+		set_country_flag = a_just_and_secure_peace
+		set_country_flag = LON_member
+		set_global_flag = LON_question
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				is_disarmed = no
+			}
+			country_event = 90820802
+		}
+		any_country = {
+			limit = {
+				not = {
+					or = {
+						ruling_party_ideology = reactionary
+						ruling_party_ideology = fascist
+						ruling_party_ideology = communist
+						ruling_party_ideology = anarcho_liberal
+					}
+				}
+				or = {
+					government = hms_government
+					government = democracy
+				}
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+		}
+		any_country = {
+			limit = {
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+					ruling_party_ideology = communist
+					ruling_party_ideology = anarcho_liberal
+				}
+				not = {
+					or = {
+						government = hms_government
+						government = democracy
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		set_variable = {
+			which = create_LON
+			value = 0
+		}
+		set_variable = {
+			which = no_LON
+			value = 0
+		}
+	}
+}
+
+#The League of Nations
+country_event = {
+
+	id = 90820802
+
+	is_triggered_only = yes
+
+	title = "EVTNAME90820802"
+	desc = "EVTDESC90820802"
+	picture = "a_just_and_secure_peace"
+	
+	option = {
+		name = "EVTOPTA90820802"
+		prestige = 10
+		set_country_flag = LON_member
+		any_country = {
+			limit = {
+				not = {
+					or = {
+						ruling_party_ideology = reactionary
+						ruling_party_ideology = fascist
+						ruling_party_ideology = communist
+						ruling_party_ideology = anarcho_liberal
+					}
+				}
+				or = {
+					has_country_flag = LON_member
+					government = hms_government
+					government = democracy
+				}
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+		}
+		any_country = {
+			limit = {
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+					ruling_party_ideology = communist
+					ruling_party_ideology = anarcho_liberal
+				}
+				not = {
+					or = {
+						has_country_flag = not_LON_member
+						government = hms_government
+						government = democracy
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		change_variable = {
+			which = create_LON
+			value = 1.1
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.2
+				government = hms_government
+			}
+			modifier = {
+				factor = 1.5
+				government = democracy
+			}
+			modifier = {
+				factor = 1.1
+				ruling_party_ideology = conservative
+			}
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = liberal
+			}
+			modifier = {
+				factor = 2
+				ruling_party_ideology = socialist
+			}
+			modifier = {
+				factor = 1.5
+				has_country_modifier = no_more_war
+			}
+			modifier = {
+				factor = 2
+				has_country_modifier = neutrality
+			}
+			modifier = {
+				factor = 1.1
+				war_exhaustion = 25
+			}
+			modifier = {
+				factor = 1.1
+				war_exhaustion = 50
+			}
+			modifier = {
+				factor = 1.1
+				war_exhaustion = 75
+			}
+			modifier = {
+				factor = 1.1
+				war_exhaustion = 100
+			}
+			modifier = {
+				factor = 1.1
+				colonial_nation = no
+			}
+			modifier = {
+				factor = 1.1
+				war_policy = anti_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = pacifism
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820802"
+		prestige = -10
+		set_country_flag = not_LON_member
+		
+		any_country = {
+			limit = {
+				not = {
+					or = {
+						ruling_party_ideology = reactionary
+						ruling_party_ideology = fascist
+						ruling_party_ideology = communist
+						ruling_party_ideology = anarcho_liberal
+					}
+				}
+				or = {
+					has_country_flag = LON_member
+					government = hms_government
+					government = democracy
+				}
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		any_country = {
+			limit = {
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+					ruling_party_ideology = communist
+					ruling_party_ideology = anarcho_liberal
+					has_country_flag = not_LON_member
+				}
+				not = {
+					or = {
+						government = hms_government
+						government = democracy
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+		}
+		change_variable = {
+			which = no_LON
+			value = 1.1
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 2
+				not = {
+					or = {
+						government = prussian_constitutionalism
+						government = hms_government
+						government = democracy
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				government = prussian_constitutionalism
+			}
+			modifier = {
+				factor = 2
+				not = {
+					or = {
+						ruling_party_ideology = liberal
+						ruling_party_ideology = socialist
+						ruling_party_ideology = conservative
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				colonial_nation = yes
+			}
+			modifier = {
+				factor = 1.1
+				war_policy = pro_military
+			}
+			modifier = {
+				factor = 1.5
+				war_policy = jingoism
+			}
+		}
+	}
+}
+
+#The League of Nations
+country_event = {
+
+	id = 90820803
+
+	trigger = {
+		has_global_flag = LON_enabled
+		has_country_flag = a_just_and_secure_peace
+		not = {
+			or = {
+				has_global_flag = LON_not_founded
+				has_global_flag = LON_founded
+			}
+		}
+		check_variable = {
+			which = create_LON
+			value = 3
+		}
+	}
+	
+	major = yes
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 6
+		
+		modifier = {
+			factor = 0.2
+			check_variable = {
+				which = create_LON
+				value = 3
+			}
+		}
+	}
+
+	title = "EVTNAME90820803"
+	desc = "EVTDESC90820803"
+	
+	option = {
+		name = "EVTOPTA90820803"
+		set_global_flag = LON_founded
+		clr_country_flag = a_just_and_secure_peace
+		any_country = {
+			limit = {
+				has_country_flag = LON_member
+			}
+			country_event = 
+		}
+	}
+}
+
+#No League of Nations
+country_event = {
+
+	id = 90820804
+
+	trigger = {
+		has_global_flag = LON_enabled
+		has_country_flag = a_just_and_secure_peace
+		not = {
+			or = {
+				has_global_flag = LON_not_founded
+				has_global_flag = LON_founded
+			}
+		}
+	}
+	
+	major = yes
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 6
+		
+		modifier = {
+			factor = 0.2
+			check_variable = {
+				which = no_LON
+				value = 5
+			}
+		}
+	}
+
+	title = "EVTNAME90820804"
+	desc = "EVTDESC90820804"
+	
+	option = {
+		name = "EVTOPTA90820804"
+		set_global_flag = LON_not_founded
+		clr_country_flag = a_just_and_secure_peace
+		any_country = {
+			limit = {
+				has_country_flag = LON_member
+			}
+			clr_country_flag = LON_member
+		}
+	}
+}
+
+#Membership at the League of Nations
+country_event = {
+
+	id = 90820805
+
+	title = "EVTNAME90820805"
+	desc = "EVTDESC90820805"
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA90820805"
+		add_country_modifier = {
+			name = LON_member
+			duration = -1
+		}
+		any_country = {
+			limit = {
+				has_country_flag = LON_member
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				has_country_flag = LON_member
+			}
+			relation = {
+				who = THIS
+				value = 200
+			}
+		}
+	}
+}
+
+#Leaving the League of Nations
+country_event = {
+
+	id = 90820806
+
+	title = "EVTNAME90820806"
+	desc = "EVTDESC90820806"
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA90820806"
+		remove_country_modifier = LON_member
+		any_country = {
+			limit = {
+				has_country_flag = LON_member
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				has_country_flag = LON_member
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+	}
+}
+
+#Two GP LON members at war with each other causes the LON to collapse
+country_event = {
+
+	id = 90820807
+
+	title = "EVTNAME90820807"
+	desc = "EVTDESC90820807"
+	
+	major = yes
+	
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = LON_member
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				has_country_flag = LON_member
+			}
+			war_with = THIS
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA90820807"
+		clr_global_flag = LON_founded
+		any_country = {
+			limit = {
+				has_country_flag = LON_member
+			}
+			clr_country_flag = LON_member
+			remove_country_modifier = LON_member
+		}
+		any_country = {
+			limit = {
+				has_country_flag = LON_headquarters
+			}
+			clr_country_flag = LON_headquarters
+			remove_country_modifier = LON_headquarters
+		}
+		any_country = {
+			limit = {
+				has_country_flag = not_LON_member
+			}
+			clr_country_flag = not_LON_member
+		}
+	}
+}
+
+#LON Headquarters
+country_event = {
+
+	id = 90820808
+
+	trigger = {
+		has_global_flag = LON_founded
+		has_country_flag = LON_member
+		civilized = yes
+		not = {
+			or = {
+				ruling_party_ideology = fascist
+				ruling_party_ideology = reactionary
+				ruling_party_ideology = communist
+				has_country_flag = not_LON_member
+				has_global_flag = LON_headquarters
+			}
+		}
+		or = {
+			government = hms_government
+			government = democracy
+		}
+		or = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
+	}
+	
+	major = yes
+ 
+	mean_time_to_happen =  {
+		months = 24
+		
+		modifier = {
+			factor = 0.9
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.9
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = 0.9
+			ruling_party_ideology = socialist
+		}
+		modifier = {
+			factor = 0.5
+			government = democracy
+		}
+		modifier = {
+			factor = 0.2
+			has_country_modifier = neutrality
+		}
+	}
+
+	title = "EVTNAME90820808"
+	desc = "EVTDESC90820808"
+	
+	option = {
+		name = "EVTOPTA90820808"
+		prestige = 30
+		set_global_flag = LON_headquarters
+		add_country_modifier = {
+			name = LON_headquarters
+			duration = -1
+		}
+	}
+}
+
+#LON Headquarters removed
+country_event = {
+
+	id = 90820809
+
+	trigger = {
+		has_country_modifier = LON_headquarters
+		or = {
+			not = {
+				has_country_flag = LON_member
+			}
+			has_country_flag = not_LON_member
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 1
+	}
+
+	title = "EVTNAME90820809"
+	desc = "EVTDESC90820809"
+	
+	major = yes
+	
+	option = {
+		name = "EVTOPTA90820809"
+		prestige = -30
+		clr_global_flag = LON_headquarters
+		remove_country_modifier = LON_headquarters
+	}
+}

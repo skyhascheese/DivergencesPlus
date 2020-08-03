@@ -9,7 +9,7 @@ country_event = {
 
 	trigger = {
 		year = 1870
-		money = 15000
+		money = 10000
 		nationalism_n_imperialism = 1
 		war = no # Nation can not be at war at the time of invite
 		not = { 
@@ -41,7 +41,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA90820301"
 		ai_chance = { factor = 99 }
-		money = -15000
+		money = -10000
 		prestige = 20
 		set_country_flag = national_football_team
 		add_country_modifier = {
@@ -615,6 +615,10 @@ country_event = {
 		modifier = {
 			factor = 0.2
 			rank = 16
+		}
+		modifier = {
+			factor = 0.1
+			tag = AMA
 		}
 	}
 
