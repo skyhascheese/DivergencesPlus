@@ -1,7 +1,7 @@
 #Setup event
 country_event = {
 
-	id = 90820800
+	id = 90820820
 
 	trigger = {
 		great_wars_enabled = yes
@@ -108,43 +108,6 @@ country_event = {
 			limit = {
 				is_greater_power = yes
 				is_disarmed = no
-				not = {
-					or = {
-						and = {
-							has_recently_lost_war = yes
-							has_unclaimed_cores = yes
-						}
-						war_policy = jingoism
-						ruling_party_ideology = fascist
-						ruling_party_ideology = reactionary
-						ruling_party_ideology = communist
-						and = {
-							ruling_party_ideology = conservative
-							or = {
-								war_policy = pro_military
-								citizenship_policy = residency
-							}
-						}
-						and = {
-							government = prussian_constitutionalism
-							or = {
-								national_value = nv_order
-								national_value = nv_tradition
-								national_value = nv_autocracy
-							}
-						}
-						slavery = yes_slavery
-						child_labor = child_labor_legal
-						border_policy = closed_borders
-						debt_law = serfdom
-						citizens_rights = primary_culture_only
-					}
-				}
-				or = {
-					government = democracy
-					government = hms_government
-					government = prussian_constitutionalism
-				}
 			}
 			country_event = 90820802
 		}
@@ -212,7 +175,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA90820802"
-		prestige = 20
+		prestige = 10
 		set_country_flag = LON_member
 		any_country = {
 			limit = {
@@ -294,19 +257,19 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.1
-				war_exhaustion = 20
+				war_exhaustion = 25
 			}
 			modifier = {
 				factor = 1.1
-				war_exhaustion = 40
+				war_exhaustion = 50
 			}
 			modifier = {
 				factor = 1.1
-				war_exhaustion = 60
+				war_exhaustion = 75
 			}
 			modifier = {
 				factor = 1.1
-				war_exhaustion = 80
+				war_exhaustion = 100
 			}
 			modifier = {
 				factor = 1.1
@@ -319,29 +282,6 @@ country_event = {
 			modifier = {
 				factor = 1.5
 				war_policy = pacifism
-			}
-			modifier = {
-				factor = 1.1
-				or = {
-					and = {
-						has_recently_lost_war = yes
-						has_unclaimed_cores = no
-					}
-					has_unclaimed_cores = no
-				}
-			}
-			modifier = {
-				factor = 1.2
-				or = {
-					national_value = nv_liberty
-					national_value = nv_equality
-				}
-			}
-			modifier = {
-				factor = 1.5
-				sphere_owner = {
-					has_country_flag = LON_member
-				}
 			}
 		}
 	}
@@ -437,80 +377,6 @@ country_event = {
 				factor = 1.5
 				war_policy = jingoism
 			}
-			modifier = {
-				factor = 1.1
-				or = {
-					and = {
-						has_recently_lost_war = yes
-						has_unclaimed_cores = yes
-					}
-					has_unclaimed_cores = yes
-				}
-			}
-			modifier = {
-				factor = 1.5
-				lost_national = 3
-			}
-			modifier = {
-				factor = 1.2
-				or = {
-					national_value = nv_order
-					national_value = nv_autocracy
-					national_value = nv_tradition
-				}
-			}
-			modifier = {
-				factor = 2
-				or = {
-					slavery = yes_slavery
-					child_labor = child_labor_legal
-					border_policy = closed_borders
-					debt_law = serfdom
-					citizens_rights = primary_culture_only
-				}
-			}
-			modifier = {
-				factor = 1.1
-				not = {
-					war_exhaustion = 10
-				}
-			}
-			modifier = {
-				factor = 1.5
-				or = {
-					slavery = yes_slavery
-					slavery = freedom_of_womb
-				}
-			}
-			modifier = {
-				factor = 1.3
-				or = {
-					debt_law = serfdom
-					debt_law = peonage
-				}
-			}
-			modifier = {
-				factor = 1.1
-				or = {
-					child_labor = child_labor_legal
-					child_labor = child_labor_restricted
-				}
-			}
-			modifier = {
-				factor = 1.2
-				not = {
-					or = {
-						conscription = one_year_draft
-						conscription = no_draft
-					}
-				}
-			}
-			modifier = {
-				factor = 1.4
-				sphere_owner = {
-					has_country_flag = not_LON_member
-				}
-			}
 		}
 	}
 }
@@ -562,7 +428,7 @@ country_event = {
 			limit = {
 				has_country_flag = LON_member
 			}
-			country_event = 90820805
+			country_event = 
 		}
 	}
 }
@@ -644,6 +510,16 @@ country_event = {
 				value = 100
 			}
 		}
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				has_country_flag = LON_member
+			}
+			relation = {
+				who = THIS
+				value = 200
+			}
+		}
 	}
 }
 
@@ -681,18 +557,6 @@ country_event = {
 			relation = {
 				who = THIS
 				value = -200
-			}
-		}
-		any_country = {
-			limit = {
-				not = {
-					has_country_flag = LON_member
-				}
-				independent = yes
-			}
-			relation = {
-				who = THIS
-				value = 50
 			}
 		}
 	}
@@ -804,12 +668,6 @@ country_event = {
 			factor = 0.2
 			has_country_modifier = neutrality
 		}
-		modifier = {
-			factor = 0.6
-			not = {
-				war_exhaustion = 10
-			}
-		}
 	}
 
 	title = "EVTNAME90820808"
@@ -855,326 +713,5 @@ country_event = {
 		prestige = -30
 		clr_global_flag = LON_headquarters
 		remove_country_modifier = LON_headquarters
-	}
-}
-
-#LON member adopts slavery
-country_event = {
-
-	id = 90820810
-
-	trigger = {
-		has_country_flag = LON_member
-		or = {
-			slavery = yes_slavery
-			slavery = freedom_of_womb
-		}
-	}
- 
-	mean_time_to_happen =  {
-		months = 1
-	}
-
-	title = "EVTNAME90820810"
-	desc = "EVTDESC90820810"
-	picture = "league_of_nations"
-	
-	option = {
-		name = "EVTOPTA90820810"
-		prestige = 10
-		slavery = no_slavery
-		
-		ai_chance = {
-			factor = 50
-		
-			modifier = {
-				factor = 1.5
-				not = {
-					or = {
-						ruling_party_ideology = reactionary
-						ruling_party_ideology = fascist
-					}
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB90820810"
-		country_event = 90820813
-		
-		ai_chance = {
-			factor = 50
-		
-			modifier = {
-				factor = 1.5
-				or = {
-					ruling_party_ideology = reactionary
-					ruling_party_ideology = fascist
-				}
-			}
-		}
-	}
-}
-
-#LON member make child labour legal
-country_event = {
-
-	id = 90820811
-
-	trigger = {
-		has_country_flag = LON_member
-		or = {
-			child_labor = child_labor_legal
-			child_labor = child_labor_restricted
-		}
-	}
- 
-	mean_time_to_happen =  {
-		months = 1
-	}
-
-	title = "EVTNAME90820811"
-	desc = "EVTDESC90820811"
-	picture = "league_of_nations"
-	
-	option = {
-		name = "EVTOPTA90820811"
-		prestige = 10
-		child_labor = child_labor_illegal
-		any_country = {
-			limit = {
-				has_country_flag = LON_member
-			}
-			relation = {
-				who = THIS
-				value = 50
-			}
-		}
-		
-		ai_chance = {
-			factor = 50
-		
-			modifier = {
-				factor = 1.5
-				not = {
-					or = {
-						ruling_party_ideology = reactionary
-						ruling_party_ideology = fascist
-						ruling_party_ideology = anarcho_liberal
-					}
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB90820811"
-		country_event = 90820813
-		
-		ai_chance = {
-			factor = 50
-		
-			modifier = {
-				factor = 1.5
-				or = {
-					ruling_party_ideology = reactionary
-					ruling_party_ideology = fascist
-					ruling_party_ideology = anarcho_liberal
-				}
-			}
-		}
-	}
-}
-
-#LON member make serfdom legal
-country_event = {
-
-	id = 90820812
-
-	trigger = {
-		has_country_flag = LON_member
-		or = {
-			debt_law = serfdom
-			debt_law = peonage
-		}
-	}
- 
-	mean_time_to_happen =  {
-		months = 1
-	}
-
-	title = "EVTNAME90820812"
-	desc = "EVTDESC90820812"
-	picture = "league_of_nations"
-	
-	option = {
-		name = "EVTOPTA90820812"
-		prestige = 10
-		debt_law = bankruptcy
-		any_country = {
-			limit = {
-				has_country_flag = LON_member
-			}
-			relation = {
-				who = THIS
-				value = 50
-			}
-		}
-		
-		ai_chance = {
-			factor = 50
-		
-			modifier = {
-				factor = 1.5
-				not = {
-					or = {
-						ruling_party_ideology = reactionary
-						ruling_party_ideology = fascist
-						ruling_party_ideology = anarcho_liberal
-					}
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB90820812"
-		set_country_flag = expelled_from_the_league
-		
-		ai_chance = {
-			factor = 50
-		
-			modifier = {
-				factor = 1.5
-				or = {
-					ruling_party_ideology = reactionary
-					ruling_party_ideology = fascist
-					ruling_party_ideology = anarcho_liberal
-				}
-			}
-		}
-	}
-}
-
-#Expelled from the League of Nations for non-compliance
-country_event = {
-
-	id = 90820813
-
-	trigger = {
-		has_country_flag = LON_member
-		has_country_flag = expelled_from_the_league
-	}
- 
-	mean_time_to_happen =  {
-		months = 1
-	}
-
-	title = "EVTNAME90820813"
-	desc = "EVTDESC90820813"
-	
-	major = yes
-	
-	option = {
-		name = "EVTOPTA90820813"
-		prestige = -30
-		clr_country_flag = LON_member
-		clr_country_flag = expelled_from_the_league
-		set_country_flag = not_LON_member
-		remove_country_modifier = LON_member
-		
-		any_country = {
-			limit = {
-				or = {
-					has_country_flag = LON_member
-					not = {
-						or = {
-							child_labor = child_labor_legal
-							child_labor = child_labor_restricted
-							child_labor = child_labor_legal
-							child_labor = child_labor_restricted
-							debt_law = serfdom
-							debt_law = peonage
-						}
-					}
-				}
-			}
-			relation = {
-				who = THIS
-				value = 50
-			}
-		}
-		any_country = {
-			limit = {
-				has_country_flag = LON_member
-			}
-			relation = {
-				who = THIS
-				value = -100
-			}
-		}
-		any_pop = {
-			limit = {
-				or = {
-					issue = jingoism
-					issue = pro_military
-					issue = laissez_faire
-					issue = moralism
-					issue = residency
-					issue = no_state_interference
-					issue = yes_slavery
-					issue = none_voting
-					issue = landed_voting
-					issue = appointed
-					issue = state_press
-					issue = no_trade_unions
-					issue = underground_parties
-					issue = mandatory_service
-					issue = four_year_draft
-					issue = two_year_draft
-					issue = primary_culture_only
-					issue = serfdom
-					issue = peonage
-					issue = closed_borders
-					issue = child_labor_legal
-					issue = child_labor_restricted
-				}
-			}
-			militancy = -1
-			consciousness = -1
-		}
-		any_pop = {
-			limit = {
-				not = {
-					or = {
-						issue = jingoism
-						issue = pro_military
-						issue = laissez_faire
-						issue = moralism
-						issue = residency
-						issue = no_state_interference
-						issue = yes_slavery
-						issue = none_voting
-						issue = landed_voting
-						issue = appointed
-						issue = state_press
-						issue = no_trade_unions
-						issue = underground_parties
-						issue = mandatory_service
-						issue = four_year_draft
-						issue = two_year_draft
-						issue = primary_culture_only
-						issue = serfdom
-						issue = peonage
-						issue = closed_borders
-						issue = child_labor_legal
-						issue = child_labor_restricted
-					}
-				}
-			}
-			militancy = 2
-			consciousness = 3
-		}
 	}
 }

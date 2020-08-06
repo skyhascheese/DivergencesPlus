@@ -1552,17 +1552,17 @@ switched_production = {
 }
 
 ##### Diseases & Famines #####
-pandemic_influenza = {
-	global_population_growth = -0.01
-	global_pop_consciousness_modifier = 0.1
-	icon = 18
-}
+#pandemic_influenza = {
+#	global_population_growth = -0.01
+#	global_pop_consciousness_modifier = 0.1
+#	icon = 18
+#}
 
-pandemic_influenza_immunity = {
-	population_growth = 0.01
-	pop_consciousness_modifier = -0.1
-	icon = 19
-}
+#pandemic_influenza_immunity = {
+#	population_growth = 0.01
+#	pop_consciousness_modifier = -0.1
+#	icon = 19
+#}
 
 ##### Crime & Punishment #####
 trustee_system = {
@@ -2735,6 +2735,31 @@ LON_member = {
 	research_points_on_conquer = -0.5
 	global_immigrant_attract = 0.05
 	core_pop_militancy_modifier = -0.01
+	life_rating = -0.1
 	icon = 7
+}
+
+influenza_mitigation = {
+	population_growth = -0.03
+	local_factory_output = -0.3
+	local_RGO_output = -0.2
+	local_artisan_output = -0.2
+	local_ship_build = 1
+	local_repair = 1
+	immigrant_attract = -1
+	poor_income_modifier = -0.2
+	middle_income_modifier = -0.2
+	rich_income_modifier = -0.3
+	pop_consciousness_modifier = 0.1
+	icon = 18
+}
+
+influenza = {
+	population_growth = -0.06
+	immigrant_attract = -1
+	local_ruling_party_support = -0.2
+	pop_consciousness_modifier = 0.2
+	life_rating = -0.2
+	icon = 18
 }
 

@@ -1,0 +1,282 @@
+political_decisions = {
+	
+	join_the_league_of_nations = {
+		picture = league_of_nations
+		
+		potential = {
+			has_global_flag = LON_founded
+			civilized = yes
+			independent = yes
+			is_substate = no
+			is_vassal = no
+			not = {
+				or = {
+					has_country_flag = LON_member
+					has_country_flag = not_LON_member
+				}
+			}
+		}
+		
+		allow = {
+			is_disarmed = no
+			war = no
+			not = {
+				or = {
+					and = {
+						has_recently_lost_war = yes
+						has_unclaimed_cores = yes
+					}
+					war_policy = jingoism
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = communist
+					and = {
+						ruling_party_ideology = conservative
+						or = {
+							war_policy = pro_military
+							citizenship_policy = residency
+						}
+					}
+					and = {
+						government = prussian_constitutionalism
+						or = {
+							national_value = nv_order
+							national_value = nv_tradition
+							national_value = nv_autocracy
+						}
+					}
+					slavery = yes_slavery
+					slavery = freedom_of_womb
+					child_labor = child_labor_legal
+					child_labor = child_labor_restricted
+					debt_law = serfdom
+					debt_law = peonage
+				}
+			}
+			or = {
+				government = democracy
+				government = hms_government
+				government = prussian_constitutionalism
+			}
+		}
+		
+		effect = {
+			prestige = 20
+			country_event = 90820805
+			any_pop = {
+				limit = {
+					or = {
+						issue = jingoism
+						issue = pro_military
+						issue = laissez_faire
+						issue = moralism
+						issue = residency
+						issue = no_state_interference
+						issue = yes_slavery
+						issue = none_voting
+						issue = landed_voting
+						issue = appointed
+						issue = state_press
+						issue = no_trade_unions
+						issue = underground_parties
+						issue = mandatory_service
+						issue = four_year_draft
+						issue = two_year_draft
+						issue = primary_culture_only
+						issue = serfdom
+						issue = peonage
+						issue = closed_borders
+						issue = child_labor_legal
+						issue = child_labor_restricted
+					}
+				}
+				militancy = 2
+				consciousness = 3
+				dominant_issue = {
+					factor = 0.1
+					value = jingoism
+				}
+			}
+			any_pop = {
+				limit = {
+					not = {
+						or = {
+							issue = jingoism
+							issue = pro_military
+							issue = laissez_faire
+							issue = moralism
+							issue = residency
+							issue = no_state_interference
+							issue = yes_slavery
+							issue = none_voting
+							issue = landed_voting
+							issue = appointed
+							issue = state_press
+							issue = no_trade_unions
+							issue = underground_parties
+							issue = mandatory_service
+							issue = four_year_draft
+							issue = two_year_draft
+							issue = primary_culture_only
+							issue = serfdom
+							issue = peonage
+							issue = closed_borders
+							issue = child_labor_legal
+							issue = child_labor_restricted
+						}
+					}
+				}
+				militancy = -1
+				consciousness = -1
+				dominant_issue = {
+					factor = 0.1
+					value = pacifism
+				}
+			}
+			add_country_modifier = {
+				which = LON_member
+				duration = -1
+			}
+			set_country_flag = LON_member
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	leave_the_league_of_nations = {
+		picture = league_of_nations
+		
+		potential = {
+			has_global_flag = LON_founded
+			civilized = yes
+			independent = yes
+			is_substate = no
+			is_vassal = no
+			has_country_flag = LON_member
+			not = {
+				has_country_flag = not_LON_member
+			}
+		}
+		
+		allow = {
+			or = {
+				and = {
+					or = {
+						not = {
+							ruling_party_ideology = liberal
+							ruling_party_ideology = socialist
+						}
+						and = {
+							ruling_party_ideology = conservative
+							or = {
+								war_policy = pro_military
+								citizenship_policy = residency
+							}
+						}
+					}
+					not = {
+						or = {
+							government = democracy
+							government = hms_government
+							government = prussian_constitutionalism
+						}
+					}
+				}
+				war_policy = jingoism
+				and = {
+					has_recently_lost_war = yes
+					has_unclaimed_cores = yes
+				}
+				lost_national = 3
+				and = {
+					government = prussian_constitutionalism
+					or = {
+						national_value = nv_order
+						national_value = nv_tradition
+						national_value = nv_autocracy
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = -20
+			country_event = 90820806
+			any_pop = {
+				limit = {
+					or = {
+						issue = jingoism
+						issue = pro_military
+						issue = laissez_faire
+						issue = moralism
+						issue = residency
+						issue = no_state_interference
+						issue = yes_slavery
+						issue = none_voting
+						issue = landed_voting
+						issue = appointed
+						issue = state_press
+						issue = no_trade_unions
+						issue = underground_parties
+						issue = mandatory_service
+						issue = four_year_draft
+						issue = two_year_draft
+						issue = primary_culture_only
+						issue = serfdom
+						issue = peonage
+						issue = closed_borders
+						issue = child_labor_legal
+						issue = child_labor_restricted
+					}
+				}
+				militancy = -1
+				consciousness = -1
+				dominant_issue = {
+					factor = 0.1
+					value = jingoism
+				}
+			}
+			any_pop = {
+				limit = {
+					not = {
+						or = {
+							issue = jingoism
+							issue = pro_military
+							issue = laissez_faire
+							issue = moralism
+							issue = residency
+							issue = no_state_interference
+							issue = yes_slavery
+							issue = none_voting
+							issue = landed_voting
+							issue = appointed
+							issue = state_press
+							issue = no_trade_unions
+							issue = underground_parties
+							issue = mandatory_service
+							issue = four_year_draft
+							issue = two_year_draft
+							issue = primary_culture_only
+							issue = serfdom
+							issue = peonage
+							issue = closed_borders
+							issue = child_labor_legal
+							issue = child_labor_restricted
+						}
+					}
+				}
+				militancy = 2
+				consciousness = 3
+				dominant_issue = {
+					factor = 0.1
+					value = pacifism
+				}
+			}
+			remove_country_modifier = LON_member
+			clr_country_flag = LON_member
+			set_country_flag = not_LON_member
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+}

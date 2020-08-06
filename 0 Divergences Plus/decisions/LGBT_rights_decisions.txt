@@ -24,6 +24,10 @@ political_decisions = {
 					religious_policy = pluralism
 					ruling_party_ideology = liberal
 				}
+				and = {
+					has_global_flag = socialism_permanent_revolution
+					ruling_party_ideology = communist
+				}
 			}
 		}
 		
@@ -72,6 +76,10 @@ political_decisions = {
 			or = {
 				ruling_party_ideology = reactionary
 				ruling_party_ideology = fascist
+				and = {
+					has_global_flag = socialism_in_one_country
+					ruling_party_ideology = communist
+				}
 			}
 		}
 		
