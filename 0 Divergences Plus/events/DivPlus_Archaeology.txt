@@ -15,6 +15,8 @@ country_event = { #In the Footsteps of the Argaeds
 			is_secondary_power = yes
 		}
 		owns = 821
+		nationalism_n_imperialism = 1
+		modern_archaeology = 1
 	}
 	
 	mean_time_to_happen = {
@@ -45,11 +47,7 @@ country_event = { #FROMCOUNTRY requests excavation rights at Aigai
 		set_global_flag = aigai_excavation_rights
 		FROM = { country_event = 90820732 }
 		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 0.1
-				has_global_flag = aigai_excavation_rights
-			}
+			factor = 40
 			modifier = {
 				factor = 3
 				FROM = { prestige = 65 }
@@ -58,6 +56,17 @@ country_event = { #FROMCOUNTRY requests excavation rights at Aigai
 				factor = 1.5
 				FROM = { is_greater_power = yes }
 			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = FROM
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_global_flag = aigai_excavation_rights
+			}
 		}
 	}
 	
@@ -65,8 +74,10 @@ country_event = { #FROMCOUNTRY requests excavation rights at Aigai
 		name = "EVTOPTB90820731"
 		FROM = { country_event = 90820733 }
 		ai_chance = {
+			factor = 60
+			
 			modifier = {
-				factor = 50
+				factor = 2
 				not = {
 					relation = {
 						who = FROM
@@ -149,18 +160,18 @@ country_event = { #Excavation team gets into trouble
 				value = 5
 			}
 		}
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				money = 5000
+			}
+		}
 	}
 	
 	option = {
 		name = "EVTOPTB90820734"
-		ai_chance = {
-			modifier = {
-				factor = 10
-				not = {
-					money = 5000
-				}
-			}
-		}
 		any_country = {
 			limit = {
 				owns = 821
@@ -173,6 +184,16 @@ country_event = { #Excavation team gets into trouble
 		prestige = -15
 		remove_country_modifier = aigai_excavation_rights
 		remove_country_modifier = pella_excavation_rights
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				not = {
+					money = 5000
+				}
+			}
+		}
 	}
 }
 
@@ -443,11 +464,8 @@ country_event = { #FROMCOUNTRY requests excavation rights at Pella
 		set_global_flag = pella_excavation_rights
 		FROM = { country_event = 90820742 }
 		ai_chance = {
-			factor = 20
-			modifier = {
-				factor = 0.1
-				has_global_flag = pella_excavation_rights
-			}
+			factor = 40
+			
 			modifier = {
 				factor = 3
 				FROM = { prestige = 65 }
@@ -456,6 +474,17 @@ country_event = { #FROMCOUNTRY requests excavation rights at Pella
 				factor = 1.5
 				FROM = { is_greater_power = yes }
 			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = FROM
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_global_flag = pella_excavation_rights
+			}
 		}
 	}
 	
@@ -463,8 +492,10 @@ country_event = { #FROMCOUNTRY requests excavation rights at Pella
 		name = "EVTOPTB90820741"
 		FROM = { country_event = 90820743 }
 		ai_chance = {
+			factor = 60
+			
 			modifier = {
-				factor = 50
+				factor = 2
 				not = {
 					relation = {
 						who = FROM
@@ -898,18 +929,19 @@ country_event = { #Excavation team gets into trouble (Dodona)
 				value = 5
 			}
 		}
+		
+		ai_chance = {
+			factor = 1.5
+			
+			modifier = {
+				factor = 10
+				money = 5000
+			}
+		}
 	}
 	
 	option = {
 		name = "EVTOPTB90820753"
-		ai_chance = {
-			modifier = {
-				factor = 10
-				not = {
-					money = 5000
-				}
-			}
-		}
 		any_country = {
 			limit = {
 				owns = 824
@@ -921,6 +953,17 @@ country_event = { #Excavation team gets into trouble (Dodona)
 		}
 		prestige = -15
 		remove_country_modifier = dodona_excavation_rights
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				not = {
+					money = 5000
+				}
+			}
+		}
 	}
 }
 
@@ -969,9 +1012,7 @@ country_event = { #Fraud (Dodona)
 	picture = "archaeological_fraud"
 		
 	trigger = {
-		or = {
-			has_country_modifier = dodona_excavations
-		}
+		has_country_modifier = dodona_excavations
 		NOT = {
 			owns = 824
 		}
@@ -995,9 +1036,565 @@ country_event = { #Fraud (Dodona)
 	}
 	
 	option = {
-		name = "EVTOPTA90820736"
+		name = "EVTOPTA90820755"
 		any_pop = {
 			militancy = 1
+		}
+	}
+}
+
+country_event = { #The $COUNTRY_ADJ$ Museum
+	id = 9082080
+	title = "EVTNAME90820755"
+	desc = "EVTDESC90820755"
+	picture = "future_of_the_parthenon_marbles"
+	
+	fire_only_once = yes
+		
+	trigger = {
+		not = { 
+			or = {
+				has_global_flag = parthenon_marbles_museum
+				has_global_flag = return_the_marbles
+			}
+		}
+		invention = early_archaeology
+		or = {
+			is_greater_power = yes
+			is_secondary_power = yes
+			owns = 729 #Venice
+		}
+		capital_scope = {
+			continent = europe
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.7
+			money = 50000
+		}
+		modifier = {
+			factor = 0.7
+			owns = 729
+		}
+		modifier = {
+			factor = 0.7
+			is_greater_power = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820736" #Establish the Museum
+		money = -50000
+		capital_scope = {
+			add_province_modifier = {
+				name = parthenon_marbles_museum
+				duration = -1
+			}
+		}
+		any_country = {
+			limit = {
+				civilized = yes 
+			}
+			country_event = xxx
+		}
+		any_country = {
+			limit = {
+				primary_culture = greek
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+			consciousness = 2
+		}
+		set_global_flag = parthenon_marbles_museum
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 3
+				any_country = {
+					limit = {
+						owns = 834 #Athens
+					}
+					not = {
+						primary_culture = greek
+					}
+				}
+			}	
+			modifier = {
+				factor = 1.5
+				not = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						is_greater_power = yes
+					}
+				}
+			}			
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.5
+				and = {
+					not = {
+						any_country = {
+							limit = {
+								owns = 834 #Athens
+								primary_culture = greek
+							}
+							is_greater_power = no
+							is_secondary_power = no
+						}
+					}
+					is_greater_power = no
+					is_secondary_power_power = yes
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						relation = {
+							who = THIS
+							value = 150
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						bigger_army_than = THIS
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820736" #Return the Marbles
+		prestige = -20
+		any_country = {
+			limit = {
+				primary_culture = greek
+				owns = 834 #Athens
+			}
+			country_event = xxx
+		}
+		set_global_flag = return_the_marbles
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.5
+				any_country = {
+					limit = {
+						owns = 834 #Athens
+						primary_culture = greek
+					}
+					is_sphere_leader_of = THIS
+				}
+			}
+			modifier = {
+				factor = 1.2
+				and = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						bigger_army_than = THIS
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				and = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						is_secondary_power = yes
+					}
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+			modifier = {
+				factor = 1.2
+				and = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						is_greater_power = yes
+					}
+					is_greater_power = no
+					is_secondary_power = yes
+				}
+			}
+			modifier = {
+				factor = 1.2
+				any_country = {
+					limit = {
+						owns = 834 #Athens
+						primary_culture = greek
+					}
+					relation = {
+						who = THIS
+						value = 150
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				any_country = {
+					limit = {
+						owns = 834 #Athens
+						primary_culture = greek
+					}
+					alliance_with = THIS
+				}
+			}
+		}
+	}
+}
+
+country_event = { #The $FROMCOUNTRY_ADJ$ Museum
+	id = 9082080
+	title = "EVTNAME90820755"
+	desc = "EVTDESC90820755"
+	picture = "venetian_museum"
+		
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820736" #Establish the Museum
+	}
+}
+
+country_event = { #The Parthenon Marbles Returned
+	id = 9082080
+	title = "EVTNAME90820755"
+	desc = "EVTDESC90820755"
+	picture = "duveen_gallery"
+		
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820736"
+		set_global_flag = parthenon_marbles_returned
+		set_global_flag = parthenon_marbles_crisis_ended
+		FROM = {
+			capital_scope = {
+				remove_province_modifier = parthenon_marbles_museum
+			}
+		}
+	}
+}
+
+country_event = { #$FROMCOUNTRY$ demands return of the Parthenon marbles
+	id = 9082080
+	title = "EVTNAME90820755"
+	desc = "EVTDESC90820755"
+	picture = "parthenon_marbles_carricature"
+		
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820736" #Refuse demand
+		any_country = {
+			limit = {
+				primary_culture = greek
+				owns = 834 #Athens
+			}
+			country_event = xxx
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				not = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						is_greater_power = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						relation = {
+							who = THIS
+							value = 150
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						bigger_army_than = THIS
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820736" #Return the Marbles
+		prestige = -20
+		any_country = {
+			limit = {
+				primary_culture = greek
+				owns = 834 #Athens
+			}
+			country_event = xxx
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				any_country = {
+					limit = {
+						owns = 834 #Athens
+						primary_culture = greek
+					}
+					is_sphere_leader_of = THIS
+				}
+			}
+			modifier = {
+				factor = 1.2
+				and = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						bigger_army_than = THIS
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				and = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						is_secondary_power = yes
+					}
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+			modifier = {
+				factor = 1.2
+				and = {
+					any_country = {
+						limit = {
+							owns = 834 #Athens
+							primary_culture = greek
+						}
+						is_greater_power = yes
+					}
+					is_greater_power = no
+					is_secondary_power = yes
+				}
+			}
+			modifier = {
+				factor = 1.2
+				any_country = {
+					limit = {
+						owns = 834 #Athens
+						primary_culture = greek
+					}
+					relation = {
+						who = THIS
+						value = 150
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				any_country = {
+					limit = {
+						owns = 834 #Athens
+						primary_culture = greek
+					}
+					alliance_with = THIS
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Ultimatum refused
+	id = 9082080
+	title = "EVTNAME90820755"
+	desc = "EVTDESC90820755"
+	picture = "parthenon_marbles_carricature"
+		
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90820736" #Press ahead
+		FROM = {
+			set_country_flag = parthenon_marbles_war
+		}
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = humiliate }
+			call_ally = yes
+		}
+		any_country = {
+			limit = {
+				not = {
+					or = {
+						tag = FROM
+						tag = THIS
+					}
+				}
+			country_event = xxx
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				not = {
+					FROM = {
+						is_greater_power = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					FROM = {
+						relation = {
+							who = THIS
+							value = 100
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					FROM = {
+						bigger_army_than = THIS
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820736" #Back down
+		prestige = -50
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+			}
+			consciousness = 3
+		}
+		any_country = {
+			limit = {
+				not = {
+					tag = THIS
+				}
+			country_event = xxx
+		}
+		set_global_flag = parthenon_marbles_crisis_ended
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				not = {
+					FROM = {
+						is_greater_power = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					FROM = {
+						relation = {
+							who = THIS
+							value = 100
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					FROM = {
+						bigger_army_than = THIS
+					}
+				}
+			}
 		}
 	}
 }

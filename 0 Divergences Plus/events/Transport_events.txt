@@ -508,3 +508,319 @@ country_event = {
 		}
 	}
 }
+
+# An Underground Railway
+country_event = {
+
+	id = 90820409
+
+	trigger = {
+		not = { 
+			or = { 
+				has_global_flag = underground_railroads
+				has_country_flag = no_first_underground
+			}
+		}
+		industrial_score = 500
+		is_greater_power = yes
+		year = 1860
+		money = 100000
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+		
+		modifier = {
+			factor = 0.8
+			industrial_score = 1000
+		}
+		modifier = {
+			factor = 0.6
+			industrial_score = 2000
+		}
+		modifier = {
+			factor = 0.4
+			industrial_score = 3000
+		}
+		modifier = {
+			factor = 0.2
+			industrial_score = 4000
+		}
+	}
+
+	title = "EVTNAME90820409"
+	desc = "EVTDESC90820409"
+	picture = "underground_railroad_concept"
+
+	option = {
+		name = "EVTOPTA90820409"
+		set_global_flag = underground_railroads
+		set_country_flag = first_underground
+		money = -100000
+		capital_scope = {
+			add_province_modifier = {
+				name = building_underground
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 66
+		}
+	}
+
+	option = {
+		name = "EVTOPTB90820409"
+		set_country_flag = no_first_underground
+		prestige = -10
+		ai_chance = {
+			factor = 44
+		}
+		owner = {
+			any_pop = {
+				limit = {
+					has_pop_type = capitalists
+				}
+				consciousness = 1
+			}
+		}
+	}
+}
+
+# The $PROVINCE$ Metropolitan Railway
+province_event = {
+
+	id = 90820410
+
+	trigger = {
+		has_province_modifier = building_underground
+		has_global_flag = first_underground_opened
+		owner = {
+			not = {
+				has_country_flag = first_underground
+				not = { has_country_flag = first_underground_opened }
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 24
+		
+		modifier = {
+			factor = 1.5
+			has_province_modifier = underground_delays
+		}
+	}
+
+	title = "EVTNAME90820410"
+	desc = "EVTDESC90820410"
+	picture = "underground_railroad"
+
+	option = {
+		name = "EVTOPTA90820410"
+		prestige = 30
+		remove_province_modifier = building_underground
+		remove_province_modifier = underground_delays
+		add_province_modifier = {
+			name = underground_system
+			duration = -1
+		}
+		infrastructure = 1
+		owner = {
+			any_pop = {
+				limit = {
+					has_pop_type = capitalists
+				}
+				consciousness = -1
+			}
+		}
+	}
+}
+
+# Railway Troubles in $PROVINCE$
+province_event = {
+
+	id = 90820411
+
+	trigger = {
+		has_province_modifier = building_underground
+		not = {
+			has_province_modifier = underground_delays
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 50
+		
+		modifier = {
+			factor = 0.5
+			owner = { not = { administration_spending = 0.7 } }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { not = { administration_spending = 0.5 } }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { not = { administration_spending = 0.3 } }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { unemployment = 0.15 }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { has_country_modifier = bad_host }
+		}
+	}
+
+	title = "EVTNAME90820411"
+	desc = "EVTDESC90820411"
+	picture = "underground_railroad_planning"
+
+	option = {
+		name = "EVTOPTA90820411"
+		prestige = -10
+		money = -25000
+		owner = {
+			any_pop = {
+				limit = {
+					has_pop_type = capitalists
+				}
+				consciousness = 1
+			}
+		}
+	}
+}
+
+# The $PROVINCE$ Metropolitan Railway (first)
+province_event = {
+
+	id = 90820412
+
+	trigger = {
+		has_province_modifier = building_underground
+		owner = {
+			has_country_flag = first_underground
+			not = { has_country_flag = first_underground_opened }
+		}
+	}
+	
+	major = yes
+ 
+	mean_time_to_happen =  {
+		months = 24
+		
+		modifier = {
+			factor = 1.5
+			has_province_modifier = underground_delays
+		}
+	}
+
+	title = "EVTNAME90820412"
+	desc = "EVTDES90820412"
+
+	option = {
+		name = "EVTOPTA90820412"
+		prestige = 50
+		set_global_flag = first_underground_opened
+		remove_province_modifier = building_underground
+		remove_province_modifier = underground_delays
+		add_province_modifier = {
+			name = underground_system
+			duration = -1
+		}
+		infrastructure = 1
+	}
+}
+
+# An Underground Railway for $PROVINCE$
+province_event = {
+
+	id = 90820413
+
+	trigger = {
+		has_global_flag = underground_railroads
+		has_global_flag = first_underground_opened
+		not = { 
+			or = {
+				has_province_modifier = building_underground
+				has_province_modifier = overcrowded_metropolis
+			}
+		}
+		or = {
+			and = {
+				total_pops = 500000
+				is_state_capital = yes 
+			}
+			is_capital = yes
+		}
+		is_core = yes
+		is_overseas = no
+		is_colonial = no
+		has_building = railroad
+		has_factories = yes
+		owner = {
+			industrial_score = 200
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			not = {
+				has_country_flag = first_underground
+				not = { has_country_flag = first_underground_opened }
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 24
+	}
+
+	title = "EVTNAME90820413"
+	desc = "EVTDESC90820413"
+	picture = "underground_railroad"
+	picture = "underground_railroad_concept"
+
+	option = {
+		name = "EVTOPTA90820413"
+		money = -100000
+		add_province_modifier = {
+			name = building_underground
+			duration = -1
+		}
+		ai_chance = {
+			factor = 66
+		
+			modifier = {
+				factor = 0.1
+				not = { money = 100000 }
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB90820413"
+		prestige = -10
+		add_province_modifier = {
+			name = overcrowded_metropolis
+			duration = -1
+		}
+		owner = {
+			any_pop = {
+				limit = {
+					has_pop_type = capitalists
+				}
+				consciousness = 1
+			}
+		}
+		
+		ai_chance = {
+			factor = 44
+		
+			modifier = {
+				factor = 3
+				not = { money = 100000 }
+			}
+		}
+	}
+}

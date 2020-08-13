@@ -128,9 +128,9 @@ country_event = {
 						and = {
 							government = prussian_constitutionalism
 							or = {
-								national_value = nv_order
-								national_value = nv_tradition
-								national_value = nv_autocracy
+								nationalvalue = nv_order
+								nationalvalue = nv_tradition
+								nationalvalue = nv_autocracy
 							}
 						}
 						slavery = yes_slavery
@@ -333,8 +333,8 @@ country_event = {
 			modifier = {
 				factor = 1.2
 				or = {
-					national_value = nv_liberty
-					national_value = nv_equality
+					nationalvalue = nv_liberty
+					nationalvalue = nv_equality
 				}
 			}
 			modifier = {
@@ -449,14 +449,14 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				lost_national = 3
+				lost_national = 0.2
 			}
 			modifier = {
 				factor = 1.2
 				or = {
-					national_value = nv_order
-					national_value = nv_autocracy
-					national_value = nv_tradition
+					nationalvalue = nv_order
+					nationalvalue = nv_autocracy
+					nationalvalue = nv_tradition
 				}
 			}
 			modifier = {
@@ -688,7 +688,7 @@ country_event = {
 				not = {
 					has_country_flag = LON_member
 				}
-				independent = yes
+				is_independant = yes
 			}
 			relation = {
 				who = THIS
@@ -712,12 +712,12 @@ country_event = {
 
 	trigger = {
 		has_country_flag = LON_member
-		any_country = {
-			limit = {
-				is_greater_power = yes
+		is_greater_power = yes
+		any_greater_power = {
+			and = {
 				has_country_flag = LON_member
+				war_with = THIS
 			}
-			war_with = THIS
 		}
 	}
  
@@ -1117,28 +1117,10 @@ country_event = {
 		any_pop = {
 			limit = {
 				or = {
-					issue = jingoism
-					issue = pro_military
-					issue = laissez_faire
-					issue = moralism
-					issue = residency
-					issue = no_state_interference
-					issue = yes_slavery
-					issue = none_voting
-					issue = landed_voting
-					issue = appointed
-					issue = state_press
-					issue = no_trade_unions
-					issue = underground_parties
-					issue = mandatory_service
-					issue = four_year_draft
-					issue = two_year_draft
-					issue = primary_culture_only
-					issue = serfdom
-					issue = peonage
-					issue = closed_borders
-					issue = child_labor_legal
-					issue = child_labor_restricted
+					pop_majority_ideology = fascist
+					pop_majority_ideology = reactionary
+					pop_majority_ideology = communist
+					pop_majority_ideology = anarcho_liberal
 				}
 			}
 			militancy = -1
@@ -1148,28 +1130,10 @@ country_event = {
 			limit = {
 				not = {
 					or = {
-						issue = jingoism
-						issue = pro_military
-						issue = laissez_faire
-						issue = moralism
-						issue = residency
-						issue = no_state_interference
-						issue = yes_slavery
-						issue = none_voting
-						issue = landed_voting
-						issue = appointed
-						issue = state_press
-						issue = no_trade_unions
-						issue = underground_parties
-						issue = mandatory_service
-						issue = four_year_draft
-						issue = two_year_draft
-						issue = primary_culture_only
-						issue = serfdom
-						issue = peonage
-						issue = closed_borders
-						issue = child_labor_legal
-						issue = child_labor_restricted
+						pop_majority_ideology = fascist
+						pop_majority_ideology = reactionary
+						pop_majority_ideology = communist
+						pop_majority_ideology = anarcho_liberal
 					}
 				}
 			}

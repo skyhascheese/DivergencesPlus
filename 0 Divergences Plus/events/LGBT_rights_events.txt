@@ -43,12 +43,10 @@ country_event = { #Research on the Riddle of Man-Manly Love
 			limit = {
 				not = {
 					or = {
-						issue = pro_atheism
-						issue = secularized
-						and = {
-							issue = pluralism
-							ideology = liberal
-						}
+						pop_majority_ideology = communist
+						pop_majority_ideology = socialist
+						pop_majority_ideology = liberal
+						pop_majority_ideology = anarcho_liberal
 					}
 				}
 			}
@@ -58,12 +56,10 @@ country_event = { #Research on the Riddle of Man-Manly Love
 		any_pop = {
 			limit = {
 				or = {
-					issue = pro_atheism
-					issue = secularized
-					and = {
-						issue = pluralism
-						ideology = liberal
-					}
+					pop_majority_ideology = communist
+					pop_majority_ideology = socialist
+					pop_majority_ideology = liberal
+					pop_majority_ideology = anarcho_liberal
 				}
 			}
 			militancy = -1
@@ -159,12 +155,10 @@ country_event = { #First Gay Village
 			limit = {
 				not = {
 					or = {
-						issue = pro_atheism
-						issue = secularized
-						and = {
-							issue = pluralism
-							ideology = liberal
-						}
+						pop_majority_ideology = communist
+						pop_majority_ideology = socialist
+						pop_majority_ideology = liberal
+						pop_majority_ideology = anarcho_liberal
 					}
 				}
 			}
@@ -174,12 +168,10 @@ country_event = { #First Gay Village
 		any_pop = {
 			limit = {
 				or = {
-					issue = pro_atheism
-					issue = secularized
-					and = {
-						issue = pluralism
-						ideology = liberal
-					}
+					pop_majority_ideology = communist
+					pop_majority_ideology = socialist
+					pop_majority_ideology = liberal
+					pop_majority_ideology = anarcho_liberal
 				}
 			}
 			militancy = -1
@@ -238,12 +230,10 @@ country_event = { #First Same-Sex Marriage in Europe since Roman Times (good)
 			limit = {
 				not = {
 					or = {
-						issue = pro_atheism
-						issue = secularized
-						and = {
-							issue = pluralism
-							ideology = liberal
-						}
+						pop_majority_ideology = communist
+						pop_majority_ideology = socialist
+						pop_majority_ideology = liberal
+						pop_majority_ideology = anarcho_liberal
 					}
 				}
 			}
@@ -253,12 +243,10 @@ country_event = { #First Same-Sex Marriage in Europe since Roman Times (good)
 		any_pop = {
 			limit = {
 				or = {
-					issue = pro_atheism
-					issue = secularized
-					and = {
-						issue = pluralism
-						ideology = liberal
-					}
+					pop_majority_ideology = communist
+					pop_majority_ideology = socialist
+					pop_majority_ideology = liberal
+					pop_majority_ideology = anarcho_liberal
 				}
 			}
 			militancy = -1
@@ -318,12 +306,10 @@ country_event = { #First Same-Sex Marriage in Europe since Roman Times (bad)
 			limit = {
 				not = {
 					or = {
-						issue = pro_atheism
-						issue = secularized
-						and = {
-							issue = pluralism
-							ideology = liberal
-						}
+						pop_majority_ideology = communist
+						pop_majority_ideology = socialist
+						pop_majority_ideology = liberal
+						pop_majority_ideology = anarcho_liberal
 					}
 				}
 			}
@@ -333,12 +319,10 @@ country_event = { #First Same-Sex Marriage in Europe since Roman Times (bad)
 		any_pop = {
 			limit = {
 				or = {
-					issue = pro_atheism
-					issue = secularized
-					and = {
-						issue = pluralism
-						ideology = liberal
-					}
+					pop_majority_ideology = communist
+					pop_majority_ideology = socialist
+					pop_majority_ideology = liberal
+					pop_majority_ideology = anarcho_liberal
 				}
 			}
 			militancy = -1
@@ -381,16 +365,23 @@ country_event = { #Gay Village Raided
 				value = 25
 			}
 		}
+		any_country = {
+			limit = {
+				has_country_flag = homosexuality_decriminalised
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
 		any_pop = {
 			limit = {
 				not = {
 					or = {
-						issue = pro_atheism
-						issue = secularized
-						and = {
-							issue = pluralism
-							ideology = liberal
-						}
+						pop_majority_ideology = communist
+						pop_majority_ideology = socialist
+						pop_majority_ideology = liberal
+						pop_majority_ideology = anarcho_liberal
 					}
 				}
 			}
@@ -400,18 +391,14 @@ country_event = { #Gay Village Raided
 		any_pop = {
 			limit = {
 				or = {
-					issue = pro_atheism
-					issue = secularized
-					and = {
-						issue = pluralism
-						ideology = liberal
-					}
+					pop_majority_ideology = communist
+					pop_majority_ideology = socialist
+					pop_majority_ideology = liberal
+					pop_majority_ideology = anarcho_liberal
 				}
 			}
 			militancy = 1
-			consciousness = 1
-			plurality = 1
-			social_reform_desire = 0.1
+			consciousness = 2
 		}
 		capital_scope = { 
 			life_rating = -1

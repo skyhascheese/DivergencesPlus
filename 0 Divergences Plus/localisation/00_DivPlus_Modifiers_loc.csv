@@ -28,3 +28,21 @@ forced_monarchy;Forced Monarchy;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;
 forced_monarchy_desc;We tried our best to maintain the Republic, but the Great Powers forced a monarch on us.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 LON_member;League of Nations member;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 LON_member_desc;As a League of Nations member, we have reaffirmed our international commitment to peace and diplomacy, striving to avoid armed conflict whevever possible.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+influenza_mitigation;Novel Influenza outbreak;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+influenza_mitigation_desc;This province is experiencing a severe outbreak of the novel Influenza virus, and the government has imposed mitigation measures such as mandatory face masks, forced lockdowns, and cancelation of public event.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+influenza;Novel Influenza outbreak
+influenza_desc;This province is experiencing a severe outbreak of the novel Influenza virus, and is especially hard-hit as the government has refused to impose any mitigation measures.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+capital_over_people;Capital over People;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+capital_over_people_desc;At the height of the Influenza pandemic, when the bodies of the dead were piling up on the streets, the $COUNTRY_ADJ$ government abandoned its citizens in favour of 'saving the national economy' - it put the interests of the Capitalist class over the working man.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+capital_over_people_local;Capital over People;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+capital_over_people_local_desc;At the height of the Influenza pandemic, when the bodies of the dead were piling up on the streets, the local administration abandoned its citizens in favour of 'saving the local economy' - it put the interests of the Capitalist class over the working man.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+big_smoke;The Big Smoke;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+big_smoke_desc;The rapid industrialisation of the local economy has come at a cost - on the best of days, a haze lingers over the major industrial centres. In the worst of days, it's hard to see even a metre ahead of you.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+building_underground;Building a Metropolitan Railway;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+building_underground_desc;An underground Metropolitan Railway system is under construction in this province.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x 
+underground_delays;Metropolitan Railway delays;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+underground_delays_desc;The local Metropolitan Railway has ran into some obstacles, with the completion date is expected to be delayed.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+underground_system;Metropolitan Railway;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+underground_system_desc;This province is home to a world-class underground Metropolitan Railway system.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+overcrowded_metropolis;Overcrowded Metropolis;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+overcrowded_metropolis_desc;This province is home to a bustling city, but, unlike the other major cities of the world, lacks proper public transport infrastructure in the form of an underground Metropolitan Railway.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

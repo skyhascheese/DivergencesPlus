@@ -55,10 +55,13 @@ country_event = {
 		name = "EVTOPTA90820850" #Mitigation
 		random_owned = {
 			add_province_modifier = {
-				which = influenza_mitigation
+				name = influenza_mitigation
 				duration = 365
 			}
-			set_province_flag = influenza_first_wave
+			add_province_modifier = {
+				name = influenza_present
+				duration = -1
+			}
 		}
 		set_country_flag = influenza_pandemic
 		set_global_flag = new_influenza_pandemic
@@ -100,14 +103,17 @@ country_event = {
 				total_pops = 20000
 			}
 			add_province_modifier = {
-				which = influenza
+				name = influenza
 				duration = 365
 			}
-			set_province_flag = influenza_first_wave
+			add_province_modifier = {
+				name = influenza_present_no_mitigation
+				duration = -1
+			}
 		}
 		set_country_flag = influenza_pandemic
 		set_global_flag = new_influenza_pandemic
-		set_province_flag = influenza_pandemic_no_mitigation_local
+		set_country_flag = influenza_pandemic_no_mitigation_local
 		change_variable = {
 			which = influenza_pandemic
 			value = 1.1
@@ -150,7 +156,10 @@ province_event = {
 			}
 		}
 		not = {
-			has_province_flag = influenza_first_wave
+			or = {
+				has_province_modifier = influenza_present
+				has_province_modifier = influenza_present_no_mitigation
+			}
 		}
 	}
  
@@ -293,10 +302,13 @@ province_event = {
 
 	option = {
 		name = "EVTOPTA90820851" #Mitigation
-		set_province_flag = influenza_first_wave
 		add_province_modifier = {
-			which = influenza_mitigation
+			name = influenza_mitigation
 			duration = 365
+		}
+		add_province_modifier = {
+			name = influenza_present
+			duration = -1
 		}
 		change_variable = {
 			which = influenza_pandemic
@@ -308,7 +320,52 @@ province_event = {
 			
 			modifier = {
 				factor = 1.3
-				not = {
+				owner = {
+					not = {
+						or = {
+							ruling_party_ideology = anarcho_liberal
+							ruling_party_ideology = reactionary
+							ruling_party_ideology = fascist
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.3
+				owner = {
+					not = {
+						or = {
+							social_policy = no_state_interference
+							social_policy = colonial_spending_policy
+							economic_policy = laissez_faire
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB90820851" #No mitigation
+		add_province_modifier = {
+			name = influenza
+			duration = 365
+		}
+		add_province_modifier = {
+			name = influenza_present_no_mitigation
+			duration = -1
+		}
+		change_variable = {
+			which = influenza_pandemic
+			value = 1
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.3
+				owner = {
 					or = {
 						ruling_party_ideology = anarcho_liberal
 						ruling_party_ideology = reactionary
@@ -318,47 +375,12 @@ province_event = {
 			}
 			modifier = {
 				factor = 1.3
-				not = {
-					or = {
+				owner = {
+					not = {
 						social_policy = no_state_interference
 						social_policy = colonial_spending_policy
 						economic_policy = laissez_faire
 					}
-				}
-			}
-		}
-	}
-
-	option = {
-		name = "EVTOPTB90820851" #No mitigation	
-		set_province_flag = influenza_first_wave
-		set_province_flag = influenza_pandemic_no_mitigation_local
-		add_province_modifier = {
-			which = influenza
-			duration = 365
-		}
-		change_variable = {
-			which = influenza_pandemic
-			value = 1
-		}
-		
-		ai_chance = {
-			factor = 50
-			
-			modifier = {
-				factor = 1.3
-				or = {
-					ruling_party_ideology = anarcho_liberal
-					ruling_party_ideology = reactionary
-					ruling_party_ideology = fascist
-				}
-			}
-			modifier = {
-				factor = 1.3
-				not = {
-					social_policy = no_state_interference
-					social_policy = colonial_spending_policy
-					economic_policy = laissez_faire
 				}
 			}
 		}
@@ -372,17 +394,20 @@ province_event = {
 
 	trigger = {
 		has_global_flag = new_influenza_pandemic
-		or = {
-			check_variable = {
-				which = influenza_pandemic
-				value = 100
-			}
-			owner = {
+		owner = {
+			or = {
 				has_country_flag = influenza_pandemic
+				check_variable = {
+					which = influenza_pandemic
+					value = 100
+				}
 			}
 		}
 		not = {
-			has_province_flag = influenza_first_wave
+			or = {
+				has_province_modifier = influenza_present
+				has_province_modifier = influenza_present_no_mitigation
+			}
 		}
 		port = yes
 	}
@@ -412,9 +437,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			or = {
-				health_care = no_health_care
-			}
+			health_care = no_health_care
 		}
 	}
 
@@ -424,10 +447,13 @@ province_event = {
 
 	option = {
 		name = "EVTOPTA90820852" #Mitigation
-		set_province_flag = influenza_first_wave
 		add_province_modifier = {
-			which = influenza_mitigation
+			name = influenza_mitigation
 			duration = 365
+		}
+		add_province_modifier = {
+			name = influenza_present
+			duration = -1
 		}
 		change_variable = {
 			which = influenza_pandemic
@@ -439,7 +465,59 @@ province_event = {
 			
 			modifier = {
 				factor = 1.3
-				not = {
+				owner = {
+					not = {
+						or = {
+							ruling_party_ideology = anarcho_liberal
+							ruling_party_ideology = reactionary
+							ruling_party_ideology = fascist
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.3
+				owner = {
+					not = {
+						or = {
+							social_policy = no_state_interference
+							social_policy = colonial_spending_policy
+							economic_policy = laissez_faire
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.3
+				or = {
+					nationalvalue = nv_liberty
+					nationalvalue = nv_equality
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB90820852" #No mitigation
+		add_province_modifier = {
+			name = influenza
+			duration = 365
+		}
+		add_province_modifier = {
+			name = influenza_present_no_mitigation
+			duration = -1
+		}
+		change_variable = {
+			which = influenza_pandemic
+			value = 1
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 1.3
+				owner = {
 					or = {
 						ruling_party_ideology = anarcho_liberal
 						ruling_party_ideology = reactionary
@@ -449,7 +527,7 @@ province_event = {
 			}
 			modifier = {
 				factor = 1.3
-				not = {
+				owner = {
 					or = {
 						social_policy = no_state_interference
 						social_policy = colonial_spending_policy
@@ -459,52 +537,10 @@ province_event = {
 			}
 			modifier = {
 				factor = 1.3
-				or = {
-					national_value = nv_liberty
-					national_value = nv_equality
-				}
-			}
-		}
-	}
-
-	option = {
-		name = "EVTOPTB90820852" #No mitigation
-		set_province_flag = influenza_first_wave
-		set_province_flag = influenza_pandemic_no_mitigation_local
-		add_province_modifier = {
-			which = influenza
-			duration = 365
-		}
-		change_variable = {
-			which = influenza_pandemic
-			value = 1
-		}
-		
-		ai_chance = {
-			factor = 50
-			
-			modifier = {
-				factor = 1.3
-				or = {
-					ruling_party_ideology = anarcho_liberal
-					ruling_party_ideology = reactionary
-					ruling_party_ideology = fascist
-				}
-			}
-			modifier = {
-				factor = 1.3
-				or = {
-					social_policy = no_state_interference
-					social_policy = colonial_spending_policy
-					economic_policy = laissez_faire
-				}
-			}
-			modifier = {
-				factor = 1.3
 				not = {
 					or = {
-						national_value = nv_liberty
-						national_value = nv_equality
+						nationalvalue = nv_liberty
+						nationalvalue = nv_equality
 					}
 				}
 			}
@@ -518,11 +554,16 @@ province_event = {
 	id = 90820853
 
 	trigger = {
-		any_owned = {
-			has_province_flag = influenza_first_wave
-		}
-		not = {
-			set_country_flag = influenza_pandemic
+		owner = {
+			any_owned_province = {
+				or = {
+					has_province_modifier = influenza_present
+					has_province_modifier = influenza_present_no_mitigation
+				}
+			}
+			not = {
+				has_country_flag = influenza_pandemic
+			}
 		}
 	}
  
@@ -536,6 +577,8 @@ province_event = {
 
 	option = {
 		name = "EVTOPTA90820853"
+		
+		owner = { set_country_flag = influenza_pandemic }
 	}
 }
 
@@ -545,30 +588,29 @@ country_event = {
 	id = 90820854
 
 	trigger = {
-		any_owned = {
-			has_province_flag = influenza_first_wave
+		any_owned_province = {
+			or = {
+				has_province_modifier = influenza_present
+				has_province_modifier = influenza_present_no_mitigation
+			}
 		}
-		not = {
-			has_country_flag = influenza_pandemic
-		}
+		has_country_flag = influenza_pandemic
 	}
  
-	mean_time_to_happen =  {
+	mean_time_to_happen = {
 		days = 60
 		
 		modifier = {
-			factor 0.8
-			owner = {
-				any_owned = {
-					has_country_modifier = influenza
-				}
-			}
+			factor = 0.8
+			any_owned_province = { has_province_modifier = influenza_present }
 		}
 		modifier = {
-			factor 0.8
-			owner = {
-				health_care = no_health_care
-			}
+			factor = 0.5
+			any_owned_province = { has_province_modifier = influenza_present_no_mitigation }
+		}
+		modifier = {
+			factor = 0.8
+			health_care = no_health_care
 		}
 	}
 
@@ -580,24 +622,31 @@ country_event = {
 		name = "EVTOPTA90820854" #Mitigation
 		any_owned = {
 			limit = {
-				not = has_province_flag = influenza_first_wave
+				not = { 
+					or = {
+						has_province_modifier = influenza_present
+						has_province_modifier = influenza_present_no_mitigation
+					}
+				}
 				or = {
 					port = yes
 					has_building = railroad
 				}
 				total_pops = 30000
 			}
-			set_province_flag = influenza_first_wave
 			add_province_modifier = {
-				which = influenza_mitigation
+				name = influenza_mitigation
 				duration = 365
+			}
+			add_province_modifier = {
+				name = influenza_present
+				duration = -1
 			}
 			change_variable = {
 				which = influenza_pandemic
 				value = 1
 			}
 		}
-		set_country_flag = influenza_pandemic
 		
 		ai_chance = {
 			factor = 50
@@ -625,8 +674,8 @@ country_event = {
 			modifier = {
 				factor = 1.2
 				or = {
-					national_value = nv_liberty
-					national_value = nv_equality
+					nationalvalue = nv_liberty
+					nationalvalue = nv_equality
 				}
 			}
 		}
@@ -636,24 +685,27 @@ country_event = {
 		name = "EVTOPTB90820854" #No mitigation
 		any_owned = {
 			limit = {
-				not = has_province_flag = influenza_first_wave
+				not = { 
+					or = {
+						has_province_modifier = influenza_present
+						has_province_modifier = influenza_present_no_mitigation
+					}
+				}
 				or = {
 					port = yes
 					has_building = railroad
 				}
+				total_pops = 30000
 			}
-			total_pops = 30000
-			set_province_flag = influenza_first_wave
 			add_province_modifier = {
-				which = influenza
+				name = influenza
 				duration = 365
 			}
-			change_variable = {
-				which = influenza_pandemic
-				value = 1
+			add_province_modifier = {
+				name = influenza_present_no_mitigation
+				duration = -1
 			}
 		}
-		set_country_flag = influenza_pandemic
 		set_country_flag = influenza_pandemic_no_mitigation
 		
 		ai_chance = {
@@ -680,8 +732,8 @@ country_event = {
 				factor = 1.2
 				not = {
 					or = {
-						national_value = nv_liberty
-						national_value = nv_equality
+						nationalvalue = nv_liberty
+						nationalvalue = nv_equality
 					}
 				}
 			}
@@ -740,50 +792,20 @@ country_event = {
 						is_primary_culture = yes
 						is_accepted_culture = yes
 					}
-				}
-				move_issue_percentage = { 
-					from = no_health_care 
-					to = acceptable_health_care 
-					value = 0.5
-				}
-			}
-			any_pop = {
-				limit = {
-					or = {
-						is_primary_culture = yes
-						is_accepted_culture = yes
+					not = {
+						or = {
+							pop_majority_ideology = reactionary
+							pop_majority_ideology = anarcho_liberal
+						}
 					}
 				}
-				move_issue_percentage = { 
-					from = trinket_health_care 
-					to = acceptable_health_care 
-					value = 0.5
+				dominant_issue = {
+					value = good_health_care
+					factor = 0.5
 				}
-			}
-			any_pop = {
-				limit = {
-					or = {
-						is_primary_culture = yes
-						is_accepted_culture = yes
-					}
-				}
-				move_issue_percentage = { 
-					from = low_health_care 
-					to = acceptable_health_care 
-					value = 0.5
-				}
-			}
-			any_pop = {
-				limit = {
-					or = {
-						is_primary_culture = yes
-						is_accepted_culture = yes
-					}
-				}
-				move_issue_percentage = { 
-					from = acceptable_health_care 
-					to = good_health_care 
-					value = 0.5
+				scaled_consciousness = {
+					factor = 0.5
+					issue = good_health_care
 				}
 			}
 		}
@@ -828,7 +850,7 @@ country_event = {
 			limit = {
 				has_country_flag = influenza_pandemic
 				not = {
-					THIS
+					tag = THIS
 				}
 			}
 			country_event = 90820857
@@ -862,7 +884,10 @@ province_event = {
 	id = 90820858
 
 	trigger = {
-		has_province_flag = influenza_first_wave
+		or = {
+			has_province_modifier = influenza_present
+			has_province_modifier = influenza_present_no_mitigation
+		}
 		or = {
 			produces = cattle
 			produces = cotton
@@ -1012,7 +1037,7 @@ country_event = {
 		name = "EVTOPTA90820860"
 		prestige = -20
 		add_country_modifier = {
-			which = capital_over_people 
+			name = capital_over_people 
 			duration = 650
 		}
 	}
@@ -1024,8 +1049,8 @@ country_event = {
 	id = 90820861
 
 	trigger = {
-		any_owned = {
-			has_province_flag = influenza_pandemic_no_mitigation_local
+		any_owned_province = {
+			has_province_modifier = influenza_present_no_mitigation
 		}
 		not = {
 			has_country_flag = capital_over_people
@@ -1043,15 +1068,13 @@ country_event = {
 	option = {
 		name = "EVTOPTA90820861"
 		prestige = -10
-		owner = {
-			any_owned = {
-				limit = {
-					has_province_flag = influenza_pandemic_no_mitigation_local
-				}
-				add_province_modifier = {
-					which = capital_over_people_local 
-					duration = 650
-				}
+		any_owned = {
+			limit = {
+				has_province_modifier = influenza_present_no_mitigation
+			}
+			add_province_modifier = {
+				name = capital_over_people_local 
+				duration = 650
 			}
 		}
 	}

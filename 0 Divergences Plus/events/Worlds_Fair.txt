@@ -693,7 +693,7 @@ country_event = {
 				is_capital = yes
 			}
 			not = {
-				has_province_flag = expo_grounds 
+				has_province_modifier = expo_grounds_lavish
 			}
 		}
 	}
@@ -709,8 +709,10 @@ country_event = {
 	option = {
 		name = "EVTOPTA90820512"
 		capital_scope = { 
-			set_province_flag = expo_grounds
-			life_rating = 2
+			add_province_modifier = {
+				name = expo_grounds_lavish
+				duration = -1
+			}
 		}
 	}
 }
@@ -728,7 +730,10 @@ country_event = {
 				is_capital = yes
 			}
 			not = {
-				has_province_flag = expo_grounds 
+				or = {
+					has_province_modifier = expo_grounds_lavish
+					has_province_modifier = expo_grounds_sensible
+				}
 			}
 		}
 	}
@@ -744,8 +749,10 @@ country_event = {
 	option = {
 		name = "EVTOPTA90820513"
 		capital_scope = { 
-			set_province_flag = expo_grounds
-			life_rating = 1
+			add_province_modifier = {
+				name = expo_grounds_lavish
+				duration = -1
+			}
 		}
 	}
 }

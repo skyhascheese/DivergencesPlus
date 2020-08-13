@@ -252,13 +252,11 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				and = {
-					has_country_flag = helping_macedonia
-					tag = ARA
-					not = {
-						truce_with = TUR
-						alliance_with = MAC
-					}
+				has_country_flag = helping_macedonia
+				tag = ARA
+				not = {
+					truce_with = TUR
+					alliance_with = MAC
 				}
 			}
 			country_event = 90820709
@@ -802,6 +800,29 @@ country_event = {
 		election = yes		
 		set_country_flag = new_republic_on_the_block
 		set_country_flag = macedonian_revolution_has_ended
+		set_country_flag = supports_antimonarchism
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				has_country_flag = great_power_monarchy
+			}
+			country_event = 90820766
+		}
+		any_neighbor_country = {
+			any_pop = {
+				limit = {
+					not = {
+						or = {
+							pop_majority_ideology = conservative
+							pop_majority_ideology = reactionary
+							pop_majority_ideology = fascist
+							pop_majority_ideology = anarcho_liberal
+						}
+					}
+				}
+				consciousness = 3
+			}
+		}	
 	}
 }
 
@@ -974,63 +995,680 @@ country_event = {
 	}
 }
 
+####################################
+#                                  #
+#  THE GREAT FIRE OF THESSALONICA  #
+#                                  #
+####################################
+
 country_event = { 
-	id = 90820719 # New Republic on the Block (is a monarchy)
-	title = "EVTNAME90820719"
-	desc = "EVTDESC90820719"
-	picture = "new_republic_on_the_block"
+	id = 90820721 # The Great Fire of Thessalonica
+	title = "EVTNAME90820720"
+	desc = "EVTDESC90820720"
 	
-	is_triggered_only = yes
+	major = yes
 	
-	option = {
-		name = "EVTOPTA90820719"
-		add_casus_belli = {
-			target = FROM
-			type = install_monarchy
-			months = 48
-		}
-		relation = {
-			who = MAC
-			value = -100
-		}
-		diplomatic_influence = {
-			who = MAC
-			value = -100
-		}
-		ai_chance = { factor = 70 }
+	fire_only_once = yes
+	
+	trigger = {
+		year = 1917
+		month = 8
+		day = 18
+		owns = 805 #Thessalonica
+		not = { has_global_flag = thessalonica_fire }
+	}
+	
+	mean_time_to_happen = { 
+		days = 1
 	}
 	
 	option = {
-		name = "EVTOPTB90820719"
-		prestige = -10
-		ai_chance = { factor = 30 }
+		name = "EVTOPTA90820721"
+		set_global_flag = thessalonica_fire
 	}
 }
 
 country_event = { 
-	id = 90820720 # New Republic on the Block (is a republic)
-	title = "EVTNAME90820720"
-	desc = "EVTDESC90820720"
-	picture = "new_republic_on_the_block"
+	id = 90820722 # Surveying the damage (good safety)
+	title = "EVTNAME90820722"
+	desc = "EVTDESC90820722"
+	picture = "thessalonica_fire"
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = thessalonica_fire
+		owns = 805 #Thessalonica
+	}
+	
+	mean_time_to_happen = { 
+		days = 14
+		
+		modifier = {
+			factor = 10
+			not = {
+				safety_regulations = good_safety
+			}
+		}
+		modifier = {
+			factor = 0.5
+			safety_regulations = good_safety
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820722"
+		805 = {
+			add_province_modifier = {
+				name = thessalonica_fire 
+				duration = 365
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820723 # Surveying the damage (adequate safety)
+	title = "EVTNAME90820723"
+	desc = "EVTDESC90820723"
+	picture = "thessalonica_fire"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = thessalonica_fire
+		owns = 805 #Thessalonica
+	}
+	
+	mean_time_to_happen = { 
+		days = 14
+		
+		modifier = {
+			factor = 10
+			or = {
+				safety_regulations = good_safety
+				not = { safety_regulations = adequate_safety }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			safety_regulations = adequate_safety
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820723"
+		805 = {
+			add_province_modifier = {
+				name = thessalonica_fire 
+				duration = 548
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820724 # Surveying the damage (devastating)
+	title = "EVTNAME90820724"
+	desc = "EVTDESC90820724"
+	picture = "thessalonica_fire"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = thessalonica_fire
+		owns = 805 #Thessalonica
+	}
+	
+	mean_time_to_happen = { 
+		days = 14
+		
+		modifier = {
+			factor = 10
+			or = {
+				safety_regulations = good_safety
+				safety_regulations = adequate_safety
+			}
+		}
+		modifier = {
+			factor = 0.5
+			not = {
+				or = {
+					safety_regulations = good_safety
+					safety_regulations = adequate_safety
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820724"
+		805 = {
+			add_province_modifier = {
+				name = thessalonica_fire 
+				duration = 730
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820725 # The Future of Thessalonica
+	title = "EVTNAME90820725"
+	desc = "EVTDESC90820725"
+	picture = "thessalonica_reconstruction"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = thessalonica_fire
+		owns = 805 #Thessalonica
+		805 = { has_province_modifier = thessalonica_fire }
+	}
+	
+	mean_time_to_happen = { 
+		days = 14
+	}
+	
+	option = {
+		name = "EVTOPTA90820725" #An International Committee
+		set_global_flag = thessalonica_international_design_competition
+		set_country_flag = thessalonica_international_design_competition_entry
+		any_country = {
+			limit = {
+				not = { has_country_flag = thessalonica_international_design_competition_entry }
+				or = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
+				invention = impressionist_art
+				relation = {
+					who = THIS
+					value = 50
+				}
+			}
+			country_event = 90820726
+		}
+		805 = {
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				consciousness = -3
+				militancy = -2
+			}
+		}
+		
+		ai_chance = { 
+			factor = 33 
+			
+			modifier = {
+				factor = 10
+				not = {
+					or = {
+						ruling_party_ideology = reactionary
+						ruling_party_ideology = fascist
+						ruling_party_ideology = anarcho_liberal
+						economic_policy = lessaiz_faire
+						social_policy = no_state_interference
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820725" #Allow only $COUNTRY_ADJ$ entries
+		set_global_flag = thessalonica_national_design_competition
+		805 = {
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				consciousness = -1
+				militancy = -1
+			}
+		}
+		
+		ai_chance = { 
+			factor = 33 
+			
+			modifier = {
+				factor = 10
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC90820725" #Hasty rebuilding
+		prestige = -20
+		set_global_flag = thessalonica_hasty_rebuilding
+		clr_global_flag = thessalonica_fire
+		clr_global_flag = thessalonica_delays
+		clr_global_flag = thessalonica_international_design_competition
+		clr_global_flag = thessalonica_international_design_competition_entry
+		clr_global_flag = thessalonica_plan_lavish
+		clr_global_flag = thessalonica_plan_sensible
+		clr_global_flag = thessalonica_national_design_competition
+		set_global_flag = thessalonica_rebuilt
+		805 = {
+			remove_province_modifier = thessalonica_fire
+			add_province_modifier = {
+				name = thessalonica_fire 
+				duration = 183
+			}
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				consciousness = 3
+				militancy = 1
+			}
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			consciousness = 1
+		}
+		
+		ai_chance = { 
+			factor = 33 
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = anarcho_liberal
+			}
+			modifier = {
+				factor = 1.5
+				or = {
+					economic_policy = lessaiz_faire
+					social_policy = no_state_interference 
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820726 # International Design Competition
+	title = "EVTNAME90820726"
+	desc = "EVTDESC90820726"
+	picture = "thessalonica_reconstruction"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820720"
-		create_alliance = MAC
-		relation = {
-			who = MAC
-			value = 100
+		name = "EVTOPTA90820723" #We should enter
+		set_country_flag = thessalonica_international_design_competition_entry
+		money = -10000
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 2
+				money = 10000
+			}
 		}
-		diplomatic_influence = {
-			who = MAC
-			value = 100
-		}
-		ai_chance = { factor = 50 }
 	}
+	
 	option = {
-		name = "EVTOPTB90820720"
+		name = "EVTOPTB90820726" #We should enter
 		prestige = -10
-		ai_chance = { factor = 50 }
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 2
+				not = { money = 10000 }
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820727 # International Design Competition Winner
+	title = "EVTNAME90820727"
+	desc = "EVTDESC90820727"
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = thessalonica_international_design_competition_entry
+	}
+	
+	mean_time_to_happen = { 
+		days = 365
+		
+		modifier = {
+			factor = 0.9
+			prestige = 100
+		}
+		modifier = {
+			factor = 0.9
+			prestige = 300
+		}
+		modifier = {
+			factor = 0.8
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.8
+			has_country_modifier = good_host
+		}
+		modifier = {
+			factor = 0.7
+			and = {
+				tag = DUA
+				is_greater_power = yes
+				prestige = 100
+			}
+		}
+		modifier = {
+			factor = 1.5
+			not = { prestige = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			has_country_modifier = bad_host
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820727"
+		any_country = {
+			limit = { has _country_flag = thessalonica_international_design_competition_entry }
+			clr_country_flag = thessalonica_international_design_competition_entry
+		}
+		clr_global_flag = thessalonica_international_design_competition
+		prestige = 20
+		money = 30000
+		any_country = {
+			limit = { owns = 805 }
+			country_event = 90820728
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820728 # Implementing the Plan
+	title = "EVTNAME90820725"
+	desc = "EVTDESC90820725"
+	picture = "thessalonica_hebrard_plan"
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "EVTOPTA90820725"
+		set_global_flag = thessalonica_plan_lavish
+		money = -100000
+		
+		ai_chance = { 
+			factor = 33
+			
+			modifier = {
+				factor = 3
+				money = 100000
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820725"
+		set_global_flag = thessalonica_plan_sensible
+		money = -50000
+		
+		ai_chance = { 
+			factor = 33
+			
+			modifier = {
+				factor = 3
+				and = {
+					money = 50000
+					not = { money = 100000 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC90820725"
+		set_global_flag = thessalonica_plan_minimal
+		money = -10000
+		
+		ai_chance = { 
+			factor = 33
+			
+			modifier = {
+				factor = 3
+				not = {	money = 50000 }
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820729 #The Rebuilding of Thessalonica (lavish)
+	title = "EVTNAME90820729"
+	desc = "EVTDESC90820729"
+	picture = "thessalonica_lavish"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = thessalonica_fire
+		set_global_flag = thessalonica_plan_lavish
+		owns = 805 #Thessalonica
+	}
+	
+	mean_time_to_happen = { 
+		days = 730
+		modifier = {
+			factor = 1.5
+			has_global_flag = thessalonica_delays
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820729"
+		clr_global_flag = thessalonica_fire
+		clr_global_flag = thessalonica_delays
+		clr_global_flag = thessalonica_international_design_competition
+		clr_global_flag = thessalonica_international_design_competition_entry
+		clr_global_flag = thessalonica_hasty_rebuilding
+		clr_global_flag = thessalonica_plan_lavish
+		clr_global_flag = thessalonica_plan_sensible
+		clr_global_flag = thessalonica_national_design_competition
+		set_global_flag = thessalonica_rebuilt
+		prestige = 30
+		805 = {
+			add_province_modifier = {
+				name = thessalonica_lavish
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820730 #The Rebuilding of Thessalonica (sensible)
+	title = "EVTNAME90820730"
+	desc = "EVTDESC90820730"
+	picture = "thessalonica_sensible"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = thessalonica_plan_sensible
+		owns = 805 #Thessalonica
+	}
+	
+	mean_time_to_happen = { 
+		days = 730
+		modifier = {
+			factor = 1.5
+			has_global_flag = thessalonica_delays
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90820730"
+		clr_global_flag = thessalonica_fire
+		clr_global_flag = thessalonica_delays
+		clr_global_flag = thessalonica_international_design_competition
+		clr_global_flag = thessalonica_international_design_competition_entry
+		clr_global_flag = thessalonica_hasty_rebuilding
+		clr_global_flag = thessalonica_plan_lavish
+		clr_global_flag = thessalonica_plan_sensible
+		clr_global_flag = thessalonica_national_design_competition
+		set_global_flag = thessalonica_rebuilt
+		prestige = 10
+		805 = {
+			add_province_modifier = {
+				name = thessalonica_sensible
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820731 # Rebuilding Thessalonica (national competition only, is not GP)
+	title = "EVTNAME90820731"
+	desc = "EVTDESC90820731"
+	picture = "thessalonica_hebrard_plan"
+	
+	trigger = {
+		has_global_flag = thessalonica_national_design_competition
+		is_greater_power = no
+		not = { invention = impressionist_art }
+		owns = 805
+	}
+	
+	mean_time_to_happen = { 
+		days = 365
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "EVTOPTA90820731"
+		set_global_flag = thessalonica_plan_sensible
+		money = -50000
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 2
+				and = {
+					money = 50000
+					not = { money = 100000 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820731"
+		set_global_flag = thessalonica_plan_minimal
+		money = -10000
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 2
+				not = {	money = 50000 }
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90820732 # Rebuilding Thessalonica (national competition only, is GP)
+	title = "EVTNAME90820732"
+	desc = "EVTDESC90820732"
+	picture = "thessalonica_hebrard_plan"
+	
+	trigger = {
+		has_global_flag = thessalonica_national_design_competition
+		is_greater_power = yes
+		invention = impressionist_art
+		owns = 805
+	}
+	
+	mean_time_to_happen = { 
+		days = 365
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "EVTOPTA90820732"
+		set_global_flag = thessalonica_plan_lavish
+		money = -100000
+		
+		ai_chance = { 
+			factor = 33
+			
+			modifier = {
+				factor = 3
+				money = 100000
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB90820732"
+		set_global_flag = thessalonica_plan_sensible
+		money = -50000
+		
+		ai_chance = { 
+			factor = 33
+			
+			modifier = {
+				factor = 3
+				and = {
+					money = 50000
+					not = { money = 100000 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC90820726"
+		set_global_flag = thessalonica_plan_minimal
+		money = -10000
+		
+		ai_chance = { 
+			factor = 33
+			
+			modifier = {
+				factor = 3
+				not = {	money = 50000 }
+			}
+		}
 	}
 }

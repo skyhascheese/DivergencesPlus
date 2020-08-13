@@ -1,0 +1,100 @@
+political_decisions = {
+	
+	ptolemaida_coal_rush = {
+		picture = ptolemaida
+		
+		potential = {
+			civilized = yes
+			owns = 820
+			820 = {
+				not = {
+					trade_goods = coal
+				}
+			}
+		}
+		
+		allow = {
+			not = {
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = anarcho_liberal
+					economic_policy = lessaiz_faire
+				}
+			}
+			combustion_engine = 1
+		}
+		
+		effect = {
+			trade_goods = coal
+			add_province_modifier = {
+				name = ptolemaida_coal_rush
+				duration = -1
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	a_new_anabasis = {
+		picture = anabasis
+		
+		potential = {
+			tag = MAC
+			has_country_flag = macedon_greece
+			has_country_flag = macedi_idea
+			not = { has_country_flag = to_north }
+		}
+		
+		allow = {
+			is_greater_power = yes
+			GRE = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+			MAC = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 20
+			badboy = -0.5
+			913 = {
+				add_core = MAC
+			}
+			919 = {
+				add_core = MAC
+			}
+			1746 = {
+				add_core = MAC
+			}
+			1751 = {
+				add_core = MAC
+			}
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+				}
+				dominant_issue = {
+					factor = 0.1
+					value = jingoism
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+}

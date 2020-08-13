@@ -181,45 +181,39 @@ country_event = {
 		any_country = {
 			limit = {
 				is_greater_power = yes
-				is_overseas = no
+				#is_overseas = no
 				has_country_flag = great_power_monarchy
 			}
 			country_event = 90820766
 		}
-		any_country = {
-			limit = {
-				is_greater_power = yes
-				is_overseas = yes
-				has_country_flag = great_power_monarchy
-			}
-			country_event = 90820767
-		}
-		any_country = {
-			limit = {
-				neighbor = THIS
-			}
+		#any_country = {
+		#	limit = {
+		#		is_greater_power = yes
+		#		is_overseas = yes
+		#		has_country_flag = great_power_monarchy
+		#	}
+		#	country_event = 90820767
+		#}
+		any_neighbor_country = {
 			any_pop = {
 				limit = {
 					not = {
 						or = {
-							type = rich_strata
-							ideology = conservative
-							ideology = reactionary
-							ideology = fascist
-							ideology = anarcho_liberal
+							pop_majority_ideology = conservative
+							pop_majority_ideology = reactionary
+							pop_majority_ideology = fascist
+							pop_majority_ideology = anarcho_liberal
 						}
 					}
 				}
 				consciousness = 3
-				political_reform_desire = 0.3
-				social_reform_desire = 0.2
 			}
 		}	
 	}
 }
 
 country_event = { 
-	id = 90820766 # New Republic on the Block (GP event)
+	id = 90820766 # New Republic on the Block (GP event, same continent)
 	title = "EVTNAME90820766"
 	desc = "EVTDESC990820766"
 	picture = "suppressing_republicanism"
@@ -234,6 +228,10 @@ country_event = {
 			target = FROM
 			type = install_monarchy
 			months = 24
+		}
+		relation = {
+			who = FROM
+			value = -50
 		}
 		any_country = {
 			limit = {
@@ -267,17 +265,14 @@ country_event = {
 				limit = {
 					not = {
 						or = {
-							type = rich_strata
-							ideology = conservative
-							ideology = reactionary
-							ideology = fascist
-							ideology = anarcho_liberal
+							pop_majority_ideology = conservative
+							pop_majority_ideology = reactionary
+							pop_majority_ideology = fascist
+							pop_majority_ideology = anarcho_liberal
 						}
 					}
 				}
 			consciousness = 1.5
-			political_reform_desire = 0.15
-			social_reform_desire = 0.1
 		}
 		ai_chance = {
 			factor = 66
@@ -313,17 +308,14 @@ country_event = {
 				limit = {
 					not = {
 						or = {
-							type = rich_strata
-							ideology = conservative
-							ideology = reactionary
-							ideology = fascist
-							ideology = anarcho_liberal
+							pop_majority_ideology = conservative
+							pop_majority_ideology = reactionary
+							pop_majority_ideology = fascist
+							pop_majority_ideology = anarcho_liberal
 						}
 					}
 				}
-			consciousness = 0.5
-			political_reform_desire = 0.1
-			social_reform_desire = 0.05
+			consciousness = 1
 		}	
 		ai_chance = {
 			factor = 33
@@ -331,11 +323,9 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				or = {
-					not = {
-						relation = {
-							who = FROM
-							value = 150
-						}
+					relation = {
+						who = FROM
+						value = 150
 					}
 					FROM = {
 						in_sphere = THIS
@@ -346,10 +336,134 @@ country_event = {
 	}
 }
 
+#country_event = { 
+#	id = 90820767 # New Republic on the Block (GP event, different continent)
+#	title = "EVTNAME90820767"
+#	desc = "EVTDESC990820767"
+#	picture = "suppressing_republicanism"
+#	
+#	is_triggered_only = yes
+#	
+#	allow_multiple_instances = yes
+#	
+#	option = {
+#		name = "EVTOPTA90820767"
+#		add_casus_belli = {
+#			target = FROM
+#			type = install_monarchy
+#			months = 24
+#		}
+#		relation = {
+#			who = FROM
+#			value = -50
+#		}
+#		any_country = {
+#			limit = {
+#				is_greater_power = yes
+#				not = {
+#					has_country_flag = great_power_monarchy
+#				}
+#			}
+#			relation = {
+#				who = THIS
+#				value = -100
+#			}
+#		}
+#		any_country = {
+#			limit = {
+#				not = {
+#					is_greater_power = yes
+#					or = {
+#						government = absolute_monarchy
+#						government = prussian_constitutionalism
+#						government = hms_government
+#					}
+#				}
+#			}
+#			relation = {
+#				who = THIS
+#				value = -50
+#			}
+#		}
+#		any_pop = {
+#				limit = {
+#					not = {
+#						or = {
+#							pop_majority_ideology = conservative
+#							pop_majority_ideology = reactionary
+#							pop_majority_ideology = fascist
+#							pop_majority_ideology = anarcho_liberal
+#						}
+#					}
+#				}
+#			consciousness = 1.5
+#		}
+#		ai_chance = {
+#			factor = 40
+#			
+#			modifier = {
+#				factor = 1.5
+#				not = {
+#					relation = {
+#						who = FROM
+#						value = 50
+#					}
+#				}
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = "EVTOPTB90820767"
+#		prestige = -10
+#		any_country = {
+#			limit = {
+#				is_greater_power = yes
+#				not = {
+#					has_country_flag = great_power_monarchy
+#				}
+#			}
+#			relation = {
+#				who = THIS
+#				value = 20
+#			}
+#		}
+#		any_pop = {
+#				limit = {
+#					not = {
+#						or = {
+#							pop_majority_ideology = conservative
+#							pop_majority_ideology = reactionary
+#							pop_majority_ideology = fascist
+#							pop_majority_ideology = anarcho_liberal
+#						}
+#					}
+#				}
+#			consciousness = 1
+#		}	
+#		ai_chance = {
+#			factor = 60
+#			
+#			modifier = {
+#				factor = 0.2
+#				or = {
+#					relation = {
+#						who = FROM
+#						value = 150
+#					}
+#					FROM = {
+#						in_sphere = THIS
+#					}
+#				}
+#			}
+#		}
+#	}
+#}
+
 country_event = { 
-	id = 90820767 # Our Republic Dismantled
-	title = "EVTNAME90820767"
-	desc = "EVTDESC990820767"
+	id = 90820768 # Our Republic Dismantled
+	title = "EVTNAME90820768"
+	desc = "EVTDESC990820768"
 	picture = "suppressing_republicanism"
 	
 	is_triggered_only = yes
@@ -357,7 +471,7 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA90820767"
+		name = "EVTOPTA90820768"
 		clr_country_flag = new_republic_on_the_block
 		clr_country_flag = supports_antimonarchism
 		set_country_flag = supports_monarchy
@@ -380,27 +494,23 @@ country_event = {
 			limit = {
 				not = {
 					or = {
-						type = rich_strata
-						ideology = conservative
-						ideology = reactionary							
-						ideology = fascist
-						ideology = anarcho_liberal
+						pop_majority_ideology = conservative
+						pop_majority_ideology = reactionary							
+						pop_majority_ideology = fascist
+						pop_majority_ideology = anarcho_liberal
 					}
 				}
 			}
-			consciousness = 2
-			political_reform_desire = 0.2
-			social_reform_desire = 0.1
+			consciousness = 4
 		}
 		any_pop = {
 			limit = {
 				or = {
-					type = rich_strata
-					ideology = conservative
-					ideology = reactionary
-					ideology = fascist
-					ideology = anarcho_liberal
-					}
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+					pop_majority_ideology = fascist
+					pop_majority_ideology = anarcho_liberal
+				}
 			}
 			consciousness = -3
 			militancy = -5

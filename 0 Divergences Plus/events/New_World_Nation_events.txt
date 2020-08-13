@@ -197,9 +197,90 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820006"
+		name = "EVTOPTA90820007"
 		prestige = 20
 		set_country_flag = beacon_of_liberty
 		set_global_flag = statue_of_liberty_start
+	}
+}
+
+country_event = { 
+	id = 90820010 #Asimov
+	title = "EVTNAME90820010"
+	desc = "EVTDESC90820010"
+	picture = "isaac_asimov"
+	news = yes
+	news_desc_long = "EVTDESC90820010_NEWS_LONG"
+	news_desc_medium = "EVTDESC90820010_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC90820010_NEWS_SHORT"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		not = { has_global_flag = asimov }
+		has_country_flag = new_world_nation
+		or = {
+			government = hms_government
+			government = democracy
+		}
+		any_country = {
+			limit = {
+				owns = 943 #smolensk
+			}
+			not = {
+				or {
+					government = hms_government
+					government = democracy
+				}	
+			}
+		}
+		invention = futurism
+		year = 1922
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "EVTOPTA90820010"
+		set_global_flag = asimov
+		prestige = 10
+		year_of_research = 1
+	}
+}
+
+country_event = { 
+	id = 90820011 #Asimov
+	title = "EVTNAME90820011"
+	desc = "EVTDESC90820011"
+	picture = "isaac_asimov"
+	news = yes
+	news_desc_long = "EVTDESC90820011_NEWS_LONG"
+	news_desc_medium = "EVTDESC90820011_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC90820011_NEWS_SHORT"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		not = { has_global_flag = asimov }
+		or = {
+			government = hms_government
+			government = democracy
+		}
+		owns = 943 #smolensk
+		invention = futurism
+		year = 1922
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "EVTOPTA90820011"
+		set_global_flag = asimov
+		prestige = 10
+		year_of_research = 1
 	}
 }

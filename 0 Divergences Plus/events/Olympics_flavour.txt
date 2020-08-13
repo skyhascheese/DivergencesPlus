@@ -79,8 +79,12 @@ country_event = {
 		ai_chance = {
 			factor = 33
 			modifier = {
-				factor = 0.5
+				factor = 0.1
 				NOT = { money = 100000 }
+			}
+			modifier = {
+				factor = 4
+				money = 100000
 			}
 		}
 	}
@@ -100,8 +104,12 @@ country_event = {
 		ai_chance = {
 			factor = 33
 			modifier = {
-				factor = 0.2
+				factor = 0.1
 				NOT = { money = 50000 }
+			}
+			modifier = {
+				factor = 2
+				money = 50000
 			}
 		}
 	}
@@ -120,6 +128,11 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 33
+			
+			modifier = {
+				factor = 3
+				NOT = { money = 50000 }
+			}
 		}
 	}
 }
@@ -142,7 +155,7 @@ country_event = {
 		months = 12
 
 		modifier = {
-			factor = 0.1
+			factor = 0.7
 			has_country_flag = sensible_olympic_spending
 		}
 		modifier = {
@@ -150,23 +163,23 @@ country_event = {
 			has_country_flag = minimal_olympic_spending
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.8
 			not = { administration_spending = 0.7 }
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			not = { administration_spending = 0.5 }
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			not = { administration_spending = 0.3 }
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			unemployment = 0.15
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			has_country_modifier = bad_host
 		}
 	}
@@ -206,11 +219,11 @@ country_event = {
 		months = 3
 		
 		modifier = {
-			factor = 2
+			factor = 0.2
 			has_country_flag = lavish_olympic_spending
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.7
 			has_country_flag = sensible_olympic_spending
 		}
 	}
@@ -255,11 +268,11 @@ country_event = {
 		months = 3
 		
 		modifier = {
-			factor = 2
+			factor = 0.2
 			has_country_flag = sensible_olympic_spending
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.7
 			has_country_flag = minimal_olympic_spending
 		}
 	}
@@ -300,11 +313,11 @@ country_event = {
 		months = 3
 		
 		modifier = {
-			factor = 2
+			factor = 0.2
 			has_country_flag = minimal_olympic_spending
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.7
 			has_country_flag = sensible_olympic_spending
 		}
 	}
@@ -424,7 +437,7 @@ country_event = {
 				is_capital = yes
 			}
 			not = {
-				has_province_flag = olympic_sports_complex 
+				has_province_modifier = olympic_sports_complex_lavish
 			}
 		}
 	}
@@ -440,8 +453,10 @@ country_event = {
 	option = {
 		name = "EVTOPTA90820109"
 		capital_scope = { 
-			set_province_flag = olympic_sports_complex
-			life_rating = 2
+			add_province_modifier = {
+				name = olympic_sports_complex_lavish
+				duration = -1
+			}
 		}
 	}
 }
@@ -457,7 +472,10 @@ country_event = {
 		has_country_flag = sensible_olympic_spending
 		not = {
 			capital_scope = {
-				has_province_flag = olympic_sports_complex 
+				or = {
+					has_province_modifier = olympic_sports_complex_lavish
+					has_province_modifier = olympic_sports_complex_sensible
+				}
 			}
 		}
 	}
@@ -473,8 +491,10 @@ country_event = {
 	option = {
 		name = "EVTOPTA90820110"
 		capital_scope = { 
-			set_province_flag = olympic_sports_complex
-			life_rating = 1
+			add_province_modifier = {
+				name = olympic_sports_complex_lavish
+				duration = -1
+			}
 		}
 	}
 }

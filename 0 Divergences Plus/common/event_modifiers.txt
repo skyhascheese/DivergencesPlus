@@ -2693,6 +2693,18 @@ the_statue_of_liberty = {
 	icon = 15
 }
 
+olympic_sports_complex_lavish = {
+	life_rating = 0.05
+	pop_consciousness_modifier = -0.01
+	icon = 13
+}
+
+olympic_sports_complex_sensible = {
+	life_rating = 0.03
+	pop_consciousness_modifier = -0.01
+	icon = 13
+}
+
 worlds_fair_winner = {
 	prestige = 0.01
 	tax_efficiency = 0.05
@@ -2701,6 +2713,26 @@ worlds_fair_winner = {
 
 worlds_fair_cooloff = {
 	icon = 8
+}
+
+expo_grounds_lavish = {
+	local_factory_output = 0.1
+	life_rating = 0.05
+	pop_consciousness_modifier = -0.01
+	icon = 13
+}
+
+expo_grounds_sensible = {
+	local_factory_output = 0.05
+	life_rating = 0.03
+	pop_consciousness_modifier = -0.01
+	icon = 13
+}
+
+world_cup_stadium = {
+	life_rating = 0.03
+	pop_consciousness_modifier = -0.01
+	icon = 19
 }
 
 forced_monarchy = {
@@ -2735,7 +2767,6 @@ LON_member = {
 	research_points_on_conquer = -0.5
 	global_immigrant_attract = 0.05
 	core_pop_militancy_modifier = -0.01
-	life_rating = -0.1
 	icon = 7
 }
 
@@ -2751,6 +2782,7 @@ influenza_mitigation = {
 	middle_income_modifier = -0.2
 	rich_income_modifier = -0.3
 	pop_consciousness_modifier = 0.1
+	life_rating = -0.05
 	icon = 18
 }
 
@@ -2759,7 +2791,7 @@ influenza = {
 	immigrant_attract = -1
 	local_ruling_party_support = -0.2
 	pop_consciousness_modifier = 0.2
-	life_rating = -0.2
+	life_rating = -0.1
 	icon = 18
 }
 
@@ -2787,4 +2819,36 @@ capital_over_people_local = {
 	local_factory_output = 0.1
 	local_rgo_output = 0.1
 	icon = 18
+}
+
+big_smoke = {
+	population_growth = -0.005
+	local_factory_output = 0.03
+	icon = 20
+}
+
+building_underground = {
+	icon = 7
+}
+
+underground_delays = {
+	icon = 8
+}
+
+underground_system = {
+	local_factory_output = 0.03
+	life_rating = 0.05
+	immigrant_attract = 0.05
+	icon = 19
+}
+
+overcrowded_metropolis = {
+	immigrant_attract = -0.05
+	icon = 20
+}
+
+ptolemaids_coal_rush = {
+	immigrant_attract = 0.05
+	local_rgo_output = 0.2
+	icon = 13
 }
