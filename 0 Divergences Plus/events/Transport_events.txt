@@ -1,7 +1,42 @@
+# First airline
+country_event = {
+
+	id = 90821250
+
+	trigger = {
+		year = 1910
+		is_greater_power = yes
+		capitalists = 0.01
+		industrial_score = 300
+		produces = aeroplanes
+		not = { has_global_flag = delag_founded }
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+
+		modifier = {
+			factor = 0.5
+			big_producer = aeroplanes
+		}
+	}
+
+	title = "EVTNAME90821250"
+	desc = "EVTDESC90821250"
+	
+	major = yes
+
+	option = {
+		name = "EVTOPTA90821250"
+		prestige = 20
+		set_global_flag = delag_founded
+	}
+}
+
 #Commercial Aviation
 country_event = {
 
-	id = 90820401
+	id = 90821251
 
 	trigger = {
 		year = 1910
@@ -25,13 +60,13 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820401"
-	desc = "EVTDESC90820401"
+	title = "EVTNAME90821251"
+	desc = "EVTDESC90821251"
 	picture = "commercial_aviation"
 	
 
 	option = {
-		name = "EVTOPTA90820401"
+		name = "EVTOPTA90821251"
 		prestige = 10
 		set_country_flag = commercial_aviation
 		add_country_modifier = {
@@ -41,45 +76,10 @@ country_event = {
 	}
 }
 
-# First airline
-country_event = {
-
-	id = 90820402
-
-	trigger = {
-		year = 1910
-		is_greater_power = yes
-		capitalists = 0.01
-		industrial_score = 300
-		produces = aeroplanes
-		not = { has_global_flag = delag_founded }
-	}
- 
-	mean_time_to_happen =  {
-		months = 12
-
-		modifier = {
-			factor = 0.5
-			big_producer = aeroplanes
-		}
-	}
-
-	title = "EVTNAME90820402"
-	desc = "EVTDESC90820402"
-	
-	major = yes
-
-	option = {
-		name = "EVTOPTA90820402"
-		prestige = 20
-		set_global_flag = delag_founded
-	}
-}
-
 # Transatlantic Line
 country_event = {
 
-	id = 90820403
+	id = 90821252
 
 	trigger = {
 		is_greater_power = yes
@@ -126,12 +126,12 @@ country_event = {
 		months = 12
 	}
 
-	title = "EVTNAME90820403"
-	desc = "EVTDESC90820403"
+	title = "EVTNAME90821252"
+	desc = "EVTDESC90821252"
 	picture = "ocean_liner"
 
 	option = {
-		name = "EVTOPTA90820403"
+		name = "EVTOPTA90821252"
 		prestige = 10
 		set_country_flag = transatlantic_line
 	}
@@ -140,7 +140,7 @@ country_event = {
 # The blue riband
 country_event = {
 
-	id = 90820404
+	id = 90821253
 
 	trigger = {
 		is_greater_power = yes
@@ -154,13 +154,13 @@ country_event = {
 		months = 24
 	}
 
-	title = "EVTNAME90820404"
-	desc = "EVTDESC90820404"
+	title = "EVTNAME90821253"
+	desc = "EVTDESC90821253"
 	
 	major = yes
 
 	option = {
-		name = "EVTOPTA90820404"
+		name = "EVTOPTA90821253"
 		prestige = 20
 		any_country = {
 			remove_country_modifier = blue_riband_cooloff
@@ -182,7 +182,7 @@ country_event = {
 # Titanic launched
 country_event = {
 
-	id = 90820405
+	id = 90821254
 
 	trigger = {
 		has_country_flag = transatlantic_line
@@ -219,12 +219,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820405"
-	desc = "EVTDESC90820405"
+	title = "EVTNAME90821254"
+	desc = "EVTDESC90821254"
 	picture = "titanic_launch"
 
 	option = {
-		name = "EVTOPTA90820405"
+		name = "EVTOPTA90821254"
 		prestige = 20
 		set_country_flag = titanic_nation
 		set_global_flag = titanic_launched
@@ -234,7 +234,7 @@ country_event = {
 # Titanic disaster
 country_event = {
 
-	id = 90820406
+	id = 90821255
 
 	trigger = {
 		has_country_flag = titanic_nation
@@ -252,13 +252,13 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820406"
-	desc = "EVTDESC90820406"
+	title = "EVTNAME90821255"
+	desc = "EVTDESC90821255"
 	
 	major = yes
 
 	option = {
-		name = "EVTOPTA90820406"
+		name = "EVTOPTA90821255"
 		prestige = -40
 		social_reform = good_safety
 		set_global_flag = titanic_disaster
@@ -309,7 +309,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820406"
+		name = "EVTOPTB90821255"
 		prestige = -70
 		badboy = 0.1
 		set_global_flag = titanic_disaster
@@ -361,7 +361,7 @@ country_event = {
 # Titanic disaster aftermath
 country_event = {
 
-	id = 90820407
+	id = 90821256
 
 	trigger = {
 		has_global_flag = titanic_disaster
@@ -373,12 +373,12 @@ country_event = {
 		months = 3
 	}
 
-	title = "EVTNAME90820407"
-	desc = "EVTDESC90820407"
+	title = "EVTNAME90821256"
+	desc = "EVTDESC90821256"
 	picture = "titanic_reforms"
 
 	option = {
-		name = "EVTOPTA90820407"
+		name = "EVTOPTA90821256"
 		prestige = 10
 		social_reform = good_safety
 		set_country_flag = titanic_reforms
@@ -428,7 +428,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820407"
+		name = "EVTOPTB90821256"
 		prestige = -10
 		badboy = 0.1
 		set_country_flag = titanic_reforms
@@ -480,7 +480,7 @@ country_event = {
 # Ghosts of Titanic removed
 country_event = {
 
-	id = 90820408
+	id = 90821257
 
 	trigger = {
 		has_global_flag = titanic_disaster
@@ -492,12 +492,12 @@ country_event = {
 		months = 3
 	}
 
-	title = "EVTNAME90820408"
-	desc = "EVTDESC90820408"
+	title = "EVTNAME90821257"
+	desc = "EVTDESC90821257"
 	picture = "titanic_reforms"
 
 	option = {
-		name = "EVTOPTA90820408"
+		name = "EVTOPTA90821257"
 		prestige = 10
 		remove_country_modifier = ghosts_of_titanic
 		any_pop = {
@@ -512,7 +512,7 @@ country_event = {
 # An Underground Railway
 country_event = {
 
-	id = 90820409
+	id = 90821258
 
 	trigger = {
 		not = { 
@@ -548,12 +548,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820409"
-	desc = "EVTDESC90820409"
+	title = "EVTNAME90821258"
+	desc = "EVTDESC90821258"
 	picture = "underground_railroad_concept"
 
 	option = {
-		name = "EVTOPTA90820409"
+		name = "EVTOPTA90821258"
 		set_global_flag = underground_railroads
 		set_country_flag = first_underground
 		money = -100000
@@ -569,7 +569,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTB90820409"
+		name = "EVTOPTB90821258"
 		set_country_flag = no_first_underground
 		prestige = -10
 		ai_chance = {
@@ -589,7 +589,7 @@ country_event = {
 # The $PROVINCE$ Metropolitan Railway
 province_event = {
 
-	id = 90820410
+	id = 90821259
 
 	trigger = {
 		has_province_modifier = building_underground
@@ -611,12 +611,12 @@ province_event = {
 		}
 	}
 
-	title = "EVTNAME90820410"
-	desc = "EVTDESC90820410"
+	title = "EVTNAME90821259"
+	desc = "EVTDESC90821259"
 	picture = "underground_railroad"
 
 	option = {
-		name = "EVTOPTA90820410"
+		name = "EVTOPTA90821259"
 		prestige = 30
 		remove_province_modifier = building_underground
 		remove_province_modifier = underground_delays
@@ -639,7 +639,7 @@ province_event = {
 # Railway Troubles in $PROVINCE$
 province_event = {
 
-	id = 90820411
+	id = 90821260
 
 	trigger = {
 		has_province_modifier = building_underground
@@ -673,12 +673,12 @@ province_event = {
 		}
 	}
 
-	title = "EVTNAME90820411"
-	desc = "EVTDESC90820411"
+	title = "EVTNAME90821260"
+	desc = "EVTDESC90821260"
 	picture = "underground_railroad_planning"
 
 	option = {
-		name = "EVTOPTA90820411"
+		name = "EVTOPTA90821260"
 		prestige = -10
 		money = -25000
 		owner = {
@@ -695,7 +695,7 @@ province_event = {
 # The $PROVINCE$ Metropolitan Railway (first)
 province_event = {
 
-	id = 90820412
+	id = 90821261
 
 	trigger = {
 		has_province_modifier = building_underground
@@ -716,11 +716,11 @@ province_event = {
 		}
 	}
 
-	title = "EVTNAME90820412"
-	desc = "EVTDES90820412"
+	title = "EVTNAME90821261"
+	desc = "EVTDES90821261"
 
 	option = {
-		name = "EVTOPTA90820412"
+		name = "EVTOPTA90821261"
 		prestige = 50
 		set_global_flag = first_underground_opened
 		remove_province_modifier = building_underground
@@ -736,7 +736,7 @@ province_event = {
 # An Underground Railway for $PROVINCE$
 province_event = {
 
-	id = 90820413
+	id = 90821262
 
 	trigger = {
 		has_global_flag = underground_railroads
@@ -776,20 +776,20 @@ province_event = {
 		months = 24
 	}
 
-	title = "EVTNAME90820413"
-	desc = "EVTDESC90820413"
+	title = "EVTNAME90821262"
+	desc = "EVTDESC90821262"
 	picture = "underground_railroad"
 	picture = "underground_railroad_concept"
 
 	option = {
-		name = "EVTOPTA90820413"
+		name = "EVTOPTA90821262"
 		money = -100000
 		add_province_modifier = {
 			name = building_underground
 			duration = -1
 		}
 		ai_chance = {
-			factor = 66
+			factor = 80
 		
 			modifier = {
 				factor = 0.1
@@ -799,7 +799,7 @@ province_event = {
 	}
 
 	option = {
-		name = "EVTOPTB90820413"
+		name = "EVTOPTB90821262"
 		prestige = -10
 		add_province_modifier = {
 			name = overcrowded_metropolis
@@ -815,10 +815,10 @@ province_event = {
 		}
 		
 		ai_chance = {
-			factor = 44
+			factor = 20
 		
 			modifier = {
-				factor = 3
+				factor = 5
 				not = { money = 100000 }
 			}
 		}

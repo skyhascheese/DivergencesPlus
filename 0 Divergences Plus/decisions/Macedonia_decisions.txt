@@ -5,6 +5,7 @@ political_decisions = {
 		
 		potential = {
 			civilized = yes
+			industrial_score = 100
 			owns = 820
 			820 = {
 				not = {
@@ -16,7 +17,6 @@ political_decisions = {
 		allow = {
 			not = {
 				or = {
-					ruling_party_ideology = reactionary
 					ruling_party_ideology = anarcho_liberal
 					economic_policy = lessaiz_faire
 				}
@@ -93,6 +93,66 @@ political_decisions = {
 					value = jingoism
 				}
 			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	synedrion = {
+		picture = greek_parliament
+		
+		potential = {
+			tag = MAC
+			government = absolute_monarchy
+			not = { has_country_flag = synedrion }
+		}
+		
+		allow = {
+			or = {
+				militancy = 3
+				plurality = 3
+				political_reform_desire = 0.3
+			}
+			not = {
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+				}
+			}
+		}
+		
+		effect = {
+			political_reform = wealth_weighted_voting
+			government = hms_government
+			any_pop = {
+				militancy = -2
+			}
+			set_country_flag = synedrion
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	walls_of_thessalonica = {
+		picture = walls_of_thessalonica
+		
+		potential = {
+			owns = 805
+			year = 1874
+			war = no
+			805 = 
+				not = {
+					has_province_modifier = walls_of_thessalonica_demolished
+				}
+			}
+		}
+		
+		allow = {
+			market_regulations = 1
+		}
+		
+		effect = {
+			country_event = 90823050
 		}
 		
 		ai_will_do = { factor = 1 }

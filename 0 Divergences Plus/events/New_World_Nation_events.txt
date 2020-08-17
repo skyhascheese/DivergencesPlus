@@ -1,7 +1,7 @@
 country_event = { 
-	id = 90820001 # Nations that start without the New World flag can get it by becoming a Great Power
-	title = "EVTNAME90820001"
-	desc = "EVTDESC90820001"
+	id = 90821000 # Nations that start without the New World flag can get it by becoming a Great Power
+	title = "EVTNAME90821000"
+	desc = "EVTDESC90821000"
 	picture = "new_world_nation"
 	
 	trigger = {
@@ -19,15 +19,15 @@ country_event = {
 	mean_time_to_happen = { months = 10 }
 	
 	option = {
-		name = "EVTOPTA90820001"
+		name = "EVTOPTA90821000"
 		set_country_flag = new_world_nation
 	}
 }
 
 country_event = { 
-	id = 90820002 #Statue of Liberty chain
-	title = "EVTNAME90820002"
-	desc = "EVTDESC90820002"
+	id = 90821001 #Statue of Liberty chain
+	title = "EVTNAME90821001"
+	desc = "EVTDESC90821001"
 	picture = "statue_of_liberty_new_world"
 	
 	trigger = {
@@ -54,7 +54,7 @@ country_event = {
 	mean_time_to_happen = { months = 10 }
 	
 	option = {
-		name = "EVTOPTA90820002"
+		name = "EVTOPTA90821001"
 		set_global_flag = statue_of_liberty_built
 		random_country = {
 			limit = {
@@ -70,7 +70,7 @@ country_event = {
 				}
 				not = { has_country_flag = statue_of_liberty_refused }
 			}
-			country_event = 90820003
+			country_event = 90821002
 			relation = {
 				who = THIS
 				value = 150
@@ -81,7 +81,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820002"
+		name = "EVTOPTB90821001"
 		prestige = -20
 		set_country_flag = statue_of_liberty_refused
 		ai_chance = {
@@ -91,27 +91,27 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820003 #New World Nation asked if it wants Statue of Liberty
-	title = "EVTNAME90820003"
-	desc = "EVTDESC90820003"
+	id = 90821002 #New World Nation asked if it wants Statue of Liberty
+	title = "EVTNAME90821002"
+	desc = "EVTDESC90821002"
 	picture = "statue_of_liberty_new_world"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820003" # Accept
+		name = "EVTOPTA90821002" # Accept
 		FROM = {
-			country_event = 90820004
+			country_event = 90821003
 		}
 		ai_chance = {
 			factor = 99
 		}
 	}
 	option = {
-		name = "EVTOPTB90820003" # Refuse
+		name = "EVTOPTB90821002" # Refuse
 		set_country_flag = statue_of_liberty_refused
 		FROM = {
-			country_event = 90820005
+			country_event = 90821004
 		}
 		ai_chance = {
 			factor = 1
@@ -120,27 +120,27 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820004 #New World Nation has accepted
-	title = "EVTNAME90820004"
-	desc = "EVTDESC90820004"
+	id = 90821003 #New World Nation has accepted
+	title = "EVTNAME90821003"
+	desc = "EVTDESC90821003"
 	picture = "statue_of_liberty_new_world"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820004"
+		name = "EVTOPTA90821003"
 		money = -30000
 		prestige = 40
 		FROM = {
-			country_event = 90820006
+			country_event = 90821005
 		}
 	}
 }
 
 country_event = { 
-	id = 90820005 #New World Nation has refused
-	title = "EVTNAME90820005"
-	desc = "EVTDESC90820005"
+	id = 90821004 #New World Nation has refused
+	title = "EVTNAME90821004"
+	desc = "EVTDESC90821004"
 	picture = "statue_of_liberty_new_world"
 	
 	major = yes
@@ -148,22 +148,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820005"
+		name = "EVTOPTA90821004"
 		clr_global_flag = statue_of_liberty_built
 	}
 }
 
 country_event = { 
-	id = 90820006 #Liberty Enlighting the World
-	title = "EVTNAME90820006"
-	desc = "EVTDESC90820006"
+	id = 90821005 #Liberty Enlighting the World
+	title = "EVTNAME90821005"
+	desc = "EVTDESC90821005"
 	
 	major = yes
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820006"
+		name = "EVTOPTA90821005"
 		prestige = 20
 		add_country_modifier = {
 			name = the_statue_of_liberty
@@ -173,9 +173,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820007 #A Beacon of Liberty
-	title = "EVTNAME90820007"
-	desc = "EVTDESC90820007"
+	id = 90821006 #A Beacon of Liberty
+	title = "EVTNAME90821006"
+	desc = "EVTDESC90821006"
 	picture = "beacon_of_liberty"
 	
 	trigger = {
@@ -197,44 +197,46 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820007"
+		name = "EVTOPTA90821006"
 		prestige = 20
 		set_country_flag = beacon_of_liberty
 		set_global_flag = statue_of_liberty_start
 	}
 }
 
-country_event = { 
-	id = 90820010 #Asimov
-	title = "EVTNAME90820010"
-	desc = "EVTDESC90820010"
+province_event = { 
+	id = 90821010 #Asimov flees
+	title = "EVTNAME90821010"
+	desc = "EVTDESC90821010"
 	picture = "isaac_asimov"
-	news = yes
-	news_desc_long = "EVTDESC90820010_NEWS_LONG"
-	news_desc_medium = "EVTDESC90820010_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC90820010_NEWS_SHORT"
 	
 	fire_only_once = yes
 	
 	trigger = {
+		port = yes
 		not = { has_global_flag = asimov }
-		has_country_flag = new_world_nation
-		or = {
-			government = hms_government
-			government = democracy
-		}
-		any_country = {
-			limit = {
-				owns = 943 #smolensk
+		owner = { has_country_flag = new_world_nation }
+		owner = { 
+			or = {
+				government = hms_government
+				government = democracy
 			}
-			not = {
-				or {
-					government = hms_government
-					government = democracy
-				}	
+			or = {
+				border_policy = quota_immigration
+				border_policy = open_borders
 			}
 		}
-		invention = futurism
+		943 = {
+			owner = {
+				not = {
+					or = {
+						government = hms_government
+						government = democracy
+					}
+				}
+			}
+		}
+		owner = { invention = futurism }
 		year = 1922
 	}
 	
@@ -243,22 +245,20 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820010"
+		name = "EVTOPTA90821010"
 		set_global_flag = asimov
-		prestige = 10
-		year_of_research = 1
+		owner = {
+			prestige = 10
+			year_of_research = 1
+		}
 	}
 }
 
 country_event = { 
-	id = 90820011 #Asimov
-	title = "EVTNAME90820011"
-	desc = "EVTDESC90820011"
+	id = 90821011 #Asimov stays
+	title = "EVTNAME90821011"
+	desc = "EVTDESC90821011"
 	picture = "isaac_asimov"
-	news = yes
-	news_desc_long = "EVTDESC90820011_NEWS_LONG"
-	news_desc_medium = "EVTDESC90820011_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC90820011_NEWS_SHORT"
 	
 	fire_only_once = yes
 	
@@ -278,7 +278,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820011"
+		name = "EVTOPTA90821011"
 		set_global_flag = asimov
 		prestige = 10
 		year_of_research = 1

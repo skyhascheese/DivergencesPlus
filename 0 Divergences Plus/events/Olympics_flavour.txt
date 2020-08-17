@@ -1,7 +1,7 @@
 #Olympic Hymn
 country_event = {
 
-	id = 90820201
+	id = 90821150
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -25,13 +25,13 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820201"
-	desc = "EVTDESC90820201"
+	title = "EVTNAME90821150"
+	desc = "EVTDESC90821150"
 	picture = "olympic_hymn"
 	
 
 	option = {
-		name = "EVTOPTA90820201"
+		name = "EVTOPTA90821150"
 		prestige = 15
 		set_global_flag = olympic_hymn
 	}
@@ -40,7 +40,7 @@ country_event = {
 # Planning the Olympics
 country_event = {
 
-	id = 90820202
+	id = 90821151
 
 	trigger = {
 		year = 1899
@@ -59,12 +59,12 @@ country_event = {
 		months = 2
 	}
 
-	title = "EVTNAME90820202"
-	desc = "EVTDESC90820202"
+	title = "EVTNAME90821151"
+	desc = "EVTDESC90821151"
 	picture = "planning_the_olympics"
 
 	option = {
-		name = "EVTOPTA90820202" # Lavish spending
+		name = "EVTOPTA90821151" # Lavish spending
 		money = -100000
 		any_country = { 
 			limit = {
@@ -89,7 +89,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820202" # Sensible spending
+		name = "EVTOPTB90821151" # Sensible spending
 		money = -50000
 		any_country = { 
 			limit = {
@@ -114,7 +114,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTC90820202" # Minimal spending
+		name = "EVTOPTC90821151" # Minimal spending
 		money = -10000
 		set_country_flag = minimal_olympic_spending
 		any_country = { 
@@ -140,7 +140,7 @@ country_event = {
 # Olympic Hurdles
 country_event = {
 
-	id = 90820203
+	id = 90821152
 	
 	trigger = {
 		has_country_flag = IOCMember
@@ -184,12 +184,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820203"
-	desc = "EVTDESC90820203"
+	title = "EVTNAME90821152"
+	desc = "EVTDESC90821152"
 	picture = "planning_the_olympics"
 
 	option = {
-		name = "EVTOPTA90820203" # Send invites to other IOC members
+		name = "EVTOPTA90821152" # Send invites to other IOC members
 		money = -20000
 		any_country = { 
 			limit = {
@@ -206,7 +206,7 @@ country_event = {
 # Olympic verdict - Good
 country_event = {
 
-	id = 90820204 
+	id = 90821153 
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -228,11 +228,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820104"
-	desc = "EVTDESC90820104"
+	title = "EVTNAME90821153"
+	desc = "EVTDESC90821153"
 
 	option = {
-		name = "EVTOPTA90820104"
+		name = "EVTOPTA90821153"
 		prestige = 40
 		clr_country_flag = Current_Olympic_host
 		clr_country_flag = Recent_Olympic_host
@@ -255,7 +255,7 @@ country_event = {
 # Olympic verdict - Not great, not terrible
 country_event = {
 
-	id = 90820205 
+	id = 90821154 
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -277,11 +277,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820105"
-	desc = "EVTDESC90820105"
+	title = "EVTNAME90821154"
+	desc = "EVTDESC90821154"
 
 	option = {
-		name = "EVTOPTA90820105"
+		name = "EVTOPTA90821154"
 		prestige = 10
 		clr_country_flag = Current_Olympic_host
 		clr_country_flag = Recent_Olympic_host
@@ -300,7 +300,7 @@ country_event = {
 # Olympic verdict - Terrible
 country_event = {
 
-	id = 90820206 
+	id = 90821155 
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -322,11 +322,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820106"
-	desc = "EVTDESC90820106"
+	title = "EVTNAME90821155"
+	desc = "EVTDESC90821155"
 
 	option = {
-		name = "EVTOPTA90820106"
+		name = "EVTOPTA90821155"
 		prestige = -20
 		clr_country_flag = Current_Olympic_host
 		clr_country_flag = Recent_Olympic_host
@@ -349,7 +349,7 @@ country_event = {
 # Olympic flag
 country_event = {
 
-	id = 90820207
+	id = 90821156
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -364,12 +364,12 @@ country_event = {
 		days = 5
 	}
 
-	title = "EVTNAME90820107"
-	desc = "EVTDESC90820107"
+	title = "EVTNAME90821156"
+	desc = "EVTDESC90821156"
 	picture = "olympic_flag"
 
 	option = {
-		name = "EVTOPTA90820107"
+		name = "EVTOPTA90821156"
 		prestige = 20
 		set_global_flag = olympic_flag
 		any_country = { 
@@ -387,7 +387,7 @@ country_event = {
 # Olympic flame
 country_event = {
 
-	id = 90820208
+	id = 90821157
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -402,12 +402,12 @@ country_event = {
 		days = 5
 	}
 
-	title = "EVTNAME90820108"
-	desc = "EVTDESC90820108"
+	title = "EVTNAME90821157"
+	desc = "EVTDESC90821157"
 	picture = "olympic_flame"
 
 	option = {
-		name = "EVTOPTA90820108"
+		name = "EVTOPTA90821157"
 		prestige = 20
 		set_global_flag = olympic_flag
 		money = -10000
@@ -426,7 +426,7 @@ country_event = {
 # Olympic sports complex - lavish
 country_event = {
 
-	id = 90820209
+	id = 90821158
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -446,8 +446,8 @@ country_event = {
 		days = 5
 	}
 
-	title = "EVTNAME90820109"
-	desc = "EVTDESC90820109"
+	title = "EVTNAME90821158"
+	desc = "EVTDESC90821158"
 	picture = "olympic_sports_complex"
 
 	option = {
@@ -464,7 +464,7 @@ country_event = {
 # Olympic sports complex - sensible
 country_event = {
 
-	id = 90820210
+	id = 90821159
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -484,12 +484,12 @@ country_event = {
 		days = 5
 	}
 
-	title = "EVTNAME90820110"
-	desc = "EVTDESC90820110"
+	title = "EVTNAME90821159"
+	desc = "EVTDESC90821159"
 	picture = "olympic_sports_complex"
 
 	option = {
-		name = "EVTOPTA90820110"
+		name = "EVTOPTA90821159"
 		capital_scope = { 
 			add_province_modifier = {
 				name = olympic_sports_complex_lavish

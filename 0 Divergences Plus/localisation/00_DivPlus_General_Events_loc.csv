@@ -1,23 +1,29 @@
-EVTNAME90820001;As Good a Place as Any;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820001;For years we have struggled to prove to the international community that $COUNTRY$ is a state of equal standing to any of the European colonial states in the so-called New World. Our institutions are developed, our cities thriving, and our industries booming! We have now ascended to the status of Great Power and have put the question to rest. We are a power to be reckoned with, but also a state worth emigrating to!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820001;$COUNTRY$'s future is Glorious!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820002;A Token of Friendship and Gratitude;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820002;The Old World is overpopulated, its numerous cities struggling to provide for the needy. The New World is a mostly-untapped Eden, and one country in particular has a reputation for welcoming immigrants from the Old World with open arms. Should we finance the construction of a statue to commemmorate that shining beacon of liberalism and compassion?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820002;Let's do it!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820002;The money would be better spent elsewhere.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820003;A Token of Friendship and Gratitude;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820003;Officials from $FROMCOUNTRY$ have approached us to say that the $FROMCOUNTRY_ADJ$ government is interested in financing the construction of a new statue in our largest port-of-entry, in order to commemmorate $FROMCOUNTRY_ADJ$-$COUNTRY_ADJ$ friendship, as well as our country's liberal immigration policies. Should we accept the offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820003;A great addition to the waterfront!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820003;Thanks, bu no thanks.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820004;$FROMCOUNTRY$ Accepts;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820004;We reached out to $FROMCOUNTRY$ regarding the statue we proposed we build, and the $FROMCOUNTRY_ADJ$ authorities have accepted our proposal.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820004;Marvellous!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820005;$FROMCOUNTRY$ Refused;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820005;We reached out to $FROMCOUNTRY$ regarding the statue we proposed we build, but the $FROMCOUNTRY_ADJ$ authorities have refused our proposal.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820005;Their loss!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820006;Liberty Enlighting the World;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820006;It is a glorious day in $COUNTRY$, for $COUNTRY_ADJ$ have inaugurated the new Colossus: a massive bronze statue of a woman holding a torch financed and built by $FROMCOUNTRY$. The statue, rising 46 metres from head to toe, dominates $COUNTRY$'s largest port of entry and is a beacon of liberty and hope for the millions seeking a better life in the New World.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820006;What a magnificent sight!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820007;A Beacon of Liberty;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820007;Our nation has gained renown throughout the Old World as a society welcoming to immigrants. Fleeing the overcrowded continent of Europe, they have found safe haven in $COUNTRY$.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820007;Immigrants are always welcome here.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821000;As Good a Place as Any;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821000;For years we have struggled to prove to the international community that $COUNTRY$ is a state of equal standing to any of the European colonial states in the so-called New World. Our institutions are developed, our cities thriving, and our industries booming! We have now ascended to the status of Great Power and have put the question to rest. We are a power to be reckoned with, but also a state worth emigrating to!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821000;$COUNTRY$'s future is Glorious!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821001;A Token of Friendship and Gratitude;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821001;The Old World is overpopulated, its numerous cities struggling to provide for the needy. The New World is a mostly-untapped Eden, and one country in particular has a reputation for welcoming immigrants from the Old World with open arms. Should we finance the construction of a statue to commemmorate that shining beacon of liberalism and compassion?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821001;Let's do it!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821001;The money would be better spent elsewhere.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821002;A Token of Friendship and Gratitude;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821002;Officials from $FROMCOUNTRY$ have approached us to say that the $FROMCOUNTRY_ADJ$ government is interested in financing the construction of a new statue in our largest port-of-entry, in order to commemmorate $FROMCOUNTRY_ADJ$-$COUNTRY_ADJ$ friendship, as well as our country's liberal immigration policies. Should we accept the offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821002;A great addition to the waterfront!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821002;Thanks, bu no thanks.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821003;$FROMCOUNTRY$ Accepts;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821003;We reached out to $FROMCOUNTRY$ regarding the statue we proposed we build, and the $FROMCOUNTRY_ADJ$ authorities have accepted our proposal.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821003;Marvellous!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821004;$FROMCOUNTRY$ Refused;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821004;We reached out to $FROMCOUNTRY$ regarding the statue we proposed we build, but the $FROMCOUNTRY_ADJ$ authorities have refused our proposal.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821004;Their loss!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821005;Liberty Enlighting the World;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821005;It is a glorious day in $COUNTRY$, for $COUNTRY_ADJ$ have inaugurated the new Colossus: a massive bronze statue of a woman holding a torch financed and built by $FROMCOUNTRY$. The statue, rising 46 metres from head to toe, dominates $COUNTRY$'s largest port of entry and is a beacon of liberty and hope for the millions seeking a better life in the New World.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821005;What a magnificent sight!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821006;A Beacon of Liberty;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821006;Our nation has gained renown throughout the Old World as a society welcoming to immigrants. Fleeing the overcrowded continent of Europe, they have found safe haven in $COUNTRY$.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821006;Immigrants are always welcome here.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821010;The Father of Science Fiction;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821010;Port authorities in $PROVINCE$ registered the arrival of a young Russian Jewish boy and his family today, fleeing their native town of Petrovichi after an outbreak of severe pneumonia. The young boy, who gave his name as Isaac Asimov, will go on to become on of this country's most prolific writers, being published in eight of the nine Dewey Decimal System categories. But perhaps his most lasting influence is in the field of hard science fiction, where he will go on to invent many concepts which form the bedrock of the genre, including the Galactic Empire (modelled on the fall of the Roman Empire), the idea of a planet-wide city as the capital of the galaxy, and the creation of the word 'robotics', along with the Three Laws governing robot sentience.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821010;He is a national treasure.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821011;The Father of Science Fiction;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821011;A young Jewish boy by the name of Isaac Asimov was born in the town of Petrovichi sometime between 4 October1919 and 2 January 1920, and he has come to the attention of the local schoolteacher. He will go on to become on of this country's most prolific writers, being published in eight of the nine Dewey Decimal System categories. But perhaps his most lasting influence is in the field of hard science fiction, where he will go on to invent many concepts which form the bedrock of the genre, including the Galactic Empire (modelled on the fall of the Roman Empire), the idea of a planet-wide city as the capital of the galaxy, and the creation of the word 'robotics', along with the Three Laws governing robot sentience.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821011;He is a national treasure.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

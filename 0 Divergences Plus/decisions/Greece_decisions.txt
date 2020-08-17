@@ -1,0 +1,250 @@
+political_decisions = {
+	
+	arcadia_coal_rush = {
+		picture = ptolemaida
+		
+		potential = {
+			civilized = yes
+			industrial_score = 100
+			owns = 820
+			820 = {
+				not = {
+					trade_goods = coal
+				}
+			}
+		}
+		
+		allow = {
+			not = {
+				or = {
+					ruling_party_ideology = anarcho_liberal
+					economic_policy = lessaiz_faire
+				}
+			}
+			combustion_engine = 1
+		}
+		
+		effect = {
+			trade_goods = coal
+			add_province_modifier = {
+				name = arcadia_coal_rush
+				duration = -1
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	acropolis_restoration = {
+		picture = acropolis_restoration
+		
+		potential = {
+			primary_culture = greek
+			owns = 834 #Athens
+			not = { has_global_flag = acropolis_restoration }
+		}
+		
+		allow = {
+			invention = early_archaeology
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+				prestige = 25
+			}
+			money = 20000
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = acropolis_restoration
+			country_event = 90823200
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	heirs_of_pericles = {
+		picture = heirs_of_pericles
+		
+		potential = {
+			has_global_flag = acropolis_restoration
+			primary_culture = greek
+			owns = 834 #Athens
+			or = {
+				and = {
+					has_country_flag = heirs_of_pericles_min
+					is_greater_power = yes
+				}
+				not = {
+					or = {
+						has_country_flag = heirs_of_pericles_min
+						has_country_flag = heirs_of_pericles
+					}
+				}
+			}
+		}
+		
+		allow = {
+			invention = early_archaeology
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+				prestige = 25
+			}
+			money = 20000
+			war = no
+		}
+		
+		effect = {
+			country_event = 90823202
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	athenian_splendour = {
+		picture = athenian_splendour
+		
+		potential = {
+			owns = 834 #Athens
+			primary_culture = greek
+			not = { has_global_flag = acropolis_restoration }
+		}
+		
+		allow = {
+			is_independant = yes
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+				prestige = 25
+			}
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = acropolis_restoration
+			country_event = 
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	arvanite_assimilation = {
+		picture = arvanites
+		
+		potential = {
+			owns = 834 #Athens
+			primary_culture = greek
+			not = { has_global_flag = arvanite_assimilation }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = arvanite_assimilation
+			country_event = 
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	adopt_standard_modern_greek = {
+		picture = new_athenian_school
+		
+		potential = {
+			has_country_flag = greek_language_question
+			primary_culture = greek
+			not = { has_country_flag = standard_modern_greek }
+		}
+		
+		allow = {
+			war = no
+			or = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = socialist
+				ruling_party_ideology = communist
+			}
+		}
+		
+		effect = {
+			set_country_flag = standard_modern_greek
+			add_country_modifier = {
+				name = standard_modern_greek
+				duration = -1
+			}
+			any_pop = {
+				limit = {
+					has_culture = greek
+					not = {
+						or = {
+							pop_majority_ideology = liberal
+							pop_majority_ideology = socialist
+							pop_majority_ideology = communist
+						}
+					}
+					ideology = {
+						factor = 0.15
+						value = reactionary
+					}
+				}
+				militancy = 3
+				consciousness = 4
+			}
+			any_pop = {
+				limit = {
+					pop_majority_ideology = conservative
+				}
+				militancy = 1
+				consciousness = 1
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	revert_to_katharevousa = {
+		picture = new_athenian_school
+		
+		potential = {
+			has_country_flag = standard_modern_greek
+			primary_culture = greek
+		}
+		
+		allow = {
+			war = no
+			or = {
+				ruling_party_ideology = reactionary
+				ruling_party_ideology = fascist
+				ruling_party_ideology = conservative
+				religious_policy = moralism
+			}
+		}
+		
+		effect = {
+			clr_country_flag = standard_modern_greek
+			remove_country_modifier = standard_modern_greek
+			any_pop = {
+				limit = {
+					has_culture = greek
+					or = {
+						pop_majority_ideology = fascist
+						pop_majority_ideology = reactionary
+					}
+				}
+				militancy = -2
+				consciousness = -3
+			}
+			any_pop = {
+				limit = {
+					pop_majority_ideology = conservative
+				}
+				militancy = -1
+				consciousness = -1
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+}

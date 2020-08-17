@@ -1,0 +1,210 @@
+country_event = { 
+	id = 90823200 # Acropolis Restoration
+	title = "EVTNAME90823200"
+	desc = "EVTDESC90823200"
+	picture = "acropolis_restoration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90823200"
+		money = -20000
+		prestige = 5
+		any_owned = {
+			limit = {
+				or = {
+					is_core = GRE
+					is_primary_culture = yes
+				}
+				add_province_modifier = {
+					name = heirs_of_pericles
+					duration = 300
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				civilized = yes
+			}
+			country_event = 90823201
+		}
+		plurality = 1
+		set_country_flag = heirs_of_pericles_min
+	}
+	
+	option = {
+		name = "EVTOPTB90823200"
+		money = -50000
+		prestige = 20
+		any_owned = {
+			limit = {
+				or = {
+					is_core = GRE
+					is_primary_culture = yes
+				}
+				add_province_modifier = {
+					name = heirs_of_pericles
+					duration = -1
+				}
+			}
+		}
+		plurality = 2
+		set_country_flag = heirs_of_pericles
+	}
+}
+
+country_event = { 
+	id = 90823201 # Acropolis Restoration explanation event
+	title = "EVTNAME90823201"
+	desc = "EVTDESC90823201"
+	picture = "acropolis_restored"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90823201"
+		any_pop = {
+			limit = {
+				or = {
+					culture = greek
+					culture = arvanite
+				}
+			}
+			consciousness = 2
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = 1
+		}
+	}
+}
+
+province_event = { 
+	id = 90823202 # Heirs of Pericles removed
+	title = "EVTNAME90823202"
+	desc = "EVTDESC90823202"
+	picture = "acropolis_restored"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90823200"
+		money = -20000
+		prestige = 5
+		any_owned = {
+			limit = {
+				or = {
+					is_core = GRE
+					is_primary_culture = yes
+				}
+				add_province_modifier = {
+					name = heirs_of_pericles
+					duration = 300
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				civilized = yes
+			}
+			country_event = 90823201
+		}
+		plurality = 1
+		set_country_flag = heirs_of_pericles
+	}
+	
+	option = {
+		name = "EVTOPTB90823200"
+		money = -50000
+		prestige = 20
+		any_owned = {
+			limit = {
+				or = {
+					is_core = GRE
+					is_primary_culture = yes
+				}
+				add_province_modifier = {
+					name = heirs_of_pericles
+					duration = -1
+				}
+			}
+		}
+		plurality = 2
+		set_country_flag = heirs_of_pericles
+	}
+}
+
+province_event = { 
+	id = 90823210 # The Gospel Riots
+	title = "EVTNAME90823210"
+	desc = "EVTDESC90823210"
+	picture = "gospel_riots"
+	
+	trigger = {
+		primary_culture = greek
+		or = {
+			and = {
+				is_greater_power = no
+				year = 1900
+			}
+			and = {
+				is_greater_power = no
+				year = 1890
+			}
+		}
+		invention = romantic_literature
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+		months = 12
+		
+		modifier = {
+			factor = 0.5
+			year = 1902
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90823210"
+		set_global_flag = greek_language_question
+		prestige = -10
+		any_pop = {
+			limit = {
+				has_culture = greek
+			}
+			consciousness = 1
+		}
+		any_country = {
+			limit = {
+				primary_culture = greek
+				not = {
+					tag = THIS
+				}
+			}
+			country_event = 90823211
+		}
+	}
+}
+
+province_event = { 
+	id = 90823211 # The Gospel Riots (other Greek states)
+	title = "EVTNAME90823210"
+	desc = "EVTDESC90823210"
+	picture = "gospel_riots"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90823210"
+		any_pop = {
+			limit = {
+				has_culture = greek
+			}
+			consciousness = 1
+		}
+	}
+}

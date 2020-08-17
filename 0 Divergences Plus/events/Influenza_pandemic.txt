@@ -1,7 +1,7 @@
 #New influenza detected
 country_event = {
 
-	id = 90820850
+	id = 90825100
 
 	trigger = {
 		great_wars_enabled = yes
@@ -47,12 +47,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820850"
-	desc = "EVTDESC90820850"
+	title = "EVTNAME90825100"
+	desc = "EVTDESC90825100"
 	picture = "influenza_pandemic"
 
 	option = {
-		name = "EVTOPTA90820850" #Mitigation
+		name = "EVTOPTA90825100" #Mitigation
 		random_owned = {
 			add_province_modifier = {
 				name = influenza_mitigation
@@ -97,7 +97,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTB90820850" #No mitigation	
+		name = "EVTOPTB90825100" #No mitigation	
 		random_owned = {
 			limit = {
 				total_pops = 20000
@@ -145,7 +145,7 @@ country_event = {
 #Influenza in $PROVINCE$
 province_event = {
 
-	id = 90820851
+	id = 90825101
 
 	trigger = {
 		has_global_flag = new_influenza_pandemic
@@ -296,12 +296,12 @@ province_event = {
 		}
 	}
 
-	title = "EVTNAME90820851"
-	desc = "EVTDESC90820851"
+	title = "EVTNAME90825101"
+	desc = "EVTDESC90825101"
 	picture = "influenza_pandemic"
 
 	option = {
-		name = "EVTOPTA90820851" #Mitigation
+		name = "EVTOPTA90825101" #Mitigation
 		add_province_modifier = {
 			name = influenza_mitigation
 			duration = 365
@@ -346,7 +346,7 @@ province_event = {
 	}
 
 	option = {
-		name = "EVTOPTB90820851" #No mitigation
+		name = "EVTOPTB90825101" #No mitigation
 		add_province_modifier = {
 			name = influenza
 			duration = 365
@@ -390,7 +390,7 @@ province_event = {
 #Flu arrives at port
 province_event = {
 
-	id = 90820852
+	id = 90825102
 
 	trigger = {
 		has_global_flag = new_influenza_pandemic
@@ -441,12 +441,12 @@ province_event = {
 		}
 	}
 
-	title = "EVTNAME90820852"
-	desc = "EVTDESC90820852"
+	title = "EVTNAME90825102"
+	desc = "EVTDESC90825102"
 	picture = "influenza_port"
 
 	option = {
-		name = "EVTOPTA90820852" #Mitigation
+		name = "EVTOPTA90825102" #Mitigation
 		add_province_modifier = {
 			name = influenza_mitigation
 			duration = 365
@@ -498,7 +498,7 @@ province_event = {
 	}
 
 	option = {
-		name = "EVTOPTB90820852" #No mitigation
+		name = "EVTOPTB90825102" #No mitigation
 		add_province_modifier = {
 			name = influenza
 			duration = 365
@@ -551,7 +551,7 @@ province_event = {
 #Flu in $COUNTRY$
 province_event = {
 
-	id = 90820853
+	id = 90825103
 
 	trigger = {
 		owner = {
@@ -571,12 +571,12 @@ province_event = {
 		days = 7
 	}
 
-	title = "EVTNAME90820853"
-	desc = "EVTDESC90820853"
+	title = "EVTNAME90825103"
+	desc = "EVTDESC90825103"
 	picture = "influenza_in_country"
 
 	option = {
-		name = "EVTOPTA90820853"
+		name = "EVTOPTA90825103"
 		
 		owner = { set_country_flag = influenza_pandemic }
 	}
@@ -585,7 +585,7 @@ province_event = {
 #Flu Hotspots
 country_event = {
 
-	id = 90820854
+	id = 90825104
 
 	trigger = {
 		any_owned_province = {
@@ -614,12 +614,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820854"
-	desc = "EVTDESC90820854"
+	title = "EVTNAME90825104"
+	desc = "EVTDESC90825104"
 	picture = "influenza_hotspots"
 
 	option = {
-		name = "EVTOPTA90820854" #Mitigation
+		name = "EVTOPTA90825104" #Mitigation
 		any_owned = {
 			limit = {
 				not = { 
@@ -682,7 +682,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTB90820854" #No mitigation
+		name = "EVTOPTB90825104" #No mitigation
 		any_owned = {
 			limit = {
 				not = { 
@@ -744,7 +744,7 @@ country_event = {
 #The $COUNTRY_ADJ$ Flu
 country_event = {
 
-	id = 90820855
+	id = 90825105
 
 	trigger = {
 		war = no
@@ -775,11 +775,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820855"
-	desc = "EVTDESC90820855"
+	title = "EVTNAME90825105"
+	desc = "EVTDESC90825105"
 
 	option = {
-		name = "EVTOPTA90820855"
+		name = "EVTOPTA90825105"
 		
 		set_country_flag = flu_name
 		any_country = {
@@ -815,7 +815,7 @@ country_event = {
 #The Horrors of the $COUNTRY_ADJ$ Flu
 country_event = {
 
-	id = 90820856
+	id = 90825106
 
 	trigger = {
 		has_country_flag = flu_name
@@ -836,12 +836,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820856"
-	desc = "EVTDESC90820856"
+	title = "EVTNAME90825106"
+	desc = "EVTDESC90825106"
 	picture = "influenza_deaths"
 
 	option = {
-		name = "EVTOPTA90820856"
+		name = "EVTOPTA90825106"
 		
 		any_pop = {
 			consciousness = 2
@@ -853,7 +853,7 @@ country_event = {
 					tag = THIS
 				}
 			}
-			country_event = 90820857
+			country_event = 90825107
 		}
 	}
 }
@@ -861,16 +861,16 @@ country_event = {
 #The Horrors of the $FROMCOUNTRY_ADJ$ Flu
 country_event = {
 
-	id = 90820857
+	id = 90825107
 
 	is_triggered_only = yes
 
-	title = "EVTNAME90820857"
-	desc = "EVTDESC90820857"
+	title = "EVTNAME90825107"
+	desc = "EVTDESC90825107"
 	picture = "influenza_deaths"
 
 	option = {
-		name = "EVTOPTA90820857"
+		name = "EVTOPTA90825107"
 		
 		any_pop = {
 			consciousness = 2
@@ -881,7 +881,7 @@ country_event = {
 #Ground Zero
 province_event = {
 
-	id = 90820858
+	id = 90825108
 
 	trigger = {
 		or = {
@@ -972,12 +972,12 @@ province_event = {
 		}
 	}
 
-	title = "EVTNAME90820858"
-	desc = "EVTDESC90820858"
+	title = "EVTNAME90825108"
+	desc = "EVTDESC90825108"
 	picture = "influenza_origins"
 
 	option = {
-		name = "EVTOPTA90820858"
+		name = "EVTOPTA90825108"
 		
 		owner = {
 			any_pop = {
@@ -989,7 +989,7 @@ province_event = {
 			limit = {
 				has_country_flag = flu_name
 			}
-			country_event = 90820859
+			country_event = 90825109
 		}
 	}
 }
@@ -997,17 +997,17 @@ province_event = {
 #The Origin of the $COUNTRY_ADJ$ Flu
 country_event = {
 
-	id = 90820859
+	id = 90825109
 
 	is_triggered_only = yes
 
-	title = "EVTNAME90820859"
-	desc = "EVTDESC90820859"
+	title = "EVTNAME90825109"
+	desc = "EVTDESC90825109"
 	
 	major = yes
 
 	option = {
-		name = "EVTOPTA90820859"
+		name = "EVTOPTA90825109"
 		
 		prestige = 10
 	}
@@ -1016,7 +1016,7 @@ country_event = {
 #Capital over People (national)
 country_event = {
 
-	id = 90820860
+	id = 90825110
 
 	trigger = {
 		has_country_flag = influenza_pandemic_no_mitigation
@@ -1029,12 +1029,12 @@ country_event = {
 		months = 3
 	}
 
-	title = "EVTNAME90820860"
-	desc = "EVTDESC90820860"
+	title = "EVTNAME90825110"
+	desc = "EVTDESC90825110"
 	picture = "capital_over_people"
 
 	option = {
-		name = "EVTOPTA90820860"
+		name = "EVTOPTA90825110"
 		prestige = -20
 		add_country_modifier = {
 			name = capital_over_people 
@@ -1046,7 +1046,7 @@ country_event = {
 #Capital over People (local)
 country_event = {
 
-	id = 90820861
+	id = 90825111
 
 	trigger = {
 		any_owned_province = {
@@ -1061,12 +1061,12 @@ country_event = {
 		months = 3
 	}
 
-	title = "EVTNAME90820861"
-	desc = "EVTDESC90820861"
+	title = "EVTNAME90825111"
+	desc = "EVTDESC90825111"
 	picture = "capital_over_people"
 
 	option = {
-		name = "EVTOPTA90820861"
+		name = "EVTOPTA90825111"
 		prestige = -10
 		any_owned = {
 			limit = {

@@ -5,12 +5,12 @@
 #Formation of the Internatonal Olympic Committee
 country_event = {
 
-	id = 90820101
+	id = 90821100
 	news = yes
 	news_title = "EVTNAME23400_NEWS_TITLE"
-	news_desc_long = "EVTDESC90820101_NEWS_LONG"
-	news_desc_medium = "EVTDESC90820101_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC90820101_NEWS_SHORT"
+	news_desc_long = "EVTDESC90821100_NEWS_LONG"
+	news_desc_medium = "EVTDESC90821100_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC90821100_NEWS_SHORT"
 
 	trigger = {
 		not = { 
@@ -148,20 +148,20 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820101"
-	desc = "EVTDESC90820101"
+	title = "EVTNAME90821100"
+	desc = "EVTDESC90821100"
 	picture = "Olympics"
 	
 
 	option = {
-		name = "EVTOPTA90820101" # Join the IOC
+		name = "EVTOPTA90821100" # Join the IOC
 		ai_chance = { factor = 99 }
 		money = -5000
 		prestige = 20
 		set_country_flag = IOCMember
 	}
 	option = {
-		name = "EVTOPTB90820101" # Reject invite
+		name = "EVTOPTB90821100" # Reject invite
 		ai_chance = { factor = 1 }
 		prestige = -5
 		set_country_flag = NoIOCMember
@@ -171,7 +171,7 @@ country_event = {
 # 1st Olympiad - Greece gets first crack to host if it wants
 country_event = {
 
-	id = 90820102
+	id = 90821101
 
 	trigger = {
 		tag = GRE # Greece hosted 1896 Olympics
@@ -202,12 +202,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820102"
-	desc = "EVTDESC90820102"
+	title = "EVTNAME90821101"
+	desc = "EVTDESC90821101"
 	picture = "Olympics"
 
 	option = {
-		name = "EVTOPTA90820102" # Send invites to other IOC members
+		name = "EVTOPTA90821101" # Send invites to other IOC members
 		money = -10000
 		set_global_flag = I_Olympiad_host_chosen
 		set_country_flag = I_Olympiad_host
@@ -231,7 +231,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820102" # Not interested
+		name = "EVTOPTB90821101" # Not interested
 		prestige = -5
 		set_global_flag = GRE_declined_I_Olympiad
 		set_country_flag = I_Olympiad_host_declined
@@ -253,7 +253,7 @@ country_event = {
 # 1st Olympiad - Other Greek state gets asked to host
 country_event = {
 
-	id = 90820103
+	id = 90821102
 	
 	trigger = {
 		has_country_flag = IOCMember
@@ -300,12 +300,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820103"
-	desc = "EVTDESC90820103"
+	title = "EVTNAME90821102"
+	desc = "EVTDESC90821102"
 	picture = "Olympics"
 
 	option = {
-		name = "EVTOPTA90820103" # Send invites to other IOC members
+		name = "EVTOPTA90821102" # Send invites to other IOC members
 		money = -10000
 		set_global_flag = I_Olympiad_host_chosen
 		set_country_flag = I_Olympiad_host
@@ -329,7 +329,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820103" # Not interested
+		name = "EVTOPTB90821102" # Not interested
 		prestige = -5
 		set_global_flag = GRE_declined_I_Olympiad_2
 		set_country_flag = I_Olympiad_host_declined
@@ -351,7 +351,7 @@ country_event = {
 # 1st Olympiad - Other nation hosts because all Greek states refuse or none exist
 country_event = {
 
-	id = 90820104 
+	id = 90821103 
 
 	trigger = {
 		has_global_flag = GRE_declined_I_Olympiad
@@ -391,12 +391,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820104"
-	desc = "EVTDESC90820104"
+	title = "EVTNAME90821103"
+	desc = "EVTDESC90821103"
 	picture = "Olympics"
 
 	option = {
-		name = "EVTOPTA90820104" # Send invites to other IOC members
+		name = "EVTOPTA90821103" # Send invites to other IOC members
 		money = -10000
 		set_global_flag = I_Olympiad_host_chosen
 		set_country_flag = I_Olympiad_host
@@ -420,7 +420,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820104" # Not interested
+		name = "EVTOPTB90821103" # Not interested
 		prestige = -5
 		set_country_flag = I_Olympiad_host_declined
 		any_country = { 
@@ -441,7 +441,7 @@ country_event = {
 # 1st Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820105 # Attend 1896 Olympics 
+	id = 90821104 # Attend 1896 Olympics 
 
 	trigger = {
 		has_global_flag = I_Olympiad_host_chosen
@@ -470,12 +470,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820105"
-	desc = "EVTDESC90820105"
+	title = "EVTNAME90821104"
+	desc = "EVTDESC90821104"
 	picture = "Olympics"
 
 	option = {
-		name = "EVTOPTA90820105" # Send a delegation to the games
+		name = "EVTOPTA90821104" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_I_Olympiad
@@ -497,7 +497,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820105" # We're not going this year
+		name = "EVTOPTB90821104" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_I_Olympiad
 		any_country = { 
@@ -518,7 +518,7 @@ country_event = {
 # 1st Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820106 # 1st games are held 
+	id = 90821105 # 1st games are held 
 
 	trigger = {
 		has_country_flag = I_Olympiad_host
@@ -544,11 +544,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820106"
-	desc = "EVTDESC90820106"
+	title = "EVTNAME90821105"
+	desc = "EVTDESC90821105"
 
 	option = {
-		name = "EVTOPTA90820106" # The games are held
+		name = "EVTOPTA90821105" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = I_Olympiad_Opened
@@ -559,7 +559,7 @@ country_event = {
 # 1st Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820107 # Win medal at 1896 Olympics 
+	id = 90821106 # Win medal at 1896 Olympics 
 
 	trigger = {
 		has_global_flag = I_Olympiad_Opened
@@ -652,11 +652,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820107"
-	desc = "EVTDESC90820107"
+	title = "EVTNAME90821106"
+	desc = "EVTDESC90821106"
 
 	option = {
-		name = "EVTOPTA90820107" # Our team won medals!
+		name = "EVTOPTA90821106" # Our team won medals!
 		prestige = 30
 		set_global_flag = I_Olympiad_Winner
 		set_country_flag = I_Olympiad_Winner_country
@@ -666,7 +666,7 @@ country_event = {
 # 1900 Olympiad - Choose host
 country_event = {
 
-	id = 90820108
+	id = 90821107
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -706,12 +706,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820108"
-	desc = "EVTDESC90820108"
+	title = "EVTNAME90821107"
+	desc = "EVTDESC90821107"
 	picture = "olympics_opening"
 
 	option = {
-		name = "EVTOPTA90820108" # Send invites to other IOC members
+		name = "EVTOPTA90821107" # Send invites to other IOC members
 		money = -30000
 		set_global_flag = II_Olympiad_host_chosen
 		set_country_flag = II_Olympiad_host
@@ -735,7 +735,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820108" # Not interested
+		name = "EVTOPTB90821107" # Not interested
 		prestige = -5
 		set_country_flag = II_Olympiad_host_declined
 		any_country = { 
@@ -756,7 +756,7 @@ country_event = {
 # 1900 Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820109 # Attend 1900 Olympics 
+	id = 90821108 # Attend 1900 Olympics 
 
 	trigger = {
 		has_global_flag = II_Olympiad_host_chosen
@@ -789,12 +789,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820109"
-	desc = "EVTDESC90820109"
+	title = "EVTNAME90821108"
+	desc = "EVTDESC90821108"
 	picture = "olympics_running"
 
 	option = {
-		name = "EVTOPTA90820109" # Send a delegation to the games
+		name = "EVTOPTA90821108" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_II_Olympiad
@@ -817,7 +817,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820109" # We're not going this year
+		name = "EVTOPTB90821108" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_II_Olympiad
 		any_country = { 
@@ -838,7 +838,7 @@ country_event = {
 # 1900 Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820110 # 1900 games are held 
+	id = 90821109 # 1900 games are held 
 
 	trigger = {
 		has_country_flag = II_Olympiad_host
@@ -864,11 +864,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820110"
-	desc = "EVTDESC90820110"
+	title = "EVTNAME90821109"
+	desc = "EVTDESC90821109"
 
 	option = {
-		name = "EVTOPTA90820110" # The games are held
+		name = "EVTOPTA90821109" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = II_Olympiad_Opened
@@ -879,7 +879,7 @@ country_event = {
 # 1900 Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820111 # Win medal at 1900 Olympics 
+	id = 90821110 # Win medal at 1900 Olympics 
 
 	trigger = {
 		has_global_flag = II_Olympiad_Opened
@@ -972,11 +972,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820111"
-	desc = "EVTDESC90820111"
+	title = "EVTNAME90821110"
+	desc = "EVTDESC90821110"
 
 	option = {
-		name = "EVTOPTA90820111" # Our team won medals!
+		name = "EVTOPTA90821110" # Our team won medals!
 		prestige = 30
 		set_global_flag = II_Olympiad_Winner
 		set_country_flag = II_Olympiad_Winner_country
@@ -992,7 +992,7 @@ country_event = {
 # 1904 Olympiad - Choose host
 country_event = {
 
-	id = 90820112
+	id = 90821111
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -1037,12 +1037,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820112"
-	desc = "EVTDESC90820112"
+	title = "EVTNAME90821111"
+	desc = "EVTDESC90821111"
 	picture = "olympics_opening"
 
 	option = {
-		name = "EVTOPTA90820112" # Send invites to other IOC members
+		name = "EVTOPTA90821111" # Send invites to other IOC members
 		money = -30000
 		set_global_flag = III_Olympiad_host_chosen
 		set_country_flag = III_Olympiad_host
@@ -1066,7 +1066,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820112" # Not interested
+		name = "EVTOPTB90821111" # Not interested
 		prestige = -5
 		set_country_flag = III_Olympiad_host_declined
 		any_country = { 
@@ -1087,7 +1087,7 @@ country_event = {
 # 1904 Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820113 # Attend 1904 Olympics 
+	id = 90821112 # Attend 1904 Olympics 
 
 	trigger = {
 		has_global_flag = III_Olympiad_host_chosen
@@ -1120,12 +1120,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820113"
-	desc = "EVTDESC90820113"
+	title = "EVTNAME90821112"
+	desc = "EVTDESC90821112"
 	picture = "olympics_running"
 
 	option = {
-		name = "EVTOPTA90820113" # Send a delegation to the games
+		name = "EVTOPTA90821112" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_III_Olympiad
@@ -1148,7 +1148,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820113" # We're not going this year
+		name = "EVTOPTB90821112" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_III_Olympiad
 		any_country = { 
@@ -1169,7 +1169,7 @@ country_event = {
 # 1904 Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820114 # 1904 games are held 
+	id = 90821113 # 1904 games are held 
 
 	trigger = {
 		has_country_flag = III_Olympiad_host
@@ -1195,11 +1195,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820114"
-	desc = "EVTDESC90820114"
+	title = "EVTNAME90821113"
+	desc = "EVTDESC90821113"
 
 	option = {
-		name = "EVTOPTA90820114" # The games are held
+		name = "EVTOPTA90821113" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = III_Olympiad_Opened
@@ -1210,7 +1210,7 @@ country_event = {
 # 1904 Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820115 # Win medal at 1900 Olympics 
+	id = 90821114 # Win medal at 1900 Olympics 
 
 	trigger = {
 		has_global_flag = III_Olympiad_Opened
@@ -1303,11 +1303,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820115"
-	desc = "EVTDESC90820115"
+	title = "EVTNAME90821114"
+	desc = "EVTDESC90821114"
 
 	option = {
-		name = "EVTOPTA90820115" # Our team won medals!
+		name = "EVTOPTA90821114" # Our team won medals!
 		prestige = 30
 		set_global_flag = III_Olympiad_Winner
 		set_country_flag = III_Olympiad_Winner_country
@@ -1323,7 +1323,7 @@ country_event = {
 # 1908 Olympiad - Choose host
 country_event = {
 
-	id = 90820116
+	id = 90821115
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -1368,12 +1368,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820116"
-	desc = "EVTDESC90820116"
+	title = "EVTNAME90821115"
+	desc = "EVTDESC90821115"
 	picture = "olympics_opening"
 
 	option = {
-		name = "EVTOPTA90820116" # Send invites to other IOC members
+		name = "EVTOPTA90821115" # Send invites to other IOC members
 		money = -30000
 		set_global_flag = IV_Olympiad_host_chosen
 		set_country_flag = IV_Olympiad_host
@@ -1397,7 +1397,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820112" # Not interested
+		name = "EVTOPTB90821111" # Not interested
 		prestige = -5
 		set_country_flag = IV_Olympiad_host_declined
 		any_country = { 
@@ -1418,7 +1418,7 @@ country_event = {
 # 1908 Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820117 # Attend 1908 Olympics 
+	id = 90821116 # Attend 1908 Olympics 
 
 	trigger = {
 		has_global_flag = IV_Olympiad_host_chosen
@@ -1451,12 +1451,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820117"
-	desc = "EVTDESC90820117"
+	title = "EVTNAME90821116"
+	desc = "EVTDESC90821116"
 	picture = "olympics_running"
 
 	option = {
-		name = "EVTOPTA90820117" # Send a delegation to the games
+		name = "EVTOPTA90821116" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_IV_Olympiad
@@ -1479,7 +1479,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820117" # We're not going this year
+		name = "EVTOPTB90821116" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_IV_Olympiad
 		any_country = { 
@@ -1500,7 +1500,7 @@ country_event = {
 # 1908 Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820118 # 1908 games are held 
+	id = 90821117 # 1908 games are held 
 
 	trigger = {
 		has_country_flag = IV_Olympiad_host
@@ -1526,11 +1526,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820118"
-	desc = "EVTDESC90820118"
+	title = "EVTNAME90821117"
+	desc = "EVTDESC90821117"
 
 	option = {
-		name = "EVTOPTA90820118" # The games are held
+		name = "EVTOPTA90821117" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = IV_Olympiad_Opened
@@ -1541,7 +1541,7 @@ country_event = {
 # 1908 Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820119 # Win medal at 1900 Olympics 
+	id = 90821118 # Win medal at 1900 Olympics 
 
 	trigger = {
 		has_global_flag = IV_Olympiad_Opened
@@ -1634,11 +1634,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820119"
-	desc = "EVTDESC90820119"
+	title = "EVTNAME90821118"
+	desc = "EVTDESC90821118"
 
 	option = {
-		name = "EVTOPTA90820119" # Our team won medals!
+		name = "EVTOPTA90821118" # Our team won medals!
 		prestige = 30
 		set_global_flag = IV_Olympiad_Winner
 		set_country_flag = IV_Olympiad_Winner_country
@@ -1654,7 +1654,7 @@ country_event = {
 # 1912 Olympiad - Choose host
 country_event = {
 
-	id = 90820120
+	id = 90821119
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -1699,12 +1699,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820120"
-	desc = "EVTDESC90820120"
+	title = "EVTNAME90821119"
+	desc = "EVTDESC90821119"
 	picture = "olympics_opening"
 
 	option = {
-		name = "EVTOPTA90820120" # Send invites to other IOC members
+		name = "EVTOPTA90821119" # Send invites to other IOC members
 		money = -30000
 		set_global_flag = V_Olympiad_host_chosen
 		set_country_flag = V_Olympiad_host
@@ -1728,7 +1728,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820120" # Not interested
+		name = "EVTOPTB90821119" # Not interested
 		prestige = -5
 		set_country_flag = V_Olympiad_host_declined
 		any_country = { 
@@ -1749,7 +1749,7 @@ country_event = {
 # 1912 Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820121 # Attend 1912 Olympics 
+	id = 90821120 # Attend 1912 Olympics 
 
 	trigger = {
 		has_global_flag = V_Olympiad_host_chosen
@@ -1782,12 +1782,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820121"
-	desc = "EVTDESC90820121"
+	title = "EVTNAME90821120"
+	desc = "EVTDESC90821120"
 	picture = "olympics_running"
 
 	option = {
-		name = "EVTOPTA90820121" # Send a delegation to the games
+		name = "EVTOPTA90821120" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_V_Olympiad
@@ -1810,7 +1810,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820121" # We're not going this year
+		name = "EVTOPTB90821120" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_V_Olympiad
 		any_country = { 
@@ -1831,7 +1831,7 @@ country_event = {
 # 1912 Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820122 # 1912 games are held 
+	id = 90821121 # 1912 games are held 
 
 	trigger = {
 		has_country_flag = V_Olympiad_host
@@ -1857,11 +1857,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820122"
-	desc = "EVTDESC90820122"
+	title = "EVTNAME90821121"
+	desc = "EVTDESC90821121"
 
 	option = {
-		name = "EVTOPTA90820122" # The games are held
+		name = "EVTOPTA90821121" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = V_Olympiad_Opened
@@ -1872,7 +1872,7 @@ country_event = {
 # 1912 Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820123 # Win medal at 1912 Olympics 
+	id = 90821122 # Win medal at 1912 Olympics 
 
 	trigger = {
 		has_global_flag = V_Olympiad_Opened
@@ -1965,11 +1965,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820123"
-	desc = "EVTDESC90820123"
+	title = "EVTNAME90821122"
+	desc = "EVTDESC90821122"
 
 	option = {
-		name = "EVTOPTA90820123" # Our team won medals!
+		name = "EVTOPTA90821122" # Our team won medals!
 		prestige = 30
 		set_global_flag = V_Olympiad_Winner
 		set_country_flag = V_Olympiad_Winner_country
@@ -1985,7 +1985,7 @@ country_event = {
 # 1916 Olympiad - Choose host
 country_event = {
 
-	id = 90820124
+	id = 90821123
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -2030,12 +2030,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820124"
-	desc = "EVTDESC90820124"
+	title = "EVTNAME90821123"
+	desc = "EVTDESC90821123"
 	picture = "olympics_opening"
 
 	option = {
-		name = "EVTOPTA90820124" # Send invites to other IOC members
+		name = "EVTOPTA90821123" # Send invites to other IOC members
 		money = -30000
 		set_global_flag = VI_Olympiad_host_chosen
 		set_country_flag = VI_Olympiad_host
@@ -2059,7 +2059,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820120" # Not interested
+		name = "EVTOPTB90821119" # Not interested
 		prestige = -5
 		set_country_flag = VI_Olympiad_host_declined
 		any_country = { 
@@ -2080,7 +2080,7 @@ country_event = {
 # 1916 Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820125 # Attend 1916 Olympics 
+	id = 90821124 # Attend 1916 Olympics 
 
 	trigger = {
 		has_global_flag = VI_Olympiad_host_chosen
@@ -2113,12 +2113,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820125"
-	desc = "EVTDESC90820125"
+	title = "EVTNAME90821124"
+	desc = "EVTDESC90821124"
 	picture = "olympics_running"
 
 	option = {
-		name = "EVTOPTA90820125" # Send a delegation to the games
+		name = "EVTOPTA90821124" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_VI_Olympiad
@@ -2141,7 +2141,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820125" # We're not going this year
+		name = "EVTOPTB90821124" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_VI_Olympiad
 		any_country = { 
@@ -2162,7 +2162,7 @@ country_event = {
 # 1916 Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820126 # 1916 games are held 
+	id = 90821125 # 1916 games are held 
 
 	trigger = {
 		has_country_flag = VI_Olympiad_host
@@ -2188,11 +2188,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820126"
-	desc = "EVTDESC90820126"
+	title = "EVTNAME90821125"
+	desc = "EVTDESC90821125"
 
 	option = {
-		name = "EVTOPTA90820126" # The games are held
+		name = "EVTOPTA90821125" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = VI_Olympiad_Opened
@@ -2203,7 +2203,7 @@ country_event = {
 # 1916 Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820127 # Win medal at 1916 Olympics 
+	id = 90821126 # Win medal at 1916 Olympics 
 
 	trigger = {
 		has_global_flag = VI_Olympiad_Opened
@@ -2296,11 +2296,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820127"
-	desc = "EVTDESC90820127"
+	title = "EVTNAME90821126"
+	desc = "EVTDESC90821126"
 
 	option = {
-		name = "EVTOPTA90820127" # Our team won medals!
+		name = "EVTOPTA90821126" # Our team won medals!
 		prestige = 30
 		set_global_flag = VI_Olympiad_Winner
 		set_country_flag = VI_Olympiad_Winner_country
@@ -2316,7 +2316,7 @@ country_event = {
 # 1920 Olympiad - Choose host
 country_event = {
 
-	id = 90820128
+	id = 90821127
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -2361,12 +2361,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820128"
-	desc = "EVTDESC90820128"
+	title = "EVTNAME90821127"
+	desc = "EVTDESC90821127"
 	picture = "olympics_opening"
 
 	option = {
-		name = "EVTOPTA90820128" # Send invites to other IOC members
+		name = "EVTOPTA90821127" # Send invites to other IOC members
 		money = -30000
 		set_global_flag = VII_Olympiad_host_chosen
 		set_country_flag = VII_Olympiad_host
@@ -2390,7 +2390,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820124" # Not interested
+		name = "EVTOPTB90821123" # Not interested
 		prestige = -5
 		set_country_flag = VII_Olympiad_host_declined
 		any_country = { 
@@ -2411,7 +2411,7 @@ country_event = {
 # 1920 Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820129 # Attend 1916 Olympics 
+	id = 90821128 # Attend 1916 Olympics 
 
 	trigger = {
 		has_global_flag = VII_Olympiad_host_chosen
@@ -2444,12 +2444,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820125"
-	desc = "EVTDESC90820125"
+	title = "EVTNAME90821124"
+	desc = "EVTDESC90821124"
 	picture = "olympics_running"
 
 	option = {
-		name = "EVTOPTA90820129" # Send a delegation to the games
+		name = "EVTOPTA90821128" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_VII_Olympiad
@@ -2472,7 +2472,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820125" # We're not going this year
+		name = "EVTOPTB90821124" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_VII_Olympiad
 		any_country = { 
@@ -2493,7 +2493,7 @@ country_event = {
 # 1920 Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820130 # 1920 games are held 
+	id = 90821129 # 1920 games are held 
 
 	trigger = {
 		has_country_flag = VII_Olympiad_host
@@ -2519,11 +2519,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820130"
-	desc = "EVTDESC90820130"
+	title = "EVTNAME90821129"
+	desc = "EVTDESC90821129"
 
 	option = {
-		name = "EVTOPTA90820130" # The games are held
+		name = "EVTOPTA90821129" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = VII_Olympiad_Opened
@@ -2534,7 +2534,7 @@ country_event = {
 # 1920 Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820131 # Win medal at 1916 Olympics 
+	id = 90821130 # Win medal at 1916 Olympics 
 
 	trigger = {
 		has_global_flag = VII_Olympiad_Opened
@@ -2627,11 +2627,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820131"
-	desc = "EVTDESC90820131"
+	title = "EVTNAME90821130"
+	desc = "EVTDESC90821130"
 
 	option = {
-		name = "EVTOPTA90820131" # Our team won medals!
+		name = "EVTOPTA90821130" # Our team won medals!
 		prestige = 30
 		set_global_flag = VII_Olympiad_Winner
 		set_country_flag = VII_Olympiad_Winner_country
@@ -2647,7 +2647,7 @@ country_event = {
 # 1924 Olympiad - Choose host
 country_event = {
 
-	id = 90820132
+	id = 90821131
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -2692,12 +2692,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820132"
-	desc = "EVTDESC90820132"
+	title = "EVTNAME90821131"
+	desc = "EVTDESC90821131"
 	picture = "olympics_opening"
 
 	option = {
-		name = "EVTOPTA90820132" # Send invites to other IOC members
+		name = "EVTOPTA90821131" # Send invites to other IOC members
 		money = -30000
 		set_global_flag = VIII_Olympiad_host_chosen
 		set_country_flag = VIII_Olympiad_host
@@ -2721,7 +2721,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820132" # Not interested
+		name = "EVTOPTB90821131" # Not interested
 		prestige = -5
 		set_country_flag = VIII_Olympiad_host_declined
 		any_country = { 
@@ -2742,7 +2742,7 @@ country_event = {
 # 1924 Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820133 # Attend 1924 Olympics 
+	id = 90821132 # Attend 1924 Olympics 
 
 	trigger = {
 		has_global_flag = VIII_Olympiad_host_chosen
@@ -2775,12 +2775,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820133"
-	desc = "EVTDESC90820133"
+	title = "EVTNAME90821132"
+	desc = "EVTDESC90821132"
 	picture = "olympics_running"
 
 	option = {
-		name = "EVTOPTA90820133" # Send a delegation to the games
+		name = "EVTOPTA90821132" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_VIII_Olympiad
@@ -2803,7 +2803,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820133" # We're not going this year
+		name = "EVTOPTB90821132" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_VIII_Olympiad
 		any_country = { 
@@ -2824,7 +2824,7 @@ country_event = {
 # 1924 Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820134 # 1924 games are held 
+	id = 90821133 # 1924 games are held 
 
 	trigger = {
 		has_country_flag = VIII_Olympiad_host
@@ -2850,11 +2850,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820134"
-	desc = "EVTDESC90820134"
+	title = "EVTNAME90821133"
+	desc = "EVTDESC90821133"
 
 	option = {
-		name = "EVTOPTA90820134" # The games are held
+		name = "EVTOPTA90821133" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = VIII_Olympiad_Opened
@@ -2865,7 +2865,7 @@ country_event = {
 # 1924 Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820135 # Win medal at 1924 Olympics 
+	id = 90821134 # Win medal at 1924 Olympics 
 
 	trigger = {
 		has_global_flag = VIII_Olympiad_Opened
@@ -2958,11 +2958,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820135"
-	desc = "EVTDESC90820135"
+	title = "EVTNAME90821134"
+	desc = "EVTDESC90821134"
 
 	option = {
-		name = "EVTOPTA90820135" # Our team won medals!
+		name = "EVTOPTA90821134" # Our team won medals!
 		prestige = 30
 		set_global_flag = VIII_Olympiad_Winner
 		set_country_flag = VIII_Olympiad_Winner_country
@@ -2978,7 +2978,7 @@ country_event = {
 # 1928 Olympiad - Choose host
 country_event = {
 
-	id = 90820136
+	id = 90821135
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -3023,12 +3023,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820136"
-	desc = "EVTDESC90820136"
+	title = "EVTNAME90821135"
+	desc = "EVTDESC90821135"
 	picture = "olympics_opening"
 
 	option = {
-		name = "EVTOPTA90820136" # Send invites to other IOC members
+		name = "EVTOPTA90821135" # Send invites to other IOC members
 		money = -30000
 		set_global_flag = IX_Olympiad_host_chosen
 		set_country_flag = IX_Olympiad_host
@@ -3052,7 +3052,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820136" # Not interested
+		name = "EVTOPTB90821135" # Not interested
 		prestige = -5
 		set_country_flag = IX_Olympiad_host_declined
 		any_country = { 
@@ -3073,7 +3073,7 @@ country_event = {
 # 1928 Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820137 # Attend 1928 Olympics 
+	id = 90821136 # Attend 1928 Olympics 
 
 	trigger = {
 		has_global_flag = IX_Olympiad_host_chosen
@@ -3106,12 +3106,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820137"
-	desc = "EVTDESC90820137"
+	title = "EVTNAME90821136"
+	desc = "EVTDESC90821136"
 	picture = "olympics_running"
 
 	option = {
-		name = "EVTOPTA90820137" # Send a delegation to the games
+		name = "EVTOPTA90821136" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_IX_Olympiad
@@ -3134,7 +3134,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820137" # We're not going this year
+		name = "EVTOPTB90821136" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_IX_Olympiad
 		any_country = { 
@@ -3155,7 +3155,7 @@ country_event = {
 # 1928 Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820138 # 1928 games are held 
+	id = 90821137 # 1928 games are held 
 
 	trigger = {
 		has_country_flag = IX_Olympiad_host
@@ -3181,11 +3181,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820138"
-	desc = "EVTDESC90820138"
+	title = "EVTNAME90821137"
+	desc = "EVTDESC90821137"
 
 	option = {
-		name = "EVTOPTA90820138" # The games are held
+		name = "EVTOPTA90821137" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = IX_Olympiad_Opened
@@ -3196,7 +3196,7 @@ country_event = {
 # 1928 Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820139 # Win medal at 1928 Olympics 
+	id = 90821138 # Win medal at 1928 Olympics 
 
 	trigger = {
 		has_global_flag = IX_Olympiad_Opened
@@ -3289,11 +3289,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820139"
-	desc = "EVTDESC90820139"
+	title = "EVTNAME90821138"
+	desc = "EVTDESC90821138"
 
 	option = {
-		name = "EVTOPTA90820139" # Our team won medals!
+		name = "EVTOPTA90821138" # Our team won medals!
 		prestige = 30
 		set_global_flag = IX_Olympiad_Winner
 		set_country_flag = IX_Olympiad_Winner_country
@@ -3309,7 +3309,7 @@ country_event = {
 # 1932 Olympiad - Choose host
 country_event = {
 
-	id = 90820140
+	id = 90821139
 
 	trigger = {
 		has_country_flag = IOCMember
@@ -3354,12 +3354,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820140"
-	desc = "EVTDESC90820140"
+	title = "EVTNAME90821139"
+	desc = "EVTDESC90821139"
 	picture = "olympics_opening"
 
 	option = {
-		name = "EVTOPTA90820140" # Send invites to other IOC members
+		name = "EVTOPTA90821139" # Send invites to other IOC members
 		money = -30000
 		set_global_flag = X_Olympiad_host_chosen
 		set_country_flag = X_Olympiad_host
@@ -3383,7 +3383,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820140" # Not interested
+		name = "EVTOPTB90821139" # Not interested
 		prestige = -5
 		set_country_flag = X_Olympiad_host_declined
 		any_country = { 
@@ -3404,7 +3404,7 @@ country_event = {
 # 1932 Olympiad - Send Delegation or No
 country_event = {
 
-	id = 90820141 # Attend 1932 Olympics 
+	id = 90821140 # Attend 1932 Olympics 
 
 	trigger = {
 		has_global_flag = X_Olympiad_host_chosen
@@ -3437,12 +3437,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820141"
-	desc = "EVTDESC90820141"
+	title = "EVTNAME90821140"
+	desc = "EVTDESC90821140"
 	picture = "olympics_running"
 
 	option = {
-		name = "EVTOPTA90820141" # Send a delegation to the games
+		name = "EVTOPTA90821140" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_X_Olympiad
@@ -3465,7 +3465,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820141" # We're not going this year
+		name = "EVTOPTB90821140" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_X_Olympiad
 		any_country = { 
@@ -3486,7 +3486,7 @@ country_event = {
 # 1932 Olympiad - Host nation holds games
 country_event = {
 
-	id = 90820142 # 1932 games are held 
+	id = 90821141 # 1932 games are held 
 
 	trigger = {
 		has_country_flag = X_Olympiad_host
@@ -3512,11 +3512,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820142"
-	desc = "EVTDESC90820142"
+	title = "EVTNAME90821141"
+	desc = "EVTDESC90821141"
 
 	option = {
-		name = "EVTOPTA90820142" # The games are held
+		name = "EVTOPTA90821141" # The games are held
 		prestige = 50
 		plurality = 1
 		set_global_flag = X_Olympiad_Opened
@@ -3527,7 +3527,7 @@ country_event = {
 # 1932 Olympiad - Our nation won medals at the games
 country_event = {
 
-	id = 90820143 # Win medal at 1932 Olympics 
+	id = 90821142 # Win medal at 1932 Olympics 
 
 	trigger = {
 		has_global_flag = X_Olympiad_Opened
@@ -3620,11 +3620,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820143"
-	desc = "EVTDESC90820143"
+	title = "EVTNAME90821142"
+	desc = "EVTDESC90821142"
 
 	option = {
-		name = "EVTOPTA90820143" # Our team won medals!
+		name = "EVTOPTA90821142" # Our team won medals!
 		prestige = 30
 		set_global_flag = X_Olympiad_Winner
 		set_country_flag = X_Olympiad_Winner_country

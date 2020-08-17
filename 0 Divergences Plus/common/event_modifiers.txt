@@ -2852,3 +2852,18 @@ ptolemaids_coal_rush = {
 	local_rgo_output = 0.2
 	icon = 13
 }
+
+walls_of_thessalonica_demolished = {
+	life_rating = 0.03
+	icon = 1
+}
+
+heirs_of_pericles = {
+	assimilation_rate = 0.1
+	icon = 9
+}
+
+standard_modern_greek = {
+	education_efficiency_modifier = 0.1
+	icon = 17
+}

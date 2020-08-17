@@ -1,7 +1,7 @@
 country_event = { #In the Footsteps of the Argaeds
-	id = 90820730
-	title = "EVTNAME90820730"
-	desc = "EVTDESC90820730"
+	id = 90826000
+	title = "EVTNAME90826000"
+	desc = "EVTDESC90826000"
 	picture = "aigai"
 	
 	trigger = {
@@ -29,23 +29,23 @@ country_event = { #In the Footsteps of the Argaeds
 	}
 	
 	option = {
-		name = "EVTOPTA90820730"
+		name = "EVTOPTA90826000"
 		set_global_flag = in_the_footsteps_of_the_argaeds
 	}
 }
 
 country_event = { #FROMCOUNTRY requests excavation rights at Aigai
-	id = 90820731
-	title = "EVTNAME90820731"
-	desc = "EVTDESC90820731"
+	id = 90826001
+	title = "EVTNAME90826001"
+	desc = "EVTDESC90826001"
 	picture = "aigai"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820731"
+		name = "EVTOPTA90826001"
 		set_global_flag = aigai_excavation_rights
-		FROM = { country_event = 90820732 }
+		FROM = { country_event = 90826002 }
 		ai_chance = {
 			factor = 40
 			modifier = {
@@ -71,8 +71,8 @@ country_event = { #FROMCOUNTRY requests excavation rights at Aigai
 	}
 	
 	option = {
-		name = "EVTOPTB90820731"
-		FROM = { country_event = 90820733 }
+		name = "EVTOPTB90826001"
+		FROM = { country_event = 90826003 }
 		ai_chance = {
 			factor = 60
 			
@@ -90,15 +90,15 @@ country_event = { #FROMCOUNTRY requests excavation rights at Aigai
 }
 
 country_event = { #Aigai excavation rights granted
-	id = 90820732
-	title = "EVTNAME90820732"
-	desc = "EVTDESC90820732"
+	id = 90826002
+	title = "EVTNAME90826002"
+	desc = "EVTDESC90826002"
 	picture = "aigai"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820732"
+		name = "EVTOPTA90826002"
 		add_country_modifier = {
 			name = aigai_excavations
 			duration = -1
@@ -112,15 +112,15 @@ country_event = { #Aigai excavation rights granted
 }
 
 country_event = { #Aigai excavation rights refused
-	id = 90820733
-	title = "EVTNAME90820733"
-	desc = "EVTDESC90820733"
+	id = 90826003
+	title = "EVTNAME90826003"
+	desc = "EVTDESC90826003"
 	picture = "aigai"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820733"
+		name = "EVTOPTA90826003"
 		relation = {
 			who = FROM
 			value = -20
@@ -131,9 +131,9 @@ country_event = { #Aigai excavation rights refused
 }
 
 country_event = { #Excavation team gets into trouble
-	id = 90820734
-	title = "EVTNAME90820734"
-	desc = "EVTDESC90820734"
+	id = 90826004
+	title = "EVTNAME90826004"
+	desc = "EVTDESC90826004"
 	picture = "archaeological_excavations"
 	
 	trigger = {
@@ -149,7 +149,7 @@ country_event = { #Excavation team gets into trouble
 	}
 	
 	option = {
-		name = "EVTOPTA90820734"
+		name = "EVTOPTA90826004"
 		treasury = -5000
 		any_country = {
 			limit = {
@@ -171,7 +171,7 @@ country_event = { #Excavation team gets into trouble
 	}
 	
 	option = {
-		name = "EVTOPTB90820734"
+		name = "EVTOPTB90826004"
 		any_country = {
 			limit = {
 				owns = 821
@@ -198,9 +198,9 @@ country_event = { #Excavation team gets into trouble
 }
 
 country_event = { #Ruin found
-	id = 90820735
-	title = "EVTNAME90820735"
-	desc = "EVTDESC90820735"
+	id = 90826005
+	title = "EVTNAME90826005"
+	desc = "EVTDESC90826005"
 	picture = "archaeological_ruins"
 	
 	trigger = {
@@ -232,16 +232,16 @@ country_event = { #Ruin found
 	}
 	
 	option = {
-		name = "EVTOPTA90820735"
+		name = "EVTOPTA90826005"
 		prestige = 10
 		years_of_research = 0.1
 	}
 }
 
 country_event = { #Fraud
-	id = 90820736
-	title = "EVTNAME90820736"
-	desc = "EVTDESC90820736"
+	id = 90826006
+	title = "EVTNAME90826006"
+	desc = "EVTDESC90826006"
 	picture = "archaeological_fraud"
 		
 	trigger = {
@@ -272,7 +272,7 @@ country_event = { #Fraud
 	}
 	
 	option = {
-		name = "EVTOPTA90820736"
+		name = "EVTOPTA90826006"
 		any_pop = {
 			militancy = 1
 		}
@@ -280,9 +280,9 @@ country_event = { #Fraud
 }
 
 country_event = { #The Royal Tombs
-	id = 90820737
-	title = "EVTNAME90820737"
-	desc = "EVTDESC90820737"
+	id = 90826007
+	title = "EVTNAME90826007"
+	desc = "EVTDESC90826007"
 	picture = "royal_tombs_aigai"	
 	
 	trigger = {
@@ -334,7 +334,7 @@ country_event = { #The Royal Tombs
 	}
 	
 	option = {
-		name = "EVTOPTA90820737"
+		name = "EVTOPTA90826007"
 		prestige = 30
 		years_of_research = 0.5
 		set_global_flag = aigai_found
@@ -344,28 +344,28 @@ country_event = { #The Royal Tombs
 					tag = THIS
 				}
 			}
-			country_event = 90820738
+			country_event = 90826008
 		}
 	}
 }
 
 country_event = { #Aigai archaeological explanation event
-	id = 90820738
-	title = "EVTNAME90820738"
-	desc = "EVTDESC90820738"
+	id = 90826008
+	title = "EVTNAME90826008"
+	desc = "EVTDESC90826008"
 	picture = "royal_tombs_aigai"	
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820738"
+		name = "EVTOPTA90826008"
 	}
 }
 
 country_event = { #The Royal Palace
-	id = 90820739
-	title = "EVTNAME90820739"
-	desc = "EVTDESC90820739"
+	id = 90826009
+	title = "EVTNAME90826009"
+	desc = "EVTDESC90826009"
 	picture = "royal_palace_aigai"	
 	
 	trigger = {
@@ -418,7 +418,7 @@ country_event = { #The Royal Palace
 	}
 	
 	option = {
-		name = "EVTOPTA90820739"
+		name = "EVTOPTA90826009"
 		prestige = 30
 		years_of_research = 0.5
 		set_global_flag = aigai_found
@@ -428,7 +428,7 @@ country_event = { #The Royal Palace
 					tag = THIS
 				}
 			}
-			country_event = 90820740
+			country_event = 90826010
 		}
 		any_country = {
 			remove_country_modifier = aigai_excavations
@@ -439,30 +439,30 @@ country_event = { #The Royal Palace
 }
 
 country_event = { #Aigai palace archaeological explanation event
-	id = 90820740
-	title = "EVTNAME90820740"
-	desc = "EVTDESC90820740"
+	id = 90826010
+	title = "EVTNAME90826010"
+	desc = "EVTDESC90826010"
 	picture = "royal_palace_aigai"	
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820740"
+		name = "EVTOPTA90826010"
 	}
 }
 
 country_event = { #FROMCOUNTRY requests excavation rights at Pella
-	id = 90820741
-	title = "EVTNAME90820741"
-	desc = "EVTDESC90820741"
+	id = 90826011
+	title = "EVTNAME90826011"
+	desc = "EVTDESC90826011"
 	picture = "pella"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820741"
+		name = "EVTOPTA90826011"
 		set_global_flag = pella_excavation_rights
-		FROM = { country_event = 90820742 }
+		FROM = { country_event = 90826012 }
 		ai_chance = {
 			factor = 40
 			
@@ -489,8 +489,8 @@ country_event = { #FROMCOUNTRY requests excavation rights at Pella
 	}
 	
 	option = {
-		name = "EVTOPTB90820741"
-		FROM = { country_event = 90820743 }
+		name = "EVTOPTB90826011"
+		FROM = { country_event = 90826013 }
 		ai_chance = {
 			factor = 60
 			
@@ -508,15 +508,15 @@ country_event = { #FROMCOUNTRY requests excavation rights at Pella
 }
 
 country_event = { #Pella excavation rights granted
-	id = 90820742
-	title = "EVTNAME90820742"
-	desc = "EVTDESC90820742"
+	id = 90826012
+	title = "EVTNAME90826012"
+	desc = "EVTDESC90826012"
 	picture = "pella"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820742"
+		name = "EVTOPTA90826012"
 		add_country_modifier = {
 			name = pella_excavations
 			duration = -1
@@ -531,15 +531,15 @@ country_event = { #Pella excavation rights granted
 }
 
 country_event = { #Pella excavation rights refused
-	id = 90820743
-	title = "EVTNAME90820743"
-	desc = "EVTDESC90820743"
+	id = 90826013
+	title = "EVTNAME90826013"
+	desc = "EVTDESC90826013"
 	picture = "pella"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820743"
+		name = "EVTOPTA90826013"
 		relation = {
 			who = FROM
 			value = -20
@@ -550,9 +550,9 @@ country_event = { #Pella excavation rights refused
 }
 
 country_event = { #Ancient Pella
-	id = 90820744
-	title = "EVTNAME90820744"
-	desc = "EVTDESC90820744"
+	id = 90826014
+	title = "EVTNAME90826014"
+	desc = "EVTDESC90826014"
 	picture = "ancient_pella"	
 	
 	trigger = {
@@ -604,7 +604,7 @@ country_event = { #Ancient Pella
 	}
 	
 	option = {
-		name = "EVTOPTA90820744"
+		name = "EVTOPTA90826014"
 		prestige = 30
 		years_of_research = 0.5
 		set_global_flag = pella_found
@@ -614,28 +614,28 @@ country_event = { #Ancient Pella
 					tag = THIS
 				}
 			}
-			country_event = 90820745
+			country_event = 90826015
 		}
 	}
 }
 
 country_event = { #Pella archaeological explanation event
-	id = 90820745
-	title = "EVTNAME90820745"
-	desc = "EVTDESC90820745"
+	id = 90826015
+	title = "EVTNAME90826015"
+	desc = "EVTDESC90826015"
 	picture = "ancient_pella"	
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820745"
+		name = "EVTOPTA90826015"
 	}
 }
 
 country_event = { #Pella Curse Tablet
-	id = 90820746
-	title = "EVTNAME90820746"
-	desc = "EVTDESC90820746"
+	id = 90826016
+	title = "EVTNAME90826016"
+	desc = "EVTDESC90826016"
 	picture = "pella_curse_tablet"	
 	
 	trigger = {
@@ -688,7 +688,7 @@ country_event = { #Pella Curse Tablet
 	}
 	
 	option = {
-		name = "EVTOPTA90820744"
+		name = "EVTOPTA90826016"
 		prestige = 20
 		years_of_research = 0.5
 		set_global_flag = pella_curse_tablet
@@ -698,7 +698,7 @@ country_event = { #Pella Curse Tablet
 					tag = THIS
 				}
 			}
-			country_event = 90820747
+			country_event = 90826017
 		}
 		any_country = {
 			remove_country_modifier = pella_excavations
@@ -710,30 +710,30 @@ country_event = { #Pella Curse Tablet
 }
 
 country_event = { #Pella curse tablet explanation event
-	id = 90820747
-	title = "EVTNAME90820747"
-	desc = "EVTDESC90820747"
+	id = 90826017
+	title = "EVTNAME90826017"
+	desc = "EVTDESC90826017"
 	picture = "pella_curse_tablet"	
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820747"
+		name = "EVTOPTA90826017"
 	}
 }
 
 country_event = { #FROMCOUNTRY requests excavation rights at Dodona
-	id = 90820748
-	title = "EVTNAME90820748"
-	desc = "EVTDESC90820748"
+	id = 90826018
+	title = "EVTNAME90826018"
+	desc = "EVTDESC90826018"
 	picture = "dodona"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820746"
+		name = "EVTOPTA90826018"
 		set_global_flag = dodona_excavation_rights
-		FROM = { country_event = 90820749 }
+		FROM = { country_event = 90826019 }
 		ai_chance = {
 			factor = 80
 			modifier = {
@@ -752,8 +752,8 @@ country_event = { #FROMCOUNTRY requests excavation rights at Dodona
 	}
 	
 	option = {
-		name = "EVTOPTB90820748"
-		FROM = { country_event = 90820750 }
+		name = "EVTOPTB90826018"
+		FROM = { country_event = 90826020 }
 		ai_chance = {
 			factor = 20
 			modifier = {
@@ -770,15 +770,15 @@ country_event = { #FROMCOUNTRY requests excavation rights at Dodona
 }
 
 country_event = { #Dodona excavation rights granted
-	id = 90820749
-	title = "EVTNAME90820749"
-	desc = "EVTDESC90820749"
+	id = 90826019
+	title = "EVTNAME90826019"
+	desc = "EVTDESC90826019"
 	picture = "dodona"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820749"
+		name = "EVTOPTA90826019"
 		add_country_modifier = {
 			name = dodona_excavations
 			duration = -1
@@ -793,15 +793,15 @@ country_event = { #Dodona excavation rights granted
 }
 
 country_event = { #Dodona excavation rights refused
-	id = 90820750
-	title = "EVTNAME90820750"
-	desc = "EVTDESC90820750"
+	id = 90826020
+	title = "EVTNAME90826020"
+	desc = "EVTDESC90826020"
 	picture = "dodona"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820750"
+		name = "EVTOPTA90826020"
 		relation = {
 			who = FROM
 			value = -20
@@ -812,9 +812,9 @@ country_event = { #Dodona excavation rights refused
 }
 
 country_event = { #The Oracle at Dodona
-	id = 90820751
-	title = "EVTNAME90820751"
-	desc = "EVTDESC90820751"
+	id = 90826021
+	title = "EVTNAME90826021"
+	desc = "EVTDESC90826021"
 	picture = "oracle_at_dodona"	
 	
 	trigger = {
@@ -866,7 +866,7 @@ country_event = { #The Oracle at Dodona
 	}
 	
 	option = {
-		name = "EVTOPTA90820751"
+		name = "EVTOPTA90826021"
 		prestige = 30
 		years_of_research = 0.5
 		set_global_flag = dodona_found
@@ -876,7 +876,7 @@ country_event = { #The Oracle at Dodona
 					tag = THIS
 				}
 			}
-			country_event = 90820752
+			country_event = 90826022
 		}
 		any_country = {
 			remove_country_modifier = dodona_excavations
@@ -888,22 +888,22 @@ country_event = { #The Oracle at Dodona
 }
 
 country_event = { #Dodona archaeological explanation event
-	id = 90820752
-	title = "EVTNAME90820752"
-	desc = "EVTDESC90820752"
+	id = 90826022
+	title = "EVTNAME90826022"
+	desc = "EVTDESC90826022"
 	picture = "oracle_at_dodona"	
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820752"
+		name = "EVTOPTA90826022"
 	}
 }
 
 country_event = { #Excavation team gets into trouble (Dodona)
-	id = 90820753
-	title = "EVTNAME90820753"
-	desc = "EVTDESC90820753"
+	id = 90826023
+	title = "EVTNAME90826023"
+	desc = "EVTDESC90826023"
 	picture = "archaeological_excavations"
 	
 	trigger = {
@@ -918,7 +918,7 @@ country_event = { #Excavation team gets into trouble (Dodona)
 	}
 	
 	option = {
-		name = "EVTOPTA90820753"
+		name = "EVTOPTA90826023"
 		treasury = -5000
 		any_country = {
 			limit = {
@@ -941,7 +941,7 @@ country_event = { #Excavation team gets into trouble (Dodona)
 	}
 	
 	option = {
-		name = "EVTOPTB90820753"
+		name = "EVTOPTB90826023"
 		any_country = {
 			limit = {
 				owns = 824
@@ -968,9 +968,9 @@ country_event = { #Excavation team gets into trouble (Dodona)
 }
 
 country_event = { #Ruin found (Dodona)
-	id = 90820754
-	title = "EVTNAME90820754"
-	desc = "EVTDESC90820754"
+	id = 90826024
+	title = "EVTNAME90826024"
+	desc = "EVTDESC90826024"
 	picture = "archaeological_ruins"
 	
 	trigger = {
@@ -999,16 +999,16 @@ country_event = { #Ruin found (Dodona)
 	}
 	
 	option = {
-		name = "EVTOPTA90820754"
+		name = "EVTOPTA90826024"
 		prestige = 10
 		years_of_research = 0.1
 	}
 }
 
 country_event = { #Fraud (Dodona)
-	id = 90820755
-	title = "EVTNAME90820755"
-	desc = "EVTDESC90820755"
+	id = 90826025
+	title = "EVTNAME90826025"
+	desc = "EVTDESC90826025"
 	picture = "archaeological_fraud"
 		
 	trigger = {
@@ -1036,17 +1036,23 @@ country_event = { #Fraud (Dodona)
 	}
 	
 	option = {
-		name = "EVTOPTA90820755"
+		name = "EVTOPTA90826025"
 		any_pop = {
 			militancy = 1
 		}
 	}
 }
 
+##############################
+##                          ##
+##   THE PARTHENON MARBLES  ##
+##                          ##
+##############################
+
 country_event = { #The $COUNTRY_ADJ$ Museum
-	id = 9082080
-	title = "EVTNAME90820755"
-	desc = "EVTDESC90820755"
+	id = 90826200
+	title = "EVTNAME90826200"
+	desc = "EVTDESC90826200"
 	picture = "future_of_the_parthenon_marbles"
 	
 	fire_only_once = yes
@@ -1087,7 +1093,7 @@ country_event = { #The $COUNTRY_ADJ$ Museum
 	}
 	
 	option = {
-		name = "EVTOPTA90820736" #Establish the Museum
+		name = "EVTOPTA90826200" #Establish the Museum
 		money = -50000
 		capital_scope = {
 			add_province_modifier = {
@@ -1191,7 +1197,7 @@ country_event = { #The $COUNTRY_ADJ$ Museum
 	}
 	
 	option = {
-		name = "EVTOPTA90820736" #Return the Marbles
+		name = "EVTOPTA90826200" #Return the Marbles
 		prestige = -20
 		any_country = {
 			limit = {
@@ -1287,28 +1293,29 @@ country_event = { #The $COUNTRY_ADJ$ Museum
 }
 
 country_event = { #The $FROMCOUNTRY_ADJ$ Museum
-	id = 9082080
-	title = "EVTNAME90820755"
-	desc = "EVTDESC90820755"
+	id = 90826201
+	title = "EVTNAME90826201"
+	desc = "EVTDESC90826201"
 	picture = "venetian_museum"
 		
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820736" #Establish the Museum
+		name = "EVTOPTA90826201" #Establish the Museum
 	}
 }
 
 country_event = { #The Parthenon Marbles Returned
-	id = 9082080
-	title = "EVTNAME90820755"
-	desc = "EVTDESC90820755"
-	picture = "duveen_gallery"
+	id = 90826202
+	title = "EVTNAME90826202"
+	desc = "EVTDESC90826202"
+	
+	major = yes
 		
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820736"
+		name = "EVTOPTA90826202"
 		set_global_flag = parthenon_marbles_returned
 		set_global_flag = parthenon_marbles_crisis_ended
 		FROM = {
@@ -1320,21 +1327,21 @@ country_event = { #The Parthenon Marbles Returned
 }
 
 country_event = { #$FROMCOUNTRY$ demands return of the Parthenon marbles
-	id = 9082080
-	title = "EVTNAME90820755"
-	desc = "EVTDESC90820755"
+	id = 90826203
+	title = "EVTNAME90826203"
+	desc = "EVTDESC90826203"
 	picture = "parthenon_marbles_carricature"
 		
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820736" #Refuse demand
+		name = "EVTOPTA90826203" #Refuse demand
 		any_country = {
 			limit = {
 				primary_culture = greek
 				owns = 834 #Athens
 			}
-			country_event = xxx
+			country_event = 90826204
 		}
 		
 		ai_chance = {
@@ -1387,14 +1394,14 @@ country_event = { #$FROMCOUNTRY$ demands return of the Parthenon marbles
 	}
 	
 	option = {
-		name = "EVTOPTA90820736" #Return the Marbles
+		name = "EVTOPTA90826203" #Return the Marbles
 		prestige = -20
 		any_country = {
 			limit = {
 				primary_culture = greek
 				owns = 834 #Athens
 			}
-			country_event = xxx
+			country_event = 90826202
 		}
 		
 		ai_chance = {
@@ -1478,15 +1485,15 @@ country_event = { #$FROMCOUNTRY$ demands return of the Parthenon marbles
 }
 
 country_event = { #Ultimatum refused
-	id = 9082080
-	title = "EVTNAME90820755"
-	desc = "EVTDESC90820755"
+	id = 90826204
+	title = "EVTNAME90826204"
+	desc = "EVTDESC90826204"
 	picture = "parthenon_marbles_carricature"
-		
+	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820736" #Press ahead
+		name = "EVTOPTA90826204" #Press ahead
 		FROM = {
 			set_country_flag = parthenon_marbles_war
 		}
@@ -1495,15 +1502,8 @@ country_event = { #Ultimatum refused
 			attacker_goal = { casus_belli = humiliate }
 			call_ally = yes
 		}
-		any_country = {
-			limit = {
-				not = {
-					or = {
-						tag = FROM
-						tag = THIS
-					}
-				}
-			country_event = xxx
+		FROM = {
+			country_event = 90826205
 		}
 		
 		ai_chance = {
@@ -1544,7 +1544,7 @@ country_event = { #Ultimatum refused
 	}
 	
 	option = {
-		name = "EVTOPTA90820736" #Back down
+		name = "EVTOPTA90826204" #Back down
 		prestige = -50
 		any_pop = {
 			limit = {
@@ -1552,12 +1552,8 @@ country_event = { #Ultimatum refused
 			}
 			consciousness = 3
 		}
-		any_country = {
-			limit = {
-				not = {
-					tag = THIS
-				}
-			country_event = xxx
+		FROM = {
+			country_event = 90826206
 		}
 		set_global_flag = parthenon_marbles_crisis_ended
 		
@@ -1595,6 +1591,67 @@ country_event = { #Ultimatum refused
 					}
 				}
 			}
+		}
+	}
+}
+
+country_event = { #The War of the Marbles
+	id = 90826205
+	title = "EVTNAME90826205"
+	desc = "EVTDESC90826205"
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90826205"
+	}
+}
+
+country_event = { #Parthenon Marbles to Stay in $COUNTRY$
+	id = 90826206
+	title = "EVTNAME90826206"
+	desc = "EVTDESC90826206"
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90826206"
+	}
+}
+
+country_event = { #War of the Marbles - Marbles to stay
+	id = 90826207
+	title = "EVTNAME90826207"
+	desc = "EVTDESC90826207"
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90826207"
+	}
+}
+
+country_event = { #War of the Marbles - Marbles returned
+	id = 90826208
+	title = "EVTNAME90826208"
+	desc = "EVTDESC90826208"
+	picture = "future_of_the_parthenon_marbles"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA90826208"
+		any_country = {
+			limit = {
+				owns = 834 #athens
+			}
+			country_event = 90826202
 		}
 	}
 }

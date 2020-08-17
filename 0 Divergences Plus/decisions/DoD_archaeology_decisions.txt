@@ -6,7 +6,7 @@ political_decisions = {
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
 			not = {
-				owns = 821
+				owns = 821 #Edessa
 			}
 		}
 		
@@ -23,7 +23,7 @@ political_decisions = {
 				limit = {
 					owns = 821
 				}
-				country_event = 90820731
+				country_event = 90826001
 			}
 		}
 		
@@ -35,7 +35,7 @@ political_decisions = {
 		
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
-			owns = 821
+			owns = 821 #Edessa
 		}
 		
 		allow = {
@@ -59,7 +59,7 @@ political_decisions = {
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
 			not = {
-				owns = 821
+				owns = 821 #Edessa
 			}
 		}
 		
@@ -74,9 +74,9 @@ political_decisions = {
 		effect = {
 			any_country = {
 				limit = {
-					owns = 821
+					owns = 821 #Edessa
 				}
-				country_event = 90820741
+				country_event = 90826011
 			}
 		}
 		
@@ -88,7 +88,7 @@ political_decisions = {
 		
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
-			owns = 821
+			owns = 821 #Edessa
 		}
 		
 		allow = {
@@ -112,7 +112,7 @@ political_decisions = {
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
 			not = {
-				owns = 824
+				owns = 824 #Ioannina
 			}
 		}
 		
@@ -129,7 +129,7 @@ political_decisions = {
 				limit = {
 					owns = 824
 				}
-				country_event = 90820748
+				country_event = 90826018
 			}
 		}
 	
@@ -141,7 +141,7 @@ political_decisions = {
 		
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
-			owns = 824
+			owns = 824 #Ioannina
 		}
 		
 		allow = {
@@ -154,6 +154,34 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = dodona_excavations
+		}
+	
+		ai_will_do = { factor = 1 }
+	}
+	
+	restoring_the_acropolis = {
+		picture = acropolis_restoration
+		
+		potential = {
+			owns = 834 #Athens
+			or = {
+				religion = catholic
+				religion = protestant
+				religion = orthodox
+			}
+		}
+		
+		allow = {
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			invention = early_archaeology
+			money = 50000
+		}
+		
+		effect = {
+			country_event = 90826300
 		}
 	
 		ai_will_do = { factor = 1 }

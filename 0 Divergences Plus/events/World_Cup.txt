@@ -5,7 +5,7 @@
 #Form a national football team
 country_event = {
 
-	id = 90820301
+	id = 90821200
 
 	trigger = {
 		year = 1870
@@ -33,13 +33,13 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820301"
-	desc = "EVTDESC90820301"
+	title = "EVTNAME90821200"
+	desc = "EVTDESC90821200"
 	picture = "national_football_team"
 	
 
 	option = {
-		name = "EVTOPTA90820301"
+		name = "EVTOPTA90821200"
 		ai_chance = { factor = 99 }
 		money = -10000
 		prestige = 20
@@ -50,7 +50,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820301"
+		name = "EVTOPTB90821200"
 		ai_chance = { factor = 1 }
 		prestige = -5
 		set_country_flag = no_national_football_team
@@ -60,7 +60,7 @@ country_event = {
 #The first national football team in the world
 country_event = {
 
-	id = 90820302
+	id = 90821201
 
 	trigger = {
 		has_country_flag = national_football_team
@@ -73,12 +73,12 @@ country_event = {
 		days = 1
 	}
 
-	title = "EVTNAME90820302"
-	desc = "EVTDESC90820302"
+	title = "EVTNAME90821201"
+	desc = "EVTDESC90821201"
 	picture = "national_football_team"
 	
 	option = {
-		name = "EVTOPTA90820302"
+		name = "EVTOPTA90821201"
 		prestige = 5
 		set_country_flag = first_national_football_team
 		set_global_flag = first_national_football_team
@@ -88,7 +88,7 @@ country_event = {
 #The second national football team in the world
 country_event = {
 
-	id = 90820303
+	id = 90821202
 
 	trigger = {
 		has_country_flag = national_football_team
@@ -108,12 +108,12 @@ country_event = {
 		days = 1
 	}
 
-	title = "EVTNAME90820303"
-	desc = "EVTDESC90820303"
+	title = "EVTNAME90821202"
+	desc = "EVTDESC90821202"
 	picture = "national_football_team"
 	
 	option = {
-		name = "EVTOPTA90820303"
+		name = "EVTOPTA90821202"
 		prestige = 5
 		set_country_flag = second_national_football_team
 		set_global_flag = second_national_football_team
@@ -123,7 +123,7 @@ country_event = {
 #Challenge the second national team to the first international match
 country_event = {
 
-	id = 90820304
+	id = 90821203
 
 	trigger = {
 		has_country_flag = first_national_football_team
@@ -138,18 +138,18 @@ country_event = {
 		months = 12
 	}
 
-	title = "EVTNAME90820304"
-	desc = "EVTDESC90820304"
+	title = "EVTNAME90821203"
+	desc = "EVTDESC90821203"
 	picture = "first_international_football_match"
 	
 	option = {
-		name = "EVTOPTA90820304"
+		name = "EVTOPTA90821203"
 		set_global_flag = second_national_football_team_challenged
 		any_country = {
 			limit = {
 				has_country_flag = second_national_football_team
 			}
-			country_event = 90820305
+			country_event = 90821204
 		}
 	}
 }
@@ -157,12 +157,12 @@ country_event = {
 #We are being challenged to the first international football match
 country_event = {
 
-	id = 90820305
+	id = 90821204
 
 	is_triggered_only = yes
 
-	title = "EVTNAME90820305"
-	desc = "EVTDESC90820305"
+	title = "EVTNAME90821204"
+	desc = "EVTDESC90821204"
 	picture = "first_international_football_match"
 	
 	option = {
@@ -172,20 +172,20 @@ country_event = {
 				has_country_flag = first_national_football_team
 			}
 			random_list = {
-				50 = { country_event = 90820306 }
-				50 = { country_event = 90820307 }
+				50 = { country_event = 90821205 }
+				50 = { country_event = 90821206 }
 			}
 		}
 		ai_chance = { factor = 80 }
 	}
 	
 	option = {
-		name = "EVTOPTB90820305"
+		name = "EVTOPTB90821204"
 		any_country = {
 			limit = {
 				has_country_flag = first_national_football_team
 			}
-			country_event = 90820308
+			country_event = 90821207
 		}
 		prestige = -15
 		clr_country_flag = second_national_football_team
@@ -199,18 +199,18 @@ country_event = {
 #The first international football match - first team wins
 country_event = {
 
-	id = 90820306
+	id = 90821205
 
 	is_triggered_only = yes
 	
 	major = yes
 
-	title = "EVTNAME90820306"
-	desc = "EVTDESC90820306"
+	title = "EVTNAME90821205"
+	desc = "EVTDESC90821205"
 	picture = "first_international_football_match"
 	
 	option = {
-		name = "EVTOPTA90820306"
+		name = "EVTOPTA90821205"
 		set_global_flag = first_international_match_held
 		prestige = 15
 		any_country = {
@@ -223,18 +223,18 @@ country_event = {
 #The first international football match - second team wins
 country_event = {
 
-	id = 90820307
+	id = 90821206
 
 	is_triggered_only = yes
 	
 	major = yes
 
-	title = "EVTNAME90820307"
-	desc = "EVTDESC90820307"
+	title = "EVTNAME90821206"
+	desc = "EVTDESC90821206"
 	picture = "first_international_football_match"
 	
 	option = {
-		name = "EVTOPTA90820307"
+		name = "EVTOPTA90821206"
 		set_global_flag = first_international_match_held
 		prestige = -5
 		any_country = {
@@ -247,23 +247,23 @@ country_event = {
 #Second national team refused
 country_event = {
 
-	id = 90820308
+	id = 90821207
 
 	is_triggered_only = yes
 
-	title = "EVTNAME90820308"
-	desc = "EVTDESC90820308"
+	title = "EVTNAME90821207"
+	desc = "EVTDESC90821207"
 	picture = "first_international_football_match"
 	
 	option = {
-		name = "EVTOPTA90820308"
+		name = "EVTOPTA90821207"
 	}
 }
 
 #Establish the International Federation of Association Football (FIFA)
 country_event = {
 
-	id = 90820309
+	id = 90821208
 
 	trigger = {
 		has_global_flag = FIFA_founded
@@ -401,13 +401,13 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820309"
-	desc = "EVTDESC90820309"
+	title = "EVTNAME90821208"
+	desc = "EVTDESC90821208"
 	picture = "fifa"
 	
 
 	option = {
-		name = "EVTOPTA90820309" # Join FIFA
+		name = "EVTOPTA90821208" # Join FIFA
 		ai_chance = { factor = 99 }
 		money = -10000
 		prestige = 20
@@ -415,7 +415,7 @@ country_event = {
 		set_global_flag = FIFA_founded
 	}
 	option = {
-		name = "EVTOPTB90820309" # Reject invite
+		name = "EVTOPTB90821208" # Reject invite
 		ai_chance = { factor = 1 }
 		prestige = -10
 		set_country_flag = NoFIFAMember
@@ -425,7 +425,7 @@ country_event = {
 #Join the International Federation of Association Football (FIFA)
 country_event = {
 
-	id = 90820310
+	id = 90821209
 
 	trigger = {
 		has_global_flag = FIFA_founded
@@ -568,14 +568,14 @@ country_event = {
 	
 
 	option = {
-		name = "EVTOPTA90820101" # Join FIFA
+		name = "EVTOPTA90821209" # Join FIFA
 		ai_chance = { factor = 99 }
 		money = -5000
 		prestige = 10
 		set_country_flag = FIFAMember
 	}
 	option = {
-		name = "EVTOPTB90820101" # Reject invite
+		name = "EVTOPTB90821209" # Reject invite
 		ai_chance = { factor = 1 }
 		prestige = -10
 		set_country_flag = NoFIFAMember
@@ -585,7 +585,7 @@ country_event = {
 # 1930 World Cup - Choose host
 country_event = {
 
-	id = 90820311
+	id = 90821210
 
 	trigger = {
 		has_country_flag = FIFAMember
@@ -622,12 +622,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820140"
-	desc = "EVTDESC90820140"
+	title = "EVTNAME90821210"
+	desc = "EVTDESC90821210"
 	picture = "world_cup"
 
 	option = {
-		name = "EVTOPTA90820140" # Send invites to other FIFA members
+		name = "EVTOPTA90821210" # Send invites to other FIFA members
 		money = -30000
 		set_global_flag = I_World_Cup_host_chosen
 		set_country_flag = I_World_Cup_host
@@ -651,7 +651,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820140" # Not interested
+		name = "EVTOPTB90821210" # Not interested
 		prestige = -5
 		set_country_flag = I_World_Cup_host_declined
 		any_country = { 
@@ -672,7 +672,7 @@ country_event = {
 # 1930 World Cup - Participate Yer or No
 country_event = {
 
-	id = 90820312 # Attend 1930 World Cup 
+	id = 90821211 # Attend 1930 World Cup 
 
 	trigger = {
 		has_global_flag = I_World_Cup_host_chosen
@@ -704,12 +704,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820141"
-	desc = "EVTDESC90820141"
+	title = "EVTNAME90821211"
+	desc = "EVTDESC90821211"
 	picture = "world_cup"
 
 	option = {
-		name = "EVTOPTA90820141" # Send a delegation to the games
+		name = "EVTOPTA90821211" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_I_World_Cup
@@ -732,7 +732,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820141" # We're not going this year
+		name = "EVTOPTB90821211" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_I_World_Cup
 		any_country = { 
@@ -753,7 +753,7 @@ country_event = {
 # 1930 World Cup - Host nation holds games
 country_event = {
 
-	id = 90820313 # 1930 cup is held 
+	id = 90821212 # 1930 cup is held 
 
 	trigger = {
 		has_country_flag = I_World_Cup_host
@@ -779,11 +779,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820142"
-	desc = "EVTDESC90820142"
+	title = "EVTNAME90821212"
+	desc = "EVTDESC90821212"
 
 	option = {
-		name = "EVTOPTA90820142" # The games are held
+		name = "EVTOPTA90821212" # The games are held
 		prestige = 40
 		consciousness = 1
 		set_global_flag = I_World_Cup_Opened
@@ -791,7 +791,7 @@ country_event = {
 		clr_country_flag = Current_World_Cup_host
 		random_country = {
 			limit = { has_country_flag = Attend_I_World_Cup }
-			country_event = 90820314
+			country_event = 90821213
 		}
 	}
 }
@@ -799,16 +799,16 @@ country_event = {
 # 1930 World Cup - Semi-fanalist 1
 country_event = {
 
-	id = 90820314
+	id = 90821213
 
 	is_triggered_only = yes
 
-	title = "EVTNAME90820142"
-	desc = "EVTDESC90820142"
+	title = "EVTNAME90821213"
+	desc = "EVTDESC90821213"
 	picture = "world_cup"
 
 	option = {
-		name = "EVTOPTA90820142" # The games are held
+		name = "EVTOPTA90821213" # The games are held
 		set_country_flag = world_cup_finalist_one
 		random_country = {
 			limit = { 
@@ -816,8 +816,8 @@ country_event = {
 				not = { tag = this }
 			}
 			random_list = {
-				50 = { country_event = 90820315 }
-				50 = { country_event = 90820316 }
+				50 = { country_event = 90821214 }
+				50 = { country_event = 90821215 }
 			}
 		}
 	}
@@ -826,17 +826,17 @@ country_event = {
 # 1930 World Cup - Semi-fanalist 1 wins
 country_event = {
 
-	id = 90820315
+	id = 90821214
 
 	is_triggered_only = yes
 	
 	major = yes
 
-	title = "EVTNAME90820142"
-	desc = "EVTDESC90820142"
+	title = "EVTNAME90821214"
+	desc = "EVTDESC90821214"
 
 	option = {
-		name = "EVTOPTA90820142"
+		name = "EVTOPTA90821214"
 		prestige = 40
 		any_country = {
 			limit = { has_country_flag = world_cup_finalist_one }
@@ -849,17 +849,17 @@ country_event = {
 # 1930 World Cup - Semi-fanalist 2 wins
 country_event = {
 
-	id = 90820316
+	id = 90821215
 
 	is_triggered_only = yes
 	
 	major = yes
 
-	title = "EVTNAME90820142"
-	desc = "EVTDESC90820142"
+	title = "EVTNAME90821215"
+	desc = "EVTDESC90821215"
 
 	option = {
-		name = "EVTOPTA90820142"
+		name = "EVTOPTA90821215"
 		prestige = 15
 		any_country = {
 			limit = { has_country_flag = world_cup_finalist_one }
@@ -872,7 +872,7 @@ country_event = {
 # 1934 World Cup - Choose host
 country_event = {
 
-	id = 90820317
+	id = 90821216
 
 	trigger = {
 		has_country_flag = FIFAMember
@@ -906,12 +906,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820140"
-	desc = "EVTDESC90820140"
+	title = "EVTNAME90821216"
+	desc = "EVTDESC90821216"
 	picture = "world_cup"
 
 	option = {
-		name = "EVTOPTA90820140" # Send invites to other FIFA members
+		name = "EVTOPTA90821216" # Send invites to other FIFA members
 		money = -30000
 		set_global_flag = II_World_Cup_host_chosen
 		set_country_flag = II_World_Cup_host
@@ -935,7 +935,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820140" # Not interested
+		name = "EVTOPTB90821216" # Not interested
 		prestige = -5
 		set_country_flag = II_World_Cup_host_declined
 		any_country = { 
@@ -956,7 +956,7 @@ country_event = {
 # 1934 World Cup - Participate Yer or No
 country_event = {
 
-	id = 90820318 # Attend 1930 World Cup 
+	id = 90821217 # Attend 1930 World Cup 
 
 	trigger = {
 		has_global_flag = II_World_Cup_host_chosen
@@ -988,12 +988,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820141"
-	desc = "EVTDESC90820141"
+	title = "EVTNAME90821217"
+	desc = "EVTDESC90821217"
 	picture = "world_cup"
 
 	option = {
-		name = "EVTOPTA90820141" # Send a delegation to the games
+		name = "EVTOPTA90821217" # Send a delegation to the games
 		money = -10000
 		prestige = 10
 		set_country_flag = Attend_II_World_Cup
@@ -1016,7 +1016,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820141" # We're not going this year
+		name = "EVTOPTB90821217" # We're not going this year
 		prestige = -10
 		set_country_flag = No_Attend_II_World_Cup
 		any_country = { 
@@ -1037,7 +1037,7 @@ country_event = {
 # 1934 World Cup - Host nation holds games
 country_event = {
 
-	id = 90820319 # 1934 cup is held 
+	id = 90821218 # 1934 cup is held 
 
 	trigger = {
 		has_country_flag = II_World_Cup_host
@@ -1063,11 +1063,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820142"
-	desc = "EVTDESC90820142"
+	title = "EVTNAME90821218"
+	desc = "EVTDESC90821218"
 
 	option = {
-		name = "EVTOPTA90820142" # The games are held
+		name = "EVTOPTA90821218" # The games are held
 		prestige = 40
 		consciousness = 1
 		set_global_flag = II_World_Cup_Opened
@@ -1075,7 +1075,7 @@ country_event = {
 		clr_country_flag = Current_World_Cup_host
 		random_country = {
 			limit = { has_country_flag = Attend_II_World_Cup }
-			country_event = 90820320
+			country_event = 90821219
 		}
 	}
 }
@@ -1083,16 +1083,16 @@ country_event = {
 # 1934 World Cup - Semi-fanalist 1
 country_event = {
 
-	id = 90820320
+	id = 90821219
 
 	is_triggered_only = yes
 
-	title = "EVTNAME90820142"
-	desc = "EVTDESC90820142"
+	title = "EVTNAME90821219"
+	desc = "EVTDESC90821219"
 	picture = "world_cup"
 
 	option = {
-		name = "EVTOPTA90820142" # The games are held
+		name = "EVTOPTA90821219" # The games are held
 		set_country_flag = world_cup_finalist_one
 		random_country = {
 			limit = { 
@@ -1100,8 +1100,8 @@ country_event = {
 				not = { tag = this }
 			}
 			random_list = {
-				50 = { country_event = 90820321 }
-				50 = { country_event = 90820322 }
+				50 = { country_event = 90821220 }
+				50 = { country_event = 90821221 }
 			}
 		}
 	}
@@ -1110,17 +1110,17 @@ country_event = {
 # 1934 World Cup - Semi-fanalist 1 wins
 country_event = {
 
-	id = 90820321
+	id = 90821220
 
 	is_triggered_only = yes
 	
 	major = yes
 
-	title = "EVTNAME90820142"
-	desc = "EVTDESC90820142"
+	title = "EVTNAME90821220"
+	desc = "EVTDESC90821220"
 
 	option = {
-		name = "EVTOPTA90820142"
+		name = "EVTOPTA90821220"
 		prestige = 40
 		any_country = {
 			limit = { has_country_flag = world_cup_finalist_one }
@@ -1133,17 +1133,17 @@ country_event = {
 # 1934 World Cup - Semi-fanalist 2 wins
 country_event = {
 
-	id = 90820322
+	id = 90821221
 
 	is_triggered_only = yes
 	
 	major = yes
 
-	title = "EVTNAME90820142"
-	desc = "EVTDESC90820142"
+	title = "EVTNAME90821221"
+	desc = "EVTDESC90821221"
 
 	option = {
-		name = "EVTOPTA90820142"
+		name = "EVTOPTA90821221"
 		prestige = 15
 		any_country = {
 			limit = { has_country_flag = world_cup_finalist_one }
@@ -1156,7 +1156,7 @@ country_event = {
 # World Cup Stadium - lavish
 country_event = {
 
-	id = 90820323
+	id = 90821222
 
 	trigger = {
 		has_country_flag = FIFAMember
@@ -1176,12 +1176,12 @@ country_event = {
 		days = 5
 	}
 
-	title = "EVTNAME90820323"
-	desc = "EVTDESC90820323"
+	title = "EVTNAME90821222"
+	desc = "EVTDESC90821222"
 	picture = "world_cup_stadium"
 
 	option = {
-		name = "EVTOPTA90820323"
+		name = "EVTOPTA90821222"
 		capital_scope = { 
 			set_province_modifier = {
 				name = world_cup_stadium

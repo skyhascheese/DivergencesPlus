@@ -1,7 +1,7 @@
 #Setup event
 country_event = {
 
-	id = 90820800
+	id = 90824100
 
 	trigger = {
 		great_wars_enabled = yes
@@ -16,12 +16,12 @@ country_event = {
 		months = 1
 	}
 
-	title = "EVTNAME90820800"
-	desc = "EVTDESC90820800"
+	title = "EVTNAME90824100"
+	desc = "EVTDESC90824100"
 	picture = "a_just_and_secure_peace"
 
 	option = {
-		name = "EVTOPTA90820800"
+		name = "EVTOPTA90824100"
 		set_global_flag = LON_enabled
 	}
 }
@@ -29,7 +29,7 @@ country_event = {
 #A Just and Secure Peace
 country_event = {
 
-	id = 90820801
+	id = 90824101
 
 	trigger = {
 		has_global_flag = LON_enabled
@@ -94,12 +94,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820801"
-	desc = "EVTDESC90820801"
+	title = "EVTNAME90824101"
+	desc = "EVTDESC90824101"
 	picture = "a_just_and_secure_peace"
 	
 	option = {
-		name = "EVTOPTA90820801"
+		name = "EVTOPTA90824101"
 		prestige = 30
 		set_country_flag = a_just_and_secure_peace
 		set_country_flag = LON_member
@@ -146,7 +146,7 @@ country_event = {
 					government = prussian_constitutionalism
 				}
 			}
-			country_event = 90820802
+			country_event = 90824102
 		}
 		any_country = {
 			limit = {
@@ -202,16 +202,16 @@ country_event = {
 #The League of Nations
 country_event = {
 
-	id = 90820802
+	id = 90824102
 
 	is_triggered_only = yes
 
-	title = "EVTNAME90820802"
-	desc = "EVTDESC90820802"
+	title = "EVTNAME90824102"
+	desc = "EVTDESC90824102"
 	picture = "a_just_and_secure_peace"
 	
 	option = {
-		name = "EVTOPTA90820802"
+		name = "EVTOPTA90824102"
 		prestige = 20
 		set_country_flag = LON_member
 		any_country = {
@@ -347,7 +347,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820802"
+		name = "EVTOPTB90824102"
 		prestige = -10
 		set_country_flag = not_LON_member
 		
@@ -518,7 +518,7 @@ country_event = {
 #The League of Nations
 country_event = {
 
-	id = 90820803
+	id = 90824103
 
 	trigger = {
 		has_global_flag = LON_enabled
@@ -551,18 +551,18 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820803"
-	desc = "EVTDESC90820803"
+	title = "EVTNAME90824103"
+	desc = "EVTDESC90824103"
 	
 	option = {
-		name = "EVTOPTA90820803"
+		name = "EVTOPTA90824103"
 		set_global_flag = LON_founded
 		clr_country_flag = a_just_and_secure_peace
 		any_country = {
 			limit = {
 				has_country_flag = LON_member
 			}
-			country_event = 90820805
+			country_event = 90824105
 		}
 	}
 }
@@ -570,7 +570,7 @@ country_event = {
 #No League of Nations
 country_event = {
 
-	id = 90820804
+	id = 90824104
 
 	trigger = {
 		has_global_flag = LON_enabled
@@ -599,11 +599,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820804"
-	desc = "EVTDESC90820804"
+	title = "EVTNAME90824104"
+	desc = "EVTDESC90824104"
 	
 	option = {
-		name = "EVTOPTA90820804"
+		name = "EVTOPTA90824104"
 		set_global_flag = LON_not_founded
 		clr_country_flag = a_just_and_secure_peace
 		any_country = {
@@ -618,10 +618,10 @@ country_event = {
 #Membership at the League of Nations
 country_event = {
 
-	id = 90820805
+	id = 90824105
 
-	title = "EVTNAME90820805"
-	desc = "EVTDESC90820805"
+	title = "EVTNAME90824105"
+	desc = "EVTDESC90824105"
 	
 	major = yes
 
@@ -630,7 +630,7 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA90820805"
+		name = "EVTOPTA90824105"
 		add_country_modifier = {
 			name = LON_member
 			duration = -1
@@ -650,10 +650,10 @@ country_event = {
 #Leaving the League of Nations
 country_event = {
 
-	id = 90820806
+	id = 90824106
 
-	title = "EVTNAME90820806"
-	desc = "EVTDESC90820806"
+	title = "EVTNAME90824106"
+	desc = "EVTDESC90824106"
 	
 	major = yes
 
@@ -662,7 +662,7 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA90820806"
+		name = "EVTOPTA90824106"
 		remove_country_modifier = LON_member
 		any_country = {
 			limit = {
@@ -701,10 +701,10 @@ country_event = {
 #Two GP LON members at war with each other causes the LON to collapse
 country_event = {
 
-	id = 90820807
+	id = 90824107
 
-	title = "EVTNAME90820807"
-	desc = "EVTDESC90820807"
+	title = "EVTNAME90824107"
+	desc = "EVTDESC90824107"
 	
 	major = yes
 	
@@ -726,7 +726,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820807"
+		name = "EVTOPTA90824107"
 		clr_global_flag = LON_founded
 		any_country = {
 			limit = {
@@ -754,7 +754,7 @@ country_event = {
 #LON Headquarters
 country_event = {
 
-	id = 90820808
+	id = 90824108
 
 	trigger = {
 		has_global_flag = LON_founded
@@ -812,11 +812,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820808"
-	desc = "EVTDESC90820808"
+	title = "EVTNAME90824108"
+	desc = "EVTDESC90824108"
 	
 	option = {
-		name = "EVTOPTA90820808"
+		name = "EVTOPTA90824108"
 		prestige = 30
 		set_global_flag = LON_headquarters
 		add_country_modifier = {
@@ -829,7 +829,7 @@ country_event = {
 #LON Headquarters removed
 country_event = {
 
-	id = 90820809
+	id = 90824109
 
 	trigger = {
 		has_country_modifier = LON_headquarters
@@ -845,13 +845,13 @@ country_event = {
 		months = 1
 	}
 
-	title = "EVTNAME90820809"
-	desc = "EVTDESC90820809"
+	title = "EVTNAME90824109"
+	desc = "EVTDESC90824109"
 	
 	major = yes
 	
 	option = {
-		name = "EVTOPTA90820809"
+		name = "EVTOPTA90824109"
 		prestige = -30
 		clr_global_flag = LON_headquarters
 		remove_country_modifier = LON_headquarters
@@ -861,7 +861,7 @@ country_event = {
 #LON member adopts slavery
 country_event = {
 
-	id = 90820810
+	id = 90824110
 
 	trigger = {
 		has_country_flag = LON_member
@@ -875,12 +875,12 @@ country_event = {
 		months = 1
 	}
 
-	title = "EVTNAME90820810"
-	desc = "EVTDESC90820810"
+	title = "EVTNAME90824110"
+	desc = "EVTDESC90824110"
 	picture = "league_of_nations"
 	
 	option = {
-		name = "EVTOPTA90820810"
+		name = "EVTOPTA90824110"
 		prestige = 10
 		slavery = no_slavery
 		
@@ -900,8 +900,8 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820810"
-		country_event = 90820813
+		name = "EVTOPTB90824110"
+		country_event = 90824113
 		
 		ai_chance = {
 			factor = 50
@@ -920,7 +920,7 @@ country_event = {
 #LON member make child labour legal
 country_event = {
 
-	id = 90820811
+	id = 90824111
 
 	trigger = {
 		has_country_flag = LON_member
@@ -934,12 +934,12 @@ country_event = {
 		months = 1
 	}
 
-	title = "EVTNAME90820811"
-	desc = "EVTDESC90820811"
+	title = "EVTNAME90824111"
+	desc = "EVTDESC90824111"
 	picture = "league_of_nations"
 	
 	option = {
-		name = "EVTOPTA90820811"
+		name = "EVTOPTA90824111"
 		prestige = 10
 		child_labor = child_labor_illegal
 		any_country = {
@@ -969,8 +969,8 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820811"
-		country_event = 90820813
+		name = "EVTOPTB90824111"
+		country_event = 90824113
 		
 		ai_chance = {
 			factor = 50
@@ -990,7 +990,7 @@ country_event = {
 #LON member make serfdom legal
 country_event = {
 
-	id = 90820812
+	id = 90824112
 
 	trigger = {
 		has_country_flag = LON_member
@@ -1004,12 +1004,12 @@ country_event = {
 		months = 1
 	}
 
-	title = "EVTNAME90820812"
-	desc = "EVTDESC90820812"
+	title = "EVTNAME90824112"
+	desc = "EVTDESC90824112"
 	picture = "league_of_nations"
 	
 	option = {
-		name = "EVTOPTA90820812"
+		name = "EVTOPTA90824112"
 		prestige = 10
 		debt_law = bankruptcy
 		any_country = {
@@ -1039,7 +1039,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820812"
+		name = "EVTOPTB90824112"
 		set_country_flag = expelled_from_the_league
 		
 		ai_chance = {
@@ -1060,7 +1060,7 @@ country_event = {
 #Expelled from the League of Nations for non-compliance
 country_event = {
 
-	id = 90820813
+	id = 90824113
 
 	trigger = {
 		has_country_flag = LON_member
@@ -1071,13 +1071,13 @@ country_event = {
 		months = 1
 	}
 
-	title = "EVTNAME90820813"
-	desc = "EVTDESC90820813"
+	title = "EVTNAME90824113"
+	desc = "EVTDESC90824113"
 	
 	major = yes
 	
 	option = {
-		name = "EVTOPTA90820813"
+		name = "EVTOPTA90824113"
 		prestige = -30
 		clr_country_flag = LON_member
 		clr_country_flag = expelled_from_the_league

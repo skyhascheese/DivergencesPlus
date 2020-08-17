@@ -62,7 +62,7 @@ political_decisions = {
 		
 		effect = {
 			prestige = 20
-			country_event = 90820805
+			country_event = 90824105
 			any_pop = {
 				limit = {
 					or = {
@@ -201,7 +201,7 @@ political_decisions = {
 		
 		effect = {
 			prestige = -20
-			country_event = 90820806
+			country_event = 90824106
 			any_pop = {
 				limit = {
 					or = {

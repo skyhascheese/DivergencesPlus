@@ -1,7 +1,7 @@
 country_event = { 
-	id = 90820701 # Rebellion in Macedonia
-	title = "EVTNAME90820701"
-	desc = "EVTDESC90820701"
+	id = 90823000 # Rebellion in Macedonia
+	title = "EVTNAME90823000"
+	desc = "EVTDESC90823000"
 	picture = "macedonian_war_of_independence"
 	
 	trigger = {
@@ -15,12 +15,12 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820701"
+		name = "EVTOPTA90823000"
 		VEN = {
-			country_event = 90820702
+			country_event = 90823001
 		}
 		ARA = {
-			country_event = 90820702
+			country_event = 90823001
 		}
 		set_variable = {
 			which = macedonian_rebellion
@@ -30,15 +30,15 @@ country_event = {
 }
 
 country_event = {
-	id = 90820702 # Macedonia Calls for Help
-	title = "EVTNAME90820702"
-	desc = "EVTDESC90820702"
+	id = 90823001 # Macedonia Calls for Help
+	title = "EVTNAME90823001"
+	desc = "EVTDESC90823001"
 	picture = "macedonian_war_of_independence"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820702"
+		name = "EVTOPTA90823001"
 		diplomatic_influence = {
 			who = MAC
 			value = 100
@@ -66,7 +66,7 @@ country_event = {
 		}
 		set_country_flag = helping_macedonia
 		MAC = {
-			country_event = 90820703
+			country_event = 90823002
 			change_variable = {
 				which = macedonian_rebellion
 				value = 1
@@ -90,7 +90,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820702"
+		name = "EVTOPTB90823001"
 		diplomatic_influence = {
 			who = MAC
 			value = -100
@@ -108,7 +108,7 @@ country_event = {
 			}
 		}
 		MAC = {
-			country_event = 90820704
+			country_event = 90823003
 			change_variable = {
 				which = macedonian_rebellion
 				value = 1
@@ -132,9 +132,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820703 # FROMCOUNTRY Offers Help
-	title = "EVTNAME90820703"
-	desc = "EVTDESC90820703"
+	id = 90823002 # FROMCOUNTRY Offers Help
+	title = "EVTNAME90823002"
+	desc = "EVTDESC90823002"
 	picture = "macedonian_war_of_independence"
 	
 	is_triggered_only = yes
@@ -142,7 +142,7 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA90820703"
+		name = "EVTOPTA90823002"
 		relation = {
 			who = FROM
 			value = 200
@@ -151,9 +151,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820704 # FROMCOUNTRY Refuses Help
-	title = "EVTNAME90820704"
-	desc = "EVTDESC90820704"
+	id = 90823003 # FROMCOUNTRY Refuses Help
+	title = "EVTNAME90823003"
+	desc = "EVTDESC90823003"
 	picture = "macedonian_war_of_independence"
 	
 	is_triggered_only = yes
@@ -161,7 +161,7 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA90820704"
+		name = "EVTOPTA90823003"
 		relation = {
 			who = FROM
 			value = -200
@@ -170,9 +170,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820705 # Macedonia's Call to Arms
-	title = "EVTNAME90820705"
-	desc = "EVTDESC90820705"
+	id = 90823004 # Macedonia's Call to Arms
+	title = "EVTNAME90823004"
+	desc = "EVTDESC90823004"
 	picture = "macedonian_war_of_independence"
 	
 	fire_only_once = yes
@@ -195,7 +195,7 @@ country_event = {
 	mean_time_to_happen = { days = 14 }
 	
 	option = {
-		name = "EVTOPTA90820705"
+		name = "EVTOPTA90823004"
 		war = {
 			attacker_goal = { casus_belli = call_allies_cb }
 			call_ally = yes
@@ -204,9 +204,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820706 # Macedonia is Free!
-	title = "EVTNAME90820706"
-	desc = "EVTDESC90820706"
+	id = 90823005 # Macedonia is Free!
+	title = "EVTNAME90823005"
+	desc = "EVTDESC90823005"
 	
 	major = yes
 	
@@ -227,7 +227,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
-		name = "EVTOPTA90820706"
+		name = "EVTOPTA90823005"
 		prestige = 10
 		any_country = {
 			limit = {
@@ -235,7 +235,7 @@ country_event = {
 				truce_with = TUR
 				alliance_with = MAC
 			}
-			country_event = 90820707
+			country_event = 90823006
 		}
 		any_country = {
 			limit = {
@@ -248,7 +248,7 @@ country_event = {
 					}
 				}
 			}
-			country_event = 90820708
+			country_event = 90823007
 		}
 		any_country = {
 			limit = {
@@ -259,39 +259,39 @@ country_event = {
 					alliance_with = MAC
 				}
 			}
-			country_event = 90820709
+			country_event = 90823008
 		}
 		TUR = {
-			country_event = 90820710
+			country_event = 90823009
 		}
 		set_global_flag = Macedonian_war_of_independence_ended
 	}
 }
 
 country_event = { 
-	id = 90820707 # Macedonia is Free!
-	title = "EVTNAME90820707"
-	desc = "EVTDESC90820707"
+	id = 90823006 # Macedonia is Free!
+	title = "EVTNAME90823006"
+	desc = "EVTDESC90823006"
 	picture = "macedonian_war_of_independence"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820707"
+		name = "EVTOPTA90823006"
 		prestige = 10
 	}
 }
 
 country_event = { 
-	id = 90820708 # We Failed Macedonia
-	title = "EVTNAME90820708"
-	desc = "EVTDESC90820708"
+	id = 90823007 # We Failed Macedonia
+	title = "EVTNAME90823007"
+	desc = "EVTDESC90823007"
 	picture = "macedonian_war_of_independence"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820708"
+		name = "EVTOPTA90823007"
 		prestige = -10
 		clr_country_flag = helping_macedonia
 		set_country_flag = inelligible_for_macedonian_crown
@@ -307,15 +307,15 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820709 # We Failed Macedonia (Aragon)
-	title = "EVTNAME90820709"
-	desc = "EVTDESC90820709"
+	id = 90823008 # We Failed Macedonia (Aragon)
+	title = "EVTNAME90823008"
+	desc = "EVTDESC90823008"
 	picture = "macedonian_war_of_independence"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820709"
+		name = "EVTOPTA90823008"
 		prestige = -10
 		clr_country_flag = helping_macedonia
 		set_country_flag = inelligible_for_macedonian_crown
@@ -331,15 +331,15 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820710 # Macedonia Gains Independence!
-	title = "EVTNAME90820710"
-	desc = "EVTDESC90820710"
+	id = 90823009 # Macedonia Gains Independence!
+	title = "EVTNAME90823009"
+	desc = "EVTDESC90823009"
 	picture = "macedonian_war_of_independence"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820710"
+		name = "EVTOPTA90823009"
 		prestige = -20
 		any_pop = {
 			limit = {
@@ -365,9 +365,9 @@ country_event = {
 }
 
 country_event = {
-	id = 90820711 # The fate of the Republic - Aragon has helped
-	title = "EVTNAME90820711"
-	desc = "EVTDESC90820711"
+	id = 90823010 # The fate of the Republic - Aragon has helped
+	title = "EVTNAME90823010"
+	desc = "EVTDESC90823010"
 	picture = "fate_of_the_republic"
 	
 	trigger = {
@@ -390,7 +390,7 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 	
 	option = {
-		name = "EVTOPTA90820711" # Martin Fernando Alfonso, Prince of Aragon
+		name = "EVTOPTA90823010" # Martin Fernando Alfonso, Prince of Aragon
 		scaled_militancy = {
 			factor = -4
 			ideology = reactionary
@@ -409,13 +409,13 @@ country_event = {
 		}
 		set_country_flag = macedonia_prince_martin
 		ARA = {
-			country_event = 90820713
+			country_event = 90823012
 		}
 		ai_chance = { factor = 60 }
 	}
 	
 	option = {
-		name = "EVTOPTB90820711" #Reform the Republic
+		name = "EVTOPTB90823010" #Reform the Republic
 		scaled_militancy = {
 			factor = 4
 			ideology = reactionary
@@ -448,7 +448,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTC90820711" #Maintain the dictatorship
+		name = "EVTOPTC90823010" #Maintain the dictatorship
 		scaled_militancy = {
 			factor = 2
 			ideology = reactionary
@@ -482,9 +482,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820712 # The fate of the Republic - Aragon has not helped
-	title = "EVTNAME90820712"
-	desc = "EVTDESC90820712"
+	id = 90823011 # The fate of the Republic - Aragon has not helped
+	title = "EVTNAME90823011"
+	desc = "EVTDESC90823011"
 	picture = "fate_of_the_republic"
 	
 	trigger = {
@@ -507,7 +507,7 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 	
 	option = {
-		name = "EVTOPTA90820712" # Find a prince
+		name = "EVTOPTA90823011" # Find a prince
 		scaled_militancy = {
 			factor = -4
 			ideology = reactionary
@@ -529,7 +529,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820712" #Reform the Republic
+		name = "EVTOPTB90823011" #Reform the Republic
 		scaled_militancy = {
 			factor = 4
 			ideology = reactionary
@@ -551,7 +551,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTC90820712" #Maintain the dictatorship
+		name = "EVTOPTC90823011" #Maintain the dictatorship
 		scaled_militancy = {
 			factor = 4
 			ideology = reactionary
@@ -586,15 +586,15 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820713 # The Crown of Macedonia (Aragon)
-	title = "EVTNAME90820713"
-	desc = "EVTDESC90820713"
+	id = 90823012 # The Crown of Macedonia (Aragon)
+	title = "EVTNAME90823012"
+	desc = "EVTDESC90823012"
 	picture = "fate_of_the_republic"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820713"
+		name = "EVTOPTA90823012"
 		prestige = 20
 		relation = {
 			who = MAC
@@ -609,7 +609,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820713"
+		name = "EVTOPTB90823012"
 		prestige = -20
 		relation = {
 			who = MAC
@@ -621,16 +621,16 @@ country_event = {
 		}
 		set_global_flag = aragon_has_decided_to_decline
 		MAC = {
-			country_event = 90820715
+			country_event = 90823014
 		}
 		ai_chance = { factor = 10 }
 	}
 }
 
 country_event = { 
-	id = 90820714 # The Kingdom of Macedonia (Aragon)
-	title = "EVTNAME90820714"
-	desc = "EVTDESC90820714"
+	id = 90823013 # The Kingdom of Macedonia (Aragon)
+	title = "EVTNAME90823013"
+	desc = "EVTDESC90823013"
 	picture = "fate_of_the_republic"
 	
 	trigger = {
@@ -645,7 +645,7 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 	
 	option = {
-		name = "EVTOPTA90820714"
+		name = "EVTOPTA90823013"
 		government = prussian_constitutionalism
 		political_reform = state_equal_weight
 		political_reform = wealth_voting
@@ -678,15 +678,15 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820715 # Aragon has declined the offer
-	title = "EVTNAME90820715"
-	desc = "EVTDESC90820715"
+	id = 90823014 # Aragon has declined the offer
+	title = "EVTNAME90823014"
+	desc = "EVTDESC90823014"
 	picture = "fate_of_the_republic"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820715" # Find a prince
+		name = "EVTOPTA90823014" # Find a prince
 		scaled_militancy = {
 			factor = -4
 			ideology = reactionary
@@ -709,7 +709,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820715" #Reform the Republic
+		name = "EVTOPTB90823014" #Reform the Republic
 		scaled_militancy = {
 			factor = 4
 			ideology = reactionary
@@ -732,7 +732,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTC90820715" #Maintain the dictatorship
+		name = "EVTOPTC90823014" #Maintain the dictatorship
 		scaled_militancy = {
 			factor = -4
 			ideology = reactionary
@@ -768,9 +768,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820716 # The Macedonian Republic
-	title = "EVTNAME90820716"
-	desc = "EVTDESC90820716"
+	id = 90823015 # The Macedonian Republic
+	title = "EVTNAME90823015"
+	desc = "EVTDESC90823015"
 	picture = "fate_of_the_republic"
 	
 	trigger = {
@@ -784,7 +784,7 @@ country_event = {
 	mean_time_to_happen = { months = 2 }
 	
 	option = {
-		name = "EVTOPTA90820716"
+		name = "EVTOPTA90823015"
 		government = democracy
 		political_reform = state_equal_weight
 		political_reform = universal_weighted_voting
@@ -827,9 +827,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820717 # The Macedonian Crown (Aragon has declined)
-	title = "EVTNAME90820717"
-	desc = "EVTDESC90820717"
+	id = 90823016 # The Macedonian Crown (Aragon has declined)
+	title = "EVTNAME90823016"
+	desc = "EVTDESC90823016"
 	picture = "fate_of_the_republic"
 	
 	trigger = {
@@ -920,7 +920,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820717"
+		name = "EVTOPTA90823016"
 		prestige = 10
 		relation = {
 			who = MAC
@@ -932,13 +932,13 @@ country_event = {
 		}
 		set_country_flag = accepted_macedonian_crown
 		MAC = {
-			country_event = 90820718
+			country_event = 90823017
 		}
 		ai_chance = { factor = 70 }
 	}
 	
 	option = {
-		name = "EVTOPTB90820717"
+		name = "EVTOPTB90823016"
 		prestige = -10
 		relation = {
 			who = MAC
@@ -954,15 +954,15 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820718 # The Kingdom of Macedonia (Aragon has declined)
-	title = "EVTNAME90820718"
-	desc = "EVTDESC90820718"
+	id = 90823017 # The Kingdom of Macedonia (Aragon has declined)
+	title = "EVTNAME90823017"
+	desc = "EVTDESC90823017"
 	picture = "fate_of_the_republic"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820718"
+		name = "EVTOPTA90823017"
 		government = prussian_constitutionalism
 		political_reform = state_equal_weight
 		political_reform = wealth_voting
@@ -1002,9 +1002,9 @@ country_event = {
 ####################################
 
 country_event = { 
-	id = 90820721 # The Great Fire of Thessalonica
-	title = "EVTNAME90820720"
-	desc = "EVTDESC90820720"
+	id = 90823030 # The Great Fire of Thessalonica
+	title = "EVTNAME90823030"
+	desc = "EVTDESC90823030"
 	
 	major = yes
 	
@@ -1023,15 +1023,15 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820721"
+		name = "EVTOPTA90823030"
 		set_global_flag = thessalonica_fire
 	}
 }
 
 country_event = { 
-	id = 90820722 # Surveying the damage (good safety)
-	title = "EVTNAME90820722"
-	desc = "EVTDESC90820722"
+	id = 90823031 # Surveying the damage (good safety)
+	title = "EVTNAME90823031"
+	desc = "EVTDESC90823031"
 	picture = "thessalonica_fire"
 	
 	major = yes
@@ -1059,7 +1059,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820722"
+		name = "EVTOPTA90823031"
 		805 = {
 			add_province_modifier = {
 				name = thessalonica_fire 
@@ -1070,9 +1070,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820723 # Surveying the damage (adequate safety)
-	title = "EVTNAME90820723"
-	desc = "EVTDESC90820723"
+	id = 90823032 # Surveying the damage (adequate safety)
+	title = "EVTNAME90823032"
+	desc = "EVTDESC90823032"
 	picture = "thessalonica_fire"
 	
 	fire_only_once = yes
@@ -1099,7 +1099,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820723"
+		name = "EVTOPTA90823032"
 		805 = {
 			add_province_modifier = {
 				name = thessalonica_fire 
@@ -1110,9 +1110,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820724 # Surveying the damage (devastating)
-	title = "EVTNAME90820724"
-	desc = "EVTDESC90820724"
+	id = 90823033 # Surveying the damage (devastating)
+	title = "EVTNAME90823033"
+	desc = "EVTDESC90823033"
 	picture = "thessalonica_fire"
 	
 	fire_only_once = yes
@@ -1144,7 +1144,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820724"
+		name = "EVTOPTA90823033"
 		805 = {
 			add_province_modifier = {
 				name = thessalonica_fire 
@@ -1155,9 +1155,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820725 # The Future of Thessalonica
-	title = "EVTNAME90820725"
-	desc = "EVTDESC90820725"
+	id = 90823034 # The Future of Thessalonica
+	title = "EVTNAME90823034"
+	desc = "EVTDESC90823034"
 	picture = "thessalonica_reconstruction"
 	
 	fire_only_once = yes
@@ -1173,7 +1173,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820725" #An International Committee
+		name = "EVTOPTA90823034" #An International Committee
 		set_global_flag = thessalonica_international_design_competition
 		set_country_flag = thessalonica_international_design_competition_entry
 		any_country = {
@@ -1189,7 +1189,7 @@ country_event = {
 					value = 50
 				}
 			}
-			country_event = 90820726
+			country_event = 90823035
 		}
 		805 = {
 			any_pop = {
@@ -1221,7 +1221,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820725" #Allow only $COUNTRY_ADJ$ entries
+		name = "EVTOPTB90823034" #Allow only $COUNTRY_ADJ$ entries
 		set_global_flag = thessalonica_national_design_competition
 		805 = {
 			any_pop = {
@@ -1248,7 +1248,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTC90820725" #Hasty rebuilding
+		name = "EVTOPTC90823034" #Hasty rebuilding
 		prestige = -20
 		set_global_flag = thessalonica_hasty_rebuilding
 		clr_global_flag = thessalonica_fire
@@ -1301,15 +1301,15 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820726 # International Design Competition
-	title = "EVTNAME90820726"
-	desc = "EVTDESC90820726"
+	id = 90823035 # International Design Competition
+	title = "EVTNAME90823035"
+	desc = "EVTDESC90823035"
 	picture = "thessalonica_reconstruction"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90820723" #We should enter
+		name = "EVTOPTA90823035" #We should enter
 		set_country_flag = thessalonica_international_design_competition_entry
 		money = -10000
 		
@@ -1324,7 +1324,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820726" #We should enter
+		name = "EVTOPTB90823035" #We should enter
 		prestige = -10
 		
 		ai_chance = { 
@@ -1339,9 +1339,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820727 # International Design Competition Winner
-	title = "EVTNAME90820727"
-	desc = "EVTDESC90820727"
+	id = 90823036 # International Design Competition Winner
+	title = "EVTNAME90823036"
+	desc = "EVTDESC90823036"
 	
 	major = yes
 	
@@ -1389,7 +1389,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820727"
+		name = "EVTOPTA90823036"
 		any_country = {
 			limit = { has _country_flag = thessalonica_international_design_competition_entry }
 			clr_country_flag = thessalonica_international_design_competition_entry
@@ -1399,7 +1399,7 @@ country_event = {
 		money = 30000
 		any_country = {
 			limit = { owns = 805 }
-			country_event = 90820728
+			country_event = 90823037
 			relation = {
 				who = THIS
 				value = 100
@@ -1409,9 +1409,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820728 # Implementing the Plan
-	title = "EVTNAME90820725"
-	desc = "EVTDESC90820725"
+	id = 90823037 # Implementing the Plan
+	title = "EVTNAME90823037"
+	desc = "EVTDESC90823037"
 	picture = "thessalonica_hebrard_plan"
 	
 	is_triggered_only = yes
@@ -1419,7 +1419,7 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
-		name = "EVTOPTA90820725"
+		name = "EVTOPTA90823037"
 		set_global_flag = thessalonica_plan_lavish
 		money = -100000
 		
@@ -1434,7 +1434,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820725"
+		name = "EVTOPTB90823037"
 		set_global_flag = thessalonica_plan_sensible
 		money = -50000
 		
@@ -1452,7 +1452,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTC90820725"
+		name = "EVTOPTC90823037"
 		set_global_flag = thessalonica_plan_minimal
 		money = -10000
 		
@@ -1468,9 +1468,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820729 #The Rebuilding of Thessalonica (lavish)
-	title = "EVTNAME90820729"
-	desc = "EVTDESC90820729"
+	id = 90823038 #The Rebuilding of Thessalonica (lavish)
+	title = "EVTNAME90823038"
+	desc = "EVTDESC90823038"
 	picture = "thessalonica_lavish"
 	
 	fire_only_once = yes
@@ -1490,7 +1490,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820729"
+		name = "EVTOPTA90823038"
 		clr_global_flag = thessalonica_fire
 		clr_global_flag = thessalonica_delays
 		clr_global_flag = thessalonica_international_design_competition
@@ -1511,9 +1511,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820730 #The Rebuilding of Thessalonica (sensible)
-	title = "EVTNAME90820730"
-	desc = "EVTDESC90820730"
+	id = 90823039 #The Rebuilding of Thessalonica (sensible)
+	title = "EVTNAME90823039"
+	desc = "EVTDESC90823039"
 	picture = "thessalonica_sensible"
 	
 	fire_only_once = yes
@@ -1532,7 +1532,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA90820730"
+		name = "EVTOPTA90823039"
 		clr_global_flag = thessalonica_fire
 		clr_global_flag = thessalonica_delays
 		clr_global_flag = thessalonica_international_design_competition
@@ -1553,9 +1553,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820731 # Rebuilding Thessalonica (national competition only, is not GP)
-	title = "EVTNAME90820731"
-	desc = "EVTDESC90820731"
+	id = 90823040 # Rebuilding Thessalonica (national competition only, is not GP)
+	title = "EVTNAME90823040"
+	desc = "EVTDESC90823040"
 	picture = "thessalonica_hebrard_plan"
 	
 	trigger = {
@@ -1572,7 +1572,7 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
-		name = "EVTOPTA90820731"
+		name = "EVTOPTA90823040"
 		set_global_flag = thessalonica_plan_sensible
 		money = -50000
 		
@@ -1590,7 +1590,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820731"
+		name = "EVTOPTB90823040"
 		set_global_flag = thessalonica_plan_minimal
 		money = -10000
 		
@@ -1606,9 +1606,9 @@ country_event = {
 }
 
 country_event = { 
-	id = 90820732 # Rebuilding Thessalonica (national competition only, is GP)
-	title = "EVTNAME90820732"
-	desc = "EVTDESC90820732"
+	id = 90823041 # Rebuilding Thessalonica (national competition only, is GP)
+	title = "EVTNAME90823041"
+	desc = "EVTDESC90823041"
 	picture = "thessalonica_hebrard_plan"
 	
 	trigger = {
@@ -1625,7 +1625,7 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
-		name = "EVTOPTA90820732"
+		name = "EVTOPTA90823041"
 		set_global_flag = thessalonica_plan_lavish
 		money = -100000
 		
@@ -1640,7 +1640,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB90820732"
+		name = "EVTOPTB90823041"
 		set_global_flag = thessalonica_plan_sensible
 		money = -50000
 		
@@ -1658,7 +1658,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTC90820726"
+		name = "EVTOPTC90823041"
 		set_global_flag = thessalonica_plan_minimal
 		money = -10000
 		
@@ -1668,6 +1668,65 @@ country_event = {
 			modifier = {
 				factor = 3
 				not = {	money = 50000 }
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90823050 #The Walls of Thessalonica
+	title = "EVTNAME90823050"
+	desc = "EVTDESC90823050"
+	picture = "walls_of_thessalonica"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = no
+	
+	option = {
+		name = "EVTOPTA90823050"
+		
+		805 = 
+			add_province_modifier = {
+				name = walls_of_thessalonica_demolished
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 90823051 #Red Tower No More
+	title = "EVTNAME90823051"
+	desc = "EVTDESC90823051"
+	picture = "white_tower"
+	
+	trigger = {
+		has_global_flag = red_tower_no_more
+		owns = 805
+		war = no
+		not = {
+			tag = TUR
+		}
+	}
+	
+	mean_time_to_happen = { 
+		months = 12
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "EVTOPTA90823051"
+		
+		805 = 
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				militancy = -2
+				consciousness = -1
 			}
 		}
 	}

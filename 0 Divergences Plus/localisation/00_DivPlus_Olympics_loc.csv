@@ -1,152 +1,152 @@
-EVTNAME90820101;Membership in the International Olympic Commitee;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820101;The combination of renewed interest in Ancient Greek civilization and the idea of sport as an important part of social development has led a French aristocrat, Baron Pierre de Coubertin, to propose reviving the Olympic Games as a way to promote international peace through friendly athletic competition between nations. Should our nation join his International Olympic Committee and participate in the games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820101;An excellent idea! We accept.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820101;The idea is interesting, but not at this time.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820102;Shall we host the First Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820102;As the idea of the Olympics originated in our sacred soil, the International Olympic Committee has invited our government to organise the first Olympic Games of the modern era. Should we accept the offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820102;An excellent idea! We accept.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820102;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820103;Shall we host the First Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820103;Since the idea of the Olympics was created in ancient Greece, the International Olympic Committee has invited our government to organise the first Olympic Games of the modern era. Should we accept the offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820103;An excellent idea! We accept.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820103;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820104;Shall we host the First Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820104;Although the Olympic Games originated in Greece, the International Olympic Committee has decided to offer our nation the responsibility to organize the first games of the modern era. Should we accept the offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820104;An excellent idea! We accept.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820104;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820105;Attend the First Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820105;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820105;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820105;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820106;The Games of the First Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820106;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the first Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820106;We declare open the Games celebrating the First Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820107;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820107;Many nations competed in the games of the First Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820107;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820108;Shall we host the Second Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820108;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the second Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820108;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820108;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820109;Attend the Second Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820109;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820109;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820109;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820110;The Games of the Second Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820110;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the second Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820110;We declare open the Games celebrating the Second Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820111;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820111;Many nations competed in the games of the Second Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820111;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820112;Shall we host the Third Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820112;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the third Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820112;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820112;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820113;Attend the Third Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820113;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820113;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820113;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820114;The Games of the Third Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820114;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the third Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820114;We declare open the Games celebrating the Third Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820115;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820115;Many nations competed in the games of the Third Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820115;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820116;Shall we host the Fourth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820116;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the fourth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820116;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820116;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820117;Attend the Fourth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820117;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820117;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820117;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820118;The Games of the Fourth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820118;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the fourth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820118;We declare open the Games celebrating the Fourth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820119;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820119;Many nations competed in the games of the Fourth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820119;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820120;Shall we host the Fifth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820120;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the fifth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820120;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820120;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820121;Attend the Fifth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820121;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820121;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820121;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820122;The Games of the Fifth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820122;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the fifth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820122;We declare open the Games celebrating the Fifth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820123;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820123;Many nations competed in the games of the Fifth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820123;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820124;Shall we host the Sixth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820124;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the sixth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820124;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820124;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820125;Attend the Sixth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820125;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820125;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820125;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820126;The Games of the Sixth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820126;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the sixth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820126;We declare open the Games celebrating the Sixth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820127;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820127;Many nations competed in the games of the Sixth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820127;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820128;Shall we host the Seventh Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820128;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the seventh Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820128;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820128;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820129;Attend the Seventh Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820129;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820129;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820129;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820130;The Games of the Seventh Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820130;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the seventh Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820130;We declare open the Games celebrating the Seventh Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820131;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820131;Many nations competed in the games of the Seventh Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820131;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820132;Shall we host the Eighth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820132;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the eighth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820132;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820132;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820133;Attend the Eighth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820133;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820133;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820133;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820134;The Games of the Eighth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820134;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the eighth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820134;We declare open the Games celebrating the Eighth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820135;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820135;Many nations competed in the games of the Eighth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820135;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820136;Shall we host the Ninth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820136;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the ninth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820136;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820136;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820137;Attend the Ninth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820137;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820137;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820137;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820138;The Games of the Ninth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820138;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the ninth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820138;We declare open the Games celebrating the Ninth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820139;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820139;Many nations competed in the games of the Ninth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820139;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820140;Shall we host the Tenth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820140;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the tenth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820140;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820140;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820141;Attend the tenth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820141;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820141;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820141;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820142;The Games of the Tenth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820142;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the tenth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820142;We declare open the Games celebrating the Tenth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820143;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820143;Many nations competed in the games of the Tenth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820143;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821100;Membership in the International Olympic Commitee;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821100;The combination of renewed interest in Ancient Greek civilization and the idea of sport as an important part of social development has led a French aristocrat, Baron Pierre de Coubertin, to propose reviving the Olympic Games as a way to promote international peace through friendly athletic competition between nations. Should our nation join his International Olympic Committee and participate in the games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821100;An excellent idea! We accept.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821100;The idea is interesting, but not at this time.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821101;Shall we host the First Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821101;As the idea of the Olympics originated in our sacred soil, the International Olympic Committee has invited our government to organise the first Olympic Games of the modern era. Should we accept the offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821101;An excellent idea! We accept.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821101;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821102;Shall we host the First Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821102;Since the idea of the Olympics was created in ancient Greece, the International Olympic Committee has invited our government to organise the first Olympic Games of the modern era. Should we accept the offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821102;An excellent idea! We accept.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821102;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821103;Shall we host the First Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821103;Although the Olympic Games originated in Greece, the International Olympic Committee has decided to offer our nation the responsibility to organize the first games of the modern era. Should we accept the offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821103;An excellent idea! We accept.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821103;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821104;Attend the First Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821104;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821104;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821104;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821105;The Games of the First Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821105;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the first Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821105;We declare open the Games celebrating the First Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821106;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821106;Many nations competed in the games of the First Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821106;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821107;Shall we host the Second Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821107;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the second Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821107;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821107;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821108;Attend the Second Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821108;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821108;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821108;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821109;The Games of the Second Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821109;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the second Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821109;We declare open the Games celebrating the Second Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821110;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821110;Many nations competed in the games of the Second Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821110;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821111;Shall we host the Third Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821111;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the third Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821111;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821111;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821112;Attend the Third Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821112;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821112;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821112;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821113;The Games of the Third Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821113;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the third Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821113;We declare open the Games celebrating the Third Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821114;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821114;Many nations competed in the games of the Third Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821114;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821115;Shall we host the Fourth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821115;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the fourth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821115;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821115;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821116;Attend the Fourth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821116;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821116;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821116;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821117;The Games of the Fourth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821117;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the fourth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821117;We declare open the Games celebrating the Fourth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821118;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821118;Many nations competed in the games of the Fourth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821118;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821119;Shall we host the Fifth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821119;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the fifth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821119;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821119;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821120;Attend the Fifth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821120;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821120;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821120;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821121;The Games of the Fifth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821121;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the fifth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821121;We declare open the Games celebrating the Fifth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821122;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821122;Many nations competed in the games of the Fifth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821122;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821123;Shall we host the Sixth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821123;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the sixth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821123;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821123;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821124;Attend the Sixth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821124;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821124;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821124;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821125;The Games of the Sixth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821125;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the sixth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821125;We declare open the Games celebrating the Sixth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821126;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821126;Many nations competed in the games of the Sixth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821126;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821127;Shall we host the Seventh Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821127;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the seventh Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821127;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821127;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821128;Attend the Seventh Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821128;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821128;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821128;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821129;The Games of the Seventh Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821129;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the seventh Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821129;We declare open the Games celebrating the Seventh Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821130;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821130;Many nations competed in the games of the Seventh Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821130;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821131;Shall we host the Eighth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821131;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the eighth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821131;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821131;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821132;Attend the Eighth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821132;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821132;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821132;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821133;The Games of the Eighth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821133;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the eighth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821133;We declare open the Games celebrating the Eighth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821134;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821134;Many nations competed in the games of the Eighth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821134;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821135;Shall we host the Ninth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821135;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the ninth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821135;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821135;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821136;Attend the Ninth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821136;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821136;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821136;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821137;The Games of the Ninth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821137;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the ninth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821137;We declare open the Games celebrating the Ninth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821138;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821138;Many nations competed in the games of the Ninth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821138;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821139;Shall we host the Tenth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821139;We have it on good authority that the International Olympic Committee looks very favourably toward us organising the tenth Olympic Games of the modern era. Should we make an official bid?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821139;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821139;No, we have better uses of our nation's limited resources.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821140;Attend the tenth Olympic Games?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821140;With the announcement of a host nation, the International Olympic Committee has sent invitations to its members to attend the games. Shall we attend?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821140;Hope they have enough $COUNTRY_ADJ$ flags for the medal ceremonies.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821140;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821141;The Games of the Tenth Olympiad;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821141;Athletes from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the tenth Olympic Games of the modern era, in order to compete for the highest honour in their sport and bring glory to their country. Hosting the games was a great moment for our nation on the world stage, showcasing our capacity to successfully organise events of a global calibre.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821141;We declare open the Games celebrating the Tenth Olympiad of the modern era.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821142;Top of the Medals Table;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821142;Many nations competed in the games of the Tenth Olympiad, but $COUNTRY$ stood out as having performed exceptionally well, topping the medals table.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821142;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

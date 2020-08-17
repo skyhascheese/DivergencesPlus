@@ -46,3 +46,5 @@ underground_system;Metropolitan Railway;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 underground_system_desc;This province is home to a world-class underground Metropolitan Railway system.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 overcrowded_metropolis;Overcrowded Metropolis;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 overcrowded_metropolis_desc;This province is home to a bustling city, but, unlike the other major cities of the world, lacks proper public transport infrastructure in the form of an underground Metropolitan Railway.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+standard_modern_greek;Standard Modern Greek;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+standard_modern_greek_desc;Ending the state of diglossia which existed in $COUNTRY$ through the adoption of Standard Modern Greek will aid us in our national effort to increase literacy.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

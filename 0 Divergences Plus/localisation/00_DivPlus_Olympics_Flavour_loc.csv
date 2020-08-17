@@ -1,26 +1,32 @@
 EVTNAME90820201;The Olympic Hymn;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTDESC90820201;Two of our subjects, Kostis Palamas, a poet, and Spyridon Samaras, a composer, have created a musical piece they have entitled 'the Olympic Hymn'. It is to be performed at the Olympic Games.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTOPTA90820201;Let splendour pervade each noble deed, crowned with glory and fame!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820202;Planning the $CAPITAL$ Olympics;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820202;$CAPITAL$ is to host the next Olympiad, and that is a great honour for all the people of $COUNTRY$! The committee in charge of organising the games has come together and prepared a number of proposals for the Olympic park and assorted accommodation facilities. Which plan should we choose?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820202;We will spend lavishly, $COUNTRY$'s reputation is at stake here!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820202;Don't go too over the top, do something sensible.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTC90820202;Do they even need a stadium? Can't they just compete in a park or something?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820203;Olympic Hurdles;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820203;The construction of $CAPITAL$'s Olympic sites is taking longer than expected. Delays are caused by a myriad of issues, including accidents on sites, insufficient funds, and bad planning.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820203;Gosh darn it!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820204;$CAPITAL$ Olympics a Success!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820204;The recent Olympic Games held in $CAPITAL$, capital of $COUNTRY$, have been deemed by the international community to have been a resounding success. Everything from the stadiums to the design of the medals was meticulously well-planned, and it has showcased the ability of $COUNTRY$ to successfully organise international events.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820204;Hooray!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820205;$CAPITAL$ Olympics Nothing to Write Home About;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820205;The recent Olympic Games held in $CAPITAL$, capital of $COUNTRY$, have been deemed by the international community to have not been of particular note. Nothing was particularly 'off', but the event wasn't as spectacular as the organising committee would have hoped. One newspaper, out of a score of 5, gave it 3.6.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820205;3.6 you say? Not great, not terrible.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820206;$CAPITAL$ Olympics a Disaster;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820206;The recent Olympic Games held in $CAPITAL$, capital of $COUNTRY$, have been deemed by the international community to have been an unmitigated disaster. Everything that could have possibly gone wrong, did. The blame has been put on both the organising committee and the $COUNTRY_ADJ$ government, both of which have had their international reputation tarnished by this fiasco.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820206;Time for some heads to roll.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820207;The Olympic Flag;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820207;At a recent meeting of the International Olympic Committee, Baron Pierre de Coubertin, the 'father of the modern Olympics', presented a design for an Olympic flag. It is made up of five interlocking rings of blue, black, red, yellow, and green, each symbolising a continent, on a white field. The design was adopted and it will make its debut at the upcoming $CAPITAL$ Olympics!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820207;A powerful yet simple design.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820208;The Olympic Flame;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820208;In ancient Greece, a sacred fire was kept burning throughout the celebration of the Olympics on the altar of the sanctuary of Hestia, the goddess of the hearth. An architect working for the organising committee of the upcoming $CAPITAL$ Olympics has suggested that we revive this ritual and construct a torch at the Olympic Stadium. The committee was thrilled with the proposal!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820208;A great idea!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821151;Planning the $CAPITAL$ Olympics;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821151;$CAPITAL$ is to host the next Olympiad, and that is a great honour for all the people of $COUNTRY$! The committee in charge of organising the games has come together and prepared a number of proposals for the Olympic park and assorted accommodation facilities. Which plan should we choose?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821151;We will spend lavishly, $COUNTRY$'s reputation is at stake here!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821151;Don't go too over the top, do something sensible.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTC90821151;Do they even need a stadium? Can't they just compete in a park or something?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821152;Olympic Hurdles;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821152;The construction of $CAPITAL$'s Olympic sites is taking longer than expected. Delays are caused by a myriad of issues, including accidents on sites, insufficient funds, and bad planning.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821152;Gosh darn it!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821153;$CAPITAL$ Olympics a Success!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821153;The recent Olympic Games held in $CAPITAL$, capital of $COUNTRY$, have been deemed by the international community to have been a resounding success. Everything from the stadiums to the design of the medals was meticulously well-planned, and it has showcased the ability of $COUNTRY$ to successfully organise international events.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821153;Hooray!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821154;$CAPITAL$ Olympics Nothing to Write Home About;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821154;The recent Olympic Games held in $CAPITAL$, capital of $COUNTRY$, have been deemed by the international community to have not been of particular note. Nothing was particularly 'off', but the event wasn't as spectacular as the organising committee would have hoped. One newspaper, out of a score of 5, gave it 3.6.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821154;3.6 you say? Not great, not terrible.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821155;$CAPITAL$ Olympics a Disaster;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821155;The recent Olympic Games held in $CAPITAL$, capital of $COUNTRY$, have been deemed by the international community to have been an unmitigated disaster. Everything that could have possibly gone wrong, did. The blame has been put on both the organising committee and the $COUNTRY_ADJ$ government, both of which have had their international reputation tarnished by this fiasco.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821155;Time for some heads to roll.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821156;The Olympic Flag;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821156;At a recent meeting of the International Olympic Committee, Baron Pierre de Coubertin, the 'father of the modern Olympics', presented a design for an Olympic flag. It is made up of five interlocking rings of blue, black, red, yellow, and green, each symbolising a continent, on a white field. The design was adopted and it will make its debut at the upcoming $CAPITAL$ Olympics!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821156;A powerful yet simple design.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821157;The Olympic Flame;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821157;In ancient Greece, a sacred fire was kept burning throughout the celebration of the Olympics on the altar of the sanctuary of Hestia, the goddess of the hearth. An architect working for the organising committee of the upcoming $CAPITAL$ Olympics has suggested that we revive this ritual and construct a torch at the Olympic Stadium. The committee was thrilled with the proposal!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821157;A great idea!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821158;The $CAPITAL$ Olympic Complex;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821158;After months of construction, the complex of Olympic sports facilities in $CAPITAL$ has been completed. No expense has been spared, making sure the sports complex is  one of the best in the world. When the Olympics are over, it will provide the people of $CAPITAL$ with world-class facilities for sports and leisure.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821158;A great addition to the capital!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821159;The $CAPITAL$ Olympic Complex;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821159;After months of construction, the complex of Olympic sports facilities in $CAPITAL$ has been completed. Though the more extravagant designs were abandoned in favour of more economical solutions, the finished sports complex is still a vast improvement to anything $CAPITAL$ was home to previously. When the Olympics are over, it will provide the people of $CAPITAL$ with world-class facilities for sports and leisure.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821159;A great addition to the capital!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

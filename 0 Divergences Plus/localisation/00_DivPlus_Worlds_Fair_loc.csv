@@ -1,39 +1,39 @@
-EVTNAME90820501;Shall we Organise a World's Fair?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820501;Members of the industrialist class have approached our government, suggesting that we organise and host an international World's Fair to showcase the industrial prowess of $COUNTRY$, as well as the other industrial nations of the world. Should we accept their offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820501;An excellent idea!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820501;This is a glorified circus.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820502;Invited to the World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820502;$FROMCOUNTRY$ is organising a World's Fair in $FROMCAPITAL$. Industrial nations from around the world have been asked to attend so as to showcase their latest industrial and artistic achievements. Should accept their invite?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820502;An excellent idea!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820502;This is a glorified circus.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820503;Our Pavilion at the World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820503;Attending a World's Fair requires us to set up our own Pavilion, or use the provided exhibition spaces. The more we spend, the more we can wow the other participants, and the more business we can procure from the display of $COUNTRY_ADJ$ products.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820503;Spend lavishly, we must have the best pavilion.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820503;Spend sensibly, but don't go over the top.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTC90820503;The host provides a communal exhibition hall, do they not?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820504;Planning the World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820504;We have began preparations for a World's Fair in $CAPITAL$. We need to provide an exhibition ground for the various industrial, agricultural, and artistic products to be properly displayed. What should we do?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820504;We will spend lavishly, $COUNTRY$'s reputation is at stake here!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTB90820504;Don't go too over the top, do something sensible.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTC90820504;Build them some wooden stalls, that'll do it.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820505;World's Fair Troubles;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820505;Construction at $CAPITAL$'s exhibition grounds has stalled. Delays are caused by a myriad of issues, including accidents on sites, insufficient funds, and bad planning.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820505;Gosh darn it!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820506;The $YEAR$ World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820506;After years of preparation and construction, the $YEAR$ World's Fair has been officially opened in $CAPITAL$, capital of $COUNTRY$. Dignitaries from the $COUNTRY_ADJ$, including the $COUNTRY_ADJ$ $MONARCHTITLE$, representatives of foreign and domestic industry, as well as ambassadors, were present at the opening and received a tour of the exhibition.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820506;We declare open the $YEAR$ World;s Fair!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820507;Talk of the World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820507;Many nations participated in the recent World's Fair, but $COUNTRY$ really stood out as having had the best presence at the fair. Our industrial and artistic exhibits were the talk of the town, and we outperformed everyone else.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820507;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820508;World's Fair a Success!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820508;The recent World's Fair held in $CAPITAL$, capital of $COUNTRY$, has been deemed by the international community to have been a resounding success. Everything was meticulously well-planned, and it has showcased the ability of $COUNTRY$ to successfully organise international events.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820508;Hooray!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820509;World's Fair Nothing to Write Home About;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820509;The recent World's Fair held in $CAPITAL$, capital of $COUNTRY$, has been deemed by the international community to have been a mediocrity $COUNTRY_ADJ$ did its best to ensure a successful event, but they were only partially successful.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820509;Okay.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820510;World's Fair a Failure;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820510;The recent World's Fair held in $CAPITAL$, capital of $COUNTRY$, has been deemed by the international community to have been an abject failure. Buildings were half-finished, the exhibition hall was in disarray, and some products were even mislabelled, attributing them to a different nation. Overall, shameful day for $COUNTRY$.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820510;We hang our head in shame.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820511;Outshone at the World's Fair!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820511;We tried our best to put together the best possible display of $COUNTRY_ADJ$ industrial and artistic products for the recent World's Fair, but we were outshone by $FROMCOUNTRY$. They dominated the fair and put us to shame.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820511;Shame! Shame! Shame!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821350;Shall we Organise a World's Fair?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821350;Members of the industrialist class have approached our government, suggesting that we organise and host an international World's Fair to showcase the industrial prowess of $COUNTRY$, as well as the other industrial nations of the world. Should we accept their offer?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821350;An excellent idea!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821350;This is a glorified circus.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821351;Invited to the World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821351;$FROMCOUNTRY$ is organising a World's Fair in $FROMCAPITAL$. Industrial nations from around the world have been asked to attend so as to showcase their latest industrial and artistic achievements. Should accept their invite?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821351;An excellent idea!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821351;This is a glorified circus.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821352;Our Pavilion at the World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821352;Attending a World's Fair requires us to set up our own Pavilion, or use the provided exhibition spaces. The more we spend, the more we can wow the other participants, and the more business we can procure from the display of $COUNTRY_ADJ$ products.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821352;Spend lavishly, we must have the best pavilion.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821352;Spend sensibly, but don't go over the top.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTC90821352;The host provides a communal exhibition hall, do they not?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821353;Planning the World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821353;We have began preparations for a World's Fair in $CAPITAL$. We need to provide an exhibition ground for the various industrial, agricultural, and artistic products to be properly displayed. What should we do?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821353;We will spend lavishly, $COUNTRY$'s reputation is at stake here!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTB90821353;Don't go too over the top, do something sensible.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTC90821353;Build them some wooden stalls, that'll do it.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821354;World's Fair Troubles;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821354;Construction at $CAPITAL$'s exhibition grounds has stalled. Delays are caused by a myriad of issues, including accidents on sites, insufficient funds, and bad planning.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821354;Gosh darn it!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821355;The $YEAR$ World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821355;After years of preparation and construction, the $YEAR$ World's Fair has been officially opened in $CAPITAL$, capital of $COUNTRY$. Dignitaries from the $COUNTRY_ADJ$, including the $COUNTRY_ADJ$ $MONARCHTITLE$, representatives of foreign and domestic industry, as well as ambassadors, were present at the opening and received a tour of the exhibition.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821355;We declare open the $YEAR$ World;s Fair!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821356;Talk of the World's Fair;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821356;Many nations participated in the recent World's Fair, but $COUNTRY$ really stood out as having had the best presence at the fair. Our industrial and artistic exhibits were the talk of the town, and we outperformed everyone else.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821356;Glory to $COUNTRY$!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821357;World's Fair a Success!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821357;The recent World's Fair held in $CAPITAL$, capital of $COUNTRY$, has been deemed by the international community to have been a resounding success. Everything was meticulously well-planned, and it has showcased the ability of $COUNTRY$ to successfully organise international events.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821357;Hooray!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821358;World's Fair Nothing to Write Home About;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821358;The recent World's Fair held in $CAPITAL$, capital of $COUNTRY$, has been deemed by the international community to have been a mediocrity $COUNTRY_ADJ$ did its best to ensure a successful event, but they were only partially successful.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821358;Okay.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821359;World's Fair a Failure;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821359;The recent World's Fair held in $CAPITAL$, capital of $COUNTRY$, has been deemed by the international community to have been an abject failure. Buildings were half-finished, the exhibition hall was in disarray, and some products were even mislabelled, attributing them to a different nation. Overall, shameful day for $COUNTRY$.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821359;We hang our head in shame.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821360;Outshone at the World's Fair!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821360;We tried our best to put together the best possible display of $COUNTRY_ADJ$ industrial and artistic products for the recent World's Fair, but we were outshone by $FROMCOUNTRY$. They dominated the fair and put us to shame.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821360;Shame! Shame! Shame!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

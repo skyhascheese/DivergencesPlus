@@ -5,7 +5,7 @@
 #Organise a World's Fair
 country_event = {
 
-	id = 90820501
+	id = 90821350
 
 	trigger = {
 		money = 20000
@@ -35,13 +35,13 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820501"
-	desc = "EVTDESC90820501"
+	title = "EVTNAME90821350"
+	desc = "EVTDESC90821350"
 	picture = "worlds_fair"
 	
 
 	option = {
-		name = "EVTOPTA90820501"
+		name = "EVTOPTA90821350"
 		money = -20000
 		prestige = 20
 		set_country_flag = worlds_fair_host
@@ -67,7 +67,7 @@ country_event = {
 				}
 				not = { tag = this }
 			}
-			country_event = 90820502
+			country_event = 90821351
 		}
 		ai_chance = {
 			factor = 50
@@ -78,7 +78,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820501"
+		name = "EVTOPTB90821350"
 		prestige = -5
 		add_country_modifier = {
 			name = worlds_fair_cooloff
@@ -93,16 +93,16 @@ country_event = {
 #Attend the World's Fair
 country_event = {
 
-	id = 90820502
+	id = 90821351
 
 	is_triggered_only = yes
 
-	title = "EVTNAME90820502"
-	desc = "EVTDESC90820502"
+	title = "EVTNAME90821351"
+	desc = "EVTDESC90821351"
 	picture = "worlds_fair"
 	
 	option = {
-		name = "EVTOPTA90820502"
+		name = "EVTOPTA90821351"
 		prestige = 5
 		set_country_flag = worlds_fair_attendee
 		ai_chance = {
@@ -136,7 +136,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTA90820502"
+		name = "EVTOPTA90821351"
 		prestige = -5
 		set_country_flag = worlds_fair_no_attend
 		ai_chance = {
@@ -148,7 +148,7 @@ country_event = {
 #Our Pavilion 
 country_event = {
 
-	id = 90820503
+	id = 90821352
 
 	trigger = {
 		has_country_flag = worlds_fair_attendee
@@ -158,12 +158,12 @@ country_event = {
 		months = 1
 	}
 
-	title = "EVTNAME90820503"
-	desc = "EVTDESC90820503"
+	title = "EVTNAME90821352"
+	desc = "EVTDESC90821352"
 	picture = "worlds_fair_construction"
 	
 	option = {
-		name = "EVTOPTA90820503" # Lavish spending
+		name = "EVTOPTA90821352" # Lavish spending
 		money = -40000
 		set_country_flag = lavish_pavilion
 		ai_chance = {
@@ -179,7 +179,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820503" # Sensible spending
+		name = "EVTOPTB90821352" # Sensible spending
 		money = -20000
 		set_country_flag = sensible_pavilion
 		ai_chance = {
@@ -192,7 +192,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTC90820503" # Minimal spending
+		name = "EVTOPTC90821352" # Minimal spending
 		money = -10000
 		set_country_flag = minimal_pavilion
 		ai_chance = {
@@ -208,7 +208,7 @@ country_event = {
 # Planning the Worlds Fair
 country_event = {
 
-	id = 90820504
+	id = 90821353
 
 	trigger = {
 		has_country_flag = worlds_fair_host
@@ -226,12 +226,12 @@ country_event = {
 		months = 2
 	}
 
-	title = "EVTNAME90820504"
-	desc = "EVTDESC90820504"
+	title = "EVTNAME90821353"
+	desc = "EVTDESC90821353"
 	picture = "worlds_fair_construction"
 
 	option = {
-		name = "EVTOPTA90820504" # Lavish spending
+		name = "EVTOPTA90821353" # Lavish spending
 		money = -100000
 		set_country_flag = lavish_worlds_fair
 		ai_chance = {
@@ -243,7 +243,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB90820504" # Sensible spending
+		name = "EVTOPTB90821353" # Sensible spending
 		money = -50000
 		set_country_flag = sensible_worlds_fair
 		ai_chance = {
@@ -256,7 +256,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTC90820504" # Minimal spending
+		name = "EVTOPTC90821353" # Minimal spending
 		money = -10000
 		set_country_flag = minimal_worlds_fair
 		ai_chance = {
@@ -272,7 +272,7 @@ country_event = {
 # Worlds Fair troubles
 country_event = {
 
-	id = 90820505
+	id = 90821354
 	
 	trigger = {
 		has_country_flag = worlds_fair_host
@@ -317,12 +317,12 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820505"
-	desc = "EVTDESC90820505"
+	title = "EVTNAME90821354"
+	desc = "EVTDESC90821354"
 	picture = "worlds_fair_construction"
 
 	option = {
-		name = "EVTOPTA90820505"
+		name = "EVTOPTA90821354"
 		money = -20000
 		any_country = { 
 			limit = {
@@ -339,7 +339,7 @@ country_event = {
 # Worlds Fair opens
 country_event = {
 
-	id = 90820506
+	id = 90821355
 	
 	trigger = {
 		has_country_flag = worlds_fair_host
@@ -354,13 +354,13 @@ country_event = {
 		months = 12
 	}
 
-	title = "EVTNAME90820506"
-	desc = "EVTDESC90820506"
+	title = "EVTNAME90821355"
+	desc = "EVTDESC90821355"
 	
 	major = yes
 
 	option = {
-		name = "EVTOPTA90820506"
+		name = "EVTOPTA90821355"
 		prestige = 20
 		set_global_flag = worlds_fair_opened
 		set_country_flag = recent_worlds_fair_host
@@ -370,7 +370,7 @@ country_event = {
 # Outstanding performance at the Worlds Fair
 country_event = {
 
-	id = 90820507
+	id = 90821356
 	
 	trigger = {
 		has_country_flag = worlds_fair_attendee
@@ -422,13 +422,13 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820507"
-	desc = "EVTDESC90820507"
+	title = "EVTNAME90821356"
+	desc = "EVTDESC90821356"
 	
 	major = yes
 
 	option = {
-		name = "EVTOPTA90820507"
+		name = "EVTOPTA90821356"
 		prestige = 30
 		set_global_flag = recent_worlds_fair_winner_chosen
 		set_country_flag = recent_worlds_fair_winner
@@ -441,7 +441,7 @@ country_event = {
 				has_country_flag = worlds_fair_attendee
 				not = { has_country_flag = recent_worlds_fair_winner }
 			}
-			country_event = 90820511
+			country_event = 90821360
 		}
 	}
 }
@@ -449,7 +449,7 @@ country_event = {
 # Worlds Fair verdict - Good
 country_event = {
 
-	id = 90820508 
+	id = 90821357 
 
 	trigger = {
 		has_country_flag = recent_worlds_fair_host
@@ -472,11 +472,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820508"
-	desc = "EVTDESC90820508"
+	title = "EVTNAME90821357"
+	desc = "EVTDESC90821357"
 
 	option = {
-		name = "EVTOPTA90820508"
+		name = "EVTOPTA90821357"
 		prestige = 40
 		add_country_modifier = {
 			name = good_host
@@ -523,7 +523,7 @@ country_event = {
 # Worlds Fair verdict - Mediocre
 country_event = {
 
-	id = 90820509 
+	id = 90821358 
 
 	trigger = {
 		has_country_flag = recent_worlds_fair_host
@@ -546,11 +546,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820509"
-	desc = "EVTDESC90820509"
+	title = "EVTNAME90821358"
+	desc = "EVTDESC90821358"
 
 	option = {
-		name = "EVTOPTA90820509"
+		name = "EVTOPTA90821358"
 		prestige = 10
 		any_country = { 
 			limit = {
@@ -593,7 +593,7 @@ country_event = {
 # Worlds Fair verdict - Terrible
 country_event = {
 
-	id = 90820510 
+	id = 90821359 
 
 	trigger = {
 		has_country_flag = recent_worlds_fair_host
@@ -616,11 +616,11 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820510"
-	desc = "EVTDESC90820510"
+	title = "EVTNAME90821359"
+	desc = "EVTDESC90821359"
 
 	option = {
-		name = "EVTOPTA90820510"
+		name = "EVTOPTA90821359"
 		prestige = -20
 		add_country_modifier = {
 			name = bad_host
@@ -667,15 +667,15 @@ country_event = {
 # Outshone at the World's Fair
 country_event = {
 
-	id = 90820511
+	id = 90821360
 	
 	is_triggered_only = yes
 
-	title = "EVTNAME90820511"
-	desc = "EVTDESC90820511"
+	title = "EVTNAME90821360"
+	desc = "EVTDESC90821360"
 
 	option = {
-		name = "EVTOPTA90820511"
+		name = "EVTOPTA90821360"
 		prestige = -10
 	}
 }
@@ -683,7 +683,7 @@ country_event = {
 # Expo grounds - lavish
 country_event = {
 
-	id = 90820512
+	id = 90821361
 
 	trigger = {
 		has_country_flag = worlds_fair_host
@@ -702,12 +702,12 @@ country_event = {
 		days = 5
 	}
 
-	title = "EVTNAME90820512"
-	desc = "EVTDESC90820512"
+	title = "EVTNAME90821361"
+	desc = "EVTDESC90821361"
 	picture = "expo_grounds"
 
 	option = {
-		name = "EVTOPTA90820512"
+		name = "EVTOPTA90821361"
 		capital_scope = { 
 			add_province_modifier = {
 				name = expo_grounds_lavish
@@ -720,7 +720,7 @@ country_event = {
 # Expo grounds - sensible
 country_event = {
 
-	id = 90820513
+	id = 90821362
 
 	trigger = {
 		has_country_flag = worlds_fair_host
@@ -742,12 +742,12 @@ country_event = {
 		days = 5
 	}
 
-	title = "EVTNAME90820513"
-	desc = "EVTDESC90820513"
+	title = "EVTNAME90821362"
+	desc = "EVTDESC90821362"
 	picture = "expo_grounds"
 
 	option = {
-		name = "EVTOPTA90820513"
+		name = "EVTOPTA90821362"
 		capital_scope = { 
 			add_province_modifier = {
 				name = expo_grounds_lavish
