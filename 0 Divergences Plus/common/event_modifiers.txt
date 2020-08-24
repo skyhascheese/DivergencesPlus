@@ -2775,8 +2775,8 @@ influenza_mitigation = {
 	local_factory_output = -0.3
 	local_RGO_output = -0.2
 	local_artisan_output = -0.2
-	local_ship_build = 1
-	local_repair = 1
+	local_ship_build = -0.5
+	local_repair = -0.5
 	immigrant_attract = -1
 	poor_income_modifier = -0.2
 	middle_income_modifier = -0.2
@@ -2863,7 +2863,23 @@ heirs_of_pericles = {
 	icon = 9
 }
 
+heirs_of_pericles = {
+	assimilation_rate = -0.25
+	icon = 9
+}
+
 standard_modern_greek = {
 	education_efficiency_modifier = 0.1
 	icon = 17
+}
+
+parthenon_marbles_museum = {
+	culture_tech_research_bonus = 0.05
+	prestige = 0.01
+	icon = 3
+}
+
+parthenon_marbles_museum_provincial = {
+	life_rating = 0.03
+	icon = 5
 }

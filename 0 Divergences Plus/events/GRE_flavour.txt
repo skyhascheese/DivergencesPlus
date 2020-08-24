@@ -8,66 +8,129 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA90823200"
+		money = -50000
+		set_global_flag = parthenon_restoration_max
+	}
+	
+	option = {
+		name = "EVTOPTB90823200"
 		money = -20000
-		prestige = 5
+		set_global_flag = parthenon_restoration_min
+	}
+}
+
+country_event = { 
+	id = 90823201 # Acropolis Restoration (max)
+	title = "EVTNAME90823201"
+	desc = "EVTDESC90823201"
+	picture = "acropolis_restored"
+	
+	trigger = {
+		owns = 834 #Athens
+		primary_culture = greek
+		has_global_flag = parthenon_restoration_max
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+		months = 24
+	}
+	
+	option = {
+		name = "EVTOPTB90823201"
+		prestige = 20
+		any_country = {
+			limit = {
+				civilized = yes
+				not = {
+					tag = THIS
+				}
+			}
+			country_event = 90823203
+		}
+		plurality = 2
+		set_country_flag = heirs_of_pericles
+		set_global_flag = acropolis_restored
+		country_event = 90823204
+	}
+}
+
+country_event = { 
+	id = 90823202 # Acropolis Restoration (min)
+	title = "EVTNAME90823202"
+	desc = "EVTDESC90823202"
+	picture = "acropolis_restored"
+	
+	trigger = {
+		owns = 834 #Athens
+		primary_culture = greek
+		has_global_flag = parthenon_restoration_min
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+		months = 24
+	}
+	
+	option = {
+		name = "EVTOPTA90823202"
+		prestige = 20
 		any_owned = {
 			limit = {
-				or = {
-					is_core = GRE
-					is_primary_culture = yes
-				}
-				add_province_modifier = {
-					name = heirs_of_pericles
-					duration = 300
-				}
+				is_core = GRE
+			}
+			add_province_modifier = {
+				name = heirs_of_pericles
+				duration = -1
 			}
 		}
 		any_country = {
 			limit = {
 				civilized = yes
+				not = {
+					tag = THIS
+				}
 			}
-			country_event = 90823201
+			country_event = 90823203
 		}
-		plurality = 1
-		set_country_flag = heirs_of_pericles_min
-	}
-	
-	option = {
-		name = "EVTOPTB90823200"
-		money = -50000
-		prestige = 20
-		any_owned = {
+		any_pop = {
 			limit = {
 				or = {
-					is_core = GRE
-					is_primary_culture = yes
-				}
-				add_province_modifier = {
-					name = heirs_of_pericles
-					duration = -1
+					has_pop_culture = greek
+					has_pop_culture = arvanite
 				}
 			}
+			consciousness = 2
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = 1
 		}
 		plurality = 2
-		set_country_flag = heirs_of_pericles
+		set_country_flag = heirs_of_pericles_min
+		set_global_flag = acropolis_restored
 	}
 }
 
 country_event = { 
-	id = 90823201 # Acropolis Restoration explanation event
-	title = "EVTNAME90823201"
-	desc = "EVTDESC90823201"
+	id = 90823203 # Acropolis Restoration explanation event
+	title = "EVTNAME90823203"
+	desc = "EVTDESC90823203"
 	picture = "acropolis_restored"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90823201"
+		name = "EVTOPTA90823203"
 		any_pop = {
 			limit = {
 				or = {
-					culture = greek
-					culture = arvanite
+					has_pop_culture = greek
+					has_pop_culture = arvanite
 				}
 			}
 			consciousness = 2
@@ -81,62 +144,129 @@ country_event = {
 	}
 }
 
-province_event = { 
-	id = 90823202 # Heirs of Pericles removed
-	title = "EVTNAME90823202"
-	desc = "EVTDESC90823202"
-	picture = "acropolis_restored"
+country_event = { 
+	id = 90823204 # Heirs of Pericles
+	title = "EVTNAME90823204"
+	desc = "EVTDESC9082324"
+	picture = "heirs_of_pericles"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90823200"
-		money = -20000
-		prestige = 5
+		name = "EVTOPTA90823204"
 		any_owned = {
 			limit = {
 				or = {
 					is_core = GRE
 					is_primary_culture = yes
 				}
-				add_province_modifier = {
-					name = heirs_of_pericles
-					duration = 300
-				}
+			}
+			add_province_modifier = {
+				name = heirs_of_pericles
+				duration = -1
 			}
 		}
-		any_country = {
+		any_pop = {
 			limit = {
-				civilized = yes
+				or = {
+					has_pop_culture = greek
+					has_pop_culture = arvanite
+				}
 			}
-			country_event = 90823201
+			consciousness = 2
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = 1
 		}
 		plurality = 1
 		set_country_flag = heirs_of_pericles
 	}
+}
+
+country_event = { 
+	id = 90823205 # Heirs of Pericles reversed
+	title = "EVTNAME90823205"
+	desc = "EVTDESC90823205"
+	picture = "heirs_of_pericles"
+	
+	trigger = {
+		any_owned_province = {
+			has_province_modifier = heirs_of_pericles
+		}
+		not = { primary_culture = greek }
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
 	
 	option = {
-		name = "EVTOPTB90823200"
-		money = -50000
-		prestige = 20
+		name = "EVTOPTA90823205"
+		any_owned = {
+			limit = {
+				has_province_modifier = heirs_of_pericles
+			}
+			remove_province_modifier = heirs_of_pericles
+		}
+		any_pop = {
+			limit = {
+				or = {
+					has_pop_culture = greek
+					has_pop_culture = arvanite
+				}
+			}
+			consciousness = 3
+			militancy = 2
+		}
+		clr_country_flag = heirs_of_pericles
+	}
+}
+
+country_event = { 
+	id = 90823206 # Heirs of Pericles reversed 2
+	title = "EVTNAME90823206"
+	desc = "EVTDESC90823206"
+	picture = "heirs_of_pericles"
+	
+	trigger = {
+		primary_culture = GRE
+		has_country_flag = heirs_of_pericles
+		any_owned_province = {
+			limit = {
+				or = {
+					is_core = GRE
+					is_primary_culture = yes
+				}
+			}
+			not = { has_province_modifier = heirs_of_pericles }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "EVTOPTA90823206"
 		any_owned = {
 			limit = {
 				or = {
 					is_core = GRE
 					is_primary_culture = yes
 				}
-				add_province_modifier = {
-					name = heirs_of_pericles
-					duration = -1
-				}
+			}
+			add_province_modifier = {
+				name = heirs_of_pericles
+				duration = -1
 			}
 		}
-		plurality = 2
-		set_country_flag = heirs_of_pericles
 	}
 }
 
-province_event = { 
+country_event = { 
 	id = 90823210 # The Gospel Riots
 	title = "EVTNAME90823210"
 	desc = "EVTDESC90823210"
@@ -150,11 +280,11 @@ province_event = {
 				year = 1900
 			}
 			and = {
-				is_greater_power = no
-				year = 1890
+				is_greater_power = yes
+				year = 1850
 			}
 		}
-		invention = romantic_literature
+		invention = pragmatism
 	}
 	
 	fire_only_once = yes
@@ -174,7 +304,7 @@ province_event = {
 		prestige = -10
 		any_pop = {
 			limit = {
-				has_culture = greek
+				has_pop_culture = greek
 			}
 			consciousness = 1
 		}
@@ -190,21 +320,52 @@ province_event = {
 	}
 }
 
-province_event = { 
+country_event = { 
 	id = 90823211 # The Gospel Riots (other Greek states)
-	title = "EVTNAME90823210"
-	desc = "EVTDESC90823210"
+	title = "EVTNAME90823211"
+	desc = "EVTDESC90823211"
 	picture = "gospel_riots"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA90823210"
+		name = "EVTOPTA90823211"
 		any_pop = {
 			limit = {
-				has_culture = greek
+				has_pop_culture = greek
 			}
 			consciousness = 1
+		}
+	}
+}
+
+country_event = { 
+	id = 90823220 # The Santorini Eruption of 1866
+	title = "EVTNAME90823220"
+	desc = "EVTDESC90823220"
+	picture = "santorini_eruption"
+	
+	trigger = {
+		owns = 845
+		year = 1866
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+		months = 6
+		
+		modifier = {
+			factor = 0.1
+			year = 1867
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA90823220"
+		dominant_issue = {
+			value = moralism
+			factor = 0.2
 		}
 	}
 }

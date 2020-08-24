@@ -140,7 +140,7 @@ political_decisions = {
 			owns = 805
 			year = 1874
 			war = no
-			805 = 
+			805 = {
 				not = {
 					has_province_modifier = walls_of_thessalonica_demolished
 				}

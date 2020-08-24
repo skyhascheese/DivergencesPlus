@@ -6,7 +6,15 @@ political_decisions = {
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
 			not = {
-				owns = 821 #Edessa
+				or = {
+					owns = 821 #Edessa
+					has_country_flag = aigai_excavation_rights_granted
+					has_country_flag = aigai_excavation_rights_refused
+					and = {
+						has_global_flag = aigai_found
+						has_global_flag = aigai_palace_found
+					}
+				}
 			}
 		}
 		
@@ -36,6 +44,15 @@ political_decisions = {
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
 			owns = 821 #Edessa
+			not = {
+				or = {
+					has_country_flag = aigai_excavation_rights_granted
+					and = {
+						has_global_flag = aigai_found
+						has_global_flag = aigai_palace_found
+					}
+				}
+			}
 		}
 		
 		allow = {
@@ -47,7 +64,11 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = aigai_excavations
+			add_country_modifier = {
+				name = aigai_excavations
+				duration = -1
+			}
+			set_country_flag = aigai_excavation_rights_granted
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -59,7 +80,15 @@ political_decisions = {
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
 			not = {
-				owns = 821 #Edessa
+				or = {
+					owns = 821 #Edessa
+					has_country_flag = pella_excavation_rights_granted
+					has_country_flag = pella_excavation_rights_refused
+					and = {
+						has_global_flag = pella_found
+						has_global_flag = pella_curse_tablet
+					}
+				}
 			}
 		}
 		
@@ -89,6 +118,16 @@ political_decisions = {
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
 			owns = 821 #Edessa
+			not = {
+				or = {
+					has_country_flag = pella_excavation_rights_granted
+					has_country_flag = pella_excavation_rights_refused
+					and = {
+						has_global_flag = pella_found
+						has_global_flag = pella_curse_tablet
+					}
+				}
+			}
 		}
 		
 		allow = {
@@ -100,7 +139,11 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = pella_excavations
+			add_country_modifier = {
+				name = pella_excavations
+				duration = -1
+			}
+			set_country_flag = pella_excavation_rights_granted
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -112,7 +155,12 @@ political_decisions = {
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
 			not = {
-				owns = 824 #Ioannina
+				or = {
+					owns = 824 #Ioannina
+					has_country_flag = dodona_excavation_rights_granted
+					has_country_flag = dodona__excavation_rights_refused
+					has_global_flag = dodona_found
+				}
 			}
 		}
 		
@@ -142,6 +190,13 @@ political_decisions = {
 		potential = {
 			has_global_flag = in_the_footsteps_of_the_argaeds
 			owns = 824 #Ioannina
+			not = {
+				or = {
+					has_country_flag = dodona_excavation_rights_granted
+					has_country_flag = dodona__excavation_rights_refused
+					has_global_flag = dodona_found
+				}
+			}
 		}
 		
 		allow = {
@@ -153,7 +208,11 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = dodona_excavations
+			add_country_modifier = {
+				name = dodona_excavations
+				duration = -1
+			}
+			set_country_flag = dodona_excavation_rights_granted
 		}
 	
 		ai_will_do = { factor = 1 }
@@ -169,6 +228,12 @@ political_decisions = {
 				religion = protestant
 				religion = orthodox
 			}
+			not = {
+				or = {
+					has_global_flag = parthenon_restoration_max
+					has_global_flag = parthenon_restoration_min
+				}
+			}
 		}
 		
 		allow = {
@@ -182,6 +247,64 @@ political_decisions = {
 		
 		effect = {
 			country_event = 90826300
+		}
+	
+		ai_will_do = { factor = 1 }
+	}
+	
+	fate_of_the_parthenon_marbles = {
+		picture = parthenon_marbles
+		
+		potential = {
+			owns = 834 #Athens
+			primary_culture = greek
+			has_global_flag = acropolis_restored
+			not = { has_global_flag = fate_of_the_parthenon_marbles }
+		}
+		
+		allow = {
+			is_greater_power = yes
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					has_country_flag = parthenon_marbles_museum_host
+				}
+				country_event = 90826203
+			}
+			set_global_flag = fate_of_the_parthenon_marbles
+		}
+	
+		ai_will_do = { factor = 1 }
+	}
+	
+	fate_of_the_parthenon_marbles_owner = {
+		picture = parthenon_marbles
+		
+		potential = {
+			primary_culture = greek
+			has_global_flag = acropolis_restored
+			not = { 
+				or = {
+					has_global_flag = fate_of_the_parthenon_marbles
+					has_global_flag = parthenon_marbles_museum
+				}
+			}
+		}
+		
+		allow = {
+			owns = 834 #Athens
+			owns = 729 #Venice
+			or = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		
+		effect = {
+			country_event = 90826210
+			set_global_flag = fate_of_the_parthenon_marbles
 		}
 	
 		ai_will_do = { factor = 1 }

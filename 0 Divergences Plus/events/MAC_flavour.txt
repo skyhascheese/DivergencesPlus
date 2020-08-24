@@ -1391,7 +1391,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA90823036"
 		any_country = {
-			limit = { has _country_flag = thessalonica_international_design_competition_entry }
+			limit = { has_country_flag = thessalonica_international_design_competition_entry }
 			clr_country_flag = thessalonica_international_design_competition_entry
 		}
 		clr_global_flag = thessalonica_international_design_competition
@@ -1686,7 +1686,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA90823050"
 		
-		805 = 
+		805 = {
 			add_province_modifier = {
 				name = walls_of_thessalonica_demolished
 				duration = -1
@@ -1719,7 +1719,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA90823051"
 		
-		805 = 
+		805 = {
 			any_pop = {
 				limit = {
 					is_primary_culture = yes

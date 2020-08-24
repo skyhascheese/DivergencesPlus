@@ -67,7 +67,7 @@
 # 90825050 - 90825099 // 
 # 90825100 - 90825149 // Influenza pandemic - DONE
 # 90825150 - 90825199 // 
-# 90825200 - 90825299 // 
+# 90825200 - 90825299 // Political events
 # 90825300 - 90825399 // 
 # 90825400 - 90825499 // 
 # 90825500 - 90825599 // 
@@ -79,7 +79,7 @@
 ## 90826000 - Archaeology events
 # 
 # 90826000 - 90826199 // In the Footsteps of the Argaeds - DONE
-# 90826200 - 90826249 // The Parthenon Marbles - DONE // Add event that forcefully takes the marbles from Venice if a Greek state occupies/controls it
+# 90826200 - 90826249 // The Parthenon Marbles - DONE
 # 90826250 - 90826299 // Restoring the Acropolis
 # 90826300 - 90826399 // 
 # 90826400 - 90826499 // 

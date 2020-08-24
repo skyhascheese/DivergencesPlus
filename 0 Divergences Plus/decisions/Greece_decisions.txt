@@ -67,36 +67,50 @@ political_decisions = {
 		picture = heirs_of_pericles
 		
 		potential = {
-			has_global_flag = acropolis_restoration
-			primary_culture = greek
-			owns = 834 #Athens
 			or = {
 				and = {
-					has_country_flag = heirs_of_pericles_min
-					is_greater_power = yes
-				}
-				not = {
-					or = {
-						has_country_flag = heirs_of_pericles_min
-						has_country_flag = heirs_of_pericles
+					has_global_flag = acropolis_restoration_max
+					any_owned_province  = {
+						limit = {
+							is_core = GRE
+						}
+						not = {
+							has_province_modifier = heirs_of_pericles
+						}
 					}
+				}
+				and = {
+					has_global_flag = acropolis_restoration_min
+					any_owned_province  = {
+						limit = {
+							is_core = GRE
+						}
+						not = {
+							has_province_modifier = heirs_of_pericles
+						}	
+					}
+					GRE = {
+						all_core = {
+							owned_by = THIS
+						}
+					}
+					is_greater_power = yes
+					owns = 834 
 				}
 			}
 		}
 		
 		allow = {
-			invention = early_archaeology
 			or = {
 				is_greater_power = yes
 				is_secondary_power = yes
-				prestige = 25
 			}
 			money = 20000
 			war = no
 		}
 		
 		effect = {
-			country_event = 90823202
+			country_event = 90823204
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -108,22 +122,17 @@ political_decisions = {
 		potential = {
 			owns = 834 #Athens
 			primary_culture = greek
-			not = { has_global_flag = acropolis_restoration }
+			not = { has_global_flag = athenian_splendour }
 		}
 		
 		allow = {
-			is_independant = yes
-			or = {
-				is_greater_power = yes
-				is_secondary_power = yes
-				prestige = 25
-			}
-			war = no
+			money = 20000
+			nationalism_n_imperialism = 1
+			invention = romanticist_art
 		}
 		
 		effect = {
-			set_global_flag = acropolis_restoration
-			country_event = 
+			set_global_flag = athenian_splendour 
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -135,16 +144,21 @@ political_decisions = {
 		potential = {
 			owns = 834 #Athens
 			primary_culture = greek
-			not = { has_global_flag = arvanite_assimilation }
+			
+			not = { has_country_flag = arvanite_assimilation }
 		}
 		
 		allow = {
 			war = no
+			nationalism_n_imperialism = 1
 		}
 		
 		effect = {
-			set_global_flag = arvanite_assimilation
-			country_event = 
+			set_country_flag = arvanite_assimilation
+			add_country_modifier = {
+				name = arvanite_assimilation
+				duration = -1
+			}
 		}
 		
 		ai_will_do = { factor = 1 }
