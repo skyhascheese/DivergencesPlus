@@ -1,0 +1,19 @@
+Parthenon Marbles war
+
+on_po_accepted = {
+  clr_country_flag = parthenon_marbles_war_not_humiliated
+  set_country_flag = parthenon_marbles_war_humiliated
+}
+
+Outcome events (mtth 14 days)
+Lost war - 
+and = {
+  war = no
+  has_country_flag = parthenon_marbles_war_humiliated
+}
+
+Won war - 
+and = {
+  war = no
+  has_country_flag = parthenon_marbles_war_not_humiliated
+}
