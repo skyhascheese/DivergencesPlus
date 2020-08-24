@@ -6848,6 +6848,7 @@ parthenon_marbles_war_humiliation = {
 	}
 	
 	on_po_accepted = {
+		clr_country_flag = parthenon_marbles_war_not_humiliated
 		set_country_flag = parthenon_marbles_war_humiliated
 	}
 }

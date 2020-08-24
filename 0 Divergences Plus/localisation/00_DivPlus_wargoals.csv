@@ -2,4 +2,9 @@ install_monarchy;Install a monarchy;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;
 install_monarchy_desc;The overthrow of the monarchical regime will not be tolerated. We must restore the monarchy of $RECIPIENT$.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 install_monarchy_short;Install a monarchical government in $RECIPIENT$;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 install_monarchy_setup;Install a monarchical government in $RECIPIENT$;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-install_monarchy_war_name;$ORDER$$FIRST$ Restoration of the Kingdom of $SECOND$
+install_monarchy_war_name;$ORDER$$FIRST$ Restoration of the Kingdom of $SECOND$;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+parthenon_marbles_war_humiliation;Reclaim the Parthenon Marbles;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+parthenon_marbles_war_humiliation_desc;The Parthenon Marbles were plundered from us. It is time to get them back.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+parthenon_marbles_war_humiliation_short;The Parthenon Marbles were plundered from us. It is time to get them back.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+parthenon_marbles_war_humiliation_setup;The Parthenon Marbles were plundered from us. It is time to get them back.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+parthenon_marbles_war_name;The War of the Parthenon Marbles;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
