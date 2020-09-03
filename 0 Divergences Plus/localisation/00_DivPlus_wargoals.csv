@@ -2,4 +2,4 @@ install_monarchy;Install a monarchy;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;
 install_monarchy_desc;The overthrow of the monarchical regime will not be tolerated. We must restore the monarchy of $RECIPIENT$.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 install_monarchy_short;Install a monarchical government in $RECIPIENT$;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 install_monarchy_setup;Install a monarchical government in $RECIPIENT$;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-install_monarchy_war_name;$ORDER$$FIRST$ Restoration of the Kingdom of $SECOND$
+install_monarchy_war_name;$ORDER$ War of the $SECOND$ Restoration;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
