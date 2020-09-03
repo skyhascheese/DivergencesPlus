@@ -232,16 +232,15 @@ country_event = {
 	picture = "heirs_of_pericles"
 	
 	trigger = {
-		primary_culture = GRE
+		primary_culture = greek
 		has_country_flag = heirs_of_pericles
-		any_owned_province = {
-			limit = {
-				or = {
-					is_core = GRE
-					is_primary_culture = yes
+		GRE = {
+			any_core = {
+				limit = { 
+					ownd_by = THIS
 				}
+				not = { has_province_modifier = heirs_of_pericles }
 			}
-			not = { has_province_modifier = heirs_of_pericles }
 		}
 	}
 	

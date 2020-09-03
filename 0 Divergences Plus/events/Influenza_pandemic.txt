@@ -1079,3 +1079,42 @@ country_event = {
 		}
 	}
 }
+
+#The end of the Pandemic in $COUNTRY$
+country_event = {
+
+	id = 90825112
+
+	trigger = {
+		set_country_flag = influenza_pandemic
+		not = {
+			any_owned_province = {
+				or = {
+					has_province_modifier = influenza_present_no_mitigation
+					has_province_modifier = influenza_present
+				}
+			}
+		}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 2
+	}
+
+	title = "EVTNAME90825112"
+	desc = "EVTDESC90825112"
+	picture = "end_of_the_pandemic"
+
+	option = {
+		name = "EVTOPTA90825112"
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -2
+		}
+	}
+}

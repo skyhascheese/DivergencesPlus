@@ -2770,6 +2770,18 @@ LON_member = {
 	icon = 7
 }
 
+ILO_member = {
+	social_reform_desire = 0.1
+	prestige = 0.01
+	icon = 7
+}
+
+CICI_member = {
+	research_points_modifier = 0.05
+	prestige = 0.01
+	icon = 7
+}
+
 influenza_mitigation = {
 	population_growth = -0.03
 	local_factory_output = -0.3

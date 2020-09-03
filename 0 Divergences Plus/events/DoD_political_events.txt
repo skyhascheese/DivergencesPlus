@@ -1,4 +1,4 @@
-country_event = { #The $CAPITAL$ Massacle
+country_event = { #The $CAPITAL$ Massacre
 	id = 90825200
 	title = "EVTNAME90825200"
 	desc = "EVTDESC90825200"
@@ -9,8 +9,13 @@ country_event = { #The $CAPITAL$ Massacle
 	
 	trigger = {
 		capital_scope = { continent = europe }
-		political_reform = yes_meetings
-		not = { political_reform = weighted_universal }
+		public_meetings = yes_meeting
+		not = {
+			or = {
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+			}
+		}
 		or = {
 			is_greater_power = yes
 			is_secondary_power = yes

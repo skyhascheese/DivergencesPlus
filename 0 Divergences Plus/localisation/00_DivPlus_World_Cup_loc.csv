@@ -43,15 +43,15 @@ EVTOPTB90821211;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;
 EVTNAME90821212;The $YEAR$ World Cup;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTDESC90821212;National football teams from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the first ever football World Cup, in order to compete for the highest honour in Association Football.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTOPTA90821212;The World Cup is officially open!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820113;World Cup Semifinalst;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820113;The $COUNTRY_ADJ$ National Football Team has done exceptionally well at the World Cup, securing a place at the final match.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820113;May the odds be ever in our favour!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820114;$YEAR$ World Cup Final;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820114;Huge crowds have gathered to watch the final of the first World Cup organised by the International Associated Football Federation. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $COUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $COUNTRY$ 4 - $FROMCOUNTRY$ 2.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820114;Goooooooooooal!!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820115;$YEAR$ World Cup Final;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820115;Huge crowds have gathered to watch the final of the first World Cup organised by the International Associated Football Federation. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $FROMCOUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $FROMCOUNTRY$ 4 - $COUNTRY$ 2.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820115;Goooooooooooal!!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821213;World Cup Semifinalst;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821213;The $COUNTRY_ADJ$ National Football Team has done exceptionally well at the World Cup, securing a place at the final match.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821213;May the odds be ever in our favour!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821214;$YEAR$ World Cup Final;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821214;Huge crowds have gathered to watch the final of the first World Cup organised by the International Associated Football Federation. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $COUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $COUNTRY$ 4 - $FROMCOUNTRY$ 2.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821214;Goooooooooooal!!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821215;$YEAR$ World Cup Final;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821215;Huge crowds have gathered to watch the final of the first World Cup organised by the International Associated Football Federation. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $FROMCOUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $FROMCOUNTRY$ 4 - $COUNTRY$ 2.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821215;Goooooooooooal!!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTNAME90821216;Shall we host the second World Cup?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTDESC90821216;The International Associated Football Federation has approached us, proposing we organise the second World Cup. Should we accept?;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTOPTA90821216;We should take this opportunity.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
@@ -63,15 +63,15 @@ EVTOPTB90821217;We unfortunately cannot attend.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;
 EVTNAME90821218;The $YEAR$ World Cup;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTDESC90821218;National football teams from around the world have gathered in $CAPITAL$, capital of $COUNTRY$ and host city of the $YEAR$ football World Cup, in order to compete for the highest honour in Association Football.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTOPTA90821218;The World Cup is officially open!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820119;World Cup Semifinalst;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820119;The $COUNTRY_ADJ$ National Football Team has done exceptionally well at the World Cup, securing a place at the final match.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820119;May the odds be ever in our favour!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820120;$YEAR$ World Cup Final;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820120;Huge crowds have gathered to watch the final of the $YEAR$ World Cup organised by the International Associated Football Federation. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $COUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $COUNTRY$ 2 - $FROMCOUNTRY$ 1.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820120;Goooooooooooal!!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820121;$YEAR$ World Cup Final;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820121;Huge crowds have gathered to watch the final of the $YEAR$ World Cup organised by the International Associated Football Federation. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $FROMCOUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $FROMCOUNTRY$ 2 - $COUNTRY$ 1.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820121;Goooooooooooal!!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTNAME90820122;A World-Class Stadium;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTDESC90820122;Our decision to invest lavishly in preparation for the next World Cup has paid off, and $CAPITAL$ is no host to one of the most advanced stadia in the world. Not only will this showcase to other nations how serious $COUNTRY$ is about hosting international events, but it will also hugely benefit the citizens of $CAPITAL$.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVTOPTA90820122;An excellent addition to the city's infrastructure!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821219;World Cup Semifinalst;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821219;The $COUNTRY_ADJ$ National Football Team has done exceptionally well at the World Cup, securing a place at the final match.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821219;May the odds be ever in our favour!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821220;$YEAR$ World Cup Final;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821220;Huge crowds have gathered to watch the final of the $YEAR$ World Cup organised by the International Associated Football Federation. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $COUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $COUNTRY$ 2 - $FROMCOUNTRY$ 1.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821220;Goooooooooooal!!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821221;$YEAR$ World Cup Final;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821221;Huge crowds have gathered to watch the final of the $YEAR$ World Cup organised by the International Associated Football Federation. The $COUNTRY_ADJ$ and $FROMCOUNTRY_ADJ$ national teams faced-off in an intense game, with the $FROMCOUNTRY_ADJ$ team gaining the upper hand in the second half. Final score: $FROMCOUNTRY$ 2 - $COUNTRY$ 1.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821221;Goooooooooooal!!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME90821222;A World-Class Stadium;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTDESC90821222;Our decision to invest lavishly in preparation for the next World Cup has paid off, and $CAPITAL$ is no host to one of the most advanced stadia in the world. Not only will this showcase to other nations how serious $COUNTRY$ is about hosting international events, but it will also hugely benefit the citizens of $CAPITAL$.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA90821222;An excellent addition to the city's infrastructure!;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

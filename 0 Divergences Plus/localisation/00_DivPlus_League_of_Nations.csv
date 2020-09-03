@@ -49,3 +49,9 @@ join_the_league_of_nations;Join the League of Nations;;;;;;;;;;;;;;;;;;;;;;;x;;;
 join_the_league_of_nations_desc;The League of Nations has been founded to advance the cause of peace and international co-operation. $COUNTRY$ should join forces with the civilised world and participate in this endeavour for the benefit of all the peoples of the Earth.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 leave_the_league_of_nations;Leave the League of Nations;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 leave_the_league_of_nations_desc;The League of Nations, supposedly created to advance the cause of peace and international co-operation, is an international cabal whose sole purpose is to bully nations such as $COUNTRY$. We should withdraw from this pathetic excuse of an organisation.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+ILO_member;International Labour Organisation member;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+join_the_ILO;Join the ILO;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+join_the_ILO_desc;The members of the League of Nations have decided to create the International Labour Organisation, an agency devoted to the promotion of better working conditions for the working class. We should join this agency and take advantage of the League's collective expertise in matter of social welfare.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+leave_the_ILO;Leave the ILO;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+leave_the_ILO_desc;We once joined the International Labour Organisation hoping to aid the working class in $COUNTRY$, but it is no longer beneficial that we remain a member of this particular agency. We should withdraw from it and chart an independent course in labour policy.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+CICI_member;International Committee on Intellectual Cooperation member;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

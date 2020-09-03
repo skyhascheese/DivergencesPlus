@@ -1142,3 +1142,183 @@ country_event = {
 		}
 	}
 }
+
+#The International Labour Organisation
+country_event = {
+
+	id = 90824120
+
+	trigger = {
+		has_country_flag = LON_member
+		industrial_score = 100
+		not = {
+			or = {
+				trade_unions = no_trade_unions
+				has_global_flag = ILO_founded
+			}
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 24
+		
+		modifier = {
+			factor = 0.8
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 0.8
+			trade_unions = non_socialist
+		}
+		modifier = {
+			factor = 0.5
+			trade_unions = all_trade_unions
+		}
+	}
+
+	title = "EVTNAME90824120"
+	desc = "EVTDESC90824120"
+	
+	major = yes
+	
+	option = {
+		name = "EVTOPTA90824120"
+		prestige = 20
+		set_country_flag = ILO_member
+		add_country_modifier = {
+			name = ILO_member
+			duration = -1
+		}
+		set_global_flag = ILO_founded
+	}
+}
+
+#The International Labour Organisation
+country_event = {
+
+	id = 90824120
+
+	trigger = {
+		has_country_flag = LON_member
+		industrial_score = 100
+		not = {
+			or = {
+				trade_unions = no_trade_unions
+				has_global_flag = ILO_founded
+			}
+		}
+	}
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen =  {
+		months = 24
+		
+		modifier = {
+			factor = 0.8
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 0.8
+			trade_unions = non_socialist
+		}
+		modifier = {
+			factor = 0.8
+			rulist_party_ideology = socialist
+		}
+		modifier = {
+			factor = 0.5
+			trade_unions = all_trade_unions
+		}
+	}
+
+	title = "EVTNAME90824120"
+	desc = "EVTDESC90824120"
+	
+	major = yes
+	
+	option = {
+		name = "EVTOPTA90824120"
+		prestige = 20
+		set_country_flag = ILO_member
+		add_country_modifier = {
+			name = ILO_member
+			duration = -1
+		}
+		set_global_flag = ILO_founded
+	}
+}
+
+#Leaving the ILO
+country_event = {
+
+	id = 90824121
+
+	trigger = {
+		not = {
+			has_country_flag = LON_member
+		}
+		has_country_flag = ILO_member
+	}
+ 
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	title = "EVTNAME90824121"
+	desc = "EVTDESC90824121"
+	picture = "international_labour_organisation"
+	
+	option = {
+		name = "EVTOPTA90824121"
+		remove_country_modifier = ILO_member
+		clr_country_flag = ILO_member
+		any_country = {
+			limit = {	
+				has_country_flag = ILO_member
+			}
+			country_event = 90824122
+		}
+		any_country = {
+			limit = {
+				not = {
+					has_country_flag = ILO_member
+				}
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+	}
+}
+
+#$FROMCOUNTRY$ Leaves the ILO
+country_event = {
+
+	id = 90824122
+
+	is_triggered_only = yes
+
+	title = "EVTNAME90824122"
+	desc = "EVTDESC90824122"
+	picture = "international_labour_organisation"
+	
+	option = {
+		name = "EVTOPTA90824122"
+		relation = {
+			who = FROM
+			value = -25
+		}
+	}
+}

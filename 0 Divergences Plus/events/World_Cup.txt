@@ -166,7 +166,7 @@ country_event = {
 	picture = "first_international_football_match"
 	
 	option = {
-		name = "EVTOPTA90820105"
+		name = "EVTOPTA90821204"
 		any_country = {
 			limit = {
 				has_country_flag = first_national_football_team
@@ -562,8 +562,8 @@ country_event = {
 		}
 	}
 
-	title = "EVTNAME90820101"
-	desc = "EVTDESC90820101"
+	title = "EVTNAME90821209"
+	desc = "EVTDESC90821209"
 	picture = "fifa"
 	
 
@@ -1162,11 +1162,8 @@ country_event = {
 		has_country_flag = FIFAMember
 		has_country_flag = Current_World_Cup_host_host
 		has_country_flag = lavish_world_cup
-		any_owned = {
-			limit = {
-				is_capital = yes
-			}
-			not = {
+		not = {
+			capital_scope = {
 				has_province_modifier = world_cup_stadium
 			}
 		}
@@ -1183,7 +1180,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA90821222"
 		capital_scope = { 
-			set_province_modifier = {
+			add_province_modifier = {
 				name = world_cup_stadium
 				duration = -1
 			}

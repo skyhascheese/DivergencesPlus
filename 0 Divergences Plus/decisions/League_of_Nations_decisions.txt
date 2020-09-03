@@ -279,4 +279,78 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
+	
+	join_the_ILO = {
+		picture = international_labour_organisation
+		
+		potential = {
+			has_global_flag = ILO_founded
+			has_country_flag = LON_member
+			civilized = yes
+			independent = yes
+			is_substate = no
+			is_vassal = no
+			not = {
+				or = {
+					has_country_flag = ILO_member
+					has_country_flag = not_ILO_member
+				}
+			}
+		}
+		
+		allow = {
+			is_disarmed = no
+			war = no
+			not = {
+				or = {
+					ruling_party_ideology = anarcho_liberal
+					ruling_party_ideology = reactionary
+					economic_policy = laissez_faire
+					social_policy = no_state_interference
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			set_country_flag = ILO_member
+			add_country_modifier = {
+				name = ILO_member
+				duration = -1
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	leave_the_ILO = {
+		picture = international_labour_organisation
+		
+		potential = {
+			has_global_flag = ILO_founded
+			has_country_flag = ILO_member
+			not = {
+				has_country_flag = not_ILO_member
+			}
+		}
+		
+		allow = {
+			is_disarmed = no
+			war = no
+			or = {
+				ruling_party_ideology = anarcho_liberal
+				ruling_party_ideology = reactionary
+				economic_policy = laissez_faire
+				social_policy = no_state_interference
+			}
+		}
+		
+		effect = {
+			prestige = -10
+			set_country_flag = not_ILO_member
+			remove_country_modifier = ILO_member
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
 }
