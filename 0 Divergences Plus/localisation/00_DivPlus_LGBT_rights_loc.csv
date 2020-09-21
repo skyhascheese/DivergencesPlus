@@ -16,7 +16,7 @@ EVTOPTA90825004;Hopefully the New World is more enlightened than the Old.;;;;;;;
 EVTNAME90825005;Gay Village Raided;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTDESC90825005;As $COUNTRY$ lurches to the right, the re-criminalisation of homosexuality has meant the end of the $CAPITAL$ Gay Village. Local police moved in and began to systematically 'clear out' the neighbourhood, resulting in thousands of arrests and a huge loss of property.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTOPTA90825005;A sad day for equality.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-decriminalise_homosexuality;Decriminalise Homosexuality;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+decriminalise_homosexuality_title;Decriminalise Homosexuality;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 decriminalise_homosexuality_desc;Homosexual acts between consenting adults are illegal in $COUNTRY$, resulting in the misery of countless individuals through persecution, imprisonment, and sometimes even death - all because of their choice of partner. Such a moralist approach is an affront to civil liberties, and we must remove the state from peoples' bedrooms.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-recriminalise_homosexuality;Recriminalise Homosexuality;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+recriminalise_homosexuality_title;Recriminalise Homosexuality;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 recriminalise_homosexuality_desc;$COUNTRY$ previously made the decision to decriminalise homosexual activity - this was a grave error, and we have strayed from the moral teachings of our religion and our traditions. A re-introduction of those provisions of the penal code which criminalised homosexual activity between consenting adults is in order.;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x

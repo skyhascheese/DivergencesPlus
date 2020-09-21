@@ -2,7 +2,7 @@ country_event = {
 	id = 90822000 # Macedonia intro 1
 	title = "EVTNAME90822000"
 	desc = "EVTDESC90822000"
-	picture = "macedonian_war_of_independence"
+	picture = "macedonia_history_1"
 	
 	trigger = {
 		tag = MAC
@@ -26,7 +26,7 @@ country_event = {
 	id = 90822001 # Macedonia intro 2
 	title = "EVTNAME90822001"
 	desc = "EVTDESC90822001"
-	picture = "macedonian_war_of_independence"
+	picture = "macedonia_history_2"
 	
 	is_triggered_only = yes
 	
@@ -39,10 +39,10 @@ country_event = {
 }
 
 country_event = { 
-	id = 90822002 # Macedonia intro 2
+	id = 90822002 # Macedonia intro 3
 	title = "EVTNAME90822002"
 	desc = "EVTDESC90822002"
-	picture = "macedonian_war_of_independence"
+	picture = "macedonia_history_3"
 	
 	is_triggered_only = yes
 	
@@ -55,10 +55,10 @@ country_event = {
 }
 
 country_event = { 
-	id = 90822003 # Macedonia intro 3
+	id = 90822003 # Macedonia intro 4
 	title = "EVTNAME90822003"
 	desc = "EVTDESC90822003"
-	picture = "macedonian_war_of_independence"
+	picture = "macedonia_history_4"
 	
 	is_triggered_only = yes
 	
@@ -76,10 +76,10 @@ country_event = {
 }
 
 country_event = { 
-	id = 90822004 # Macedonia intro 4
+	id = 90822004 # Macedonia intro 5
 	title = "EVTNAME90822004"
 	desc = "EVTDESC90822004"
-	picture = "macedonian_war_of_independence"
+	picture = "macedonia_history_5"
 	
 	is_triggered_only = yes
 	
@@ -92,10 +92,10 @@ country_event = {
 }
 
 country_event = { 
-	id = 90822005 # Macedonia intro 5
+	id = 90822005 # Macedonia intro 6
 	title = "EVTNAME90822005"
 	desc = "EVTDESC90822005"
-	picture = "macedonian_war_of_independence"
+	picture = "macedonia_history_6"
 	
 	is_triggered_only = yes
 	
