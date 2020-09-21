@@ -30,6 +30,7 @@ country_event = {
 			}
 		}
 	}
+	}
 	
 	option = {
 		name = "EVTOPTB90820731"
@@ -124,6 +125,8 @@ country_event = {
 		}
 	}
 	
+		
+	
 	option = {
 		name = "EVTOPTB90820734"
 		ai_chance = {
@@ -178,7 +181,7 @@ country_event = {
 				has_country_flag = famous_archaeologist
 			}
 		}
-	}
+	
 	
 	option = {
 		name = "EVTOPTA90820735"
