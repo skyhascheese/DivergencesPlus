@@ -30,7 +30,7 @@ country_event = {
 			}
 		}
 	}
-	}
+	
 	
 	option = {
 		name = "EVTOPTB90820731"
